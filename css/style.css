@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Zen+Kaku+Gothic+Antique:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap');
+
+body {
+  font-family: "M PLUS 1p";
+  color: #4F4141;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* ヘッダー */
+header {
+  padding-top: 320px;
+  background-image: url(../img/index.img/backgroundimg.png);
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+header div.maintitle {
+  text-align: center;
+  color: #F5F3F0;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header p:first-child {
+  font-size: 45px;
+}
+
+header h1 {
+  margin: 30px 0;
+  font-family: "Princess Sofia", cursive;
+  font-size: 110px;
+}
+
+header p:last-child {
+  padding-bottom: 320px;
+  font-family: "Princess Sofia", cursive;
+  font-size: 80px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 31px;
+  padding: 18px 0;
+  width: 223px;
+  text-align: center;
+  font-size: 22px;
+  background: linear-gradient(90deg, #C4903C 0%, #EAD13E 50%, #C4903C 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 3px solid #C4903C;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+/* メイン */
+main {
+  padding-bottom: 1000px;
+  padding-top: 172px;
+  background-image: url(../img/index.img/backgroundimg2.png);
+  background-size: cover;
+  /* 背景画像をスクロールせずに固定 */
+  background-attachment: fixed;
+}
+
+main div.news {
+  padding: 60px 85px 40px 85px;
+  border-radius: 15px;
+  background-color: #FFFDF5;
+}
+
+main div.news h2 {
+  margin-bottom: 25px;
+  font-family: "Miltonian Tattoo", serif;
+  color: #930007;
+  font-size: 35px;
+  text-align: center;
+}
+
+main div.news dl div {
+  padding: 17px 0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #F4E5D3;
+}
+
+main div.news div dt {
+  padding-bottom: 10px;
+  padding-left: 20px;
+  font-family: "Miltonian Tattoo", serif;
+  font-size: 17px;
+}
+
+main div.news div dd {
+  padding-left: 55px;
+  font-size: 16px;
+}
