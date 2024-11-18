@@ -1,5 +1,7 @@
+/* common.cssに記入する！ */
 @import url("https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Zen+Kaku+Gothic+Antique:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap");
 
 body {
   font-family: "M PLUS 1p";
@@ -75,7 +77,9 @@ main {
 }
 
 main div.news,
-main div.event {
+main div.event,
+main div.aboutxmas,
+main div.mugcup {
   margin-bottom: 90px;
   padding: 60px 85px 40px 85px;
   border-radius: 15px;
@@ -109,21 +113,21 @@ main div.news div dd {
   font-size: 16px;
 }
 
-main div.event h2 {
+/* div.title共通設定 */
+main div.title h2 {
   margin-bottom: 10px;
 }
 
-main div.event div.eventtitle p:last-child {
+main div.title p {
+  margin-bottom: 19px;
+  text-align: center;
   color: #213b60;
   font-size: 25px;
 }
 
-main div.event div.eventtitle p {
-  margin-bottom: 19px;
-  text-align: center;
-}
-
-main div.event section {
+/* section共通設定 */
+main div.event section,
+main div.mugcup section {
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -162,5 +166,7 @@ main div.event section p:nth-child(2) {
   font-weight: bold;
 }
 
-main div.event section:nth-child(2) {
+main div.mugcup section {
+  column-gap: 100px;
+  background-color: #1a2550;
 }
