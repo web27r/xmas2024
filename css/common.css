@@ -2,3 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Zen+Kaku+Gothic+Antique:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap");
+:root {
+  --mainred: #930007;
+  --mainblue: #05063c;
+  --backbeige: #fffdf5;
+  --koibackbeige: #f4e5d3;
+  --koiblue: #1a2550;
+  --bunblue: #213b60;
+  --bunblack: #4f4141;
+  --bunorange: #d1611b;
+  --wakugreen: #43680d;
+  /* 以下gold外中グラデ */
+  --sotogold: #caa341;
+  --nakagold: #edd63e;
+}
