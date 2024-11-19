@@ -1,7 +1,4 @@
-/* common.cssに記入する！ */
-@import url("https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Zen+Kaku+Gothic+Antique:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap");
+@import url(common.css);
 
 body {
   font-family: "M PLUS 1p";
@@ -77,9 +74,10 @@ main {
 }
 
 main div.news,
-main div.event,
-main div.aboutxmas,
-main div.mugcup {
+div.event,
+div.aboutxmas,
+div.mugcup,
+div.caution {
   margin-bottom: 90px;
   padding: 60px 85px 40px 85px;
   border-radius: 15px;
@@ -127,7 +125,7 @@ main div.title p {
 
 /* section共通設定 */
 main div.event section,
-main div.mugcup section {
+div.mugcup section {
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -153,17 +151,31 @@ main div.event section {
   margin-bottom: 20px;
 }
 
-main div.event section div:last-child p:first-child {
-  margin-bottom: 15px;
+main div.event section.day p:first-child {
+  margin-bottom: 20px;
   color: #213b60;
   font-weight: bold;
   font-size: 30px;
 }
 
-main div.event section p:nth-child(2) {
+main div.event section.day p:nth-child(2) {
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: bold;
+}
+
+main div.event section.day p:nth-child(3) {
+  line-height: 20px;
+}
+
+main div.event section.free {
+  justify-content: space-between;
+}
+
+main div.event section.free p,
+section.place p,
+section.access p {
+  color: #213b60;
 }
 
 main div.mugcup section {
