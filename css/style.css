@@ -1,5 +1,6 @@
 @import url(common.css);
 
+/* common.cssに書く */
 body {
   font-family: "M PLUS 1p";
   color: #4f4141;
@@ -10,7 +11,11 @@ body {
   margin: 0 auto;
 }
 
-/* ヘッダー */
+a {
+  text-decoration: none;
+}
+
+/* ヘッダー common.cssに書く*/
 header {
   padding-top: 320px;
   background-image: url(../img/index.img/mainimg.png);
@@ -20,9 +25,9 @@ header {
 }
 
 header div.maintitle {
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   color: #f5f3f0;
-  text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 header p:first-child {
@@ -78,7 +83,7 @@ main {
 main section.news,
 section.event,
 section.aboutxmas,
-section.mugcup,
+section.magcup,
 section.caution {
   margin-bottom: 90px;
   padding: 60px 85px 40px 85px;
@@ -89,9 +94,9 @@ section.caution {
 main h2 {
   margin-bottom: 25px;
   font-family: "Miltonian Tattoo", serif;
+  text-align: center;
   color: #930007;
   font-size: 35px;
-  text-align: center;
 }
 
 main section.news dl div {
@@ -104,7 +109,7 @@ main section.news dl div {
 main section.news div dt {
   padding-bottom: 10px;
   font-family: "Miltonian Tattoo", serif;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 main section.news div dd {
@@ -114,12 +119,16 @@ main section.news div dd {
 }
 
 /* div.title共通設定 */
+main hgroup {
+  margin-bottom: 25px;
+}
+
 main hgroup h2 {
   margin-bottom: 10px;
 }
 
 main hgroup p {
-  margin-bottom: 19px;
+  margin-bottom: 10px;
   text-align: center;
   color: #213b60;
   font-size: 25px;
@@ -130,9 +139,10 @@ main section.event div.day,
 div.free,
 div.place,
 div.access,
-section.mugcup div {
+section.magcup div {
   padding: 40px 80px;
   display: flex;
+  flex-wrap: wrap;
   background-color: #f4e5d3;
   border-radius: 10px;
 }
@@ -152,18 +162,19 @@ main section.event div.day {
 
 main section.event div.day p:first-child {
   margin-bottom: 20px;
-  color: #213b60;
   font-weight: bold;
+  color: #213b60;
   font-size: 30px;
 }
 
 main section.event div.day p:nth-child(2) {
   margin-bottom: 20px;
-  font-size: 20px;
   font-weight: bold;
+  font-size: 25px;
 }
 
-main section.event div.day p:nth-child(3) {
+main section.event div.day p:nth-child(3),
+section.event div.access p {
   line-height: 30px;
 }
 
@@ -191,9 +202,7 @@ main section.event div.access {
   column-gap: 73px;
 }
 
-main section.event div.access p.noflex {
-  display: block;
-}
+
 
 main div.market {
   margin-bottom: 90px;
@@ -213,27 +222,28 @@ main div.market section.aboutxmas h2 {
   font-weight: bold;
 }
 
-main section.market div.aboutxmas p {
-  line-height: 30px;
+main div.market section.aboutxmas p {
+  line-height: 25px;
 }
 
-main section.mugcup hgroup p {
+main section.magcup hgroup p {
   font-family: "Kaisei Opti";
 }
 
-main section.mugcup p {
+main section.magcup p {
   text-align: center;
 }
 
-main section.mugcup div.magcupprice {
-  margin: 20px 0;
+main section.magcup div.magcupprice {
+  margin: 30px 0;
+  border: 3px solid #C3A80D;
   background-color: var(--bunblue);
 }
 
-main section.mugcup div.magcupprice p {
+main section.magcup div.magcupprice p {
   font-family: "Miltonian Tattoo";
   font-size: 35px;
-  color: #fffdf5;
+  color: var(--backbeige);
 }
 
 main div.magcupprice p span {
@@ -248,3 +258,84 @@ main div.magcupprice p span {
   background-position: top 27px left 37px, top 27px right 352px;
   color: #fffdf5;
 } */
+
+main section.magcup p.change {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  color: var(--bunblue);
+}
+
+main section.magcup ul li {
+  margin-bottom: 15px;
+  list-style-type: disc;
+  font-weight: bold;
+}
+
+main section.magcup aside {
+  margin: 40px 0;
+}
+
+main section.magcup aside p {
+  margin-left: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+main section.magcup p.yoyaku {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 15px 45px;
+  border: 3px solid #C3A80D;
+  background: var(--mainred);
+  font-family: "Kaisei Opti";
+  font-size: 25px;
+}
+
+
+main section.magcup p.yoyaku a {
+  color: var(--backbeige);
+}
+
+main section.caution {
+  margin-bottom: 0;
+  border: 6px solid var(--wakugreen);
+}
+
+main section.caution ul li {
+  padding-left: 5px;
+  margin-bottom: 34px;
+  list-style-image: url(../img/index.img/listicon.svg);
+  line-height: 25px;
+}
+
+
+/* フッター common.cssに書く*/
+footer {
+  padding: 20px;
+  padding-top: 65px;
+  background-image: url(../img/index.img/footer.svg);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-color: var(--mainred);
+}
+
+footer p.aboutcompany {
+  margin-bottom: 34px;
+  line-height: 30px;
+  color: #fff;
+}
+
+footer div.companyicon {
+  margin-bottom: 256px;
+  display: flex;
+  column-gap: 20px;
+}
+
+footer p.copyright {
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--mainred);
+  font-size: 12px;
+}
