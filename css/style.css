@@ -322,7 +322,7 @@ main section.caution ul li {
 }
 
 /* フッター common.cssに書く*/
-footer {
+/* footer {
   padding: 20px;
   padding-top: 65px;
   background-image: url(../img/index.img/footer.svg);
@@ -348,7 +348,7 @@ footer p.copyright {
   margin: 0 auto;
   color: var(--mainred);
   font-size: 12px;
-}
+} */
 
 /* section内のデコレーション設定 */
 main section.news,

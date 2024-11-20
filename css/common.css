@@ -93,3 +93,32 @@ hgroup p {
   color: var(--mainred);
   font-size: 35px;
 }
+
+/* フッター */
+footer {
+  padding: 20px;
+  padding-top: 65px;
+  background-image: url(../img/index.img/footer.svg);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-color: var(--mainred);
+}
+
+footer p.aboutcompany {
+  margin-bottom: 34px;
+  line-height: 30px;
+  color: #fff;
+}
+
+footer div.companyicon {
+  margin-bottom: 256px;
+  display: flex;
+  column-gap: 20px;
+}
+
+footer p.copyright {
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--mainred);
+  font-size: 12px;
+}
