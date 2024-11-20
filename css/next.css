@@ -6,78 +6,21 @@ header {
   padding: 15px 0 15px 0;
   background-color: var(--mainred);
 }
-/* ーーーーーーー
-ここから丸コピ！！！！！！！
-ーーーーーーー */
-nav ul {
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin-left: 8px;
-  margin-right: 8px;
-  padding: 18px 0;
-  width: 223px;
-  text-align: center;
-  font-size: 22px;
-  background: linear-gradient(90deg, var(--sotogold) 0%, var(--nakagold) 50%, var(--sotogold) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border: 3px solid var(--sotogold);
-}
-
-nav ul li a {
-  text-decoration: none;
-}
-/* メイン */
-main {
-  padding-bottom: 1000px;
-  padding-top: 172px;
-  background-image: url(../img/index.img/backgroundimg2.png);
-  background-size: cover;
-  /* 背景画像をスクロールせずに固定 */
-  background-attachment: fixed;
-}
-/* ーーーーーーー
-！！！！！！ここまで丸コピ！
-ーーーーーーー */
 /* ーーーー
 メインFD共通
 ーーーーー */
-/* 箱背景 */
-/* 中身だけ参考76行目！！！！！
-main div.news,
-div.event,
-div.aboutxmas,
-div.mugcup,
-div.cautionと同じ  */
-.backbeige {
-  margin-bottom: 90px;
-  padding: 60px 85px 40px 85px;
-  border-radius: 15px;
-  background-color: var(--backbeige);
-}
-/* 中身だけ参考95行目！！！！！
-main div.news dl div */
-.koibackbeige {
-  padding: 17px 0;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  background-color: var(--koibackbeige);
-}
-
 /* FD共通文字 */
 /* 87行目参考main h2 */
-main article hgroup h1 {
+/* main article hgroup h1 */
+/* .midasired {
   margin-bottom: 25px;
   font-family: "Miltonian Tattoo", serif;
   color: var(--mainred);
   font-size: 35px;
   text-align: center;
-}
-/* 119行目参考main hgroup p丸コピ */
+} */
+
+/* これ青文字 */
 main hgroup p {
   margin-bottom: 19px;
 }
