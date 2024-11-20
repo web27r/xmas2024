@@ -94,6 +94,10 @@ hgroup p {
   font-size: 35px;
 }
 
+.flex {
+  display: flex;
+}
+
 /* フッター */
 footer {
   padding: 20px;
