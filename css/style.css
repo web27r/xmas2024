@@ -19,7 +19,7 @@ a {
 /* ヘッダー */
 header {
   padding-top: 320px;
-  background-image: url(../img/index.img/mainimg.png);
+  background-image: url(../img/index.img/mainimg2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -93,12 +93,9 @@ main section.news h2 {
   margin-bottom: 25px;
 }
 
-/* main section.news dl div {
+main section.news dl div {
   padding: 20px 35px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  background-color: var(koibackbeige);
-} */
+}
 
 main section.news div dt {
   padding-bottom: 10px;
