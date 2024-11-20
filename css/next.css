@@ -1,21 +1,4 @@
 @import url(common.css);
-
-/* ーーーーーーー
-ここから丸コピ！！！！！！！
-ーーーーーーー */
-body {
-  font-family: "M PLUS 1p";
-  color: var(--bunblack);
-}
-
-.container {
-  width: 1000px;
-  margin: 0 auto;
-}
-/* ーーーーーーー
-！！！！！！ここまで丸コピ！
-ーーーーーーー */
-
 /* ーーーー
 ヘッダー
 ーーーー */
@@ -70,7 +53,7 @@ div.event,
 div.aboutxmas,
 div.mugcup,
 div.cautionと同じ  */
-main article {
+.backbeige {
   margin-bottom: 90px;
   padding: 60px 85px 40px 85px;
   border-radius: 15px;
@@ -78,7 +61,7 @@ main article {
 }
 /* 中身だけ参考95行目！！！！！
 main div.news dl div */
-main article section {
+.koibackbeige {
   padding: 17px 0;
   margin-bottom: 20px;
   border-radius: 10px;
