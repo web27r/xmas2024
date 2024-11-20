@@ -1,2 +1,139 @@
 @import url(common.css);
-/* commonは最後にマージ作る */
+
+/* ーーーーーーー
+ここから丸コピ！！！！！！！
+ーーーーーーー */
+body {
+  font-family: "M PLUS 1p";
+  color: var(--bunblack);
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+/* ーーーーーーー
+！！！！！！ここまで丸コピ！
+ーーーーーーー */
+
+/* ーーーー
+ヘッダー
+ーーーー */
+header {
+  padding: 15px 0 15px 0;
+  background-color: var(--mainred);
+}
+/* ーーーーーーー
+ここから丸コピ！！！！！！！
+ーーーーーーー */
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 18px 0;
+  width: 223px;
+  text-align: center;
+  font-size: 22px;
+  background: linear-gradient(90deg, var(--sotogold) 0%, var(--nakagold) 50%, var(--sotogold) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 3px solid var(--sotogold);
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+/* メイン */
+main {
+  padding-bottom: 1000px;
+  padding-top: 172px;
+  background-image: url(../img/index.img/backgroundimg2.png);
+  background-size: cover;
+  /* 背景画像をスクロールせずに固定 */
+  background-attachment: fixed;
+}
+/* ーーーーーーー
+！！！！！！ここまで丸コピ！
+ーーーーーーー */
+/* ーーーー
+メインFD共通
+ーーーーー */
+/* 箱背景 */
+/* 中身だけ参考76行目！！！！！
+main div.news,
+div.event,
+div.aboutxmas,
+div.mugcup,
+div.cautionと同じ  */
+main article {
+  margin-bottom: 90px;
+  padding: 60px 85px 40px 85px;
+  border-radius: 15px;
+  background-color: var(--backbeige);
+}
+/* 中身だけ参考95行目！！！！！
+main div.news dl div */
+main article section {
+  padding: 17px 0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: var(--koibackbeige);
+}
+
+/* FD共通文字 */
+/* 87行目参考main h2 */
+main article hgroup h1 {
+  margin-bottom: 25px;
+  font-family: "Miltonian Tattoo", serif;
+  color: var(--mainred);
+  font-size: 35px;
+  text-align: center;
+}
+/* 119行目参考main hgroup p丸コピ */
+main hgroup p {
+  margin-bottom: 19px;
+  text-align: center;
+  color: var(--bunblue);
+  font-size: 25px;
+}
+main article h2 {
+  color: var(--bunorange);
+  font-family: "Kaisei Opti";
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ーー
+マップ
+ーーー */
+/* figma通りに外余白付けると変になる */
+/* main article p.map {
+margin: 0 79px 26px 81px;
+} */
+
+/* ーーーーーー
+FD共通セクション
+ーーーーーーー */
+main article section {
+  background-image: url(../img/FandD.img/ornamentNo.png);
+  background-repeat: no-repeat;
+  background-position: left 26px top 20px;
+}
+main article section h3 {
+  /* マジト29-字余白16=13px */
+  margin-top: 13px;
+  margin-left: 91px;
+}
+main article section div {
+  display: flex;
+  gap: 38px;
+  margin: 27px 25px 31px 25px;
+}
+main article section dl {
+  text-align: center;
+}
