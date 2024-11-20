@@ -1,7 +1,7 @@
 @import url(common.css);
 
 /* common.cssに書く */
-body {
+/* body {
   font-family: "M PLUS 1p";
   color: #4f4141;
 }
@@ -13,7 +13,7 @@ body {
 
 a {
   text-decoration: none;
-}
+} */
 
 /* ヘッダー */
 header {
@@ -47,7 +47,7 @@ header p:last-child {
 }
 
 /* ナビゲーション */
-nav ul {
+/* nav ul {
   display: flex;
   justify-content: center;
 }
@@ -64,11 +64,7 @@ nav ul li {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border: 3px solid #c4903c;
-}
-
-nav ul li a {
-  text-decoration: none;
-}
+} */
 
 /* メイン */
 main {
@@ -80,7 +76,7 @@ main {
   background-attachment: fixed;
 }
 
-/* 外側の白い枠の九通の設定 */
+/* 外側の白い枠の九通の設定
 main section.news,
 section.event,
 section.aboutxmas,
@@ -89,19 +85,19 @@ section.caution {
   margin-bottom: 90px;
   padding: 60px 85px 40px 85px;
   border-radius: 15px;
-  background-color: #fffdf5;
-}
+  background-color: var(--backbeige);
+} */
 
 main section.news h2 {
   margin-bottom: 25px;
 }
 
-main section.news dl div {
+/* main section.news dl div {
   padding: 20px 35px;
   margin-bottom: 20px;
   border-radius: 10px;
-  background-color: #f4e5d3;
-}
+  background-color: var(koibackbeige);
+} */
 
 main section.news div dt {
   padding-bottom: 10px;
@@ -144,7 +140,7 @@ section.magcup div {
   padding: 40px 80px;
   display: flex;
   flex-wrap: wrap;
-  background-color: #f4e5d3;
+  background-color: var(--koibackbeige);
   border-radius: 10px;
 }
 
