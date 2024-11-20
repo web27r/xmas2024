@@ -15,7 +15,7 @@ a {
   text-decoration: none;
 }
 
-/* ヘッダー common.cssに書く*/
+/* ヘッダー */
 header {
   padding-top: 320px;
   background-image: url(../img/index.img/mainimg.png);
@@ -46,6 +46,7 @@ header p:last-child {
   font-size: 80px;
 }
 
+/* ナビゲーション */
 nav ul {
   display: flex;
   justify-content: center;
@@ -91,12 +92,8 @@ section.caution {
   background-color: #fffdf5;
 }
 
-main h2 {
+main section.news h2 {
   margin-bottom: 25px;
-  font-family: "Miltonian Tattoo", serif;
-  text-align: center;
-  color: #930007;
-  font-size: 35px;
 }
 
 main section.news dl div {
@@ -118,16 +115,20 @@ main section.news div dd {
   line-height: 25px;
 }
 
-/* div.title共通設定 */
-main hgroup {
+/* hgroup,h2共通設定 common.cssに書く */
+hgroup {
   margin-bottom: 25px;
 }
 
-main hgroup h2 {
+h2 {
   margin-bottom: 10px;
+  text-align: center;
+  font-family: "Miltonian Tattoo", serif;
+  color: #930007;
+  font-size: 35px;
 }
 
-main hgroup p {
+hgroup p {
   margin-bottom: 10px;
   text-align: center;
   color: #213b60;
@@ -147,9 +148,10 @@ section.magcup div {
   border-radius: 10px;
 }
 
-main section.event div h3 {
+main section.event dl dt {
   color: #4f4141;
   font-size: 20px;
+  font-weight: bold;
 }
 
 main section.event div {
@@ -160,21 +162,21 @@ main section.event div.day {
   column-gap: 45px;
 }
 
-main section.event div.day p:first-child {
+main section.event div.day dd:first-child {
   margin-bottom: 20px;
   font-weight: bold;
   color: #213b60;
   font-size: 30px;
 }
 
-main section.event div.day p:nth-child(2) {
+main section.event div.day dd:nth-child(2) {
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 25px;
 }
 
-main section.event div.day p:nth-child(3),
-section.event div.access p {
+main section.event div.day dd:nth-child(3),
+section.event div.access dd {
   line-height: 30px;
 }
 
@@ -182,14 +184,14 @@ main section.event div.free {
   column-gap: 250px;
 }
 
-main section.event div.free p,
-div.place p,
-div.access p {
+main section.event div.free dd,
+div.place dd,
+div.access dd {
   color: #213b60;
   font-size: 20px;
 }
 
-main section.event div.free p {
+main section.event div.free dd {
   font-weight: bold;
   font-size: 28px;
 }
@@ -202,7 +204,14 @@ main section.event div.access {
   column-gap: 73px;
 }
 
+main section.event div.access dd {
+  margin-bottom: 33px;
+}
 
+main section.event div.access p.noflex {
+  width: 100%;
+  text-align: center;
+}
 
 main div.market {
   margin-bottom: 90px;
@@ -211,19 +220,25 @@ main div.market {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  /* 背景画像をスクロールせずに固定 */
   background-attachment: fixed;
 }
 
 main div.market section.aboutxmas {
+  padding-bottom: 73px;
   margin-bottom: 0;
 }
 
 main div.market section.aboutxmas h2 {
+  margin-bottom: 55px;
   font-weight: bold;
 }
 
 main div.market section.aboutxmas p {
-  line-height: 25px;
+  width: 698px;
+  margin: 0 auto;
+  line-height: 28px;
+  font-size: 18px;
 }
 
 main section.magcup hgroup p {
@@ -234,30 +249,33 @@ main section.magcup p {
   text-align: center;
 }
 
-main section.magcup div.magcupprice {
+main section.magcup div {
+  padding: 18px 30px;
   margin: 30px 0;
-  border: 3px solid #C3A80D;
+  border: 3px solid #c3a80d;
   background-color: var(--bunblue);
 }
 
-main section.magcup div.magcupprice p {
+main section.magcup div p {
+  margin-right: 10px;
   font-family: "Miltonian Tattoo";
   font-size: 35px;
   color: var(--backbeige);
 }
 
-main div.magcupprice p span {
+main section.magcup div p:first-child {
+  margin-right: 30px;
+}
+
+main div p span.fontkaisei {
   font-family: "Kaisei Opti";
   font-size: 24px;
 }
 
 /* アイコン設定 */
-/* main div.magcupprice p::before {
-  content: "";
-  background-image: url(../img/index.img/cupicon1.svg), url(../img/index.img/cupicon2.svg);
-  background-position: top 27px left 37px, top 27px right 352px;
-  color: #fffdf5;
-} */
+main section.magcup div img {
+  margin-right: 5px;
+}
 
 main section.magcup p.change {
   margin-bottom: 30px;
@@ -287,12 +305,11 @@ main section.magcup p.yoyaku {
   width: fit-content;
   margin: 0 auto;
   padding: 15px 45px;
-  border: 3px solid #C3A80D;
+  border: 3px solid #c3a80d;
   background: var(--mainred);
   font-family: "Kaisei Opti";
   font-size: 25px;
 }
-
 
 main section.magcup p.yoyaku a {
   color: var(--backbeige);
@@ -309,7 +326,6 @@ main section.caution ul li {
   list-style-image: url(../img/index.img/listicon.svg);
   line-height: 25px;
 }
-
 
 /* フッター common.cssに書く*/
 footer {
@@ -338,4 +354,20 @@ footer p.copyright {
   margin: 0 auto;
   color: var(--mainred);
   font-size: 12px;
+}
+
+/* section内のデコレーション設定 */
+main section.news,
+section.magcup,
+section.caution {
+  background-image: url(../img/index.img/decosnow.svg);
+  background-repeat: no-repeat;
+  background-position: top 20px left 31px;
+}
+
+main section.event,
+section.aboutxmas {
+  background-image: url(../img/index.img/deco1.svg), url(../img/index.img/deco2.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 left 25px, top 0 right 21px;
 }

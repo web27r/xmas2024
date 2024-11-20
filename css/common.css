@@ -18,4 +18,11 @@
   /* 以下gold外中グラデ */
   --sotogold: #caa341;
   --nakagold: #edd63e;
+  /* スムーススクロール設定 */
+  scroll-behavior: smooth;
 }
+
+p
+  text-align: center;
+  color: #213b60;
+  font-size: 25px;
