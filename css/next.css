@@ -97,9 +97,6 @@ main article hgroup h1 {
 /* 119行目参考main hgroup p丸コピ */
 main hgroup p {
   margin-bottom: 19px;
-  text-align: center;
-  color: var(--bunblue);
-  font-size: 25px;
 }
 main article h2 {
   color: var(--bunorange);
