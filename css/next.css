@@ -6,22 +6,14 @@ header {
   padding: 15px 0 15px 0;
   background-color: var(--mainred);
 }
-
-/* ーーーー
-メインFD共通
-ーーーーー */
-/* ーー
-マップ
-ーーー */
-/* figma通りに外余白付けると変になる */
-/* main article p.map {
-margin: 0 79px 26px 81px;
-} */
-/* ーーーーーーーー
-FD共通アーティクル
-ーーーーーーーーー */
+/* ーーーーーーーーーーー
+FDメイン共通アーティクル
+ーーーーーーーーーーーーー */
 main article {
   margin-bottom: 90px;
+  &:not(:first-child) {
+    padding: 60px 40px 37px 40px;
+  }
 }
 h1 {
   margin-bottom: 7px;
@@ -38,7 +30,19 @@ main hgroup {
     margin-bottom: 50px;
   }
 }
-/* オレンジ国文字 */
+/* ーー
+マップ
+ーーー */
+.backbeige {
+  padding: none;
+}
+/* figma通りに外余白付けると変になるのが上記で解決 */
+main article p.shopmap {
+  margin: 0 79px 26px 81px;
+}
+/* ーーーーーー
+オレンジ国文字
+ーーーーーーー */
 main article h2 {
   height: 77px;
   margin-bottom: 20px;
@@ -51,9 +55,9 @@ main article h2 {
   background-repeat: no-repeat;
   background-position: center;
 }
-/* ーーーーーー
-FD共通セクション
-ーーーーーーー */
+/* ーーーーーーーー
+Menu共通セクション
+ーーーーーーーーーー */
 main article section {
   background-image: url(../img/FandD.img/ornamentNoRed.png);
   background-repeat: no-repeat;
@@ -76,4 +80,11 @@ FD共通フィギュア
 ーーーーーーー */
 figcaption {
   line-height: 1.5em;
+}
+/* ーーーーーーーー
+GandW共通セクション
+ーーーーーーーーーー */
+/* 音声読み上げ対策(英語と日本語が同じ意味のタグに使う) */
+.hoge::before {
+  content: attr(data-eng);
 }
