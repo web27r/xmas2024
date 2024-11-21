@@ -6,31 +6,10 @@ header {
   padding: 15px 0 15px 0;
   background-color: var(--mainred);
 }
+
 /* ーーーー
 メインFD共通
 ーーーーー */
-/* FD共通文字 */
-/* 87行目参考main h2 */
-/* main article hgroup h1 */
-/* .midasired {
-  margin-bottom: 25px;
-  font-family: "Miltonian Tattoo", serif;
-  color: var(--mainred);
-  font-size: 35px;
-  text-align: center;
-} */
-
-/* これ青文字 */
-main hgroup p {
-  margin-bottom: 19px;
-}
-main article h2 {
-  color: var(--bunorange);
-  font-family: "Kaisei Opti";
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 /* ーー
 マップ
 ーーー */
@@ -38,25 +17,63 @@ main article h2 {
 /* main article p.map {
 margin: 0 79px 26px 81px;
 } */
-
+/* ーーーーーーーー
+FD共通アーティクル
+ーーーーーーーーー */
+main article {
+  margin-bottom: 90px;
+}
+h1 {
+  margin-bottom: 7px;
+}
+/* これ青文字 */
+main hgroup {
+  &.map {
+    margin-bottom: 19px;
+  }
+  &.FandD {
+    margin-bottom: 30px;
+  }
+  &.GandW {
+    margin-bottom: 50px;
+  }
+}
+/* オレンジ国文字 */
+main article h2 {
+  height: 77px;
+  margin-bottom: 20px;
+  align-items: center;
+  color: var(--bunorange);
+  font-family: "Kaisei Opti";
+  font-size: 25px;
+  text-align: center;
+  background-image: url(../img/FandD.img/kuniback.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 /* ーーーーーー
 FD共通セクション
 ーーーーーーー */
 main article section {
-  background-image: url(../img/FandD.img/ornamentNo.png);
+  background-image: url(../img/FandD.img/ornamentNoRed.png);
   background-repeat: no-repeat;
   background-position: left 26px top 20px;
+  padding: 29px 25px 31px 25px;
 }
 main article section h3 {
-  /* マジト29-字余白16=13px */
-  margin-top: 13px;
   margin-left: 91px;
 }
 main article section div {
-  display: flex;
   gap: 38px;
   margin: 27px 25px 31px 25px;
-}
-main article section dl {
   text-align: center;
+}
+main article section div figure figcaption {
+  margin-top: 14px;
+}
+/* ーーーーーー
+FD共通フィギュア
+ーーーーーーー */
+figcaption {
+  line-height: 1.5em;
 }
