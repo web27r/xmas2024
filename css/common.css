@@ -75,7 +75,6 @@ hgroup p {
 /* 外側の白い枠の九通の設定 */
 .backbeige {
   margin-bottom: 90px;
-  padding: 60px 85px 40px 85px;
   border-radius: 15px;
   background-color: var(--backbeige);
 }

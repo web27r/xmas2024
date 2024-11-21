@@ -77,17 +77,17 @@ main {
   background-attachment: fixed;
 } */
 
-/* 外側の白い枠の九通の設定
+/* 外側の白い枠の九通の設定 */
 main section.news,
 section.event,
 section.aboutxmas,
 section.magcup,
 section.caution {
-  margin-bottom: 90px;
   padding: 60px 85px 40px 85px;
-  border-radius: 15px;
-  background-color: var(--backbeige);
-} */
+  /* margin-bottom: 90px; */
+  /* border-radius: 15px;
+  background-color: var(--backbeige); */
+}
 
 main section.news h2 {
   margin-bottom: 25px;
