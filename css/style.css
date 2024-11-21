@@ -109,7 +109,7 @@ main section.news div dd {
   line-height: 25px;
 }
 
-/* hgroup,h2共通設定 common.cssに書く */
+/* hgroup,h2共通設定 */
 hgroup {
   margin-bottom: 25px;
 }
@@ -317,7 +317,7 @@ main section.caution ul li {
   line-height: 25px;
 }
 
-/* フッター common.cssに書く*/
+/* フッター */
 /* footer {
   padding: 20px;
   padding-top: 65px;
@@ -345,6 +345,16 @@ footer p.copyright {
   color: var(--mainred);
   font-size: 12px;
 } */
+
+footer div.container {
+  position: relative;
+}
+
+footer p.logo {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}
 
 /* section内のデコレーション設定 */
 main section.news,
