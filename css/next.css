@@ -10,7 +10,6 @@ header {
 FDメイン共通アーティクル
 ーーーーーーーーーーーーー */
 main article {
-  margin-bottom: 90px;
   &:not(:first-child) {
     padding: 60px 40px 37px 40px;
   }
@@ -79,7 +78,7 @@ main article section div figure figcaption {
 FD共通フィギュア
 ーーーーーーー */
 figcaption {
-  line-height: 1.5em;
+  line-height: normal;
 }
 /* ーーーーーーーー
 GandW共通セクション
