@@ -12,9 +12,11 @@ header {
 .backbeige {
   padding: 60px 50px;
 }
+/* 兼koibackbeige */
 .toicontainer {
   width: 617px;
-  margin: 70px auto 0 auto;
+  margin: 40px auto 0 auto;
+  padding: 20px;
   line-height: normal;
 }
 /* 最初の注意書き */
@@ -25,7 +27,7 @@ small.a {
 div.flex {
   margin-top: 50px;
   &dt,
-  p.dt {
+  .dt {
     padding-top: 5px;
   }
 }
@@ -39,18 +41,18 @@ div.flex {
 .red {
   background-color: var(--mainred);
 }
-.blue {
+dd.blue {
   background-color: var(--koiblue);
 }
 /* 記入欄 */
+select,
 input[type="text"],
 input[type="tel"],
 input[type="email"],
-select {
+textarea {
   width: 617px;
 }
 textarea {
-  width: 617px;
   height: 220px;
   margin-bottom: 50px;
 }
