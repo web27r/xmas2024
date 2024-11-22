@@ -71,7 +71,6 @@ main article section div figure figcaption {
 FD共通フィギュア
 ーーーーーーー */
 figcaption {
-  line-height: normal;
   white-space: nowrap;
 }
 /* ーーーーーーーー
