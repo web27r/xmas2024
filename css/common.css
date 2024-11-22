@@ -25,6 +25,7 @@
 body {
   font-family: "M PLUS 1p";
   color: var(--bunblack);
+  line-height: normal;
 }
 
 .container {
