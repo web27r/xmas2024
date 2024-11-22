@@ -12,14 +12,68 @@ header {
 .backbeige {
   padding: 60px 50px;
 }
+hgroup {
+  margin-bottom: 20px;
+}
+/* 兼koibackbeige?? */
 .toicontainer {
   width: 617px;
-  margin: 70px auto 0 auto;
+  margin: 50px auto 0 auto;
 }
+/* 最初の注意書き */
+p.tyuui {
+  margin-top: 10px;
+}
+/* 入力３点セット */
+div.flex {
+  margin-top: 50px;
+  &dt,
+  .dt {
+    padding-top: 5px;
+  }
+}
+/* 必須任意の枠 */
 .box {
   padding: 5px 20px;
   margin-right: 20px;
   margin-bottom: 10px;
   color: var(--backbeige);
+}
+.red {
   background-color: var(--mainred);
+}
+dd.blue {
+  background-color: var(--koiblue);
+}
+/* 記入欄 */
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 617px;
+  height: 2em;
+  padding-left: 10px;
+}
+textarea {
+  height: 220px;
+  margin-bottom: 50px;
+}
+/* 同意セット */
+div.doui {
+  /* inputボタンが親に指令じゃないと左右中央ならん */
+  text-align: center;
+}
+input[type="checkbox"] {
+  margin-top: 15px;
+}
+input[type="submit"] {
+  margin-top: 31px;
+  padding: 18px 30px;
+  border: 3px solid #c3a80d;
+  border-radius: 10px;
+  font-family: "Kaisei Opti";
+  font-size: 25px;
+  color: var(--backbeige);
+  background-color: var(--koiblue);
 }

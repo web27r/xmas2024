@@ -6,22 +6,16 @@ header {
   padding: 15px 0 15px 0;
   background-color: var(--mainred);
 }
-
-/* ーーーー
-メインFD共通
-ーーーーー */
-/* ーー
-マップ
-ーーー */
-/* figma通りに外余白付けると変になる */
-/* main article p.map {
-margin: 0 79px 26px 81px;
-} */
-/* ーーーーーーーー
-FD共通アーティクル
-ーーーーーーーーー */
-main article {
-  margin-bottom: 90px;
+/* ーーーーーーーーーーー
+FDメイン共通アーティクル
+ーーーーーーーーーーーーー */
+main article.backbeige {
+  &:first-child {
+    padding: 60px 80px 26px 80px;
+  }
+  &:not(:first-child) {
+    padding: 60px 40px 37px 40px;
+  }
 }
 h1 {
   margin-bottom: 7px;
@@ -38,7 +32,9 @@ main hgroup {
     margin-bottom: 50px;
   }
 }
-/* オレンジ国文字 */
+/* ーーーーーー
+オレンジ国文字
+ーーーーーーー */
 main article h2 {
   height: 77px;
   margin-bottom: 20px;
@@ -51,21 +47,21 @@ main article h2 {
   background-repeat: no-repeat;
   background-position: center;
 }
-/* ーーーーーー
-FD共通セクション
-ーーーーーーー */
-main article section {
+/* ーーーーーーーー
+Menu共通セクション
+ーーーーーーーーーー */
+main article section.koibackbeige {
   background-image: url(../img/FandD.img/ornamentNoRed.png);
   background-repeat: no-repeat;
   background-position: left 26px top 20px;
-  padding: 29px 25px 31px 25px;
+  padding: 30px 25px;
 }
 main article section h3 {
   margin-left: 91px;
 }
-main article section div {
+main article section div.flex {
   gap: 38px;
-  margin: 27px 25px 31px 25px;
+  margin-top: 27px;
   text-align: center;
 }
 main article section div figure figcaption {
@@ -75,5 +71,12 @@ main article section div figure figcaption {
 FD共通フィギュア
 ーーーーーーー */
 figcaption {
-  line-height: 1.5em;
+  white-space: nowrap;
+}
+/* ーーーーーーーー
+GandW共通セクション
+ーーーーーーーーーー */
+/* 音声読み上げ対策(英語と日本語が同じ意味のタグに使う) */
+.hoge::before {
+  content: attr(data-eng);
 }
