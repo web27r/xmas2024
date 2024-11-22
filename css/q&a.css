@@ -18,7 +18,7 @@ main article.tab ul {
   padding-bottom: 100px;
 }
 
-article.tab li {
+main article.tab li {
   flex: 1;
 }
 
@@ -27,10 +27,11 @@ main article.tab label {
   cursor: pointer;
 }
 
-article.tab label[for="tab1"],
+main article.tab label[for="tab1"],
 label[for="tab2"],
 label[for="tab3"] {
   width: 240px;
+  margin: 0 auto;
   background-color: var(--mainred);
   text-align: center;
   font-family: "Kaisei Opti";
@@ -38,11 +39,18 @@ label[for="tab3"] {
   font-size: 25px;
 }
 
-article.tab label[for="tab2"] {
+main article.tab label[for="tab2"] {
   font-size: 19px;
 }
 
-article.tab label[for="tab1"],
+main article.tab label[for="tab1"],
 label[for="tab2"],
 label[for="tab3"] ::after {
+  content: "▼";
+  color: var(--backbeige);
+}
+
+/* ラジオボタンを消す */
+main article ul input {
+  display: none;
 }
