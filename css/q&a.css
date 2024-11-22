@@ -45,5 +45,4 @@ article.tab label[for="tab2"] {
 article.tab label[for="tab1"],
 label[for="tab2"],
 label[for="tab3"] ::after {
-  content: "▼";
 }
