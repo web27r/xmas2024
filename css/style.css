@@ -16,7 +16,9 @@ a {
   text-decoration: none;
 } */
 
-/* ヘッダー */
+/* ーーーー
+ヘッダー
+ーーーー */
 header {
   padding-top: 320px;
   background-image: url(../img/index.img/mainimg2.png);
@@ -47,7 +49,9 @@ header p:last-child {
   font-size: 80px;
 }
 
-/* ナビゲーション */
+/* ーーーー
+ナビゲーション
+ーーーー */
 /* nav ul {
   display: flex;
   justify-content: center;
@@ -262,7 +266,9 @@ main div p span.fontkaisei {
   font-size: 24px;
 }
 
-/* アイコン設定 */
+/* ーーーーーーーーーーーー
+値段横のカップアイコン設定
+ーーーーーーーーーーーーーー */
 main section.magcup div img {
   margin-right: 5px;
 }

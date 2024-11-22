@@ -12,16 +12,17 @@ header {
 .backbeige {
   padding: 60px 50px;
 }
-/* 兼koibackbeige */
+hgroup {
+  margin-bottom: 20px;
+}
+/* 兼koibackbeige?? */
 .toicontainer {
   width: 617px;
-  margin: 40px auto 0 auto;
-  padding: 20px;
-  line-height: normal;
+  margin: 50px auto 0 auto;
 }
 /* 最初の注意書き */
-small.a {
-  line-height: normal;
+p.tyuui {
+  margin-top: 10px;
 }
 /* 入力３点セット */
 div.flex {
@@ -51,6 +52,8 @@ input[type="tel"],
 input[type="email"],
 textarea {
   width: 617px;
+  height: 2em;
+  padding-left: 10px;
 }
 textarea {
   height: 220px;
