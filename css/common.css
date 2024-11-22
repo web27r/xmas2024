@@ -25,6 +25,7 @@
 body {
   font-family: "M PLUS 1p";
   color: var(--bunblack);
+  line-height: normal;
 }
 
 .container {
@@ -142,6 +143,6 @@ footer p.pagetop a {
   writing-mode: vertical-rl;
 }
 
-/* footer p.pagetop img {
+footer p.pagetop img {
   margin-bottom: 8px;
-} */
+}

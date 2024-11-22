@@ -1,0 +1,48 @@
+@import url(common.css);
+/* ーーーー
+ヘッダー
+ーーーー */
+header {
+  padding: 15px 0 15px 0;
+  background-color: var(--mainred);
+}
+
+/* ーーーー
+タブ切り替え
+ーーーーーー */
+main article.tab ul {
+  display: flex;
+  gap: 10px;
+  color: var(--bunblack);
+  position: relative;
+  padding-bottom: 100px;
+}
+
+article.tab li {
+  flex: 1;
+}
+
+main article.tab label {
+  display: block;
+  cursor: pointer;
+}
+
+article.tab label[for="tab1"],
+label[for="tab2"],
+label[for="tab3"] {
+  width: 240px;
+  background-color: var(--mainred);
+  text-align: center;
+  font-family: "Kaisei Opti";
+  color: var(--backbeige);
+  font-size: 25px;
+}
+
+article.tab label[for="tab2"] {
+  font-size: 19px;
+}
+
+article.tab label[for="tab1"],
+label[for="tab2"],
+label[for="tab3"] ::after {
+}
