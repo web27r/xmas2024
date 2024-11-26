@@ -1,4 +1,5 @@
 @import url(common.css);
+
 /* ーーーー
 ヘッダー
 ーーーー */
@@ -7,10 +8,22 @@ header {
   background-color: var(--mainred);
 }
 
+main {
+  padding-bottom: 10px;
+}
+
+main article {
+  padding: 60px 125px;
+}
+
+main article hgroup {
+  margin-bottom: 50px;
+}
+
 /* ーーーー
 タブ切り替え
 ーーーーーー */
-main article.tab ul {
+main article ul {
   display: flex;
   gap: 10px;
   color: var(--bunblack);
@@ -18,20 +31,21 @@ main article.tab ul {
   padding-bottom: 100px;
 }
 
-main article.tab li {
+main article li {
   flex: 1;
 }
 
-main article.tab label {
+main article label {
   display: block;
   cursor: pointer;
 }
 
-main article.tab label[for="tab1"],
+/* タブの設定 */
+label[for="tab1"],
 label[for="tab2"],
 label[for="tab3"] {
-  width: 240px;
-  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 15px 10px;
   background-color: var(--mainred);
   text-align: center;
   font-family: "Kaisei Opti";
@@ -39,18 +53,104 @@ label[for="tab3"] {
   font-size: 25px;
 }
 
-main article.tab label[for="tab2"] {
-  font-size: 19px;
+/* タブを選択したときの設定 */
+input:checked+label {
+  border-bottom: 5px solid var(--mainred);
+  background-color: var(--koibackbeige);
+  color: var(--bunblack);
 }
 
-main article.tab label[for="tab1"],
-label[for="tab2"],
-label[for="tab3"] ::after {
-  content: "▼";
-  color: var(--backbeige);
+main article label[for="tab2"] {
+  padding: 8.5px 21px 8.5px 10px;
+  font-size: 17px;
+}
+
+#tab1:checked~.tab1fill {
+  margin-bottom: 1650px;
+}
+
+#tab2:checked~.tab2fill {
+  margin-bottom: 950px;
+}
+
+#tab3:checked~.tab3fill {
+  margin-bottom: 1350px;
+}
+
+main article section {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+/* チェックボックスでタブ切り替え */
+main article input:checked~section {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(100%);
 }
 
 /* ラジオボタンを消す */
 main article ul input {
   display: none;
+}
+
+main article section.koibackbeige {
+  padding: 55px 30px 0 30px;
+  border: 2px solid var(--mainred);
+}
+
+main article li h3 {
+  margin-bottom: 70px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+main article dl {
+  margin-bottom: 60px;
+}
+
+main article dl dt {
+  padding: 10px 10px 20px 60px;
+  margin-bottom: 10px;
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+main article dl dd {
+  padding: 10px 10px 20px 60px;
+  position: relative;
+  font-size: 18px;
+}
+
+main article dl dt::before,
+dd::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 41px;
+  height: 41px;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 200%;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+
+main article dl dt:before {
+  content: "Q";
+  background-color: var(--mainred);
+}
+
+main article dl dd:before {
+  content: "A";
+  background-color: var(--koiblue);
 }

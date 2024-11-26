@@ -141,6 +141,7 @@ footer p.pagetop a {
   font-size: 25px;
   /* 縦書き設定 */
   writing-mode: vertical-rl;
+  display: flex;
 }
 
 footer p.pagetop img {

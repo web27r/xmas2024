@@ -81,13 +81,20 @@ main {
   background-attachment: fixed;
 } */
 
+
+/* スクロールすると、下からふわっと出現する設定 */
+section.on {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* 外側の白い枠の九通の設定 */
-main section.news,
-section.event,
-section.aboutxmas,
-section.magcup,
-section.caution {
+section {
   padding: 60px 85px 40px 85px;
+  /* スクロールすると、下からふわっと出現する設定 */
+  transition: 1s ease-in-out;
+  transform: translateY(50px);
+  opacity: 0;
   /* margin-bottom: 90px; */
   /* border-radius: 15px;
   background-color: var(--backbeige); */
@@ -363,6 +370,7 @@ footer p.logo {
 }
 
 /* section内のデコレーション設定 */
+/* 雪 class=snow*/
 main section.news,
 section.magcup,
 section.caution {
@@ -371,6 +379,7 @@ section.caution {
   background-position: top 20px left 31px;
 }
 
+/* ぶら下げ飾り class=uekazari */
 main section.event,
 section.aboutxmas {
   background-image: url(../img/index.img/deco1.svg), url(../img/index.img/deco2.svg);
