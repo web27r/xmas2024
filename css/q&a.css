@@ -119,10 +119,3 @@ main article dl dd:before {
   content: "A";
   background-color: var(--koiblue);
 }
-
-/* ぶら下げ飾り class=uekazari */
-main article {
-  background-image: url(../img/index.img/deco1.svg), url(../img/index.img/deco2.svg);
-  background-repeat: no-repeat;
-  background-position: top 0 left 25px, top 0 right 21px;
-}

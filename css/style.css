@@ -81,7 +81,6 @@ main {
   background-attachment: fixed;
 } */
 
-
 /* スクロールすると、下からふわっと出現する設定 */
 section.on {
   transform: translateY(0);
@@ -367,22 +366,4 @@ footer p.logo {
   position: absolute;
   top: 0px;
   right: 20px;
-}
-
-/* section内のデコレーション設定 */
-/* 雪 class=snow*/
-main section.news,
-section.magcup,
-section.caution {
-  background-image: url(../img/index.img/decosnow.svg);
-  background-repeat: no-repeat;
-  background-position: top 20px left 31px;
-}
-
-/* ぶら下げ飾り class=uekazari */
-main section.event,
-section.aboutxmas {
-  background-image: url(../img/index.img/deco1.svg), url(../img/index.img/deco2.svg);
-  background-repeat: no-repeat;
-  background-position: top 0 left 25px, top 0 right 21px;
 }

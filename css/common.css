@@ -147,3 +147,18 @@ footer p.pagetop a {
 footer p.pagetop img {
   margin-bottom: 8px;
 }
+
+/* section内のデコレーション設定 */
+/* 雪 */
+.snow {
+  background-image: url(../img/index.img/decosnow.svg);
+  background-repeat: no-repeat;
+  background-position: top 20px left 31px;
+}
+
+/* ぶら下げ飾り */
+.ornament {
+  background-image: url(../img/index.img/deco1.svg), url(../img/index.img/deco2.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 left 25px, top 0 right 21px;
+}
