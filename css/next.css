@@ -33,34 +33,74 @@ main hgroup {
   }
 }
 /* ーーーーーー
-オレンジ国文字
-ーーーーーーー */
-main article h2 {
-  height: 77px;
-  margin-bottom: 20px;
+FDGW共通hgroup
+ーーーーーーーー */
+hgroup.flex {
+  gap: 12px;
   align-items: center;
-  color: var(--bunorange);
-  font-family: "Kaisei Opti";
+  & p.none {
+    text-align: unset;
+    color: var(--bunblack);
+    font-size: unset;
+  }
+}
+hgroup h3,
+article.workshop h3 {
   font-size: 25px;
-  text-align: center;
-  background-image: url(../img/FandD.img/kuniback.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  font-weight: 700;
 }
 /* ーーーーーーーー
-Menu共通セクション
+FD共通セクション
 ーーーーーーーーーー */
+/* 国の名前 */
+h2 {
+  width: 368px;
+  margin-left: auto;
+  margin-right: auto;
+}
 main article section.koibackbeige {
-  background-image: url(../img/FandD.img/ornamentNoRed.png);
-  background-repeat: no-repeat;
-  background-position: left 26px top 20px;
   padding: 30px 25px;
 }
-main article section h3 {
-  margin-left: 91px;
+main article section.koibackbeige {
+  background-repeat: no-repeat;
+  background-position: left 26px top 20px;
+  background-size: 30px 38px;
+}
+main article.FandD section.koibackbeige {
+  background-image: url(../img/FandD.img/ornamentNoRed.png);
+}
+main article.goods section.koibackbeige {
+  background-image: url(../img/FandD.img/ornamentAbcBlue.png);
+}
+main article.workshop section.koibackbeige {
+  background-image: url(../img/FandD.img/WorkShop.png);
+}
+main article section.koibackbeige hgroup.flex p {
+  &.no,
+  &.abc {
+    color: var(--backbeige);
+    font-size: 22px;
+    margin-right: 21px;
+  }
+  /* &.no2 {
+    } */
+}
+main article.FandD section.koibackbeige hgroup.flex p {
+  font-family: "Kaisei Opti";
+}
+main article.goods section.koibackbeige hgroup.flex p {
+  font-family: "Miltonian Tattoo", serif;
+}
+main article section hgroup {
+  /* 30-23 */
+  margin-top: -7px;
+  /* 34-25 */
+  margin-left: 9px;
+  &h3 {
+    margin-right: 12px;
+  }
 }
 main article section div.flex {
-  gap: 38px;
   margin-top: 27px;
   text-align: center;
 }
@@ -73,10 +113,10 @@ FD共通フィギュア
 figcaption {
   white-space: nowrap;
 }
-/* ーーーーーーーー
-GandW共通セクション
-ーーーーーーーーーー */
-/* 音声読み上げ対策(英語と日本語が同じ意味のタグに使う) */
-.hoge::before {
-  content: attr(data-eng);
+/* ーーーーーーーーーーーーーーーー
+グッズ＆ワークショップ共通セクション
+ーーーーーーーーーーーーーーーーーー */
+article.goods div.flex,
+article.workshop div.flex {
+  text-align: left;
 }
