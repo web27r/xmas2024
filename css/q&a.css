@@ -52,7 +52,7 @@ label[for="tab3"] {
 }
 
 /* タブを選択したときの設定 */
-input:checked + label {
+input:checked+label {
   border-bottom: 5px solid var(--mainred);
   background-color: var(--koibackbeige);
   color: var(--bunblack);
@@ -96,7 +96,7 @@ main article dl dd {
 }
 
 main article dl dt::before,
-dd::before {
+main article dl dd::before {
   position: absolute;
   left: 0;
   top: 0;

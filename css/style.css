@@ -138,10 +138,10 @@ hgroup p {
 
 /* section共通の薄ピンクの枠の設定 */
 main section.event div.day,
-div.free,
-div.place,
-div.access,
-section.magcup div {
+main section.event div.free,
+main section.event div.place,
+main section.event div.access,
+main section.event section.magcup div {
   padding: 40px 80px;
   flex-wrap: wrap;
   background-color: var(--koibackbeige);
@@ -176,7 +176,7 @@ main section.event div.day dd:nth-child(2) {
 }
 
 main section.event div.day dd:nth-child(3),
-section.event div.access dd {
+main section.event div.access dd {
   line-height: 30px;
 }
 
@@ -185,8 +185,8 @@ main section.event div.free {
 }
 
 main section.event div.free dd,
-div.place dd,
-div.access dd {
+main section.event div.place dd,
+main section.event div.access dd {
   color: #213b60;
   font-size: 20px;
 }
@@ -324,11 +324,13 @@ main section.specialoffers div.flex {
 
 main section.specialoffers div.otoku {
   padding: 16px 34px;
-  border-right: 2px dashed #b64b15; /* 右側に縦線 */
+  border-right: 2px dashed #b64b15;
+  /* 右側に縦線 */
 }
 
 main section.specialoffers div.otoku:last-child {
-  border-right: none; /* 最後のアイテムには縦線を表示しない */
+  border-right: none;
+  /* 最後のアイテムには縦線を表示しない */
 }
 
 main section.specialoffers div.otoku p:nth-child(2) {

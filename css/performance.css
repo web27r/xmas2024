@@ -1,0 +1,105 @@
+@import url(common.css);
+
+/* ーーーー
+ヘッダー
+ーーーー */
+header {
+  padding: 15px 0 15px 0;
+  background-color: var(--mainred);
+}
+
+main article {
+  padding: 60px 40px;
+}
+
+main article hgroup {
+  margin-bottom: 85px;
+}
+
+main article section {
+  position: relative;
+  background-image: url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg);
+  background-repeat: no-repeat;
+  background-position: top 15px left 15px, top 15px right 15px, bottom 15px left 15px, bottom 15px right 15px;
+}
+
+main article section div {
+  padding: 85px 80px 66px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 30px;
+  justify-content: center;
+}
+
+main article section h3 {
+  padding: 20px 80px;
+  position: absolute;
+  top: -46px;
+  left: 250px;
+  background-image: url(../img/performance.img/titlelabel.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Kaisei Opti";
+  font-size: 35px;
+  letter-spacing: -3.5px;
+  color: var(--backbeige);
+}
+
+main article section figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ーーーーー
+テーブル
+ーーーーーーー */
+table {
+  border-spacing: 15px 0;
+  border-collapse: separate;
+}
+
+table thead tr th {
+  width: 150px;
+  padding: 5px 50px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: var(--backbeige);
+}
+
+table thead tr th.green {
+  background-color: #374312;
+}
+
+table thead tr th.purple {
+  background-color: #644374;
+}
+
+table thead tr th.yellow {
+  background-color: #D79D47;
+}
+
+table thead tr th.koiorange {
+  background-color: #922C14;
+}
+
+table thead tr th.blue {
+  background-color: #2E406A;
+}
+
+table thead tr th.red {
+  background-color: #B6151A;
+}
+
+table tbody tr th {
+  background-color: #8C3A33;
+  border-bottom: 1px solid #fff;
+  vertical-align: middle;
+  font-size: 25px;
+  color: var(--backbeige);
+}
+
+table tbody tr td {
+  background-color: #DCD0C7;
+  height: 80px;
+}
