@@ -18,12 +18,15 @@ main article hgroup {
 
 main article section {
   position: relative;
+}
+
+main article section.aboutartist {
   background-image: url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg);
   background-repeat: no-repeat;
   background-position: top 15px left 15px, top 15px right 15px, bottom 15px left 15px, bottom 15px right 15px;
 }
 
-main article section div {
+main article section.aboutartist div {
   padding: 85px 80px 66px 80px;
   display: flex;
   flex-wrap: wrap;
@@ -54,17 +57,55 @@ main article section figcaption {
 /* ーーーーー
 テーブル
 ーーーーーーー */
+main article section.schedule {
+  margin-top: 150px;
+}
+
+/* テーブルタイトル */
+main article section.schedule h3 {
+  position: absolute;
+  top: -100px;
+  padding: 20px 112px;
+}
+
+main article section.schedule div.artisttable {
+  overflow: auto; /*　横スクロール設定 */
+  -webkit-overflow-scrolling: touch;
+  height: 750px;
+}
+
 table {
-  border-spacing: 15px 0;
+  border-spacing: 10px 0;
   border-collapse: separate;
 }
 
-table thead tr th {
-  width: 150px;
-  padding: 5px 50px;
+/* 一列目の日付のセルの設定 */
+table thead tr {
+  position: sticky; /* 日付固定配置 */
+  top: 0;
+}
+
+table thead tr th.date {
+  position: relative;
+  padding: 30px 90px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  font-family: "Mate SC";
+  font-size: 25px;
   color: var(--backbeige);
+}
+
+table thead tr span.posi {
+  position: absolute; /* 12月の固定配置 */
+  top: 5px;
+  left: 55px;
+}
+
+table thead tr span.fontbig {
+  position: absolute; /* 日の固定配置 */
+  top: 10px;
+  left: 84px;
+  font-size: 40px;
 }
 
 table thead tr th.green {
@@ -76,23 +117,33 @@ table thead tr th.purple {
 }
 
 table thead tr th.yellow {
-  background-color: #D79D47;
+  background-color: #d79d47;
 }
 
 table thead tr th.koiorange {
-  background-color: #922C14;
+  background-color: #922c14;
 }
 
 table thead tr th.blue {
-  background-color: #2E406A;
+  background-color: #2e406a;
 }
 
 table thead tr th.red {
-  background-color: #B6151A;
+  background-color: #b6151a;
 }
 
-table tbody tr th {
-  background-color: #8C3A33;
+table tbody tr {
+  height: 80px;
+}
+
+/* 一行目の時間のセルの設定 */
+table tbody tr th.time {
+  padding: 80px 21px;
+  z-index: 1;
+  position: sticky; /* 時間固定配置 */
+  top: 60px;
+  left: 0;
+  background-color: #8c3a33;
   border-bottom: 1px solid #fff;
   vertical-align: middle;
   font-size: 25px;
@@ -100,6 +151,65 @@ table tbody tr th {
 }
 
 table tbody tr td {
-  background-color: #DCD0C7;
-  height: 80px;
+  position: sticky;
+  top: 60px;
+  background-color: #dcd0c7;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* タイムテーブルがあるセルの背景色、ボーダー設定 */
+table tbody tr td.seruback div {
+  margin: 10px 10px 0 10px;
+  padding: 3px 0 10px 5px;
+  background-color: #ededed;
+}
+
+table tbody tr td.green div {
+  border: 2px solid #374312;
+}
+
+table tbody tr td.purple div {
+  border: 2px solid #644374;
+}
+
+table tbody tr td.yellow div {
+  border: 2px solid #d79d47;
+}
+
+table tbody tr td.koiorange div {
+  border: 2px solid #922c14;
+}
+
+table tbody tr td.blue div {
+  border: 2px solid #2e406a;
+}
+
+table tbody tr td.red div {
+  border: 2px solid #b6151a;
+}
+
+/* タイムテーブルのセル内の時間の色 */
+table tbody td span.green {
+  color: #374312;
+}
+
+table tbody td span.purple {
+  color: #644374;
+}
+
+table tbody td span.yellow {
+  color: #d79d47;
+}
+
+table tbody td span.koiorange {
+  color: #922c14;
+}
+
+table tbody td span.blue {
+  color: #2e406a;
+}
+
+table tbody td span.red {
+  color: #b6151a;
 }

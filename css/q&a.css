@@ -52,7 +52,7 @@ label[for="tab3"] {
 }
 
 /* タブを選択したときの設定 */
-input:checked+label {
+input:checked + label {
   border-bottom: 5px solid var(--mainred);
   background-color: var(--koibackbeige);
   color: var(--bunblack);
@@ -84,9 +84,9 @@ main article dl {
 }
 
 main article dl dt {
-  padding: 10px 10px 20px 60px;
-  margin-bottom: 10px;
+  padding: 0 10px 0 60px;
   position: relative;
+
   font-weight: bold;
 }
 
@@ -99,7 +99,7 @@ main article dl dt::before,
 main article dl dd::before {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 6;
   width: 41px;
   height: 41px;
   border-radius: 25px;
@@ -118,4 +118,16 @@ main article dl dt:before {
 main article dl dd:before {
   content: "A";
   background-color: var(--koiblue);
+}
+
+main article dt div {
+  padding: 15px;
+  border: 1px dashed #895725;
+}
+
+main article dd div {
+  padding: 15px;
+  background-color: #ded5bf7d;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
