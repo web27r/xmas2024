@@ -8,19 +8,21 @@
     <link rel="icon" href="img/common.img/favicon1.png" type="image/png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/next.css">
+    <!-- jQueryの読み込み -->
+    <script src="js/jquery-3.7.1.min.js"></script>
 </head>
 
 <!-- ーーー
 ヘッダー
 ーーーー -->
-<body>
+<body id="top">
     <!-- トプペからナブ丸コピ -->
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">トップページ</a></li>
                 <li><a href="next.html">フード・ドリンク</a></li>
-                <li><a href="#">パフォーマンス</a></li>
+                <li><a href="performance.html">パフォーマンス</a></li>
                 <li><a href="#">会場マップ</a></li>
                 <li><a href="index.html#access">アクセス</a></li>
                 <li><a href="q&a.html">Q&A</a></li>
@@ -33,7 +35,13 @@
             <!-- ーーー
             会場マップ
             ーーーーー -->
-            <article class="backbeige snow">
+            <article class="backbeige snow map">
+                <h1 class="midashired mise">お店一覧</h1>
+                <ul class="flex">
+                    <li><a href="#FandD">フード&#x30FB;ドリンク</a></li>
+                    <li><a href="#goods">グッズ</a></li>
+                    <li><a href="#workshop">ワークショップ</a></li>
+                </ul>
                 <hgroup class="map">
                     <h1 class="midashired">MAP</h1>
                     <p>会場マップ</p>
@@ -43,7 +51,7 @@
             <!-- ーーーーーーーーーーーーーーーーーーーーーーー
                                     ここからフードandドリンク
                                     ーーーーーーーーーーー -->
-            <article class="backbeige snow FandD">
+            <article id="FandD" class="backbeige snow FandD">
                 <hgroup class="FandD">
                     <h1 class="midashired">FOOD &amp; DRINK</h1>
                     <p>フード・ドリンク</p>
@@ -216,8 +224,8 @@
                 </section>
                 <h2><img src="img/FandD.img/3Sweden/SwedenTitle.png" alt="スウェーデン料理"></h2>
                 <section class="koibackbeige">
-                    <hgroup class="flex">
-                        <p class="no no2">10</p>
+                    <hgroup class="flex no2">
+                        <p class="no">10</p>
                         <h3>Hamburg Haus</h3>
                         <p class="none">ハンブルグハウス</p>
                     </hgroup>
@@ -235,7 +243,7 @@
                 </section>
                 <h2><img src="img/FandD.img/4Spain/SpainTitle.png" alt="スペイン料理"></h2>
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="flex no2">
                         <p class="no">11</p>
                         <h3>La Casa Navideña</h3>
                         <p class="none">ラ&#x30FB;カサ&#x30FB;ナビデーニャ</p>
@@ -254,7 +262,7 @@
                 </section>
                 <h2><img src="img/FandD.img/5Finland/FinlandTitle.png" alt="フィンランド料理"></h2>
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="flex no2">
                         <p class="no">12</p>
                         <h3>Joulukoti</h3>
                         <p class="none">ヨウルコティ</p>
@@ -273,7 +281,7 @@
                 </section>
                 <h2><img src="img/FandD.img/6Denmark/DenmarkTitle.png" alt="デンマーク料理"></h2>
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="flex no2">
                         <p class="no">13</p>
                         <h3>Julens Hus</h3>
                         <p class="none">ユーレンス フス</p>
@@ -292,7 +300,7 @@
                 </section>
                 <h2><img src="img/FandD.img/7othermenu/OtherTitle.png" alt="その他料理"></h2>
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="flex no2">
                         <p class="no">14</p>
                         <h3>POTALU</h3>
                         <p class="none">ポタル</p>
@@ -310,7 +318,7 @@
                     </div>
                 </section>
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="flex no2">
                         <p class="no">15</p>
                         <h3>Poppin Churitos Haus</h3>
                         <p class="none">ポッピンチュリトスハウス</p>
@@ -331,7 +339,7 @@
             <!-- ーーーーー
             ここからグッズ
             ーーーーーーー -->
-            <article class="backbeige goods snow">
+            <article id="goods" class="backbeige goods snow">
                 <hgroup class="GandW">
                     <h1 class="midashired">GOODS</h1>
                     <p>グッズ</p>
@@ -362,7 +370,7 @@
                         <img src="img/FandD.img/8Bgoods/B_candle2.png" alt="白背景にキャンドル">
                         <img src="img/FandD.img/8Bgoods/B_candle3.png" alt="手に持ったフレグランス">
                     </div>
-                    <p>「Koselig（コーシェリ）」という言葉をご存知ですか？それは、“こころがホッとする”という意味のノルウェー語です。天然由来100%のソイワックスキャンドルを中心に、ナチュラルフレグランスをお届けします。クリスマス限定の香りもご用意しております。</p>
+                    <p class="gyou3">「Koselig（コーシェリ）」という言葉をご存知ですか？それは、“こころがホッとする”という意味のノルウェー語です。天然由来100%のソイワックスキャンドルを中心に、ナチュラルフレグランスをお届けします。クリスマス限定の香りもご用意しております。</p>
                 </section>
 
                 <section class="koibackbeige">
@@ -376,7 +384,7 @@
                         <img src="img/FandD.img/8Cgoods/C_docecookie2.png" alt="サンタのアイシングクッキー">
                         <img src="img/FandD.img/8Cgoods/C_docecookie3.png" alt="サンタとトナカイと雪だるまのアイシングクッキー">
                     </div>
-                    <p>人から人へ「つながる笑顔」をモットーに、アイシングクッキーで世界中を笑顔にします。熟練のデコレーターが一つ一つ、心を込めて手作りしています。</p>
+                    <p>人から人へ「つながる笑顔」をモットーに、アイシングクッキーで世界中を笑顔にします。<br>熟練のデコレーターが一つ一つ、心を込めて手作りしています。</p>
                 </section>
 
                 <section class="koibackbeige">
@@ -390,7 +398,7 @@
                         <img src="img/FandD.img/8Dgoods/D_stollen2.png" alt="真っ白なシュトーレン">
                         <img src="img/FandD.img/8Dgoods/D_stollen3.png" alt="サンタの乗ったシュトーレン">
                     </div>
-                    <p>ドイツの伝統的なお菓子シュトレンとプレッツェルを集めた限定店舗です。ドイツでは、アドベントの4週間の間に、シュトレンを薄くスライスして少しずつ食べる習慣があります。関西初出店限定シュトレンとプレッツェルが揃います。</p>
+                    <p class="gyou3">ドイツの伝統的なお菓子シュトレンとプレッツェルを集めた限定店舗です。<br>ドイツでは、アドベントの4週間の間に、シュトレンを薄くスライスして少しずつ食べる習慣があります。関西初出店限定シュトレンとプレッツェルが揃います。</p>
                 </section>
 
                 <section class="koibackbeige">
@@ -447,12 +455,12 @@
                         <img src="img/FandD.img/8Hgoods/H_sweetstea2.png" alt="キャラメルナッツ">
                         <img src="img/FandD.img/8Hgoods/H_sweetstea3.png" alt="ALTHAUSの紅茶">
                     </div>
-                    <p>&#x300C;ワールドチョコレートマスターズ2024&#x300D;日本代表選考会のファイナリストであるショコラティエ&#x30FB;西田明弘氏によるクリスマス限定チョコレートやドイツではクリスマスマーケットでお馴染みのキャラメルナッツ&#x300C;ゲブランテマンデルン&#x300D;、また北ドイツのブランド&#x300C;ALTHAUS&#x300D;の紅茶をお届けします。贈り物にもピッタリです&sung;</p>
+                    <p class="gyou3">&#x300C;ワールドチョコレートマスターズ2024&#x300D;日本代表選考会のファイナリストであるショコラティエ&#x30FB;西田明弘氏によるクリスマス限定チョコレートやドイツではクリスマスマーケットでお馴染みのキャラメルナッツ&#x300C;ゲブランテマンデルン&#x300D;、また北ドイツのブランド&#x300C;ALTHAUS&#x300D;の紅茶をお届けします。贈り物にもピッタリです&sung;</p>
                 </section>
 
                 <section class="koibackbeige">
                     <hgroup class="flex">
-                        <p class="abc">I</p>
+                        <p class="abc abci">I</p>
                         <h3>Alt Heide</h3>
                         <p class="none">アルト&#x3000;ハイデ</p>
                     </hgroup>
@@ -468,59 +476,59 @@
             <!-- ーーーーーーーーーーーーーー
                             ここからワークショップ
                             ーーーーーーーーーー -->
-            <article class="backbeige workshop snow">
+            <article id="workshop" class="backbeige workshop snow">
                 <hgroup class="GandW">
                     <h1 class="midashired">WORKSHOP</h1>
                     <p>ワークショップ</p>
                 </hgroup>
-                <section class="koibackbeige">
-                    <h3>スノードーム</h3>
+                <section class="koibackbeige snowdome">
+                    <h3 class="snowdome">スノードーム</h3>
                     <div class="flex">
                         <img src="img/FandD.img/9workshop/workshop_snowdorm.png" alt="サンタのスノードーム">
                         <div>
                             <div class="flex">
-                                <dl>
+                                <dl class="flex">
                                     <dt>現地体験キット</dt>
                                     <dd>&yen;4,500</dd>
                                 </dl>
                                 <span>&#x30FB;</span>
-                                <dl>
+                                <dl class="flex">
                                     <dt>持ち帰り製作キット</dt>
                                     <dd>&yen;3,500</dd>
                                 </dl>
                             </div>
-                            <p>世界で一つだけのオリジナルスノードームを作ろう。いろいろなモチーフを自由にレイアウトしてあなただけのスノードームを作ってクリスマスの思い出にしよう。様々なモチーフと水とキラキラしたパウダーを入れて雪の舞う完成したスノードームを持ち帰れます。</p>
+                            <p class="mb1_5em">世界で一つだけのオリジナルスノードームを作ろう。いろいろなモチーフを自由にレイアウトしてあなただけのスノードームを作ってクリスマスの思い出にしよう。様々なモチーフと水とキラキラしたパウダーを入れて雪の舞う完成したスノードームを持ち帰れます。</p>
                             <aside>&#x203B;オプションで透明なスノードームを綺麗に光らせられる&#x300C;キラキラ LEDコースター 1,000円&#x300D;を付けられます</aside>
                             <aside>&#x203B;スノードームの中のモチーフはイメージのため実際と異なる場合があります</aside>
-                            <aside>&#x203B;決済方法はクレジットカードまたはPayPay決済のみ</aside>
+                            <aside class="mb1_5em">&#x203B;決済方法はクレジットカードまたはPayPay決済のみ</aside>
                             <dl class="flex">
-                                <dt>&#xFF1C;所要時間&#xFF1E;</dt>
+                                <dt class="flex6em">&#xFF1C;所要時間&#xFF1E;</dt>
                                 <dd>30&#xFF5E;45分</dd>
                             </dl>
                             <dl class="flex">
-                                <dt>&#xFF1C;講師&#xFF1E;</dt>
+                                <dt class="flex6em">&#xFF1C;講師&#xFF1E;</dt>
                                 <dd>合同会社スノードームクリエーター</dd>
                             </dl>
                         </div>
                     </div>
                 </section>
 
-                <section class="koibackbeige">
-                    <h3>キャンドルフラワーアレンジ Red・Natunal</h3>
+                <section class="koibackbeige hana">
+                    <h3 class="hana">キャンドルフラワーアレンジ Red・Natunal</h3>
                     <div class="flex">
                         <div class="left">
-                            <dl>
+                            <dl class="flex">
                                 <dt>キャンドルフラワーアレンジ</dt>
                                 <dd>&yen;4,500</dd>
                             </dl>
-                            <p>アーティフィシャルフラワーで作る贅沢な雰囲気のキャンドルフラワーアレンジです。華やかなレッドカラーとシックなナチュラルカラーの２プラン。 揺らめく灯りに照らされたクリスマス感たっぷりの飾りを手作りしてみませんか&#xFF1F;下準備された材料を自由にあしらうだけ&sung;思い出に残るひと時をご一緒しましょう&#xFF01;</p>
-                            <aside>&#x203B;決済方法はクレジットカードまたはPayPay決済のみ</aside>
+                            <p class="mb1_5em">アーティフィシャルフラワーで作る贅沢な雰囲気のキャンドルフラワーアレンジです。華やかなレッドカラーとシックなナチュラルカラーの２プラン。 揺らめく灯りに照らされたクリスマス感たっぷりの飾りを手作りしてみませんか&#xFF1F;下準備された材料を自由にあしらうだけ&sung;思い出に残るひと時をご一緒しましょう&#xFF01;</p>
+                            <aside class="mb1_5em">&#x203B;決済方法はクレジットカードまたはPayPay決済のみ</aside>
                             <dl class="flex">
-                                <dt>&#xFF1C;所要時間&#xFF1E;</dt>
-                                <dd>30&#xFF5E;60分</dd>
+                                <dt class="flex7em">&#xFF1C;所要時間&#xFF1E;</dt>
+                                <dd>60分</dd>
                             </dl>
                             <dl class="flex">
-                                <dt>&#xFF1C;講師&#xFF1E;</dt>
+                                <dt class="flex7em">&#xFF1C;講師&#xFF1E;</dt>
                                 <dd>YUIKO HORIUCHI</dd>
                             </dl>
                         </div>
@@ -536,17 +544,20 @@
     <!-- トプペから丸コピ -->
     <footer>
         <div class="container">
-            <p class="aboutcompany">主催 クリスマスマーケット in 大阪 実行委員会<br>協力 近鉄不動産株式会社<br>後援 大阪・神戸ドイツ連邦共和国総領事館／ドイツ観光局／天王寺区／公益財団法人大阪観光局</p>
+            <p class="aboutcompany">主催 クリスマスマーケット in 大阪 実行委員会<br>協力 近鉄不動産株式会社<br>後援 大阪・神戸ドイツ連邦共和国総領事館／ドイツ観光局／天王寺区／公益財団法人大阪観光局
+            </p>
             <div class="companyicon">
                 <p><a href="https://japan.diplo.de/Vertretung/japan/ja/Startseite.html"><img src="img/common.img/site1.png" width="180" height="80" alt="ドイツ大使館&#x30FB;総領事館サイト"></a></p>
                 <p><a href="#"><img src="img/common.img/site2.jpg" width="180" height="80" alt="ドイツ総領事館150周年ロゴ"></a></p>
                 <p><a href="https://x.com/GermanyTravelJP"><img src="img/common.img/site3.png" width="180" height="80" alt="ドイツ観光局のSNS"></a></p>
             </div>
-            <p class="logo"><a href="index.html"><img src="img/common.img/logo.png" width="200" height="200" alt="ロゴ"></a></p>
+            <p class="logo"><a href="index.html"><img src="img/common.img/logo2.png" width="200" height="200" alt="ロゴ"></a>
+            </p>
             <p class="pagetop"><a href="#top"><img src="img/common.img/pagetop.svg" alt="ページトップへ">PAGE TOP</a></p>
             <p class="copyright"><small>COPYRIGHT&copy;OSAKA CHRISTMASMARKET.ALL RIGHTS RESERVED.</small></p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
