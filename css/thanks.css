@@ -6,23 +6,54 @@ header {
   padding: 15px 0 15px 0;
   background-color: var(--mainred);
 }
-/* ー
-本編
-ーー */
+
 /* ノートPC@media (max-width: 1199px)
 タブレット@media (max-width: 991px)
 スマホ縦@media (max-width: 575px) */
-main article.backbeige {
-  padding: 60px 10px 60px 10px;
+
+/* ーー
+共通幅
+ーーー */
+
+/* 外身 */
+.container,
+.backbeige {
   @media (max-width: 1199px) {
-    width: 700px;
+    width: 951px;
     margin-left: auto;
     margin-right: auto;
     @media (max-width: 991px) {
-      width: 550px;
+      width: 515px;
       margin-left: auto;
       margin-right: auto;
+      @media (max-width: 575px) {
+        width: 335px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
+  }
+}
+/* 中身 */
+.toicontainer {
+  margin: 50px auto 0 auto;
+  width: 801px;
+  @media (max-width: 991px) {
+    width: 465px;
+    @media (max-width: 575px) {
+      width: 305px;
+    }
+  }
+}
+/* } */
+/* ーーーー
+各ブロック
+ーーーーー */
+.backbeige {
+  margin-top: 70px;
+  padding: 60px 10px 78px 10px;
+  @media (max-width: 575px) {
+    padding: 35px 10px 53px 10px;
   }
 }
 hgroup {
@@ -33,14 +64,10 @@ p.blue {
   color: var(--bunblue);
   font-size: 25px;
 }
-.toicontainer {
-  width: 801px;
-  margin: 50px auto 0 auto;
-  @media (max-width: 1199px) {
-    width: 650px;
-    @media (max-width: 991px) {
-      width: 450px;
-    }
+br.born575 {
+  display: none;
+  @media (max-width: 575px) {
+    display: inline;
   }
 }
 p.mb20 {

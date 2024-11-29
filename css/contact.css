@@ -6,45 +6,76 @@ header {
   padding: 15px 0 15px 0;
   background-color: var(--mainred);
 }
-/* ー
-本編
-ーー */
+
 /* ノートPC@media (max-width: 1199px)
 タブレット@media (max-width: 991px)
-スマホ縦@media (max-width: 575px) */
+スマホ縦@media (max-width: 575px)
+コピペセット */
+
+/* ーー
+共通幅
+ーーー */
+
+/* 外身 */
+.container,
 .backbeige {
-  padding: 60px 50px;
   @media (max-width: 1199px) {
-    width: 700px;
+    width: 951px;
     margin-left: auto;
     margin-right: auto;
     @media (max-width: 991px) {
-      width: 550px;
-      margin-left: auto;
-      margin-right: auto;
+      width: 515px;
+      @media (max-width: 575px) {
+        width: 335px;
+      }
+    }
+  }
+}
+/* 中身 */
+.toicontainer,
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 617px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 991px) {
+    width: 455px;
+    @media (max-width: 575px) {
+      width: 275px;
+    }
+  }
+}
+/* ーーーー
+各ブロック
+ーーーーー */
+.backbeige {
+  padding: 60px 50px 78px 50px;
+  @media (max-width: 991px) {
+    padding: 60px 30px 78px 30px;
+    @media (max-width: 575px) {
+      padding: 35px 20px 53px 20px;
     }
   }
 }
 hgroup {
   margin-bottom: 20px;
 }
-/* 兼koibackbeige?? */
 .toicontainer {
-  width: 617px;
   margin: 50px auto 0 auto;
-  @media (max-width: 991px) {
-    width: 450px;
-  }
 }
 /* 最初の注意書き */
 p.tyuui {
   margin-top: 10px;
 }
-/* 入力３点セット */
+/* 各入力３点セット */
 div.flex {
   margin-top: 50px;
   align-items: center;
 }
+
 /* 必須任意の枠 */
 .box {
   padding: 5px 20px;
@@ -65,19 +96,20 @@ input[type="text"],
 input[type="tel"],
 input[type="email"],
 textarea {
-  width: 617px;
   height: 2em;
   padding-left: 10px;
   border-radius: 5px;
-  @media (max-width: 991px) {
-    width: 450px;
-  }
 }
 textarea {
   height: 220px;
   margin-bottom: 50px;
 }
 /* 同意セット */
+@media (max-width: 575px) {
+  br.none575 {
+    display: none;
+  }
+}
 div.doui {
   /* inputボタンが親に指令じゃないと左右中央ならん */
   text-align: center;
