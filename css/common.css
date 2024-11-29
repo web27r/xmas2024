@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
 
 /* よく使うカラー */
 :root {
@@ -29,7 +30,7 @@ body {
 }
 
 .container {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -54,12 +55,12 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 8px;
-  margin-right: 8px;
-  padding: 16px 0;
-  width: 200px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 10px 0;
+  width: 150px;
   text-align: center;
-  font-size: 19px;
+  font-size: 16px;
   background: linear-gradient(90deg, #c4903c 0%, #ead13e 50%, #c4903c 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -67,30 +68,33 @@ nav ul li {
   border: 2px solid #c4903c;
 }
 
+/* 見出しの設定 */
+.midashired {
+  text-align: center;
+  font-family: "Miltonian Tattoo", serif;
+  color: var(--mainred);
+  font-size: 35px;
+}
+
+/* 見出し下のタイトル設定 */
 hgroup p {
   text-align: center;
   color: #213b60;
   font-size: 25px;
 }
 
-/* 外側の白い枠の九通の設定 */
+/* 外側の白い枠の共通の設定 */
 .backbeige {
   margin-bottom: 90px;
   border-radius: 15px;
   background-color: var(--backbeige);
 }
 
+/* 内側の濃いベージュ枠の共通の設定 */
 .koibackbeige {
   margin-bottom: 20px;
   border-radius: 10px;
   background-color: var(--koibackbeige);
-}
-
-.midashired {
-  text-align: center;
-  font-family: "Miltonian Tattoo", serif;
-  color: var(--mainred);
-  font-size: 35px;
 }
 
 .flex {
@@ -99,8 +103,7 @@ hgroup p {
 
 /* フッター */
 footer {
-  padding: 20px;
-  padding-top: 65px;
+  padding: 65px 20px 0 20px;
   background-image: url(../img/common.img/footer.svg);
   background-repeat: repeat-x;
   background-position: bottom;
@@ -141,8 +144,24 @@ footer p.pagetop a {
   font-size: 25px;
   /* 縦書き設定 */
   writing-mode: vertical-rl;
+  display: flex;
 }
 
 footer p.pagetop img {
   margin-bottom: 8px;
+}
+
+/* section内のデコレーション設定 */
+/* 雪飾り */
+.snow {
+  background-image: url(../img/common.img/decosnow.svg);
+  background-repeat: no-repeat;
+  background-position: top 20px left 31px;
+}
+
+/* ぶら下げ飾り */
+.ornament {
+  background-image: url(../img/common.img/deco1.svg), url(../img/common.img/deco2.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 left 25px, top 0 right 21px;
 }

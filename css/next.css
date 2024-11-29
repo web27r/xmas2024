@@ -1,17 +1,65 @@
 @import url(common.css);
-/* ーーーー
-ヘッダー
-ーーーー */
+/* ーーーーーー
+下層ページ共通
+ーーーーーーー */
+/* ナブ下兼本編上余白 */
+main {
+  padding-top: 70px;
+  @media (max-width: 767px) {
+    padding-top: 40px;
+  }
+}
+/* ヘッダー */
 header {
   padding: 15px 0 15px 0;
   background-color: var(--mainred);
 }
-/* ーーーーーーーーーーー
-FDメイン共通アーティクル
-ーーーーーーーーーーーーー */
+moji23 {
+  @media (max-width: 767px) {
+    font-size: 23px;
+  }
+}
+moji21 {
+  @media (max-width: 767px) {
+    font-size: 21px;
+  }
+}
+moji20 {
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+/* ノートPC@media (max-width: 1199px)
+スマホ横@media (max-width: 767px)
+コピペセット */
+/* 1199>738 */
+/* 767>360; */
+/* ーー
+共通幅
+ーーー */
+
+/* 外身 */
+.container,
+.backbeige {
+  @media (max-width: 1199px) {
+    width: 738px;
+    @media (max-width: 767px) {
+      /* F&Dだけ幅違う */
+      width: 357px;
+    }
+  }
+}
+/* 中身 */
+
+/* ーーーーーーーーーー
+メイン共通アーティクル
+ーーーーーーーーーーーー */
 main article.backbeige {
   &:first-child {
-    padding: 60px 80px 26px 80px;
+    padding: 60px 80px;
+    @media (max-width: 767px) {
+      padding: 60px 11px 60px 12px;
+    }
   }
   &:not(:first-child) {
     padding: 60px 40px 37px 40px;
@@ -32,51 +80,188 @@ main hgroup {
     margin-bottom: 50px;
   }
 }
-/* ーーーーーー
-オレンジ国文字
-ーーーーーーー */
-main article h2 {
-  height: 77px;
-  margin-bottom: 20px;
-  align-items: center;
-  color: var(--bunorange);
+/* ーーーー
+会場マップ
+ーーーーー */
+main article.map h1.mise,
+main article.map ul {
   font-family: "Kaisei Opti";
-  font-size: 25px;
-  text-align: center;
-  background-image: url(../img/FandD.img/kuniback.png);
-  background-repeat: no-repeat;
-  background-position: center;
+}
+main article.map h1.mise {
+  margin-bottom: 20px;
+}
+main article.map ul {
+  gap: 15px;
+  margin-bottom: 50px;
+  @media (max-width: 767px) {
+    display: block;
+  }
+  & li {
+    width: 270px;
+    padding: 14px 58px 15px 29px;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+    background-color: var(--koibackbeige);
+    background-image: url(../img/FandD.img/Vector.png);
+    background-repeat: no-repeat;
+    background-position: center right 28px;
+    letter-spacing: -2.5px;
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+    & a {
+      color: var(--bunblack);
+    }
+  }
 }
 /* ーーーーーーーー
-Menu共通セクション
-ーーーーーーーーーー */
+FDGW共通セクション
+ーーーーーーーー */
+/* オーナメント123abc */
 main article section.koibackbeige {
-  background-image: url(../img/FandD.img/ornamentNoRed.png);
   background-repeat: no-repeat;
   background-position: left 26px top 20px;
-  padding: 30px 25px;
+  background-size: 30px 38px;
 }
-main article section h3 {
-  margin-left: 91px;
+main article.FandD section.koibackbeige {
+  background-image: url(../img/FandD.img/ornamentNoRed.png);
 }
-main article section div.flex {
+main article.goods section.koibackbeige {
+  background-image: url(../img/FandD.img/ornamentAbcBlue.png);
+}
+main article.workshop section.koibackbeige {
+  /* 変わるかも！ */
+  background-position: left 22px top 30px;
+  background-image: url(../img/FandD.img/WorkShop.png);
+}
+/* hgroup */
+main article section hgroup.flex {
+  align-items: baseline;
+}
+section > div.flex {
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+p.no,
+p.abc {
+  color: var(--backbeige);
+  font-size: 22px;
+  margin-right: 21px;
+}
+p.no {
+  font-family: "Kaisei Opti";
+}
+p.abc {
+  font-family: "Miltonian Tattoo", serif;
+  /* 31-25 */
+  margin-left: 6px;
+}
+p.abci {
+  /* 36-25 */
+  margin-left: 11px;
+}
+h3 {
+  margin-right: 12px;
+}
+/* 青文字から本文に戻す */
+p.none {
+  color: var(--bunblack);
+  font-size: 16px;
+}
+hgroup h3,
+article.workshop h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+/* ーーーーーーーーーーーーーー
+FD共通アーティクル＆セクション
+ーーーーーーーーーーーーーーー */
+/* 国の名前 */
+h2 {
+  width: 368px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* セクション */
+main article.FandD section.koibackbeige {
+  padding: 22px 25px;
+}
+
+main article.FandD section hgroup {
+  margin-bottom: 21px;
+  /* 34-25 */
+  margin-left: 9px;
+  &.no2 {
+    /* 29-25 */
+    margin-left: 3px;
+  }
+  &h3 {
+    margin-right: 12px;
+  }
+}
+main article.FandD section div.flex {
   gap: 38px;
-  margin-top: 27px;
   text-align: center;
 }
 main article section div figure figcaption {
   margin-top: 14px;
 }
-/* ーーーーーー
-FD共通フィギュア
-ーーーーーーー */
+/* FD共通フィギュア */
 figcaption {
   white-space: nowrap;
 }
-/* ーーーーーーーー
-GandW共通セクション
-ーーーーーーーーーー */
-/* 音声読み上げ対策(英語と日本語が同じ意味のタグに使う) */
-.hoge::before {
-  content: attr(data-eng);
+/* ーー
+グッズ
+ーーー */
+main article.goods section.koibackbeige {
+  padding: 22px 25px 33px 25px;
+  & hgroup {
+    margin-bottom: 21px;
+  }
+  & div.flex {
+    margin-bottom: 12px;
+    gap: 38px;
+  }
+  & p.gyou3 {
+    /* 33-9 */
+    margin-bottom: -24px;
+  }
+}
+/* ーーーーーー
+ワークショップ
+ーーーーーーー */
+main article.workshop section h3 {
+  /* 左余白68-25=43 */
+  margin-left: 43px;
+  &.snowdome {
+    margin-bottom: 19px;
+  }
+  &.hana {
+    margin-bottom: 22px;
+  }
+}
+.mb1_5em {
+  margin-bottom: 1.5em;
+}
+.flex6em {
+  flex-basis: 6em;
+}
+.flex7em {
+  flex-basis: 7em;
+}
+/* スノードーム */
+main article.workshop section.snowdome {
+  padding: 34px 22px 50px 22px;
+  & > div.flex {
+    gap: 21px;
+  }
+}
+/* キャンドルフラワーアレンジ */
+main article.workshop section.hana {
+  padding: 33px 25px 50px 24px;
+  & > div.flex {
+    gap: 16px;
+  }
 }

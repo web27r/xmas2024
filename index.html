@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,8 @@
   <link rel="icon" href="img/common.img/favicon1.png" type="image/png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- footerFixed -->
+  <script src="js/footerFixed.js"></script>
   <!-- jQueryの読み込み -->
   <script src="js/jquery-3.7.1.min.js"></script>
 </head>
@@ -23,7 +25,7 @@
       <ul>
         <li><a href="index.html">トップページ</a></li>
         <li><a href="next.html">フード・ドリンク</a></li>
-        <li><a href="#">パフォーマンス</a></li>
+        <li><a href="performance.html">ステージ</a></li>
         <li><a href="#">会場マップ</a></li>
         <li><a href="index.html#access">アクセス</a></li>
         <li><a href="q&a.html">Q&A</a></li>
@@ -34,20 +36,23 @@
 
   <main>
     <div class="container">
-      <section class="news backbeige">
+      <section class="news backbeige snow fadein">
         <h2 class="midashired">NEWS</h2>
         <dl>
           <div class="koibackbeige">
             <dt><time datetime="2024-11-14">2024.11.14</time></dt>
-            <dd>「フード&#x30FB;ドリンク」「プレッツェル特集」「オリジナルマグカップ事前予約」「パフォーマンススケジュー」「Q&#xFF06;A」ページを更新しました&#xFF01;詳細は各ページをご覧ください。</dd>
+            <dd>「フード&#x30FB;ドリンク」「プレッツェル特集」「オリジナルマグカップ事前予約」「パフォーマンススケジュー」「Q&#xFF06;A」ページを更新しました&#xFF01;詳細は各ページをご覧ください。
+            </dd>
           </div>
           <div class="koibackbeige">
             <dt><time datetime="2024-08-14">2024.8.14</time></dt>
-            <dd>今年もてんしばでクリスマスマーケットを開催いたします&#xFF01;皆様のご来場をお待ちしております&#xFF01;<br>&#x203B;&#x300C;大阪クリスマスマーケット&#x300D;は2024年から&#x300C;クリスマスマーケットin大阪&#x300D;として開催いたします。</dd>
+            <dd>
+              今年もてんしばでクリスマスマーケットを開催いたします&#xFF01;皆様のご来場をお待ちしております&#xFF01;<br>&#x203B;&#x300C;大阪クリスマスマーケット&#x300D;は2024年から&#x300C;クリスマスマーケットin大阪&#x300D;として開催いたします。
+            </dd>
           </div>
         </dl>
       </section>
-      <section class="event backbeige">
+      <section class="event backbeige ornament fadein">
         <hgroup>
           <h2 class="midashired">EVENT OUTLINE</h2>
           <p>開催概要</p>
@@ -61,7 +66,7 @@
               <dd>&#x203B;初日(11月29日)のみ16:00オープン<br>&#x203B;雨天決行(荒天中止)</dd>
             </div>
           </div>
-          <div class="free flex">
+          <div class="free flex" id="access">
             <dt>料金</dt>
             <dd>無料</dd>
           </div>
@@ -69,9 +74,11 @@
             <dt>会場</dt>
             <dd>天王寺公園&#x300C;てんしば&#x300D;、&#x300C;てんしばi:na&#x300D;</dd>
           </div>
-          <div class="access flex" id="access">
+          <div class="access flex">
             <dt>アクセス</dt>
-            <dd>大阪メトロ御堂筋線&#x30FB;谷町線&#x300C;天王寺&#x300D;駅<br>JR&#x300C;天王寺&#x300D;駅<br>近鉄&#x300C;大阪阿部野橋&#x300D;駅<br>阪堺上町線&#x300C;天王寺駅前&#x300D;駅<br>各駅から徒歩すぐ</dd>
+            <dd>
+              大阪メトロ御堂筋線&#x30FB;谷町線&#x300C;天王寺&#x300D;駅<br>JR&#x300C;天王寺&#x300D;駅<br>近鉄&#x300C;大阪阿部野橋&#x300D;駅<br>阪堺上町線&#x300C;天王寺駅前&#x300D;駅<br>各駅から徒歩すぐ
+            </dd>
             <p class="noflex"><img src="img/index.img/map.svg" alt="会場マップ"></p>
           </div>
         </dl>
@@ -79,7 +86,7 @@
     </div>
     <div class="market">
       <div class="container">
-        <section class="aboutxmas backbeige">
+        <section class="aboutxmas backbeige ornament fadein">
           <h2 class="midashired">クリスマスマーケットとは</h2>
           <p>
             &#x300C;クリスマスマーケット&#x300D;は、クリスマスのシーズンに開催される特別なお祭りです。特にヨーロッパで人気が高く、ドイツが発祥と言われています。マーケットでは、手作りのクリスマスオーナメント、グリューワインやジンジャーブレッドクッキーなど伝統的なグルメが味わえます。ツリーのイルミネーションや音楽でロマンティックな雰囲気とともに、おいしいワインを堪能して今年のクリスマスを過ごしてみませんか。
@@ -88,7 +95,7 @@
       </div>
     </div>
     <div class="container">
-      <section class="magcup backbeige">
+      <section class="magcup backbeige snow fadein">
         <hgroup>
           <h2 class="midashired">PREMIUM MUG</h2>
           <p>&#x3010;クリスマスマーケットin大阪 てんしば 2024&#x3011;</p>
@@ -97,7 +104,8 @@
         <p><img src="img/index.img/mugcup.png" alt="事前予約で購入できるマグカップ"></p>
         <div class="flex">
           <p><img src="img/index.img/cupicon1.svg" alt="マグカップアイコン"><span class="fontkaisei">1個</span>￥1.000 tax in</p>
-          <p><img src="img/index.img/cupicon2.svg" alt="マグカップアイコン"><span class="fontkaisei">2個セット</span>￥1.900 tax in</p>
+          <p><img src="img/index.img/cupicon2.svg" alt="マグカップアイコン"><span class="fontkaisei">2個セット</span>￥1.900 tax in
+          </p>
         </div>
         <p class="change">引き換え場所 : 天王寺公園:クリスマスマーケットin大阪 てんしば 2024会場内 「インフォメーション」ブース</p>
         <ul>
@@ -115,7 +123,47 @@
         </aside>
         <p class="yoyaku"><a href="#">ご予約はこちら</a></p>
       </section>
-      <section class="caution backbeige">
+
+
+      <section class="specialoffers backbeige snow fadein">
+        <hgroup>
+          <h2 class="midashired">SPECIAL OFFERS</h2>
+          <p>お得な情報</p>
+        </hgroup>
+        <div class="flex">
+          <div class="otoku">
+            <p><img src="img/index.img/ribon1.png" alt="100円引きプレゼント"></p>
+            <p>てんしば内の店舗1000円以上のレシート、もしくは天王寺動物園入場券提示で飲食100円引き券プレゼント!!</p>
+            <aside>&#x203B;当日分に限ります<br>&#x203B;インフォメーションブースにご提示ください</aside>
+            <div class="tenpo1">
+              <h3>&#x30FC;対象店舗&#x30FC;</h3>
+              <ul>
+                <li>AOINAPOLI IN THE PARK</li>
+                <li>ペットパラダイスDX 天王寺公園店</li>
+                <li>タリーズコーヒー天王寺公園店</li>
+                <li>MAKIBIPLACE</li>
+                <li>キャプテン翼スタジアム天王寺</li>
+              </ul>
+            </div>
+          </div>
+          <div class="otoku">
+            <p><img src="img/index.img/ribon2.png" alt="マグカップ提示得点"></p>
+            <p class="sitamargin">クリスマスマーケットin大阪てんしば2024のオリジナルマグカップ1個を下記対象店舗に提示するとうれしい特典が!!</p>
+            <div class="tenpo2">
+              <h3>&#x30FC;対象店舗&#x30FC;</h3>
+              <ul>
+                <li>AOINAPOLI IN THE PARK<br><span class="font14">ソフトドリンクの中から一杯サービス<br>&#xFF08;1オーダー必須&#xFF09;</span>
+                </li>
+                <li>タリーズコーヒー天王寺公園店<br><span class="font14">ドリンクの1サイズアップ<br>&#xFF08;short &rarr; tall、tall &rarr;
+                    grande&#xFF09;</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="caution backbeige snow fadein">
         <hgroup>
           <h2 class="midashired">CAUTION</h2>
           <p>注意事項</p>
@@ -132,14 +180,16 @@
   </main>
   <footer>
     <div class="container">
-      <p class="aboutcompany">主催 クリスマスマーケット in 大阪 実行委員会<br>協力 近鉄不動産株式会社<br>後援 大阪・神戸ドイツ連邦共和国総領事館／ドイツ観光局／天王寺区／公益財団法人大阪観光局</p>
+      <p class="aboutcompany">主催 クリスマスマーケット in 大阪 実行委員会<br>協力 近鉄不動産株式会社<br>後援 大阪・神戸ドイツ連邦共和国総領事館／ドイツ観光局／天王寺区／公益財団法人大阪観光局
+      </p>
       <div class="companyicon">
         <p><a href="https://japan.diplo.de/Vertretung/japan/ja/Startseite.html"><img src="img/common.img/site1.png" width="180" height="80" alt="ドイツ大使館&#x30FB;総領事館サイト"></a></p>
         <p><a href="#"><img src="img/common.img/site2.jpg" width="180" height="80" alt="ドイツ総領事館150周年ロゴ"></a></p>
         <p><a href="https://x.com/GermanyTravelJP"><img src="img/common.img/site3.png" width="180" height="80" alt="ドイツ観光局のSNS"></a></p>
       </div>
-      <p class="logo"><a href="index.html"><img src="img/common.img/logo.png" width="200" height="200" alt="ロゴ"></a></p>
-      <p class="pagetop"><a href="#top"><img src="img/common.img/pagetop.svg" alt="ページトップへ">PAGE TOP</a></p>
+      <!-- <p class="logo"><a href="index.html"><img src="#" width="200" height="200" alt="ロゴ"></a>
+      </p> -->
+      <p class="pagetop"><a href="#top"><img src="img/common.img/pagetop.svg" alt="ページトップへ"><span class="displaynone">PAGE </span>TOP</a></p>
       <p class="copyright"><small>COPYRIGHT&copy;OSAKA CHRISTMASMARKET.ALL RIGHTS RESERVED.</small></p>
     </div>
   </footer>

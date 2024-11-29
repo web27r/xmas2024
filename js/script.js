@@ -9,3 +9,25 @@ $(window).scroll(function () {
     $("footer p.pagetop").fadeOut(500);
   }
 });
+
+// スクロールすると、下からふわっと出現する設定(index.html)
+$(window).scroll(function () {
+  var scrollAnimationElm = document.querySelectorAll("section");
+  var scrollAnimationFunc = function () {
+    for (var i = 0; i < scrollAnimationElm.length; i++) {
+      var triggerMargin = 100;
+      if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+        scrollAnimationElm[i].classList.add("on");
+      }
+    }
+  };
+  window.addEventListener("load", scrollAnimationFunc);
+  window.addEventListener("scroll", scrollAnimationFunc);
+});
+
+// タブ選択で、表示切替設定（q&a.html）
+$('input[name="tab"]').change(function () {
+  $("main article section.tab").hide();
+  var id = $(this).attr("id");
+  $("." + id).fadeIn();
+});

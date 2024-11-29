@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,8 @@
   <link rel="icon" href="img/common.img/favicon1.png" type="image/png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/q&a.css">
+  <!-- footerFixed -->
+  <script src="js/footerFixed.js"></script>
   <!-- jQueryの読み込み -->
   <script src="js/jquery-3.7.1.min.js"></script>
 </head>
@@ -17,8 +19,8 @@
     <nav>
       <ul>
         <li><a href="index.html">トップページ</a></li>
-        <li><a href="next.html">フード・ドリンク</a></li>
-        <li><a href="#">パフォーマンス</a></li>
+        <li><a href="next.html">ショップ</a></li>
+        <li><a href="performance.html">ステージ</a></li>
         <li><a href="#">会場マップ</a></li>
         <li><a href="index.html#access">アクセス</a></li>
         <li><a href="q&a.html">Q&A</a></li>
@@ -29,125 +31,208 @@
 
   <main>
     <div class="container">
-      <article class="backbeige tab">
+      <article class="backbeige ornament">
         <hgroup>
           <h2 class="midashired">Q&A</h2>
           <p>よくあるご質問</p>
         </hgroup>
         <ul>
-          <li class="koibackbeige">
+          <li>
+            <input type="radio" name="tab" id="tab1" checked>
             <label for="tab1">ご入場について</label>
-            <input type="radio" name="tab" id="tab1">
-            <section>
-              <h3>ご入場について</h3>
-              <dl>
-                <dt>入場料はかかりますか？</dt>
-                <dd>入場料は無料です。</dd>
-              </dl>
-              <dl>
-                <dt>土日など混雑時は入場制限などありますか？</dt>
-                <dd>入場自由のため制限はございませんが、会場内の状況をみて安全上の問題が<br>
-                  生じると判断される場合は入場の制限を行わせて頂く場合があるのでご了承ください。</dd>
-              </dl>
-              <dl>
-                <dt>雨天でも開催されますか？</dt>
-                <dd>雨天でも開催いたします。一部テント席もございます。荒天の場合は中止と<br>
-                  なる場合もございます。その際は公式SNSにてお知らせいたします。</dd>
-              </dl>
-              <dl>
-                <dt>ペットの同伴は可能ですか？</dt>
-                <dd>テント内へのペットとの入場はキャリーバッグ・ペットカート（ペットの顔が出ない<br>
-                  タイプに限ります）に入れていただければ可能です。テント以外の席はリードを装着し、<br>
-                  他のお客様へのご配慮をお願いいたします。また、てんしばの芝生エリア内には<br>
-                  ペットはお入りいただけませんのでご注意ください。</dd>
-              </dl>
-              <dl>
-                <dt>車いすやベビーカーも入れますか？</dt>
-                <dd>ご入場いただけます。</dd>
-              </dl>
-              <dl>
-                <dt>駐車場・駐輪場はありますか？</dt>
-                <dd>専用の駐車場・駐輪場はございません。近隣の駐車場・駐輪場をご利用ください。</dd>
-              </dl>
-              <dl>
-                <dt>飲食物の持ち込みはできますか？</dt>
-                <dd>客席へのご飲食物のお持込はご遠慮ください（乳幼児用は可）。<br>
-                  お持込されている方にはスタッフからお声がけさせていただくこともございますので<br>
-                  ご了承ください。</dd>
-              </dl>
-            </section>
           </li>
-          <li class="koibackbeige">
+          <li>
+            <input type="radio" name="tab" id="tab2">
             <label for="tab2">飲食物・雑貨のご購入<br>
               ワークショップについて</label>
-            <input type="radio" name="tab" id="tab2">
-            <section>
-              <h3>飲食物・雑貨のご購入<br>
-                ワークショップについて</h3>
-              <dl>
-                <dt>会場内で使用できる決済方法は何ですか？</dt>
-                <dd>全店舗、現金でのお支払いが可能です。<br>
-                  一部の店舗でキャッシュレス決済、クレジットカード決済が使用できます。</dd>
-              </dl>
-              <dl>
-                <dt>お酒以外の飲み物はありますか？</dt>
-                <dd>ホットココアやコーヒーなどホットドリンク各種を販売しております。</dd>
-              </dl>
-              <dl>
-                <dt>オリジナルマグカップの予約・取り置きは可能ですか？</dt>
-                <dd>Webにて予約販売を受け付けております。(←リンク入れる)それ以外は店頭販売のみのため、<br>
-                  予約・取り置きには対応しておりませんのでご了承ください。</dd>
-              </dl>
-              <dl>
-                <dt>ワークショップに参加したいのですがどうすればいいですか？</dt>
-                <dd>Webからの事前予約制となっております。<br>
-                  ワークショップの日程・内容等、(リンク入れる→)こちらからご確認ください。</dd>
-              </dl>
-            </section>
           </li>
-          <li class="koibackbeige">
-            <label for="tab3">会場について</label>
+          <li>
             <input type="radio" name="tab" id="tab3">
-            <section>
-              <h3>会場について</h3>
-              <dl>
-                <dt>トレイはどこに返却すればいいのですか？</dt>
-                <dd>トレイは購入した店舗へご返却ください。</dd>
-              </dl>
-              <dl>
-                <dt>落し物をした（拾った）のですが、どうすればいいですか。</dt>
-                <dd>クリスマスマーケットin大阪開催期間中の会場内での落とし物については、<br>
-                  以下の交番へ届出を行います。大阪府天王寺警察署　天王寺駅前交番</dd>
-              </dl>
-              <dl>
-                <dt>領収証はどこでもらえますか？</dt>
-                <dd>購入した各店舗で発行いたします。</dd>
-              </dl>
-              <dl>
-                <dt>トイレはありますか？</dt>
-                <dd>公園内のトイレをご利用ください。</dd>
-              </dl>
-              <dl>
-                <dt>喫煙はできますか？</dt>
-                <dd>所定の場所以外での喫煙は禁止されています。</dd>
-              </dl>
-              <dl>
-                <dt>席は予約できますか？</dt>
-                <dd>予約は行っておりません。なお、荷物などを置いての長時間の場所取りは<br>
-                  ご遠慮ください。場合によってはスタッフが撤去または移動させて<br>
-                  いただく事もございます。あらかじめご了承くださいませ。<br>
-                  また、お席は皆さまで譲り合ってご利用いただきますようご協力をお願いいたします。</dd>
-              </dl>
-            </section>
+            <label for="tab3">会場について</label>
           </li>
         </ul>
+        <section class="koibackbeige tab tab1">
+          <dl>
+            <dt>
+              <div>入場料はかかりますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>入場料は無料です。</div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>土日など混雑時は入場制限などありますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>
+                入場自由のため制限はございませんが、会場内の状況をみて安全上の問題が
+                生じると判断される場合は入場の制限を行わせて頂く場合があるのでご了承ください。
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>雨天でも開催されますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>
+                雨天でも開催いたします。一部テント席もございます。荒天の場合は中止と
+                なる場合もございます。その際は公式SNSにてお知らせいたします。
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>ペットの同伴は可能ですか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>
+                テント内へのペットとの入場はキャリーバッグ・ペットカート（ペットの顔が出ない
+                タイプに限ります）に入れていただければ可能です。テント以外の席はリードを装着し、
+                他のお客様へのご配慮をお願いいたします。また、てんしばの芝生エリア内には
+                ペットはお入りいただけませんのでご注意ください。
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>車いすやベビーカーも入れますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>ご入場いただけます。</div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>駐車場・駐輪場はありますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>専用の駐車場・駐輪場はございません。近隣の駐車場・駐輪場をご利用ください。</div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>飲食物の持ち込みはできますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>
+                客席へのご飲食物のお持込はご遠慮ください（乳幼児用は可）。<br>
+                お持込されている方にはスタッフからお声がけさせていただくこともございますのでご了承ください。
+              </div>
+            </dd>
+          </dl>
+        </section>
+        <section class="koibackbeige tab tab2">
+          <dl>
+            <dt>
+              <div>会場内で使用できる決済方法は何ですか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>
+                全店舗、現金でのお支払いが可能です。<br>
+                一部の店舗でキャッシュレス決済、クレジットカード決済が使用できます。
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>お酒以外の飲み物はありますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>ホットココアやコーヒーなどホットドリンク各種を販売しております。</div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>オリジナルマグカップの予約・取り置きは可能ですか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>
+                <a href="https://www.kkday.com/ja/product/153534?cid=17198">Webにて予約販売を受け付けております。</a>
+                それ以外は店頭販売のみのため、予約・取り置きには対応しておりませんのでご了承ください。
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>ワークショップに参加したいのですがどうすればいいですか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>
+                Webからの事前予約制となっております。<br>
+                ワークショップの日程&#x30FB;内容等、
+                <a href="https://www.kkday.com/ja/affiliate/whlb/osaka_christmasmarke">こちらからご確認ください。</a>
+              </div>
+            </dd>
+          </dl>
+        </section>
+        <section class="koibackbeige tab tab3">
+          <dl>
+            <dt>
+              <div>トレイはどこに返却すればいいのですか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>トレイは購入した店舗へご返却ください。</div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>落し物をした（拾った）のですが、どうすればいいですか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>
+                クリスマスマーケットin大阪開催期間中の会場内での落とし物については、
+                以下の交番へ届出を行います。大阪府天王寺警察署&#x3000;天王寺駅前交番
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>領収証はどこでもらえますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>購入した各店舗で発行いたします。</div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>トイレはありますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>公園内のトイレをご利用ください。</div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>喫煙はできますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>所定の場所以外での喫煙は禁止されています。</div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>席は予約できますか&#xFF1F;</div>
+            </dt>
+            <dd>
+              <div>
+                予約は行っておりません。なお、荷物などを置いての長時間の場所取りは
+                ご遠慮ください。場合によってはスタッフが撤去または移動させて
+                いただく事もございます。あらかじめご了承くださいませ。<br>
+                また、お席は皆さまで譲り合ってご利用いただきますようご協力をお願いいたします。
+              </div>
+            </dd>
+          </dl>
+        </section>
       </article>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <p class="aboutcompany">主催 クリスマスマーケット in 大阪 実行委員会<br>協力 近鉄不動産株式会社<br>後援 大阪・神戸ドイツ連邦共和国総領事館／ドイツ観光局／天王寺区／公益財団法人大阪観光局</p>
+      <p class="aboutcompany">主催 クリスマスマーケット in 大阪 実行委員会<br>協力 近鉄不動産株式会社<br>後援 大阪・神戸ドイツ連邦共和国総領事館／ドイツ観光局／天王寺区／公益財団法人大阪観光局
+      </p>
       <div class="companyicon">
         <p><a href="https://japan.diplo.de/Vertretung/japan/ja/Startseite.html"><img src="img/common.img/site1.png" width="180" height="80" alt="ドイツ大使館&#x30FB;総領事館サイト"></a></p>
         <p><a href="#"><img src="img/common.img/site2.jpg" width="180" height="80" alt="ドイツ総領事館150周年ロゴ"></a></p>

@@ -1,4 +1,5 @@
 @import url(common.css);
+
 /* ーーーー
 ヘッダー
 ーーーー */
@@ -7,30 +8,42 @@ header {
   background-color: var(--mainred);
 }
 
+main {
+  padding-bottom: 10px;
+}
+
+main article {
+  padding: 60px 125px;
+}
+
+main article hgroup {
+  margin-bottom: 50px;
+}
+
 /* ーーーー
 タブ切り替え
 ーーーーーー */
-main article.tab ul {
+main article ul {
   display: flex;
   gap: 10px;
   color: var(--bunblack);
-  position: relative;
-  padding-bottom: 100px;
 }
 
-article.tab li {
+main article li {
   flex: 1;
 }
 
-main article.tab label {
+main article label {
   display: block;
   cursor: pointer;
 }
 
-article.tab label[for="tab1"],
+/* タブの設定 */
+label[for="tab1"],
 label[for="tab2"],
 label[for="tab3"] {
-  width: 240px;
+  margin-bottom: 15px;
+  padding: 15px 10px;
   background-color: var(--mainred);
   text-align: center;
   font-family: "Kaisei Opti";
@@ -38,11 +51,83 @@ label[for="tab3"] {
   font-size: 25px;
 }
 
-article.tab label[for="tab2"] {
-  font-size: 19px;
+/* タブを選択したときの設定 */
+input:checked + label {
+  border-bottom: 5px solid var(--mainred);
+  background-color: var(--koibackbeige);
+  color: var(--bunblack);
 }
 
-article.tab label[for="tab1"],
-label[for="tab2"],
-label[for="tab3"] ::after {
+main article label[for="tab2"] {
+  padding: 8.5px 21px 8.5px 10px;
+  font-size: 17px;
+}
+
+main article section.tab2,
+main article section.tab3 {
+  display: none;
+}
+
+/* ラジオボタンを消す */
+main article ul input {
+  display: none;
+}
+
+main article section.koibackbeige {
+  padding: 55px 30px 0 30px;
+  border: 2px solid var(--mainred);
+}
+
+main article dl {
+  margin-bottom: 60px;
+  font-size: 18px;
+}
+
+main article dl dt {
+  padding: 0 10px 0 60px;
+  position: relative;
+
+  font-weight: bold;
+}
+
+main article dl dd {
+  padding: 10px 10px 20px 60px;
+  position: relative;
+}
+
+main article dl dt::before,
+main article dl dd::before {
+  position: absolute;
+  left: 0;
+  top: 6;
+  width: 41px;
+  height: 41px;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 200%;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+
+main article dl dt:before {
+  content: "Q";
+  background-color: var(--mainred);
+}
+
+main article dl dd:before {
+  content: "A";
+  background-color: var(--koiblue);
+}
+
+main article dt div {
+  padding: 15px;
+  border: 1px dashed #895725;
+}
+
+main article dd div {
+  padding: 15px;
+  background-color: #ded5bf7d;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
