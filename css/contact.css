@@ -1,17 +1,24 @@
 @import url(common.css);
-/* ーーーー
-ヘッダー
-ーーーー */
+/* ーーーーーー
+下層ページ共通
+ーーーーーーー */
+/* ナブ下兼本編上余白 */
+main {
+  padding-top: 70px;
+  @media (max-width: 767px) {
+    padding-top: 40px;
+  }
+}
+/* ヘッダー */
 header {
   padding: 15px 0 15px 0;
   background-color: var(--mainred);
 }
-
 /* ノートPC@media (max-width: 1199px)
-タブレット@media (max-width: 991px)
-スマホ縦@media (max-width: 575px)
+スマホ横@media (max-width: 767px)
 コピペセット */
-
+/* 1199>738 */
+/* 767>360; */
 /* ーー
 共通幅
 ーーー */
@@ -20,14 +27,9 @@ header {
 .container,
 .backbeige {
   @media (max-width: 1199px) {
-    width: 951px;
-    margin-left: auto;
-    margin-right: auto;
-    @media (max-width: 991px) {
-      width: 515px;
-      @media (max-width: 575px) {
-        width: 335px;
-      }
+    width: 738px;
+    @media (max-width: 767px) {
+      width: 360px;
     }
   }
 }
@@ -41,11 +43,8 @@ textarea {
   width: 617px;
   margin-left: auto;
   margin-right: auto;
-  @media (max-width: 991px) {
-    width: 455px;
-    @media (max-width: 575px) {
-      width: 275px;
-    }
+  @media (max-width: 767px) {
+    width: 275px;
   }
 }
 /* ーーーー
@@ -53,18 +52,24 @@ textarea {
 ーーーーー */
 .backbeige {
   padding: 60px 50px 78px 50px;
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
     padding: 60px 30px 78px 30px;
-    @media (max-width: 575px) {
+    @media (max-width: 767px) {
       padding: 35px 20px 53px 20px;
     }
   }
 }
 hgroup {
   margin-bottom: 20px;
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+  }
 }
 .toicontainer {
   margin: 50px auto 0 auto;
+  @media (max-width: 767px) {
+    margin: 35px auto 0 auto;
+  }
 }
 /* 最初の注意書き */
 p.tyuui {
@@ -105,8 +110,8 @@ textarea {
   margin-bottom: 50px;
 }
 /* 同意セット */
-@media (max-width: 575px) {
-  br.none575 {
+@media (max-width: 767px) {
+  br.none767 {
     display: none;
   }
 }
@@ -118,12 +123,12 @@ input[type="checkbox"] {
   margin-top: 15px;
 }
 input[type="submit"] {
-  margin-top: 31px;
-  padding: 18px 30px;
+  margin-top: 38px;
+  padding: 18px 50px 18px 51px;
   border: 3px solid #c3a80d;
   border-radius: 10px;
   font-family: "Kaisei Opti";
-  font-size: 25px;
+  font-size: 20px;
   color: var(--backbeige);
   background-color: var(--koiblue);
   cursor: pointer;
