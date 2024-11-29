@@ -378,8 +378,6 @@ main section.specialoffers span.font14 {
   font-size: 14px;
 }
 
-/* ここまでレスポンシブ済み */
-
 main section.caution {
   margin-bottom: 0;
   border: 6px solid var(--wakugreen);
@@ -463,12 +461,12 @@ footer p.logo {
   }
 
   main section.news div dt {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   main section.news div dd {
     padding-left: 24px;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   /* hgroup,h2共通設定 */
@@ -498,7 +496,7 @@ footer p.logo {
   main section.event dl dt {
     margin-bottom: 5px;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   main section.event div {
@@ -516,14 +514,14 @@ footer p.logo {
     margin-bottom: 5px;
   }
 
+  main section.event div.free dd {
+    text-align: center;
+  }
+
   main section.event div.free dd,
   main section.event div.place dd,
   main section.event div.access dd {
-    font-size: 15px;
-  }
-
-  main section.event div.free dd {
-    text-align: center;
+    font-size: 18px;
   }
 
   main section.event div.access dd {
@@ -531,7 +529,7 @@ footer p.logo {
   }
 
   main section.event div.access p.noflex {
-    text-align: unset;
+    box-sizing: border-box;
   }
 
   /* クリスマスマーケット背景後で設定する！ */
@@ -552,12 +550,17 @@ footer p.logo {
 
   main div.market section.aboutxmas p {
     line-height: 20px;
-    font-size: 14px;
+    font-size: 15px;
   }
 
+  main div.market section.aboutxmas h2,
   main section.magcup hgroup h2,
   main section.specialoffers hgroup h2 {
     margin-top: 10px;
+  }
+
+  main section.magcup hgroup p {
+    font-size: 15px;
   }
 
   main section.magcup div {
@@ -582,18 +585,18 @@ footer p.logo {
 
   main section.magcup p.change {
     margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   main section.magcup ul li {
     margin-left: 18px;
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   main section.magcup aside p {
     margin-left: 0px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   main section.specialoffers div.flex {
@@ -642,12 +645,12 @@ footer p.logo {
 
   /* 見出しの設定 */
   .midashired {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   /* 見出し下のタイトル設定 */
   hgroup p {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   /* section内のデコレーション設定 */
@@ -670,7 +673,7 @@ footer p.logo {
   }
 
   footer p.aboutcompany {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   footer p.copyright {
