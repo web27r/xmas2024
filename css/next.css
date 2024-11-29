@@ -83,14 +83,8 @@ main hgroup {
 /* ーーーー
 会場マップ
 ーーーーー */
-main article.map h1.mise,
 main article.map ul {
   font-family: "Kaisei Opti";
-}
-main article.map h1.mise {
-  margin-bottom: 20px;
-}
-main article.map ul {
   gap: 15px;
   margin-bottom: 50px;
   @media (max-width: 767px) {
@@ -108,13 +102,24 @@ main article.map ul {
     background-position: center right 28px;
     letter-spacing: -2.5px;
     @media (max-width: 767px) {
-      margin-bottom: 20px;
+      margin: 0 auto 20px auto;
     }
     & a {
       color: var(--bunblack);
     }
   }
 }
+br.born757 {
+  display: none;
+  @media (max-width: 1199px) and (min-width: 757px) {
+    display: inline;
+  }
+}
+/* a.gooddown {
+  @media (max-width: 1199px) and (min-width: 757px) {
+    padding: 32px 100px 32px 100px;
+  }
+} */
 /* ーーーーーーーー
 FDGW共通セクション
 ーーーーーーーー */
@@ -138,11 +143,6 @@ main article.workshop section.koibackbeige {
 /* hgroup */
 main article section hgroup.flex {
   align-items: baseline;
-}
-section > div.flex {
-  @media (max-width: 767px) {
-    display: block;
-  }
 }
 p.no,
 p.abc {
@@ -175,6 +175,12 @@ article.workshop h3 {
   font-size: 25px;
   font-weight: 700;
 }
+/* セクション画像フレボ */
+section > div.flex {
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
 /* ーーーーーーーーーーーーーー
 FD共通アーティクル＆セクション
 ーーーーーーーーーーーーーーー */
@@ -204,6 +210,9 @@ main article.FandD section hgroup {
 main article.FandD section div.flex {
   gap: 38px;
   text-align: center;
+  @media (max-width: 1199px) {
+    gap: 5px;
+  }
 }
 main article section div figure figcaption {
   margin-top: 14px;
@@ -211,6 +220,9 @@ main article section div figure figcaption {
 /* FD共通フィギュア */
 figcaption {
   white-space: nowrap;
+  @media (max-width: 1199px) {
+    white-space: normal;
+  }
 }
 /* ーー
 グッズ
@@ -251,9 +263,15 @@ main article.workshop section h3 {
 .flex7em {
   flex-basis: 7em;
 }
+.flexauto {
+  flex: auto;
+}
 /* スノードーム */
 main article.workshop section.snowdome {
   padding: 34px 22px 50px 22px;
+  @media (max-width: 767px) {
+    padding: 33px 8px 50px 9px;
+  }
   & > div.flex {
     gap: 21px;
   }
@@ -265,3 +283,8 @@ main article.workshop section.hana {
     gap: 16px;
   }
 }
+
+/* 続きはbrボーンづくりと国画像から
+３＃移動はdesign変わるかも
+フォントの太さを見る
+common行きをチェックする！ */
