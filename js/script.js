@@ -10,7 +10,7 @@ $(window).scroll(function () {
   }
 });
 
-// スクロールすると、下からふわっと出現する設定
+// スクロールすると、下からふわっと出現する設定(index.html)
 $(window).scroll(function () {
   var scrollAnimationElm = document.querySelectorAll("section");
   var scrollAnimationFunc = function () {
@@ -25,7 +25,7 @@ $(window).scroll(function () {
   window.addEventListener("scroll", scrollAnimationFunc);
 });
 
-// タブ選択で、表示切替設定（q&a.css）
+// タブ選択で、表示切替設定（q&a.html）
 $('input[name="tab"]').change(function () {
   $("main article section.tab").hide();
   var id = $(this).attr("id");

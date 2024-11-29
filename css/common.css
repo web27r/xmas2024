@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
 
 /* よく使うカラー */
 :root {
@@ -54,12 +55,12 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 8px;
-  margin-right: 8px;
-  padding: 16px 0;
-  width: 200px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding: 10px 0;
+  width: 150px;
   text-align: center;
-  font-size: 19px;
+  font-size: 16px;
   background: linear-gradient(90deg, #c4903c 0%, #ead13e 50%, #c4903c 100%);
   background-clip: text;
   -webkit-background-clip: text;
