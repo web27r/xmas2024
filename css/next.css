@@ -1,46 +1,65 @@
 @import url(common.css);
-/* ーーーー
-ヘッダー
-ーーーー */
+/* ーーーーーー
+下層ページ共通
+ーーーーーーー */
+/* ナブ下兼本編上余白 */
+main {
+  padding-top: 70px;
+  @media (max-width: 767px) {
+    padding-top: 40px;
+  }
+}
+/* ヘッダー */
 header {
   padding: 15px 0 15px 0;
   background-color: var(--mainred);
 }
-/* ーーーー
-会場マップ
-ーーーーー */
-main article.map h1.mise,
-main article.map ul {
-  font-family: "Kaisei Opti";
+moji23 {
+  @media (max-width: 767px) {
+    font-size: 23px;
+  }
 }
-main article.map h1.mise {
-  margin-bottom: 20px;
+moji21 {
+  @media (max-width: 767px) {
+    font-size: 21px;
+  }
 }
-main article.map ul {
-  gap: 15px;
-  margin-bottom: 50px;
-  & li {
-    width: 270px;
-    padding: 14px 58px 15px 29px;
-    text-align: center;
-    font-size: 25px;
-    border: none;
-    background-color: var(--koibackbeige);
-    background-image: url(../img/FandD.img/Vector.png);
-    background-repeat: no-repeat;
-    background-position: center right 28px;
-    letter-spacing: -2.5px;
-    & a {
-      color: var(--bunblack);
+moji20 {
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+/* ノートPC@media (max-width: 1199px)
+スマホ横@media (max-width: 767px)
+コピペセット */
+/* 1199>738 */
+/* 767>360; */
+/* ーー
+共通幅
+ーーー */
+
+/* 外身 */
+.container,
+.backbeige {
+  @media (max-width: 1199px) {
+    width: 738px;
+    @media (max-width: 767px) {
+      /* F&Dだけ幅違う */
+      width: 357px;
     }
   }
 }
+/* 中身 */
+
 /* ーーーーーーーーーー
 メイン共通アーティクル
 ーーーーーーーーーーーー */
 main article.backbeige {
   &:first-child {
     padding: 60px 80px;
+    @media (max-width: 767px) {
+      padding: 60px 11px 60px 12px;
+    }
   }
   &:not(:first-child) {
     padding: 60px 40px 37px 40px;
@@ -59,6 +78,41 @@ main hgroup {
   }
   &.GandW {
     margin-bottom: 50px;
+  }
+}
+/* ーーーー
+会場マップ
+ーーーーー */
+main article.map h1.mise,
+main article.map ul {
+  font-family: "Kaisei Opti";
+}
+main article.map h1.mise {
+  margin-bottom: 20px;
+}
+main article.map ul {
+  gap: 15px;
+  margin-bottom: 50px;
+  @media (max-width: 767px) {
+    display: block;
+  }
+  & li {
+    width: 270px;
+    padding: 14px 58px 15px 29px;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+    background-color: var(--koibackbeige);
+    background-image: url(../img/FandD.img/Vector.png);
+    background-repeat: no-repeat;
+    background-position: center right 28px;
+    letter-spacing: -2.5px;
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+    & a {
+      color: var(--bunblack);
+    }
   }
 }
 /* ーーーーーーーー
@@ -84,6 +138,11 @@ main article.workshop section.koibackbeige {
 /* hgroup */
 main article section hgroup.flex {
   align-items: baseline;
+}
+section > div.flex {
+  @media (max-width: 767px) {
+    display: block;
+  }
 }
 p.no,
 p.abc {
