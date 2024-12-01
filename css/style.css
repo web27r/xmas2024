@@ -20,12 +20,18 @@ a {
 ヘッダー
 ーーーー */
 header {
-  padding-top: 320px;
-  background-image: url(../img/index.img/mainimg2.png);
+  padding-top: 15%;
+  background-image: url(../img/index.img/mainimg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (max-width:767px) {
+    padding-top: 200px;
+    background-image: url(../img/index.img/iphonemainimg.png);
+  }
 }
+
 
 header div.maintitle {
   text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
@@ -34,19 +40,33 @@ header div.maintitle {
 }
 
 header p:first-child {
-  font-size: 45px;
+  font-size: max(2vw, 30px);
+
+  @media (max-width:767px) {
+    font-size: 26px;
+  }
 }
 
 header h1 {
   margin: 30px 0;
   font-family: "Princess Sofia", cursive;
-  font-size: 110px;
+  font-size: max(5vw, 70px);
+
+  @media (max-width:767px) {
+    margin: 10px 0;
+    font-size: 50px;
+  }
 }
 
 header p:last-child {
-  padding-bottom: 320px;
+  padding-bottom: 15%;
   font-family: "Princess Sofia", cursive;
-  font-size: 80px;
+  font-size: max(4vw, 60px);
+
+  @media (max-width:767px) {
+    padding-bottom: 258px;
+    font-size: 45px;
+  }
 }
 
 /* ーーーー
@@ -94,9 +114,11 @@ section {
   transition: 1s ease-in-out;
   transform: translateY(50px);
   opacity: 0;
-  /* margin-bottom: 90px; */
-  /* border-radius: 15px;
-  background-color: var(--backbeige); */
+
+  @media (max-width:767px) {
+    padding: 50px 15px;
+
+  }
 }
 
 main section.news h2 {
@@ -105,6 +127,10 @@ main section.news h2 {
 
 main section.news dl div {
   padding: 20px 35px;
+
+  @media (max-width:767px) {
+    padding: 15px 12px;
+  }
 }
 
 main section.news div dt {
@@ -117,6 +143,10 @@ main section.news div dd {
   padding-left: 55px;
   font-size: 16px;
   line-height: 25px;
+
+  @media (max-width:767px) {
+    padding-left: 24px;
+  }
 }
 
 /* hgroup,h2共通設定 */
@@ -132,10 +162,6 @@ h2 {
   font-size: 35px; */
 }
 
-hgroup p {
-  margin-bottom: 10px;
-}
-
 /* section共通の薄ピンクの枠の設定 */
 main section.event div.day,
 main section.event div.free,
@@ -146,33 +172,66 @@ main section.event section.magcup div {
   flex-wrap: wrap;
   background-color: var(--koibackbeige);
   border-radius: 10px;
+
+  @media (max-width:1190px) {
+    padding: 40px 45px;
+    display: block;
+    flex-wrap: nowrap;
+
+    @media (max-width:767px) {
+      padding: 20px 15px 30px 15px;
+    }
+  }
 }
 
 main section.event dl dt {
   color: #4f4141;
   font-size: 20px;
   font-weight: bold;
+
+  @media (max-width:1190px) {
+    margin-bottom: 10px;
+    text-align: center;
+  }
 }
 
 main section.event div {
   margin-bottom: 20px;
 }
 
-main section.event div.day {
-  column-gap: 45px;
+main section.event div.day,
+main section.event div.access {
+  column-gap: 75px;
+}
+
+main section.event div.day div,
+main section.event div.access dd {
+  @media (max-width:1190px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
 }
 
 main section.event div.day dd:first-child {
   margin-bottom: 20px;
   font-weight: bold;
   color: #213b60;
-  font-size: 30px;
+  font-size: max(1.05vw, 18px);
+
+  @media (max-width:767px) {
+    margin-bottom: 10px;
+  }
 }
 
 main section.event div.day dd:nth-child(2) {
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: max(0.70vw, 18px);
+
+  @media (max-width:767px) {
+    margin-bottom: 5px;
+  }
 }
 
 main section.event div.free {
@@ -183,21 +242,26 @@ main section.event div.free dd,
 main section.event div.place dd,
 main section.event div.access dd {
   color: #213b60;
-  font-size: 20px;
+  font-size: max(0.70vw, 16px);
 }
 
 main section.event div.free dd {
   font-weight: bold;
   font-size: 28px;
+
+  @media (max-width:1190px) {
+    text-align: center;
+  }
 }
 
 main section.event div.place {
   column-gap: 116px;
 }
 
-main section.event div.access {
-  column-gap: 73px;
+main section.event div.place dd {
+  text-align: center;
 }
+
 
 main section.event div.access dd {
   margin-bottom: 33px;
@@ -227,17 +291,24 @@ main div.market section.aboutxmas {
 main div.market section.aboutxmas h2 {
   margin-bottom: 55px;
   font-weight: bold;
+
+  @media (max-width:767px) {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
 }
 
 main div.market section.aboutxmas p {
-  max-width: 698px;
-  margin: 0 auto;
   line-height: 28px;
   font-size: 18px;
 }
 
 main section.magcup hgroup p {
   font-family: "Kaisei Opti";
+
+  @media (max-width:767px) {
+    font-size: 15px;
+  }
 }
 
 main section.magcup p {
@@ -247,24 +318,32 @@ main section.magcup p {
 main section.magcup div {
   padding: 18px 30px;
   margin: 30px 0;
+  column-gap: 30px;
+  justify-content: center;
   border: 3px solid #c3a80d;
   background-color: var(--bunblue);
+
+  @media (max-width:767px) {
+    display: block;
+    padding: 15px;
+    margin: 20px 0;
+  }
 }
 
 main section.magcup div p {
   margin-right: 10px;
   font-family: "Miltonian Tattoo";
-  font-size: 35px;
+  font-size: max(1.23vw, 18px);
   color: var(--backbeige);
-}
-
-main section.magcup div p:first-child {
-  margin-right: 30px;
 }
 
 main div p span.fontkaisei {
   font-family: "Kaisei Opti";
-  font-size: 24px;
+  font-size: max(0.84vw, 16px);
+
+  @media (max-width:767px) {
+    margin-right: 10px;
+  }
 }
 
 /* ーーーーーーーーーーーー
@@ -272,13 +351,17 @@ main div p span.fontkaisei {
 ーーーーーーーーーーーーーー */
 main section.magcup div img {
   margin-right: 5px;
+
+  @media (max-width:767px) {
+    margin-right: 10px;
+  }
 }
 
 main section.magcup p.change {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: bold;
-  font-size: 20px;
   text-align: left;
+  font-size: max(0.41vw, 16px);
   color: var(--bunblue);
 }
 
@@ -286,6 +369,10 @@ main section.magcup ul li {
   margin-bottom: 15px;
   list-style-type: disc;
   font-weight: bold;
+
+  @media (max-width:767px) {
+    margin-left: 18px;
+  }
 }
 
 main section.magcup aside {
@@ -296,6 +383,10 @@ main section.magcup aside p {
   margin-left: -10px;
   margin-bottom: 10px;
   text-align: left;
+
+  @media (max-width:767px) {
+    margin-left: 0px;
+  }
 }
 
 main section.magcup p.yoyaku {
@@ -308,6 +399,11 @@ main section.magcup p.yoyaku {
   font-size: 25px;
 }
 
+main section.magcup p.yoyaku:hover {
+  border: 3px solid #C3A80D;
+  background: #BB232A;
+}
+
 main section.magcup p.yoyaku a {
   color: var(--backbeige);
 }
@@ -315,12 +411,34 @@ main section.magcup p.yoyaku a {
 main section.specialoffers div.flex {
   justify-content: center;
   font-weight: bold;
+
+  @media (max-width:1190px) {
+    display: block;
+  }
 }
 
 main section.specialoffers div.otoku {
   padding: 16px 34px;
   border-right: 2px dashed #b64b15;
   /* 右側に縦線 */
+
+  @media (max-width:1190px) {
+    padding: 0;
+    border-right: unset;
+    text-align: center;
+
+    @media (max-width:767px) {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width:1190px) {
+  main section.specialoffers div.otoku:first-child {
+    padding-bottom: 54px;
+    margin-bottom: 54px;
+    border-bottom: 2px dashed #b64b15;
+  }
 }
 
 main section.specialoffers div.otoku:last-child {
@@ -333,6 +451,10 @@ main section.specialoffers div.otoku p:nth-child(2) {
   margin-top: 31px;
   margin-bottom: 10px;
   color: var(--mainred);
+
+  @media (max-width:1190px) {
+    max-width: unset;
+  }
 }
 
 main section.specialoffers div.otoku aside {
@@ -341,18 +463,11 @@ main section.specialoffers div.otoku aside {
 
 main section.specialoffers div.tenpo1,
 main section.specialoffers div.tenpo2 {
+  width: fit-content;
   margin: 0 auto;
   padding: 21px 16px;
   border-radius: 15px;
   background-color: #d7c8a4;
-}
-
-main section.specialoffers div.tenpo1 {
-  max-width: 335px;
-}
-
-main section.specialoffers div.tenpo2 {
-  max-width: 350px;
 }
 
 main section.specialoffers div.otoku p.sitamargin {
@@ -388,6 +503,10 @@ main section.caution ul li {
   margin-bottom: 34px;
   list-style-image: url(../img/index.img/listicon.svg);
   line-height: 25px;
+
+  @media (max-width:767px) {
+    margin-left: 18px;
+  }
 }
 
 /* フッター */
@@ -419,6 +538,7 @@ footer p.copyright {
   font-size: 12px;
 } */
 
+/* ロゴの位置 */
 footer div.container {
   position: relative;
 }
@@ -429,277 +549,40 @@ footer p.logo {
   right: 20px;
 }
 
-/* ーーーーーー
-スマホ
-ーーーーーーーー */
-@media (max-width: 767px) {
-  header {
-    background-image: url(../img/index.img/iphonemainimg.png);
-  }
 
-  header p:first-child {
-    font-size: 26px;
-  }
 
-  header h1 {
-    margin: 10px 0;
-    font-size: 50px;
-  }
-
-  header p:last-child {
-    padding-bottom: 258px;
-    font-size: 45px;
-  }
-
-  /* 外側の白い枠の共通の設定 */
-  section {
-    padding: 35px 13px;
-  }
-
-  main section.news dl div {
-    padding: 15px 12px;
-  }
-
-  main section.news div dt {
-    font-size: 20px;
-  }
-
-  main section.news div dd {
-    padding-left: 24px;
-    font-size: 16px;
-  }
-
-  /* hgroup,h2共通設定 */
-  hgroup {
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    margin-bottom: 5px;
-  }
-
-  hgroup p {
-    margin-bottom: 0;
-  }
-
-  /* section.event共通の内側の濃いベージュ枠の設定 */
-  main section.event div.day,
-  main section.event div.free,
-  main section.event div.place,
-  main section.event div.access,
-  main section.event section.magcup div {
-    padding: 15px 30px;
-    display: block;
-    flex-wrap: nowrap;
-  }
-
-  main section.event dl dt {
-    margin-bottom: 5px;
-    text-align: center;
-    font-size: 18px;
-  }
-
-  main section.event div {
-    margin-bottom: 10px;
-  }
-
-  main section.event div.day dd:first-child,
-  main section.event div.day dd:nth-child(2),
-  main section.event div.day dd:last-child {
-    margin-bottom: 10px;
-    font-size: 15px;
-  }
-
-  main section.event div.day dd:nth-child(2) {
-    margin-bottom: 5px;
-  }
-
-  main section.event div.free dd {
-    text-align: center;
-  }
-
-  main section.event div.free dd,
-  main section.event div.place dd,
-  main section.event div.access dd {
-    font-size: 18px;
-  }
-
-  main section.event div.access dd {
-    margin-bottom: 20px;
-  }
-
-  main section.event div.access p.noflex {
-    box-sizing: border-box;
-  }
-
-  /* クリスマスマーケット背景後で設定する！ */
-  main div.market {
-    /* width: 100%;
-    height: 500px; */
-    padding: 60px 0;
-    margin-bottom: 50px;
-  }
-
-  main div.market section.aboutxmas {
-    padding-bottom: 35px;
-  }
-
-  main div.market section.aboutxmas h2 {
-    margin-bottom: 11px;
-  }
-
-  main div.market section.aboutxmas p {
-    line-height: 20px;
-    font-size: 15px;
-  }
-
-  main div.market section.aboutxmas h2,
-  main section.magcup hgroup h2,
-  main section.specialoffers hgroup h2 {
-    margin-top: 10px;
-  }
-
-  main section.magcup hgroup p {
-    font-size: 15px;
-  }
-
-  main section.magcup div {
-    display: block;
-    padding: 15px;
-    margin: 20px 0;
-  }
-
-  main section.magcup div p {
-    margin-right: 0;
-    font-size: 18px;
-  }
-
-  main div p span.fontkaisei {
-    margin-right: 10px;
-    font-size: 13px;
-  }
-
-  main section.magcup div img {
-    margin-right: 10px;
-  }
-
-  main section.magcup p.change {
-    margin-bottom: 20px;
-    font-size: 16px;
-  }
-
-  main section.magcup ul li {
-    margin-left: 18px;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-
-  main section.magcup aside p {
-    margin-left: 0px;
-    font-size: 16px;
-  }
-
-  main section.specialoffers div.flex {
-    display: block;
-  }
-
-  main section.specialoffers div.otoku {
-    padding: 0;
-    border-right: unset;
-  }
-
-  main section.specialoffers div.otoku:first-child {
-    padding-bottom: 54px;
-    margin-bottom: 54px;
-    border-bottom: 2px dashed #b64b15;
-  }
-
-  main section.caution ul li {
-    margin-left: 18px;
-    margin-bottom: 25px;
-  }
-
-  /* ーーーーーーーーーーー
+/* ーーーーーーーーーーー
   common.css追加！！！
   ーーーーーーーーーーーーー */
+/* 見出しの設定 */
+.midashired {
+  /* フォントサイズのみ vwに変更 */
+  font-size: max(1.23vw, 30px);
+}
+
+/* 見出し下のタイトル設定 */
+hgroup p {
+  font-size: max(0.88vw, 22px);
+}
+
+
+
+@media (max-width:767px) {
+
   /* メイン */
   main {
-    padding-top: 80px;
+    padding-top: 90px;
   }
+}
 
-  /* ナビゲーション */
-  nav ul {
-    display: none;
-  }
 
-  .backbeige {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 50px;
-  }
+.container,
+.backbeige {
+  @media (max-width: 1199px) {
+    width: 738px;
 
-  /* 内側の濃いベージュ枠の共通の設定 */
-  .koibackbeige {
-    margin-bottom: 10px;
-  }
-
-  /* 見出しの設定 */
-  .midashired {
-    font-size: 25px;
-  }
-
-  /* 見出し下のタイトル設定 */
-  hgroup p {
-    font-size: 20px;
-  }
-
-  /* section内のデコレーション設定 */
-  /* 雪飾り */
-  .snow {
-    background-image: url(../img/common.img/iphonedecosnow.svg);
-    background-position: top 20px left 5px;
-  }
-
-  /* ぶら下げ飾り */
-  .ornament {
-    background-image: url(../img/common.img/iphonedeco1.svg), url(../img/common.img/iphonedeco2.svg);
-    background-position: top 0 left 8px, top 0 right 8px;
-  }
-
-  /* フッター */
-  footer {
-    padding-top: 35px;
-    padding-bottom: 20px;
-  }
-
-  footer p.aboutcompany {
-    font-size: 16px;
-  }
-
-  footer p.copyright {
-    font-size: 10px;
-  }
-
-  /* ページトップボタン */
-  footer p.pagetop a {
-    padding: 10px 15px;
-    flex-direction: column-reverse;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    position: fixed;
-    right: 30px;
-    bottom: 45px;
-    border-radius: 50%;
-    font-size: 14px;
-    writing-mode: unset;
-  }
-
-  footer p.pagetop img {
-    margin-bottom: unset;
-  }
-
-  footer p.pagetop span.displaynone {
-    display: none;
+    @media (max-width: 767px) {
+      width: 360px;
+    }
   }
 }

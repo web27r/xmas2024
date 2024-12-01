@@ -9,7 +9,7 @@ header {
 }
 
 main article {
-  padding: 60px 40px;
+  padding: 60px 40px 110px 40px;
 }
 
 main article hgroup {
@@ -69,7 +69,9 @@ main article section.schedule h3 {
 }
 
 main article section.schedule div.artisttable {
-  overflow: auto; /*　横スクロール設定 */
+  margin-bottom: 28px;
+  overflow: auto;
+  /*　横スクロール設定 */
   -webkit-overflow-scrolling: touch;
   height: 750px;
 }
@@ -81,7 +83,8 @@ table {
 
 /* 一列目の日付のセルの設定 */
 table thead tr {
-  position: sticky; /* 日付固定配置 */
+  position: sticky;
+  /* 日付固定配置 */
   top: 0;
 }
 
@@ -96,13 +99,15 @@ table thead tr th.date {
 }
 
 table thead tr span.posi {
-  position: absolute; /* 12月の固定配置 */
+  position: absolute;
+  /* 12月の固定配置 */
   top: 5px;
   left: 55px;
 }
 
 table thead tr span.fontbig {
-  position: absolute; /* 日の固定配置 */
+  position: absolute;
+  /* 日の固定配置 */
   top: 10px;
   left: 84px;
   font-size: 40px;
@@ -140,7 +145,8 @@ table tbody tr {
 table tbody tr th.time {
   padding: 80px 21px;
   z-index: 1;
-  position: sticky; /* 時間固定配置 */
+  position: sticky;
+  /* 時間固定配置 */
   top: 60px;
   left: 0;
   background-color: #8c3a33;
@@ -212,4 +218,22 @@ table tbody td span.blue {
 
 table tbody td span.red {
   color: #b6151a;
+}
+
+/* PDFボタンの設定 */
+p.pdfbtn {
+  position: relative;
+}
+
+p.pdfbtn a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 51px;
+  border-radius: 15px;
+  background-color: #CC3D24;
+  color: var(--backbeige);
 }

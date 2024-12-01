@@ -31,3 +31,14 @@ $('input[name="tab"]').change(function () {
   var id = $(this).attr("id");
   $("." + id).fadeIn();
 });
+
+// ハンバーガーメニュー設定(上下スライド)
+// .hmenuをクリックした時
+$(".hmenu").click(function () {
+  $(this).toggleClass("open");
+  return false;
+});
+
+$(".container").click(function () {
+  $(".hmenu").removeClass("open");
+});
