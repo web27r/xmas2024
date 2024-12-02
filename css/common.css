@@ -48,24 +48,126 @@ main {
   background-attachment: fixed;
 }
 
+
+nav {
+  @media (max-width:767px) {
+    display: none;
+    padding-top: 50px;
+  }
+}
+
 /* ナビゲーション */
 nav ul {
+  padding: 15px 10px;
   display: flex;
   justify-content: center;
+
+  @media (max-width:767px) {
+    display: block;
+  }
 }
 
 nav ul li {
-  margin-left: 3px;
-  margin-right: 3px;
-  padding: 10px 0;
-  width: 150px;
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 170px;
+  height: 58px;
   text-align: center;
-  font-size: 16px;
   background: linear-gradient(90deg, #c4903c 0%, #ead13e 50%, #c4903c 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border: 2px solid #c4903c;
+  font-size: max(0.41vw, 12px);
+
+  @media (max-width:767px) {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #EAD13E;
+    font-size: 20px;
+  }
+}
+
+nav ul li a {
+  display: inline-block;
+  width: 100%;
+  /* liと同じ高さ */
+  line-height: 58px;
+}
+
+nav ul li:hover {
+  background: var(--, linear-gradient(90deg, #caa341 0%, #edd63e 52.01%, #caa341 100%));
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+
+  @media (max-width:767px) {
+    background: unset;
+  }
+}
+
+nav ul li:hover a {
+  color: #94661c;
+
+  @media (max-width:767px) {
+    color: unset;
+  }
+}
+
+/* モバイル時のハンバーガメニュー */
+.hmenu {
+  width: 55px;
+  height: 55px;
+  border: none;
+  /* PCでは非表示設定（モバイル時の方でdisplay:flexにして表示する） */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: unset;
+  margin-left: auto;
+  margin-right: 0;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.hmenu span,
+.hmenu span::before,
+.hmenu span::after {
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.hmenu.open span {
+  background-color: unset;
+}
+
+.hmenu span::before {
+  content: "";
+  bottom: 12px;
+}
+
+.hmenu span::after {
+  content: "";
+  top: 12px;
+}
+
+/* 下:0, 回転:-135° */
+.hmenu.open span::before {
+  bottom: 0;
+  transform: rotate(-135deg);
+}
+
+/* 上:0, 回転:135° */
+.hmenu.open span::after {
+  top: 0;
+  transform: rotate(135deg);
 }
 
 /* 見出しの設定 */
@@ -101,13 +203,40 @@ hgroup p {
   display: flex;
 }
 
-/* フッター */
+/* スクロールすると、下からふわっと出現する設定 */
+.fadein {
+  transition: 1s ease-in-out;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.fadein.on {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ーーーーー
+フッター 
+ーーーーーー*/
 footer {
   padding: 65px 20px 0 20px;
   background-image: url(../img/common.img/footer.svg);
   background-repeat: repeat-x;
   background-position: bottom;
   background-color: var(--mainred);
+}
+
+footer ul.snsbtn {
+  margin-bottom: 50px;
+  align-items: center;
+  column-gap: 16px;
+}
+
+footer ul.snsbtn::before {
+  content: "Follow us";
+  font-family: "Miltonian Tattoo";
+  font-size: 35px;
+  color: #fff;
 }
 
 footer p.aboutcompany {
@@ -118,7 +247,6 @@ footer p.aboutcompany {
 
 footer div.companyicon {
   margin-bottom: 256px;
-  display: flex;
   column-gap: 20px;
 }
 
@@ -145,10 +273,35 @@ footer p.pagetop a {
   /* 縦書き設定 */
   writing-mode: vertical-rl;
   display: flex;
+
+  /* モバイル時のページトップボタン */
+  @media (max-width: 767px) {
+    padding: 10px 15px;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 30px;
+    bottom: 45px;
+    border-radius: 50%;
+    font-size: 14px;
+    writing-mode: unset;
+  }
 }
 
 footer p.pagetop img {
   margin-bottom: 8px;
+
+  @media (max-width: 767px) {
+    margin-bottom: unset;
+  }
+}
+
+@media (max-width: 767px) {
+  footer span.none {
+    display: none;
+  }
 }
 
 /* section内のデコレーション設定 */
@@ -156,12 +309,14 @@ footer p.pagetop img {
 .snow {
   background-image: url(../img/common.img/decosnow.svg);
   background-repeat: no-repeat;
-  background-position: top 20px left 31px;
+  background-position: center top 20px;
+  background-size: 90% auto;
 }
 
 /* ぶら下げ飾り */
 .ornament {
   background-image: url(../img/common.img/deco1.svg), url(../img/common.img/deco2.svg);
   background-repeat: no-repeat;
-  background-position: top 0 left 25px, top 0 right 21px;
+  background-position: top 0 left 5%, top 0 right 5%;
+  background-size: 17% auto;
 }

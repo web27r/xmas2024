@@ -4,16 +4,24 @@
 ヘッダー
 ーーーー */
 header {
-  padding: 15px 0 15px 0;
+  padding: 10px;
   background-color: var(--mainred);
 }
 
 main article {
-  padding: 60px 40px;
+  padding: 60px 40px 110px 40px;
+
+  @media (max-width:767px) {
+    padding: 60px 15px;
+  }
 }
 
 main article hgroup {
   margin-bottom: 85px;
+
+  @media (max-width:767px) {
+    margin-bottom: 20px;
+  }
 }
 
 main article section {
@@ -27,25 +35,34 @@ main article section.aboutartist {
 }
 
 main article section.aboutartist div {
-  padding: 85px 80px 66px 80px;
-  display: flex;
+  padding: 10px 0 66px 0;
   flex-wrap: wrap;
   gap: 25px 30px;
   justify-content: center;
 }
 
 main article section h3 {
-  padding: 20px 80px;
-  position: absolute;
-  top: -46px;
-  left: 250px;
+  padding: 20px 0;
+  transform: translate(0, -50%);
   background-image: url(../img/performance.img/titlelabel.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: max(35%, 250px);
   font-family: "Kaisei Opti";
-  font-size: 35px;
+  text-align: center;
+  font-size: max(1.25vw, 25px);
   letter-spacing: -3.5px;
   color: var(--backbeige);
+
+  @media (max-width:767px) {
+    transform: translate(0, -100%);
+  }
+}
+
+@media (max-width: 767px) {
+  main article section figure {
+    margin-bottom: 15px;
+  }
 }
 
 main article section figcaption {
@@ -54,22 +71,67 @@ main article section figcaption {
   text-align: center;
 }
 
+/* ーーーーーーーーーーーー
+モバイル時のタブ切り替え設定 
+ーーーーーーーーーーーーーー*/
+main article ul {
+  display: none;
+
+  @media (max-width: 767px) {
+    padding: 22px 0;
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 11px;
+    background-color: #ebe7d3;
+  }
+}
+
+@media (max-width:767px) {
+
+  label[for="tabartist"],
+  label[for="tabschedule"] {
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: #25244e;
+    box-shadow: 0 0 0 3px #25244e;
+    border: 2px dashed #fff;
+    font-size: 14px;
+    color: var(--backbeige);
+  }
+
+  /* タブを選択したときの設定 */
+  input:checked+label {
+    background-color: #d3c6da;
+    box-shadow: 0 0 0 3px #d3c6da;
+  }
+
+  main article section.tabschedule {
+    display: none;
+  }
+
+  /* ラジオボタンを消す */
+  main article ul input {
+    display: none;
+  }
+}
+
 /* ーーーーー
 テーブル
 ーーーーーーー */
 main article section.schedule {
   margin-top: 150px;
-}
 
-/* テーブルタイトル */
-main article section.schedule h3 {
-  position: absolute;
-  top: -100px;
-  padding: 20px 112px;
+  @media (max-width:767px) {
+    margin-top: 0;
+  }
 }
 
 main article section.schedule div.artisttable {
-  overflow: auto; /*　横スクロール設定 */
+  margin-bottom: 28px;
+  overflow: auto;
+  /* 横スクロール設定 */
   -webkit-overflow-scrolling: touch;
   height: 750px;
 }
@@ -81,7 +143,8 @@ table {
 
 /* 一列目の日付のセルの設定 */
 table thead tr {
-  position: sticky; /* 日付固定配置 */
+  position: sticky;
+  /* 日付固定配置 */
   top: 0;
 }
 
@@ -96,13 +159,15 @@ table thead tr th.date {
 }
 
 table thead tr span.posi {
-  position: absolute; /* 12月の固定配置 */
+  position: absolute;
+  /* 12月の固定配置 */
   top: 5px;
   left: 55px;
 }
 
 table thead tr span.fontbig {
-  position: absolute; /* 日の固定配置 */
+  position: absolute;
+  /* 日の固定配置 */
   top: 10px;
   left: 84px;
   font-size: 40px;
@@ -140,7 +205,8 @@ table tbody tr {
 table tbody tr th.time {
   padding: 80px 21px;
   z-index: 1;
-  position: sticky; /* 時間固定配置 */
+  position: sticky;
+  /* 時間固定配置 */
   top: 60px;
   left: 0;
   background-color: #8c3a33;
@@ -212,4 +278,34 @@ table tbody td span.blue {
 
 table tbody td span.red {
   color: #b6151a;
+}
+
+/* PDFボタンの設定 */
+p.pdfbtn {
+  position: relative;
+}
+
+p.pdfbtn a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 51px;
+  border-radius: 15px;
+  background-color: #cc3d24;
+  color: var(--backbeige);
+}
+
+/* indexとq&a.htmlにも記入している為どちらも消してcommonに書く */
+.container,
+.backbeige {
+  @media (max-width: 1199px) {
+    width: 738px;
+
+    @media (max-width: 767px) {
+      width: 360px;
+    }
+  }
 }

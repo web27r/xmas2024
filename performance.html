@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>パフォーマンス&#xFF5C;Christmas Market 2024 in てんしば</title>
-  <link rel="icon" href="img/common.img/favicon1.png" type="image/png">
+  <link rel="icon" href="img/common.img/favivontonakai.png" type="image/png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/performance.css">
   <!-- footerFixed -->
@@ -16,11 +16,13 @@
 
 <body id="top">
   <header>
+    <!-- モバイル時のハンバーガーメニュー -->
+    <button class="hmenu"><span></span></button>
     <nav>
       <ul>
         <li><a href="index.html">トップページ</a></li>
         <li><a href="next.html">ショップ</a></li>
-        <li><a href="performance.html">ステージ</a></li>
+        <li><a href="performance.html">パフォーマンス</a></li>
         <li><a href="#">会場マップ</a></li>
         <li><a href="index.html#access">アクセス</a></li>
         <li><a href="q&a.html">Q&A</a></li>
@@ -31,14 +33,25 @@
 
   <main>
     <div class="container">
-      <article class="backbeige snow">
+      <article class="backbeige ornament fadein">
         <hgroup>
           <h2 class="midashired">PERFORMANCE</h2>
           <p>パフォーマンス</p>
         </hgroup>
-        <section class="koibackbeige aboutartist">
+        <!-- モバイル時の選択式タブ２つ -->
+        <ul>
+          <li>
+            <input type="radio" name="tabp" id="tabartist" checked>
+            <label for="tabartist">出演アーティスト</label>
+          </li>
+          <li>
+            <input type="radio" name="tabp" id="tabschedule">
+            <label for="tabschedule">スケジュール</label>
+          </li>
+        </ul>
+        <section class="koibackbeige aboutartist tabp tabartist">
           <h3>出演アーティスト</h3>
-          <div>
+          <div class="flex">
             <figure>
               <img src="img/performance.img/glotusimg.png">
               <figcaption>Mother&Son Duo “GLOTUS”</figcaption>
@@ -77,7 +90,7 @@
             </figure>
           </div>
         </section>
-        <section class="schedule">
+        <section class="schedule tabp tabschedule">
           <h3>スケジュール</h3>
           <div class="artisttable">
             <table>
@@ -87,7 +100,8 @@
                   <th scope="col" class="green date"><span class="posi">12/</span><span class="fontbig">20</span></th>
                   <th scope="col" class="purple date"><span class="posi">12/</span><span class="fontbig">21</span></th>
                   <th scope="col" class="yellow date"><span class="posi">12/</span><span class="fontbig">22</span></th>
-                  <th scope="col" class="koiorange date"><span class="posi">12/</span><span class="fontbig">23</span></th>
+                  <th scope="col" class="koiorange date"><span class="posi">12/</span><span class="fontbig">23</span>
+                  </th>
                   <th scope="col" class="blue date"><span class="posi">12/</span><span class="fontbig">24</span></th>
                   <th scope="col" class="red date"><span class="posi">12/</span><span class="fontbig">25</span></th>
                 </tr>
@@ -296,24 +310,28 @@
               </tbody>
             </table>
           </div>
+          <p class="pdfbtn"><a href="img/performance.img/stageschedule_PDF.pdf" target="_blank"><img
+                src="img/performance.img/pdficon.svg" alt="PDFアイコン">公演スケジュール<br>PDFダウンロード</a></p>
         </section>
       </article>
     </div>
   </main>
-
   <footer>
     <div class="container">
       <p class="aboutcompany">主催 クリスマスマーケット in 大阪 実行委員会<br>協力 近鉄不動産株式会社<br>後援 大阪・神戸ドイツ連邦共和国総領事館／ドイツ観光局／天王寺区／公益財団法人大阪観光局
       </p>
-      <div class="companyicon">
-        <p><a href="https://japan.diplo.de/Vertretung/japan/ja/Startseite.html"><img src="img/common.img/site1.png" width="180" height="80" alt="ドイツ大使館&#x30FB;総領事館サイト"></a></p>
+      <div class="companyicon flex">
+        <p><a href="https://japan.diplo.de/Vertretung/japan/ja/Startseite.html"><img src="img/common.img/site1.png"
+              width="180" height="80" alt="ドイツ大使館&#x30FB;総領事館サイト"></a></p>
         <p><a href="#"><img src="img/common.img/site2.jpg" width="180" height="80" alt="ドイツ総領事館150周年ロゴ"></a></p>
-        <p><a href="https://x.com/GermanyTravelJP"><img src="img/common.img/site3.png" width="180" height="80" alt="ドイツ観光局のSNS"></a></p>
+        <p><a href="https://x.com/GermanyTravelJP"><img src="img/common.img/site3.png" width="180" height="80"
+              alt="ドイツ観光局のSNS"></a></p>
       </div>
-      <p class="logo"><a href="index.html"><img src="img/common.img/logo2.png" width="200" height="200" alt="ロゴ"></a>
-      </p>
-      <p class="pagetop"><a href="#top"><img src="img/common.img/pagetop.svg" alt="ページトップへ">PAGE TOP</a></p>
-      <p class="copyright"><small>COPYRIGHT&copy;OSAKA CHRISTMASMARKET.ALL RIGHTS RESERVED.</small></p>
+      <!-- トップページはここにロゴを入れる！！ -->
+      <p class="pagetop"><a href="#top"><img src="img/common.img/pagetop.svg" alt="ページトップへ"><span class="none">PAGE
+          </span>TOP</a></p>
+      <p class="copyright"><small>COPYRIGHT&copy;OSAKA CHRISTMASMARKET.<span class="none">ALL RIGHTS
+            RESERVED.</span></small></p>
     </div>
   </footer>
   <script src="js/script.js"></script>
