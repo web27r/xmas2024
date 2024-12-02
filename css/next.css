@@ -2,9 +2,15 @@
 /* ーーーーーー
 下層ページ共通
 ーーーーーーー */
+:root {
+  --hoverblue: #1d3387;
+}
+.futoji {
+  font-weight: bold;
+}
 /* ナブ下兼本編上余白 */
 main {
-  padding-top: 70px;
+  padding-top: 90px;
   @media (max-width: 767px) {
     padding-top: 40px;
   }
@@ -14,17 +20,17 @@ header {
   padding: 15px 0 15px 0;
   background-color: var(--mainred);
 }
-moji23 {
+.moji23 {
   @media (max-width: 767px) {
     font-size: 23px;
   }
 }
-moji21 {
+.moji21 {
   @media (max-width: 767px) {
     font-size: 21px;
   }
 }
-moji20 {
+.moji20 {
   @media (max-width: 767px) {
     font-size: 20px;
   }
@@ -63,15 +69,21 @@ main article.backbeige {
   }
   &:not(:first-child) {
     padding: 60px 40px 37px 40px;
+    @media (max-width: 767px) {
+      padding: 60px 15px 29px 15px;
+    }
   }
 }
 h1 {
   margin-bottom: 7px;
 }
 /* これ青文字 */
-main hgroup {
+main article hgroup {
+  &.shop {
+    margin-bottom: 30px;
+  }
   &.map {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
   }
   &.FandD {
     margin-bottom: 30px;
@@ -84,42 +96,30 @@ main hgroup {
 会場マップ
 ーーーーー */
 main article.map ul {
-  font-family: "Kaisei Opti";
-  gap: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
+  gap: 30px;
+  justify-content: center;
   @media (max-width: 767px) {
     display: block;
-  }
-  & li {
-    width: 270px;
-    padding: 14px 58px 15px 29px;
-    text-align: center;
-    font-size: 25px;
-    border: none;
-    background-color: var(--koibackbeige);
-    background-image: url(../img/FandD.img/Vector.png);
-    background-repeat: no-repeat;
-    background-position: center right 28px;
-    letter-spacing: -2.5px;
-    @media (max-width: 767px) {
-      margin: 0 auto 20px auto;
-    }
-    & a {
-      color: var(--bunblack);
-    }
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+main article.map ul li {
+  @media (max-width: 767px) {
+    width: 155px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+}
+/* 消えたけどどこかで使う */
 br.born757 {
   display: none;
   @media (max-width: 1199px) and (min-width: 757px) {
     display: inline;
   }
 }
-/* a.gooddown {
-  @media (max-width: 1199px) and (min-width: 757px) {
-    padding: 32px 100px 32px 100px;
-  }
-} */
 /* ーーーーーーーー
 FDGW共通セクション
 ーーーーーーーー */
@@ -164,21 +164,34 @@ p.abci {
 }
 h3 {
   margin-right: 12px;
+  font-weight: bold;
 }
 /* 青文字から本文に戻す */
 p.none {
   color: var(--bunblack);
   font-size: 16px;
+  @media (max-width: 767px) {
+    /* text-align: left; */
+    margin-left: unset;
+    /* ここ左揃えたい */
+  }
 }
 hgroup h3,
 article.workshop h3 {
   font-size: 25px;
   font-weight: 700;
 }
-/* セクション画像フレボ */
+/* セクションタイトルフレボ＆画像フレボ */
+section > hgroup.flex,
 section > div.flex {
   @media (max-width: 767px) {
     display: block;
+  }
+}
+.flexborn {
+  display: inherit;
+  @media (max-width: 767px) {
+    display: flex;
   }
 }
 /* ーーーーーーーーーーーーーー
@@ -189,10 +202,18 @@ h2 {
   width: 368px;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: 767px) {
+    /* width: 357px; */
+    margin-left: -20px;
+    /* margin-right: -5px; */
+  }
 }
 /* セクション */
 main article.FandD section.koibackbeige {
   padding: 22px 25px;
+  @media (max-width: 767px) {
+    padding-top: 25px;
+  }
 }
 
 main article.FandD section hgroup {
@@ -229,6 +250,9 @@ figcaption {
 ーーー */
 main article.goods section.koibackbeige {
   padding: 22px 25px 33px 25px;
+  @media (max-width: 767px) {
+    padding-top: 30px;
+  }
   & hgroup {
     margin-bottom: 21px;
   }
@@ -284,7 +308,29 @@ main article.workshop section.hana {
   }
 }
 
-/* 続きはbrボーンづくりと国画像から
-３＃移動はdesign変わるかも
-フォントの太さを見る
-common行きをチェックする！ */
+/* 続きはbrボーンづくり
+フォントの太さNEXTのみ！
+ミディアム問題を相談
+common行きをチェックした！
+コンテナ,ベージュの幅要らん */
+
+/* // ーーーーーーーーーーー
+// ホバーして画像が変わる
+// ーーーーーーーーーーー
+$(function () {
+  $(".js-hover").each(function () {
+    var src_off = $(this).find("img").attr("src"),
+      src_on = src_off.replace("_off", "_on");
+
+    $(".js-hover").attr("src", src_off);
+
+    $(this).hover(
+      function () {
+        $(this).find("img").attr("src", src_on);
+      },
+      function () {
+        $(this).find("img").attr("src", src_off);
+      }
+    );
+  });
+}); */

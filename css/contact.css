@@ -2,9 +2,15 @@
 /* ーーーーーー
 下層ページ共通
 ーーーーーーー */
+:root {
+  --hoverblue: #1d3387;
+}
+.futoji {
+  font-weight: bold;
+}
 /* ナブ下兼本編上余白 */
 main {
-  padding-top: 70px;
+  padding-top: 90px;
   @media (max-width: 767px) {
     padding-top: 40px;
   }
@@ -71,8 +77,8 @@ hgroup {
     margin: 35px auto 0 auto;
   }
 }
-/* 最初の注意書き */
-p.tyuui {
+/* form box 下※の注意書き */
+aside.tyuui {
   margin-top: 10px;
 }
 /* 各入力３点セット */
@@ -132,4 +138,8 @@ input[type="submit"] {
   color: var(--backbeige);
   background-color: var(--koiblue);
   cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--hoverblue);
 }
