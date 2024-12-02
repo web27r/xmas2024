@@ -526,16 +526,6 @@ footer p.copyright {
   font-size: 12px;
 } */
 
-/* ロゴの位置 */
-footer div.container {
-  position: relative;
-}
-
-footer p.logo {
-  position: absolute;
-  top: 0px;
-  right: 20px;
-}
 
 /* ーーーーーーーーーーー
   common.css追加！！！
@@ -543,7 +533,7 @@ footer p.logo {
 /* 見出しの設定 */
 .midashired {
   /* フォントサイズのみ vwに変更 */
-  font-size: max(1.23vw, 30px);
+  font-size: max(1.25vw, 30px);
 }
 
 /* 見出し下のタイトル設定 */
@@ -552,6 +542,7 @@ hgroup p {
 }
 
 @media (max-width: 767px) {
+
   /* メイン */
   main {
     padding-top: 35px;

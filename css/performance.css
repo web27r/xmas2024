@@ -4,19 +4,24 @@
 ヘッダー
 ーーーー */
 header {
+  padding: 10px;
   background-color: var(--mainred);
-
-  @media (max-width: 767px) {
-    background-color: unset;
-  }
 }
 
 main article {
   padding: 60px 40px 110px 40px;
+
+  @media (max-width:767px) {
+    padding: 60px 15px;
+  }
 }
 
 main article hgroup {
   margin-bottom: 85px;
+
+  @media (max-width:767px) {
+    margin-bottom: 20px;
+  }
 }
 
 main article section {
@@ -30,28 +35,28 @@ main article section.aboutartist {
 }
 
 main article section.aboutartist div {
-  padding: 85px 80px 66px 80px;
+  padding: 10px 0 66px 0;
   flex-wrap: wrap;
   gap: 25px 30px;
   justify-content: center;
-
-  @media (max-width: 767px) {
-    display: block;
-  }
 }
 
 main article section h3 {
-  padding: 20px 80px;
+  padding: 20px 0;
   transform: translate(0, -50%);
   background-image: url(../img/performance.img/titlelabel.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 30% auto;
+  background-size: max(35%, 250px);
   font-family: "Kaisei Opti";
   text-align: center;
-  font-size: max(1.23vw, 30px);
+  font-size: max(1.25vw, 25px);
   letter-spacing: -3.5px;
   color: var(--backbeige);
+
+  @media (max-width:767px) {
+    transform: translate(0, -100%);
+  }
 }
 
 @media (max-width: 767px) {
@@ -66,10 +71,15 @@ main article section figcaption {
   text-align: center;
 }
 
-/* モバイル時の選択ボタン設定 */
+/* ーーーーーーーーーーーー
+モバイル時のタブ切り替え設定 
+ーーーーーーーーーーーーーー*/
 main article ul {
   display: none;
+
   @media (max-width: 767px) {
+    padding: 22px 0;
+    margin-bottom: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,48 +88,33 @@ main article ul {
   }
 }
 
-label[for="tabartist"],
-label[for="tabschedule"] {
-  padding: 10px 22px;
-  display: none;
-  border-radius: 10px;
-  background-color: #25244e;
-  border: 2px dashed #fff;
-  box-shadow: 0 0 0 3px #25244e;
-  color: var(--backbeige);
-}
+@media (max-width:767px) {
 
-/* タブを選択したときの設定 */
-input:checked + label {
-  background-color: #d3c6da;
-}
-
-main article #tabschedule {
-  display: none;
-}
-
-/* ラジオボタンを消す */
-main article ul input {
-  display: none;
-}
-
-/* main article button.btn1,
-main article button.btn2 {
-  padding: 10px 22px;
-  display: none;
-  border-radius: 10px;
-  background-color: #25244e;
-  border: 2px dashed #fff;
-  box-shadow: 0 0 0 3px #25244e;
-  color: var(--backbeige);
-  @media (max-width: 767px) {
-    display: block;
+  label[for="tabartist"],
+  label[for="tabschedule"] {
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: #25244e;
+    box-shadow: 0 0 0 3px #25244e;
+    border: 2px dashed #fff;
+    font-size: 14px;
+    color: var(--backbeige);
   }
-} */
 
-/* スクロールせずにパッと表示する設定 */
-:root {
-  scroll-behavior: unset;
+  /* タブを選択したときの設定 */
+  input:checked+label {
+    background-color: #d3c6da;
+    box-shadow: 0 0 0 3px #d3c6da;
+  }
+
+  main article section.tabschedule {
+    display: none;
+  }
+
+  /* ラジオボタンを消す */
+  main article ul input {
+    display: none;
+  }
 }
 
 /* ーーーーー
@@ -127,6 +122,10 @@ main article button.btn2 {
 ーーーーーーー */
 main article section.schedule {
   margin-top: 150px;
+
+  @media (max-width:767px) {
+    margin-top: 0;
+  }
 }
 
 main article section.schedule div.artisttable {
@@ -297,4 +296,16 @@ p.pdfbtn a {
   border-radius: 15px;
   background-color: #cc3d24;
   color: var(--backbeige);
+}
+
+/* indexとq&a.htmlにも記入している為どちらも消してcommonに書く */
+.container,
+.backbeige {
+  @media (max-width: 1199px) {
+    width: 738px;
+
+    @media (max-width: 767px) {
+      width: 360px;
+    }
+  }
 }

@@ -48,22 +48,30 @@ main {
   background-attachment: fixed;
 }
 
+
+nav {
+  @media (max-width:767px) {
+    display: none;
+    padding-top: 50px;
+  }
+}
+
 /* ナビゲーション */
 nav ul {
   padding: 15px 10px;
   display: flex;
   justify-content: center;
 
-  @media (max-width: 767px) {
-    display: none;
+  @media (max-width:767px) {
+    display: block;
   }
 }
 
 nav ul li {
   margin-left: 4px;
   margin-right: 4px;
-  padding: 18px 0;
   width: 170px;
+  height: 58px;
   text-align: center;
   background: linear-gradient(90deg, #c4903c 0%, #ead13e 50%, #c4903c 100%);
   background-clip: text;
@@ -71,6 +79,20 @@ nav ul li {
   -webkit-text-fill-color: transparent;
   border: 2px solid #c4903c;
   font-size: max(0.41vw, 12px);
+
+  @media (max-width:767px) {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #EAD13E;
+    font-size: 20px;
+  }
+}
+
+nav ul li a {
+  display: inline-block;
+  width: 100%;
+  /* liと同じ高さ */
+  line-height: 58px;
 }
 
 nav ul li:hover {
@@ -78,10 +100,18 @@ nav ul li:hover {
   background-clip: unset;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
+
+  @media (max-width:767px) {
+    background: unset;
+  }
 }
 
 nav ul li:hover a {
   color: #94661c;
+
+  @media (max-width:767px) {
+    color: unset;
+  }
 }
 
 /* モバイル時のハンバーガメニュー */
@@ -93,13 +123,12 @@ nav ul li:hover a {
   display: none;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 15px;
-  right: 15px;
   background-color: unset;
+  margin-left: auto;
+  margin-right: 0;
 
   @media (max-width: 767px) {
-    display: flex;
+    display: block;
   }
 }
 
@@ -186,13 +215,28 @@ hgroup p {
   opacity: 1;
 }
 
-/* フッター */
+/* ーーーーー
+フッター 
+ーーーーーー*/
 footer {
   padding: 65px 20px 0 20px;
   background-image: url(../img/common.img/footer.svg);
   background-repeat: repeat-x;
   background-position: bottom;
   background-color: var(--mainred);
+}
+
+footer ul.snsbtn {
+  margin-bottom: 50px;
+  align-items: center;
+  column-gap: 16px;
+}
+
+footer ul.snsbtn::before {
+  content: "Follow us";
+  font-family: "Miltonian Tattoo";
+  font-size: 35px;
+  color: #fff;
 }
 
 footer p.aboutcompany {
@@ -204,11 +248,6 @@ footer p.aboutcompany {
 footer div.companyicon {
   margin-bottom: 256px;
   column-gap: 20px;
-
-  @media (max-width: 767px) {
-    /* ！！！！！あとで直す！！！！！ */
-    flex-wrap: wrap;
-  }
 }
 
 footer p.copyright {

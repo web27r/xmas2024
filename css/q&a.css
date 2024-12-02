@@ -4,10 +4,13 @@
 ヘッダー
 ーーーー */
 header {
+  padding: 10px;
   background-color: var(--mainred);
 
-  @media (max-width: 767px) {
-    background-color: unset;
+  @media (max-width:767px) {
+    background-image: url(../img/common.img/iphonenavback.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -65,7 +68,7 @@ label[for="tab3"] {
 }
 
 /* タブを選択したときの設定 */
-input:checked + label {
+input:checked+label {
   border-bottom: 5px solid var(--mainred);
   background-color: var(--koibackbeige);
   color: var(--bunblack);
@@ -160,7 +163,6 @@ main article dd div {
   border-bottom-right-radius: 15px;
 }
 
-/* commonに書く！！ */
 
 /* index.htmlにも記入している為どちらも消してcommonに書く */
 .container,
