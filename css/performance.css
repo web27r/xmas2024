@@ -4,8 +4,11 @@
 ヘッダー
 ーーーー */
 header {
-  padding: 15px 0 15px 0;
   background-color: var(--mainred);
+
+  @media (max-width: 767px) {
+    background-color: unset;
+  }
 }
 
 main article {
@@ -28,30 +31,95 @@ main article section.aboutartist {
 
 main article section.aboutartist div {
   padding: 85px 80px 66px 80px;
-  display: flex;
   flex-wrap: wrap;
   gap: 25px 30px;
   justify-content: center;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
 }
 
 main article section h3 {
   padding: 20px 80px;
-  position: absolute;
-  top: -46px;
-  left: 250px;
+  transform: translate(0, -50%);
   background-image: url(../img/performance.img/titlelabel.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 30% auto;
   font-family: "Kaisei Opti";
-  font-size: 35px;
+  text-align: center;
+  font-size: max(1.23vw, 30px);
   letter-spacing: -3.5px;
   color: var(--backbeige);
+}
+
+@media (max-width: 767px) {
+  main article section figure {
+    margin-bottom: 15px;
+  }
 }
 
 main article section figcaption {
   margin-top: 8px;
   font-weight: bold;
   text-align: center;
+}
+
+/* モバイル時の選択ボタン設定 */
+main article ul {
+  display: none;
+  @media (max-width: 767px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 11px;
+    background-color: #ebe7d3;
+  }
+}
+
+label[for="tabartist"],
+label[for="tabschedule"] {
+  padding: 10px 22px;
+  display: none;
+  border-radius: 10px;
+  background-color: #25244e;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 0 3px #25244e;
+  color: var(--backbeige);
+}
+
+/* タブを選択したときの設定 */
+input:checked + label {
+  background-color: #d3c6da;
+}
+
+main article #tabschedule {
+  display: none;
+}
+
+/* ラジオボタンを消す */
+main article ul input {
+  display: none;
+}
+
+/* main article button.btn1,
+main article button.btn2 {
+  padding: 10px 22px;
+  display: none;
+  border-radius: 10px;
+  background-color: #25244e;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 0 3px #25244e;
+  color: var(--backbeige);
+  @media (max-width: 767px) {
+    display: block;
+  }
+} */
+
+/* スクロールせずにパッと表示する設定 */
+:root {
+  scroll-behavior: unset;
 }
 
 /* ーーーーー
@@ -61,17 +129,10 @@ main article section.schedule {
   margin-top: 150px;
 }
 
-/* テーブルタイトル */
-main article section.schedule h3 {
-  position: absolute;
-  top: -100px;
-  padding: 20px 112px;
-}
-
 main article section.schedule div.artisttable {
   margin-bottom: 28px;
   overflow: auto;
-  /*　横スクロール設定 */
+  /* 横スクロール設定 */
   -webkit-overflow-scrolling: touch;
   height: 750px;
 }
@@ -234,6 +295,6 @@ p.pdfbtn a {
   right: 0;
   padding: 8px 51px;
   border-radius: 15px;
-  background-color: #CC3D24;
+  background-color: #cc3d24;
   color: var(--backbeige);
 }

@@ -10,9 +10,9 @@ $(window).scroll(function () {
   }
 });
 
-// スクロールすると、下からふわっと出現する設定(index.html)
+// スクロールすると、下からふわっと出現する設定
 $(window).scroll(function () {
-  var scrollAnimationElm = document.querySelectorAll("section");
+  var scrollAnimationElm = document.querySelectorAll(".fadein");
   var scrollAnimationFunc = function () {
     for (var i = 0; i < scrollAnimationElm.length; i++) {
       var triggerMargin = 100;
@@ -41,4 +41,11 @@ $(".hmenu").click(function () {
 
 $(".container").click(function () {
   $(".hmenu").removeClass("open");
+});
+
+// タブ選択で、表示切替設定(performance.html）
+$('input[name="tabp"]').change(function () {
+  $("main article ul ").hide();
+  var id = $(this).attr("id");
+  $("." + id).fadeIn();
 });

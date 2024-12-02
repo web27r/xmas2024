@@ -50,12 +50,13 @@ main {
 
 /* ナビゲーション */
 nav ul {
+  padding: 15px 10px;
   display: flex;
   justify-content: center;
 
-  /* @media (max-width:767px) {
+  @media (max-width: 767px) {
     display: none;
-  } */
+  }
 }
 
 nav ul li {
@@ -73,14 +74,14 @@ nav ul li {
 }
 
 nav ul li:hover {
-  background: var(--, linear-gradient(90deg, #CAA341 0%, #EDD63E 52.01%, #CAA341 100%));
+  background: var(--, linear-gradient(90deg, #caa341 0%, #edd63e 52.01%, #caa341 100%));
   background-clip: unset;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
 }
 
 nav ul li:hover a {
-  color: #94661C;
+  color: #94661c;
 }
 
 /* モバイル時のハンバーガメニュー */
@@ -97,7 +98,7 @@ nav ul li:hover a {
   right: 15px;
   background-color: unset;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     display: flex;
   }
 }
@@ -140,8 +141,6 @@ nav ul li:hover a {
   transform: rotate(135deg);
 }
 
-
-
 /* 見出しの設定 */
 .midashired {
   text-align: center;
@@ -175,6 +174,18 @@ hgroup p {
   display: flex;
 }
 
+/* スクロールすると、下からふわっと出現する設定 */
+.fadein {
+  transition: 1s ease-in-out;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.fadein.on {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* フッター */
 footer {
   padding: 65px 20px 0 20px;
@@ -194,7 +205,7 @@ footer div.companyicon {
   margin-bottom: 256px;
   column-gap: 20px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     /* ！！！！！あとで直す！！！！！ */
     flex-wrap: wrap;
   }
@@ -225,7 +236,7 @@ footer p.pagetop a {
   display: flex;
 
   /* モバイル時のページトップボタン */
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding: 10px 15px;
     flex-direction: column-reverse;
     align-items: center;
@@ -243,12 +254,12 @@ footer p.pagetop a {
 footer p.pagetop img {
   margin-bottom: 8px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-bottom: unset;
   }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   footer span.none {
     display: none;
   }

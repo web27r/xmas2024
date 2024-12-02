@@ -20,18 +20,17 @@ a {
 ヘッダー
 ーーーー */
 header {
-  padding-top: 15%;
+  padding-top: 10%;
   background-image: url(../img/index.img/mainimg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding-top: 200px;
     background-image: url(../img/index.img/iphonemainimg.png);
   }
 }
-
 
 header div.maintitle {
   text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
@@ -42,7 +41,7 @@ header div.maintitle {
 header p:first-child {
   font-size: max(2vw, 30px);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     font-size: 26px;
   }
 }
@@ -52,7 +51,7 @@ header h1 {
   font-family: "Princess Sofia", cursive;
   font-size: max(5vw, 70px);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin: 10px 0;
     font-size: 50px;
   }
@@ -63,7 +62,7 @@ header p:last-child {
   font-family: "Princess Sofia", cursive;
   font-size: max(4vw, 60px);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding-bottom: 258px;
     font-size: 45px;
   }
@@ -101,23 +100,12 @@ main {
   background-attachment: fixed;
 } */
 
-/* スクロールすると、下からふわっと出現する設定 */
-section.on {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 /* 外側の白い枠の共通の設定 */
 section {
   padding: 60px 85px 40px 85px;
-  /* スクロールすると、下からふわっと出現する設定 */
-  transition: 1s ease-in-out;
-  transform: translateY(50px);
-  opacity: 0;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding: 50px 15px;
-
   }
 }
 
@@ -128,7 +116,7 @@ main section.news h2 {
 main section.news dl div {
   padding: 20px 35px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding: 15px 12px;
   }
 }
@@ -144,7 +132,7 @@ main section.news div dd {
   font-size: 16px;
   line-height: 25px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding-left: 24px;
   }
 }
@@ -173,12 +161,12 @@ main section.event section.magcup div {
   background-color: var(--koibackbeige);
   border-radius: 10px;
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     padding: 40px 45px;
     display: block;
     flex-wrap: nowrap;
 
-    @media (max-width:767px) {
+    @media (max-width: 767px) {
       padding: 20px 15px 30px 15px;
     }
   }
@@ -189,7 +177,7 @@ main section.event dl dt {
   font-size: 20px;
   font-weight: bold;
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     margin-bottom: 10px;
     text-align: center;
   }
@@ -206,7 +194,7 @@ main section.event div.access {
 
 main section.event div.day div,
 main section.event div.access dd {
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
@@ -219,7 +207,7 @@ main section.event div.day dd:first-child {
   color: #213b60;
   font-size: max(1.05vw, 18px);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-bottom: 10px;
   }
 }
@@ -227,9 +215,9 @@ main section.event div.day dd:first-child {
 main section.event div.day dd:nth-child(2) {
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: max(0.70vw, 18px);
+  font-size: max(0.7vw, 18px);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-bottom: 5px;
   }
 }
@@ -242,14 +230,14 @@ main section.event div.free dd,
 main section.event div.place dd,
 main section.event div.access dd {
   color: #213b60;
-  font-size: max(0.70vw, 16px);
+  font-size: max(0.7vw, 16px);
 }
 
 main section.event div.free dd {
   font-weight: bold;
   font-size: 28px;
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     text-align: center;
   }
 }
@@ -261,7 +249,6 @@ main section.event div.place {
 main section.event div.place dd {
   text-align: center;
 }
-
 
 main section.event div.access dd {
   margin-bottom: 33px;
@@ -292,7 +279,7 @@ main div.market section.aboutxmas h2 {
   margin-bottom: 55px;
   font-weight: bold;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-bottom: 20px;
     font-size: 25px;
   }
@@ -306,7 +293,7 @@ main div.market section.aboutxmas p {
 main section.magcup hgroup p {
   font-family: "Kaisei Opti";
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     font-size: 15px;
   }
 }
@@ -323,7 +310,7 @@ main section.magcup div {
   border: 3px solid #c3a80d;
   background-color: var(--bunblue);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     display: block;
     padding: 15px;
     margin: 20px 0;
@@ -341,7 +328,7 @@ main div p span.fontkaisei {
   font-family: "Kaisei Opti";
   font-size: max(0.84vw, 16px);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-right: 10px;
   }
 }
@@ -352,7 +339,7 @@ main div p span.fontkaisei {
 main section.magcup div img {
   margin-right: 5px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-right: 10px;
   }
 }
@@ -370,7 +357,7 @@ main section.magcup ul li {
   list-style-type: disc;
   font-weight: bold;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-left: 18px;
   }
 }
@@ -384,7 +371,7 @@ main section.magcup aside p {
   margin-bottom: 10px;
   text-align: left;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-left: 0px;
   }
 }
@@ -400,8 +387,8 @@ main section.magcup p.yoyaku {
 }
 
 main section.magcup p.yoyaku:hover {
-  border: 3px solid #C3A80D;
-  background: #BB232A;
+  border: 3px solid #c3a80d;
+  background: #bb232a;
 }
 
 main section.magcup p.yoyaku a {
@@ -412,7 +399,7 @@ main section.specialoffers div.flex {
   justify-content: center;
   font-weight: bold;
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     display: block;
   }
 }
@@ -422,18 +409,18 @@ main section.specialoffers div.otoku {
   border-right: 2px dashed #b64b15;
   /* 右側に縦線 */
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     padding: 0;
     border-right: unset;
     text-align: center;
 
-    @media (max-width:767px) {
+    @media (max-width: 767px) {
       text-align: left;
     }
   }
 }
 
-@media (max-width:1190px) {
+@media (max-width: 1190px) {
   main section.specialoffers div.otoku:first-child {
     padding-bottom: 54px;
     margin-bottom: 54px;
@@ -452,7 +439,7 @@ main section.specialoffers div.otoku p:nth-child(2) {
   margin-bottom: 10px;
   color: var(--mainred);
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     max-width: unset;
   }
 }
@@ -468,6 +455,7 @@ main section.specialoffers div.tenpo2 {
   padding: 21px 16px;
   border-radius: 15px;
   background-color: #d7c8a4;
+  text-align: left;
 }
 
 main section.specialoffers div.otoku p.sitamargin {
@@ -504,7 +492,7 @@ main section.caution ul li {
   list-style-image: url(../img/index.img/listicon.svg);
   line-height: 25px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-left: 18px;
   }
 }
@@ -549,8 +537,6 @@ footer p.logo {
   right: 20px;
 }
 
-
-
 /* ーーーーーーーーーーー
   common.css追加！！！
   ーーーーーーーーーーーーー */
@@ -565,16 +551,12 @@ hgroup p {
   font-size: max(0.88vw, 22px);
 }
 
-
-
-@media (max-width:767px) {
-
+@media (max-width: 767px) {
   /* メイン */
   main {
-    padding-top: 90px;
+    padding-top: 35px;
   }
 }
-
 
 .container,
 .backbeige {
