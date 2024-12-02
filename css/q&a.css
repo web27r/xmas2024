@@ -14,6 +14,10 @@ main {
 
 main article {
   padding: 60px 125px;
+
+  @media (max-width:1190px) {
+    padding: 60px 15px;
+  }
 }
 
 main article hgroup {
@@ -27,6 +31,10 @@ main article ul {
   display: flex;
   gap: 10px;
   color: var(--bunblack);
+
+  @media (max-width:767px) {
+    display: block;
+  }
 }
 
 main article li {
@@ -45,6 +53,8 @@ label[for="tab3"] {
   margin-bottom: 15px;
   padding: 15px 10px;
   background-color: var(--mainred);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   text-align: center;
   font-family: "Kaisei Opti";
   color: var(--backbeige);
@@ -52,7 +62,7 @@ label[for="tab3"] {
 }
 
 /* タブを選択したときの設定 */
-input:checked + label {
+input:checked+label {
   border-bottom: 5px solid var(--mainred);
   background-color: var(--koibackbeige);
   color: var(--bunblack);
@@ -76,23 +86,38 @@ main article ul input {
 main article section.koibackbeige {
   padding: 55px 30px 0 30px;
   border: 2px solid var(--mainred);
+
+  @media (max-width:767px) {
+    padding: 45px 10px 5px 10px;
+  }
 }
 
 main article dl {
   margin-bottom: 60px;
   font-size: 18px;
+
+  @media (max-width:767px) {
+    margin-bottom: 40px;
+  }
 }
 
 main article dl dt {
   padding: 0 10px 0 60px;
   position: relative;
-
   font-weight: bold;
+
+  @media (max-width:767px) {
+    padding: 0 0 0 50px;
+  }
 }
 
 main article dl dd {
   padding: 10px 10px 20px 60px;
   position: relative;
+
+  @media (max-width:767px) {
+    padding: 10px 0 20px 50px;
+  }
 }
 
 main article dl dt::before,
@@ -130,4 +155,19 @@ main article dd div {
   background-color: #ded5bf7d;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+
+/* commonに書く！！ */
+
+/* index.htmlにも記入している為どちらも消してcommonに書く */
+.container,
+.backbeige {
+  @media (max-width: 1199px) {
+    width: 738px;
+
+    @media (max-width: 767px) {
+      width: 360px;
+    }
+  }
 }
