@@ -26,9 +26,12 @@ header {
   background-position: center;
   background-size: cover;
 
-  @media (max-width: 767px) {
-    padding-top: 200px;
-    background-image: url(../img/index.img/iphonemainimg.png);
+  @media (max-width: 992px) {
+    padding-top: 0;
+
+    @media (max-width: 767px) {
+      background-image: url(../img/index.img/iphonemainimg.png);
+    }
   }
 }
 
@@ -36,6 +39,19 @@ header div.maintitle {
   text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   color: #f5f3f0;
+
+  @media (max-width: 767px) {
+    margin-top: 140px;
+  }
+}
+
+header div.flex {
+  display: block;
+
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 header p:first-child {
@@ -49,11 +65,15 @@ header p:first-child {
 header h1 {
   margin: 30px 0;
   font-family: "Princess Sofia", cursive;
-  font-size: max(5vw, 70px);
+  font-size: max(5vw, 50px);
 
-  @media (max-width: 767px) {
-    margin: 10px 0;
-    font-size: 50px;
+  @media (max-width: 992px) {
+    margin: 5px 0;
+
+    @media (max-width: 767px) {
+      margin: 10px 0;
+      font-size: 50px;
+    }
   }
 }
 
@@ -526,7 +546,6 @@ footer p.copyright {
   font-size: 12px;
 } */
 
-
 /* ーーーーーーーーーーー
   common.css追加！！！
   ーーーーーーーーーーーーー */
@@ -542,7 +561,6 @@ hgroup p {
 }
 
 @media (max-width: 767px) {
-
   /* メイン */
   main {
     padding-top: 35px;

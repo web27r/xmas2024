@@ -11,7 +11,7 @@ header {
 main article {
   padding: 60px 40px 110px 40px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding: 60px 15px;
   }
 }
@@ -19,7 +19,7 @@ main article {
 main article hgroup {
   margin-bottom: 85px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-bottom: 20px;
   }
 }
@@ -54,7 +54,7 @@ main article section h3 {
   letter-spacing: -3.5px;
   color: var(--backbeige);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     transform: translate(0, -100%);
   }
 }
@@ -72,7 +72,7 @@ main article section figcaption {
 }
 
 /* ーーーーーーーーーーーー
-モバイル時のタブ切り替え設定 
+モバイル時のタブ切り替え設定
 ーーーーーーーーーーーーーー*/
 main article ul {
   display: none;
@@ -84,12 +84,10 @@ main article ul {
     align-items: center;
     justify-content: center;
     column-gap: 11px;
-    background-color: #ebe7d3;
   }
 }
 
-@media (max-width:767px) {
-
+@media (max-width: 767px) {
   label[for="tabartist"],
   label[for="tabschedule"] {
     padding: 10px 25px;
@@ -102,7 +100,7 @@ main article ul {
   }
 
   /* タブを選択したときの設定 */
-  input:checked+label {
+  input:checked + label {
     background-color: #d3c6da;
     box-shadow: 0 0 0 3px #d3c6da;
   }
@@ -123,7 +121,7 @@ main article ul {
 main article section.schedule {
   margin-top: 150px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-top: 0;
   }
 }

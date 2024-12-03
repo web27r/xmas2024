@@ -48,9 +48,8 @@ main {
   background-attachment: fixed;
 }
 
-
 nav {
-  @media (max-width:767px) {
+  @media (max-width: 992px) {
     display: none;
     padding-top: 50px;
   }
@@ -62,7 +61,7 @@ nav ul {
   display: flex;
   justify-content: center;
 
-  @media (max-width:767px) {
+  @media (max-width: 992px) {
     display: block;
   }
 }
@@ -80,10 +79,10 @@ nav ul li {
   border: 2px solid #c4903c;
   font-size: max(0.41vw, 12px);
 
-  @media (max-width:767px) {
+  @media (max-width: 992px) {
     width: 100%;
     border: none;
-    border-bottom: 1px solid #EAD13E;
+    border-bottom: 1px solid #ead13e;
     font-size: 20px;
   }
 }
@@ -101,7 +100,7 @@ nav ul li:hover {
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
 
-  @media (max-width:767px) {
+  @media (max-width: 992px) {
     background: unset;
   }
 }
@@ -109,7 +108,7 @@ nav ul li:hover {
 nav ul li:hover a {
   color: #94661c;
 
-  @media (max-width:767px) {
+  @media (max-width: 992px) {
     color: unset;
   }
 }
@@ -127,7 +126,7 @@ nav ul li:hover a {
   margin-left: auto;
   margin-right: 0;
 
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     display: block;
   }
 }
@@ -216,7 +215,7 @@ hgroup p {
 }
 
 /* ーーーーー
-フッター 
+フッター
 ーーーーーー*/
 footer {
   padding: 65px 20px 0 20px;
@@ -224,30 +223,64 @@ footer {
   background-repeat: repeat-x;
   background-position: bottom;
   background-color: var(--mainred);
+  position: relative;
 }
 
-footer ul.snsbtn {
-  margin-bottom: 50px;
+footer div {
   align-items: center;
-  column-gap: 16px;
 }
 
-footer ul.snsbtn::before {
-  content: "Follow us";
+footer p.logo {
+  @media (max-width: 767px) {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+footer div.flex:first-child {
+  justify-content: space-evenly;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+footer div.snsflex {
+  margin-bottom: 50px;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+footer div.snsflex p {
   font-family: "Miltonian Tattoo";
-  font-size: 35px;
+  font-size: max(1.82vw, 30px);
   color: #fff;
+
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+  }
 }
 
-footer p.aboutcompany {
-  margin-bottom: 34px;
-  line-height: 30px;
-  color: #fff;
+footer div.snsflex ul {
+  align-items: center;
+}
+
+footer div.snsflex ul li {
+  margin: 0 8px;
 }
 
 footer div.companyicon {
-  margin-bottom: 256px;
   column-gap: 20px;
+}
+
+footer p.aboutcompany {
+  margin-top: 65px;
+  margin-bottom: 215px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
 }
 
 footer p.copyright {
