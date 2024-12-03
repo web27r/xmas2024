@@ -3,11 +3,6 @@
 /* ーーーー
 ヘッダー
 ーーーー */
-header {
-  padding: 10px;
-  background-color: var(--mainred);
-}
-
 main article {
   padding: 60px 40px 110px 40px;
 
@@ -88,6 +83,7 @@ main article ul {
 }
 
 @media (max-width: 767px) {
+
   label[for="tabartist"],
   label[for="tabschedule"] {
     padding: 10px 25px;
@@ -100,7 +96,7 @@ main article ul {
   }
 
   /* タブを選択したときの設定 */
-  input:checked + label {
+  input:checked+label {
     background-color: #d3c6da;
     box-shadow: 0 0 0 3px #d3c6da;
   }
@@ -287,13 +283,15 @@ p.pdfbtn a {
   display: flex;
   align-items: center;
   width: fit-content;
-  position: absolute;
-  top: 0;
-  right: 0;
   padding: 8px 51px;
   border-radius: 15px;
   background-color: #cc3d24;
   color: var(--backbeige);
+  margin-left: auto;
+
+  @media (max-width: 767px) {
+    margin-right: auto;
+  }
 }
 
 /* indexとq&a.htmlにも記入している為どちらも消してcommonに書く */

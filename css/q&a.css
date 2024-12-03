@@ -3,21 +3,6 @@
 /* ーーーー
 ヘッダー
 ーーーー */
-header {
-  padding: 10px;
-  background-color: var(--mainred);
-
-  @media (max-width:767px) {
-    background-image: url(../img/common.img/iphonenavback.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-main {
-  padding-bottom: 10px;
-}
-
 main article {
   padding: 60px 125px;
 

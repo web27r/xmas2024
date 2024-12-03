@@ -32,24 +32,11 @@ $('input[name="tab"]').change(function () {
   $("." + id).fadeIn();
 });
 
-// ハンバーガーメニュー設定(上下スライド)
-// .hmenuをクリックした時
-// $(".hmenu").click(function () {
-//   $(this).toggleClass("open");
-//   return false;
-// });
-
-// $(".container").click(function () {
-//   $(".hmenu").removeClass("open");
-// });
-
 // 上下スライド
 // .hmenuをクリックした時
 $(".hmenu").click(function () {
-  // navにスライドトグル
   $("nav").slideToggle(500);
-  // $(this)にクラスclose(自分だけopenというクラス名)をトグル
-  $(this).toggleClass("open");
+  $(this).toggleClass("close");
 });
 
 // タブ選択で、表示切替設定(performance.html）
