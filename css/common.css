@@ -16,6 +16,7 @@
   --bunblack: #4f4141;
   --bunorange: #d1611b;
   --wakugreen: #43680d;
+  --hoverblue: #1d3387;
   /* 以下gold外中グラデ */
   --sotogold: #caa341;
   --nakagold: #edd63e;
@@ -32,10 +33,22 @@ body {
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  @media (max-width: 1199px) {
+    width: 738px;
+
+    @media (max-width: 767px) {
+      width: 360px;
+    }
+  }
+}
+
+.futoji {
+  font-weight: bold;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .headerkasou {
@@ -51,18 +64,22 @@ a {
 }
 
 h1.logo {
-  @media (max-width:992px) {
+  @media (max-width: 992px) {
     margin: 10px;
   }
 }
 
 /* メイン */
 main {
-  padding: 60px 0;
+  padding: 90px 0;
   background-image: url(../img/index.img/backgroundimg2.png);
   background-size: cover;
   /* 背景画像をスクロールせずに固定 */
   background-attachment: fixed;
+
+  @media (max-width: 767px) {
+    padding: 60px 0;
+  }
 }
 
 nav {
@@ -196,21 +213,30 @@ nav ul li:hover a {
   text-align: center;
   font-family: "Miltonian Tattoo", serif;
   color: var(--mainred);
-  font-size: 35px;
+  font-size: max(1.25vw, 30px);
 }
 
 /* 見出し下のタイトル設定 */
 hgroup p {
   text-align: center;
   color: #213b60;
-  font-size: 25px;
+  font-size: max(0.88vw, 22px);
 }
 
 /* 外側の白い枠の共通の設定 */
 .backbeige {
-  margin-bottom: 90px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 50px;
   border-radius: 15px;
   background-color: var(--backbeige);
+  @media (max-width: 1199px) {
+    width: 738px;
+
+    @media (max-width: 767px) {
+      width: 360px;
+    }
+  }
 }
 
 /* 内側の濃いベージュ枠の共通の設定 */
