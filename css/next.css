@@ -33,9 +33,9 @@ main article.backbeige {
     }
   }
   &:not(:first-child) {
-    padding: 60px 40px 37px 40px;
+    padding: 60px 40px 47px 40px;
     @media (max-width: 767px) {
-      padding: 60px 15px 29px 15px;
+      padding: 60px 15px 30px 15px;
     }
   }
 }
@@ -44,17 +44,13 @@ h1 {
 }
 /* これ青文字 */
 main article hgroup {
-  &.shop {
-    margin-bottom: 30px;
-  }
-  &.map {
-    margin-bottom: 20px;
-  }
+  &.shop,
   &.FandD {
     margin-bottom: 30px;
   }
+  &.map,
   &.GandW {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 }
 /* ーーーー
@@ -65,36 +61,34 @@ main article.map ul {
   gap: 30px;
   justify-content: center;
   @media (max-width: 767px) {
-    /* display: block; */
     gap: 11px;
-    margin-left: 18px;
-    margin-right: 18px;
     flex-wrap: wrap;
   }
 }
 li.goods {
   @media (max-width: 767px) {
-    margin-bottom: 19px;
+    /* 19-gap11=8px */
+    margin-bottom: 8px;
   }
 }
 main article.map ul li {
-  padding: 10px 25px;
+  width: 155px;
+  height: 45px;
+  padding: 10px 17px 13px 18px;
   border-radius: 10px;
   background-color: #de9115;
   box-shadow: 0 0 0 3px #de9115;
   border: 2px dashed var(--koibackbeige);
   color: var(--koibackbeige);
-  font-size: 14px;
+  font-size: 15px;
   white-space: nowrap;
   text-align: center;
   background-image: url(../img/FandD.img/sitasankaku_off.png);
   background-repeat: no-repeat;
   background-position: center bottom 4px;
   @media (max-width: 767px) {
-    width: 155px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 33px;
   }
 }
 main article.map ul li:hover {
@@ -132,7 +126,6 @@ main article.goods section.koibackbeige {
   background-image: url(../img/FandD.img/ornamentAbcBlue.png);
 }
 main article.workshop section.koibackbeige {
-  /* 変わるかも！ */
   background-position: left 22px top 30px;
   background-image: url(../img/FandD.img/WorkShop.png);
 }
@@ -162,14 +155,15 @@ h3 {
   margin-right: 12px;
   font-weight: bold;
 }
-/* 青文字から本文に戻す */
+/* FDG青文字から本文に戻す */
 p.none {
   color: var(--bunblack);
   font-size: 16px;
   @media (max-width: 767px) {
-    /* text-align: left; */
-    margin-left: unset;
-    /* ここ左揃えたい */
+    margin-top: -2px;
+    /* テキレと合わせ技じゃないと左にならん63-25=38 */
+    margin-left: 38px;
+    text-align: left;
   }
 }
 hgroup h3,
@@ -206,14 +200,14 @@ h2 {
 }
 /* セクション */
 main article.FandD section.koibackbeige {
-  padding: 22px 25px;
+  padding: 25px 25px 31px 25px;
   @media (max-width: 767px) {
-    padding-top: 25px;
+    padding-top: 25px 31px 32px 31px;
   }
 }
 
 main article.FandD section hgroup {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   /* 34-25 */
   margin-left: 9px;
   &.no2 {
@@ -245,20 +239,25 @@ figcaption {
 グッズ
 ーーー */
 main article.goods section.koibackbeige {
-  padding: 22px 25px 33px 25px;
+  padding: 30px 25px 22px 24px;
   @media (max-width: 767px) {
-    padding-top: 30px;
+    padding-top: 30px 3px 33px 14px;
   }
   & hgroup {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
-  & div.flex {
-    margin-bottom: 12px;
-    gap: 38px;
+  & > p {
+    margin-bottom: 25px;
   }
   & p.gyou3 {
-    /* 33-9 */
-    margin-bottom: -24px;
+    margin-bottom: 11px;
+  }
+  & div.flex {
+    gap: 38px;
+    & img {
+      width: 265px;
+      height: 177px;
+    }
   }
 }
 /* ーーーーーー
