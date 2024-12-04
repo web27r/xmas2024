@@ -83,7 +83,6 @@ main article ul {
 }
 
 @media (max-width: 767px) {
-
   label[for="tabartist"],
   label[for="tabschedule"] {
     padding: 10px 25px;
@@ -96,7 +95,7 @@ main article ul {
   }
 
   /* タブを選択したときの設定 */
-  input:checked+label {
+  input:checked + label {
     background-color: #d3c6da;
     box-shadow: 0 0 0 3px #d3c6da;
   }

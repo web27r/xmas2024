@@ -470,36 +470,3 @@ main section.caution ul li {
     margin-left: 18px;
   }
 }
-
-/* ーーーーーーーーーーー
-  common.css追加！！！
-  ーーーーーーーーーーーーー */
-/* 見出しの設定 */
-.midashired {
-  /* フォントサイズのみ vwに変更 */
-  font-size: max(1.25vw, 30px);
-}
-
-/* 見出し下のタイトル設定 */
-hgroup p {
-  font-size: max(0.88vw, 22px);
-}
-
-@media (max-width: 767px) {
-
-  /* メイン */
-  main {
-    padding-top: 35px;
-  }
-}
-
-.container,
-.backbeige {
-  @media (max-width: 1199px) {
-    width: 738px;
-
-    @media (max-width: 767px) {
-      width: 360px;
-    }
-  }
-}
