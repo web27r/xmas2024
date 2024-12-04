@@ -22,11 +22,6 @@
 コピペセット */
 /* 1199>738 */
 /* 767>360; */
-/* ーー
-共通幅
-ーーー */
-/* 中身 */
-
 /* ーーーーーーーーーー
 メイン共通アーティクル
 ーーーーーーーーーーーー */
@@ -69,11 +64,17 @@ main article.map ul {
   margin-bottom: 70px;
   gap: 30px;
   justify-content: center;
-
   @media (max-width: 767px) {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* display: block; */
+    gap: 11px;
+    margin-left: 18px;
+    margin-right: 18px;
+    flex-wrap: wrap;
+  }
+}
+li.goods {
+  @media (max-width: 767px) {
+    margin-bottom: 19px;
   }
 }
 main article.map ul li {
@@ -81,25 +82,38 @@ main article.map ul li {
   border-radius: 10px;
   background-color: #de9115;
   box-shadow: 0 0 0 3px #de9115;
-  border: 2px dashed #f4e5d3;
+  border: 2px dashed var(--koibackbeige);
+  color: var(--koibackbeige);
   font-size: 14px;
-  color: var(--backbeige);
+  white-space: nowrap;
+  text-align: center;
+  background-image: url(../img/FandD.img/sitasankaku_off.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 4px;
   @media (max-width: 767px) {
     width: 155px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 33px;
   }
 }
 main article.map ul li:hover {
-  background-color: #f4e5d3;
-  box-shadow: 0 0 0 3px #f4e5d3;
+  background-color: var(--koibackbeige);
+  box-shadow: 0 0 0 3px var(--koibackbeige);
+  border: 2px dashed #de9115;
+  color: #de9115;
+  background-image: url(../img/FandD.img/sitasankaku_on.png);
 }
-/* 消えたけどどこかで使う */
+/* 消えたけどどこかで使う便利２セット */
 br.born757 {
   display: none;
   @media (max-width: 1199px) and (min-width: 757px) {
     display: inline;
+  }
+}
+.orikaesan {
+  @media (min-width: 1199px) and (max-width: 757px) {
+    white-space: nowrap;
   }
 }
 /* ーーーーーーーー
@@ -293,3 +307,23 @@ main article.workshop section.hana {
 /* 続きはbrボーンづくり
 フォントの太さNEXTのみ！
 コンテナ,ベージュの幅要らん */
+
+/* トプペmain section.magcup aside p左マイナス要らん */
+
+/* // スクロールすると、下からふわっと出現する設定
+$(window).scroll(function () {
+  var scrollAnimationElm = document.querySelectorAll(".fadein");
+  var scrollAnimationFunc = function () {
+    for (var i = 0; i < scrollAnimationElm.length; i++) {
+      var triggerMargin = 100;
+      if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+        scrollAnimationElm[i].classList.add("on");
+      }
+    }
+  };
+  window.addEventListener("load", scrollAnimationFunc);
+  window.addEventListener("scroll", scrollAnimationFunc);
+}); */
+/* これを一番上だけ自動で出したい */
+
+/* 幅がズレたのはcommonに追加してもらったコンテナtoバックベージュの1199/767が悪さしていた。マジ左右15&50と同居出来ない模様。1199/767消せば解決 */

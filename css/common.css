@@ -33,13 +33,13 @@ body {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  @media (max-width: 1199px) {
+  /* @media (max-width: 1199px) {
     width: 738px;
 
     @media (max-width: 767px) {
       width: 360px;
     }
-  }
+  } */
 }
 
 .futoji {
@@ -230,13 +230,13 @@ hgroup p {
   margin-bottom: 50px;
   border-radius: 15px;
   background-color: var(--backbeige);
-  @media (max-width: 1199px) {
+  /* @media (max-width: 1199px) {
     width: 738px;
 
     @media (max-width: 767px) {
       width: 360px;
     }
-  }
+  } */
 }
 
 /* 内側の濃いベージュ枠の共通の設定 */
