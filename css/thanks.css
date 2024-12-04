@@ -1,46 +1,10 @@
 @import url(common.css);
-/* ーーーーーー
-下層ページ共通
-ーーーーーーー */
-:root {
-  --hoverblue: #1d3387;
-}
-.futoji {
-  font-weight: bold;
-}
-/* ナブ下兼本編上余白 */
-main {
-  /* padding-top: 70px; */
-  padding-top: 90px;
-  @media (max-width: 767px) {
-    padding-top: 40px;
-  }
-}
-/* ヘッダー */
-header {
-  padding: 15px 0 15px 0;
-  background-color: var(--mainred);
-}
+
 /* ノートPC@media (max-width: 1199px)
 スマホ横@media (max-width: 767px)
 コピペセット */
 /* 1199>738 */
 /* 767>360; */
-/* ーー
-共通幅
-ーーー */
-
-/* 外身 */
-/* .container,
-.backbeige {
-  @media (max-width: 1199px) {
-    width: 738px;
-    @media (max-width: 767px) {
-      width: 360px;
-    }
-  }
-} */
-
 /* ーーーー
 各ブロック
 ーーーーー */
@@ -105,35 +69,15 @@ p.homebutton {
   ーーーーーーーーーーーーー */
 /* メイン */
 /* main {
-    padding-top: 80px;
-  }数値が安定しない今下層90pxになってた */
-
-/* ナビゲーション */
-/* nav ul {
-    display: none;
-  }？モバメのためのやつ？？ */
+    padding-top: 90/60 */
 
 /* .backbeige {
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 50px;
-  }マジボ50pxはよく変わる
-  マジ左右おｋ */
+  } */
 
 /* 内側の濃いベージュ枠の共通の設定 */
 /* .koibackbeige {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
-  下層は合間合間は20px多い一番下のマジボ38pxとかある */
-
-/* 見出しの設定 */
-/* .midashired {
-    font-size: 25px;
-  }？ */
-
-/* 見出し下のタイトル設定 */
-/* hgroup p {
-    font-size: 20px;
-  }？ */
-
-/* 以下全部おｋ */

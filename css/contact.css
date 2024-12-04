@@ -1,25 +1,4 @@
 @import url(common.css);
-/* ーーーーーー
-下層ページ共通
-ーーーーーーー */
-:root {
-  --hoverblue: #1d3387;
-}
-.futoji {
-  font-weight: bold;
-}
-/* ナブ下兼本編上余白 */
-main {
-  padding-top: 90px;
-  @media (max-width: 767px) {
-    padding-top: 40px;
-  }
-}
-/* ヘッダー */
-header {
-  padding: 15px 0 15px 0;
-  background-color: var(--mainred);
-}
 /* ノートPC@media (max-width: 1199px)
 スマホ横@media (max-width: 767px)
 コピペセット */
@@ -28,17 +7,6 @@ header {
 /* ーー
 共通幅
 ーーー */
-
-/* 外身 */
-.container,
-.backbeige {
-  @media (max-width: 1199px) {
-    width: 738px;
-    @media (max-width: 767px) {
-      width: 360px;
-    }
-  }
-}
 /* 中身 */
 .toicontainer,
 select,

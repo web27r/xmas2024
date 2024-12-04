@@ -2,24 +2,6 @@
 /* ーーーーーー
 下層ページ共通
 ーーーーーーー */
-:root {
-  --hoverblue: #1d3387;
-}
-.futoji {
-  font-weight: bold;
-}
-/* ナブ下兼本編上余白 */
-main {
-  padding-top: 90px;
-  @media (max-width: 767px) {
-    padding-top: 40px;
-  }
-}
-/* ヘッダー */
-header {
-  padding: 15px 0 15px 0;
-  background-color: var(--mainred);
-}
 .moji23 {
   @media (max-width: 767px) {
     font-size: 23px;
@@ -43,18 +25,6 @@ header {
 /* ーー
 共通幅
 ーーー */
-
-/* 外身 */
-.container,
-.backbeige {
-  @media (max-width: 1199px) {
-    width: 738px;
-    @media (max-width: 767px) {
-      /* F&Dだけ幅違う */
-      width: 357px;
-    }
-  }
-}
 /* 中身 */
 
 /* ーーーーーーーーーー
@@ -99,6 +69,7 @@ main article.map ul {
   margin-bottom: 70px;
   gap: 30px;
   justify-content: center;
+
   @media (max-width: 767px) {
     display: block;
     margin-left: auto;
@@ -106,12 +77,23 @@ main article.map ul {
   }
 }
 main article.map ul li {
+  padding: 10px 25px;
+  border-radius: 10px;
+  background-color: #de9115;
+  box-shadow: 0 0 0 3px #de9115;
+  border: 2px dashed #f4e5d3;
+  font-size: 14px;
+  color: var(--backbeige);
   @media (max-width: 767px) {
     width: 155px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
   }
+}
+main article.map ul li:hover {
+  background-color: #f4e5d3;
+  box-shadow: 0 0 0 3px #f4e5d3;
 }
 /* 消えたけどどこかで使う */
 br.born757 {
@@ -310,27 +292,4 @@ main article.workshop section.hana {
 
 /* 続きはbrボーンづくり
 フォントの太さNEXTのみ！
-ミディアム問題を相談
-common行きをチェックした！
 コンテナ,ベージュの幅要らん */
-
-/* // ーーーーーーーーーーー
-// ホバーして画像が変わる
-// ーーーーーーーーーーー
-$(function () {
-  $(".js-hover").each(function () {
-    var src_off = $(this).find("img").attr("src"),
-      src_on = src_off.replace("_off", "_on");
-
-    $(".js-hover").attr("src", src_off);
-
-    $(this).hover(
-      function () {
-        $(this).find("img").attr("src", src_on);
-      },
-      function () {
-        $(this).find("img").attr("src", src_off);
-      }
-    );
-  });
-}); */
