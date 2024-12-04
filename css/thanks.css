@@ -63,21 +63,3 @@ p.homebutton {
     background-color: var(--hoverblue);
   }
 }
-
-/* ーーーーーーーーーーー
-  common.css追加！！！
-  ーーーーーーーーーーーーー */
-/* メイン */
-/* main {
-    padding-top: 90/60 */
-
-/* .backbeige {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 50px;
-  } */
-
-/* 内側の濃いベージュ枠の共通の設定 */
-/* .koibackbeige {
-    margin-bottom: 20px;
-  }
