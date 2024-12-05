@@ -31,15 +31,9 @@ body {
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  /* @media (max-width: 1199px) {
-    width: 738px;
-
-    @media (max-width: 767px) {
-      width: 360px;
-    }
-  } */
+  max-width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .futoji {
@@ -73,9 +67,11 @@ h1.logo {
 main {
   padding: 90px 0;
   background-image: url(../img/index.img/backgroundimg2.png);
-  background-size: cover;
   /* 背景画像をスクロールせずに固定 */
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 
   @media (max-width: 767px) {
     padding: 60px 0;
@@ -85,7 +81,7 @@ main {
 nav {
   @media (max-width: 992px) {
     display: none;
-    padding: 50px 0;
+    padding: 86px 0 20px 0;
     position: absolute;
     width: 100%;
     z-index: 1;
@@ -137,18 +133,10 @@ nav ul li:hover {
   background-clip: unset;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
-
-  @media (max-width: 992px) {
-    background: unset;
-  }
 }
 
 nav ul li:hover a {
   color: #94661c;
-
-  @media (max-width: 992px) {
-    color: unset;
-  }
 }
 
 /* モバイル時のハンバーガメニュー */
@@ -230,13 +218,6 @@ hgroup p {
   margin-bottom: 50px;
   border-radius: 15px;
   background-color: var(--backbeige);
-  /* @media (max-width: 1199px) {
-    width: 738px;
-
-    @media (max-width: 767px) {
-      width: 360px;
-    }
-  } */
 }
 
 /* 内側の濃いベージュ枠の共通の設定 */
@@ -260,6 +241,24 @@ hgroup p {
 .fadein.on {
   transform: translateY(0);
   opacity: 1;
+}
+
+/* トップページ以外の自動フェードイン */
+.fadein2 {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ーーーーー
@@ -334,8 +333,10 @@ footer p.aboutcompany {
 }
 
 footer p.copyright {
+  margin-bottom: 20px;
   width: fit-content;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--mainred);
   font-size: 12px;
 }

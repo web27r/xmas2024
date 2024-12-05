@@ -80,7 +80,7 @@ header p:last-child {
 
 /* 外側の白い枠の共通の設定 */
 section {
-  padding: 60px 85px 40px 85px;
+  padding: 60px 125px 40px 125px;
 
   @media (max-width: 767px) {
     padding: 50px 15px;
@@ -92,7 +92,7 @@ main section.news h2 {
 }
 
 main section.news dl div {
-  padding: 20px 35px;
+  padding: 20px 23px;
 
   @media (max-width: 767px) {
     padding: 15px 12px;
@@ -103,16 +103,6 @@ main section.news div dt {
   padding-bottom: 10px;
   font-family: "Miltonian Tattoo", serif;
   font-size: 20px;
-}
-
-main section.news div dd {
-  padding-left: 55px;
-  font-size: 16px;
-  line-height: 25px;
-
-  @media (max-width: 767px) {
-    padding-left: 24px;
-  }
 }
 
 /* hgroup,h2共通設定 */
@@ -167,11 +157,12 @@ main section.event div.access {
 }
 
 main section.event div.day div,
+main section.event div.place dd,
 main section.event div.access dd {
   @media (max-width: 1190px) {
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    width: fit-content;
   }
 }
 
@@ -218,10 +209,6 @@ main section.event div.free dd {
 
 main section.event div.place {
   column-gap: 116px;
-}
-
-main section.event div.place dd {
-  text-align: center;
 }
 
 main section.event div.access dd {
@@ -330,6 +317,7 @@ main section.magcup ul li {
   margin-bottom: 15px;
   list-style-type: disc;
   font-weight: bold;
+  margin-left: 1.1em;
 
   @media (max-width: 767px) {
     margin-left: 18px;
@@ -341,7 +329,6 @@ main section.magcup aside {
 }
 
 main section.magcup aside p {
-  margin-left: -10px;
   margin-bottom: 10px;
   text-align: left;
 
@@ -380,8 +367,7 @@ main section.specialoffers div.flex {
 
 main section.specialoffers div.otoku {
   padding: 16px 34px;
-  border-right: 2px dashed #b64b15;
-  /* 右側に縦線 */
+  border-right: 2px dashed #b64b15; /* 右側に縦線 */
 
   @media (max-width: 1190px) {
     padding: 0;
