@@ -11,61 +11,6 @@ main article {
   }
 }
 
-main article hgroup {
-  margin-bottom: 85px;
-
-  @media (max-width: 767px) {
-    margin-bottom: 20px;
-  }
-}
-
-main article section {
-  position: relative;
-}
-
-main article section.aboutartist {
-  background-image: url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg);
-  background-repeat: no-repeat;
-  background-position: top 15px left 15px, top 15px right 15px, bottom 15px left 15px, bottom 15px right 15px;
-}
-
-main article section.aboutartist div {
-  padding: 10px 0 66px 0;
-  flex-wrap: wrap;
-  gap: 25px 30px;
-  justify-content: center;
-}
-
-main article section h3 {
-  padding: 20px 0;
-  transform: translate(0, -50%);
-  background-image: url(../img/performance.img/titlelabel.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: max(35%, 250px);
-  font-family: "Kaisei Opti";
-  text-align: center;
-  font-size: max(1.25vw, 25px);
-  letter-spacing: -3.5px;
-  color: var(--backbeige);
-
-  @media (max-width: 767px) {
-    transform: translate(0, -100%);
-  }
-}
-
-@media (max-width: 767px) {
-  main article section figure {
-    margin-bottom: 15px;
-  }
-}
-
-main article section figcaption {
-  margin-top: 8px;
-  font-weight: bold;
-  text-align: center;
-}
-
 /* ーーーーーーーーーーーー
 モバイル時のタブ切り替え設定
 ーーーーーーーーーーーーーー*/
@@ -92,6 +37,11 @@ main article ul {
     border: 2px dashed #fff;
     font-size: 14px;
     color: var(--backbeige);
+    white-space: nowrap;
+    text-align: center;
+    background-image: url(../img/FandD.img/sitasankaku_off.png);
+    background-repeat: no-repeat;
+    background-position: center bottom 4px;
   }
 
   /* タブを選択したときの設定 */
@@ -110,15 +60,125 @@ main article ul {
   }
 }
 
+main article hgroup.midashiperform {
+  margin-bottom: 70px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+}
+
+main article section {
+  position: relative;
+}
+
+/* ーーーーーー
+出演アーティスト
+ーーーーーーーー */
+main article section.aboutartist {
+  background-image: url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg);
+  background-repeat: no-repeat;
+  background-position: top 15px left 15px, top 15px right 15px, bottom 15px left 15px, bottom 15px right 15px;
+}
+
+main article section h3 {
+  padding: 20px 0;
+  margin-bottom: -20px;
+  transform: translate(0, -50%);
+  background-image: url(../img/performance.img/titlelabel.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: max(35%, 250px);
+  font-family: "Kaisei Opti";
+  text-align: center;
+  font-size: max(1.25vw, 25px);
+  letter-spacing: -3.5px;
+  color: var(--backbeige);
+
+  @media (max-width: 767px) {
+    transform: translate(0, -100%);
+  }
+}
+
+main article section.aboutartist hgroup {
+  text-align: center;
+  color: var(--bunblue);
+}
+
+main article section.aboutartist h4,
+main article section.schedule h4 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+main article section.aboutartist p,
+main article section.schedule p {
+  font-size: 18px;
+}
+
+main article section.aboutartist div {
+  padding: 10px 0 66px 0;
+  flex-wrap: wrap;
+  gap: 25px 30px;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  main article section figure {
+    margin-bottom: 15px;
+  }
+}
+
+main article section figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+main section.aboutartist hgroup.stageplace {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 0;
+  border-top: 2px dashed #b64b15;
+}
+
+main section.aboutartist hgroup.stageplace p:last-child,
+main section.aboutartist hgroup.stageplace2 p:last-child {
+  font-size: 16px;
+  color: var(--bunblack);
+}
+
+main section.aboutartist hgroup.stageplace p a {
+  text-decoration: underline;
+  color: #337dcc;
+}
+
+main section.aboutartist hgroup.stageplace2 {
+  padding-bottom: 55px;
+}
+
 /* ーーーーー
 テーブル
 ーーーーーーー */
 main article section.schedule {
-  margin-top: 150px;
+  margin-top: 80px;
 
   @media (max-width: 767px) {
     margin-top: 0;
   }
+}
+
+main article section.schedule hgroup {
+  width: fit-content;
+  margin-bottom: 10px;
+  align-items: baseline;
+  border-bottom: 3px solid #648497;
+}
+
+main article section.schedule h4 {
+  margin-right: 30px;
+  color: var(--bunblue);
 }
 
 main article section.schedule div.artisttable {
@@ -290,17 +350,5 @@ p.pdfbtn a {
 
   @media (max-width: 767px) {
     margin-right: auto;
-  }
-}
-
-/* indexとq&a.htmlにも記入している為どちらも消してcommonに書く */
-.container,
-.backbeige {
-  @media (max-width: 1199px) {
-    width: 738px;
-
-    @media (max-width: 767px) {
-      width: 360px;
-    }
   }
 }
