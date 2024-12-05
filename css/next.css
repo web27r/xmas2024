@@ -165,6 +165,12 @@ h3 {
   margin-right: 12px;
   font-weight: bold;
 }
+main article.FandD section hgroup h3,
+main article.goods section hgroup h3 {
+  @media (max-width: 767px) {
+    margin-right: 0;
+  }
+}
 /* FDG青文字から本文に戻す */
 p.none {
   color: var(--bunblack);

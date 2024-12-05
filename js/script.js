@@ -1,9 +1,9 @@
 // ページトップボタン設定
 $(window).scroll(function () {
   var sc = $(window).scrollTop();
-  // 条件式：スクロールが100を超えたら、ページトップボタンがfadeInで表示
+  // 条件式：スクロールが100を超えたら、ページトップボタンがfadein2で表示
   if (sc > 100) {
-    $("footer p.pagetop").fadeIn(500);
+    $("footer p.pagetop").fadein2(500);
     // スクロールが100を超えなければ、トップページボタンがfadeOutする
   } else {
     $("footer p.pagetop").fadeOut(500);
@@ -12,7 +12,7 @@ $(window).scroll(function () {
 
 // スクロールすると、下からふわっと出現する設定
 $(window).scroll(function () {
-  var scrollAnimationElm = document.querySelectorAll(".fadein");
+  var scrollAnimationElm = document.querySelectorAll(".fadein2");
   var scrollAnimationFunc = function () {
     for (var i = 0; i < scrollAnimationElm.length; i++) {
       var triggerMargin = 100;
@@ -29,7 +29,7 @@ $(window).scroll(function () {
 $('input[name="tab"]').change(function () {
   $("main article section.tab").hide();
   var id = $(this).attr("id");
-  $("." + id).fadeIn();
+  $("." + id).fadein2();
 });
 
 // 上下スライド
@@ -43,5 +43,5 @@ $(".hmenu").click(function () {
 $('input[name="tabp"]').change(function () {
   $("main article section.tabp").hide();
   var id = $(this).attr("id");
-  $("." + id).fadeIn();
+  $("." + id).fadein2();
 });
