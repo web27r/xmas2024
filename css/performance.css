@@ -28,6 +28,7 @@ main article ul {
 }
 
 @media (max-width: 767px) {
+
   label[for="tabartist"],
   label[for="tabschedule"] {
     width: 155px;
@@ -47,7 +48,7 @@ main article ul {
   }
 
   /* タブを選択したときの設定 */
-  input:checked + label {
+  input:checked+label {
     background-color: #d3c6da;
     box-shadow: 0 0 0 3px #d3c6da;
   }
@@ -118,11 +119,24 @@ main article section.schedule p {
   font-size: 18px;
 }
 
+main article section.schedule h4 {
+  @media (max-width:767px) {
+    font-size: 19px;
+  }
+}
+
+main article section.schedule p {
+  @media (max-width:767px) {
+    font-size: 14px;
+  }
+}
+
 main article section.aboutartist div {
   padding: 20px 0 50px 0;
   flex-wrap: wrap;
   gap: 25px 30px;
   justify-content: center;
+
   @media (max-width: 767px) {
     padding-bottom: 30px;
   }
@@ -146,6 +160,7 @@ main section.aboutartist hgroup.stageplace {
   padding: 30px 0;
   margin: 0 20px;
   border-top: 2px dashed #b64b15;
+
   @media (max-width: 991px) {
     margin: 0 20px;
   }
@@ -153,6 +168,7 @@ main section.aboutartist hgroup.stageplace {
 
 br.mobilbr {
   display: none;
+
   @media (max-width: 991px) {
     display: block;
   }

@@ -4,6 +4,7 @@
 main {
   padding-bottom: 100px;
   padding-top: 172px;
+
   @media (max-width: 991px) {
     padding-top: 100px;
   }
@@ -78,6 +79,12 @@ header p:last-child {
   @media (max-width: 767px) {
     padding-bottom: 258px;
     font-size: 45px;
+  }
+}
+
+.hmenu {
+  @media (max-width: 991px) {
+    position: fixed;
   }
 }
 
@@ -173,7 +180,7 @@ main section.event div.day dd:first-child {
   margin-bottom: 20px;
   font-weight: bold;
   color: #213b60;
-  font-size: max(1.05vw, 18px);
+  font-size: max(1.00vw, 19px);
 
   @media (max-width: 767px) {
     margin-bottom: 10px;
@@ -258,7 +265,7 @@ main section.magcup hgroup p {
   font-family: "Kaisei Opti";
 
   @media (max-width: 767px) {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
@@ -364,6 +371,7 @@ main section.magcup p.yoyaku a:hover {
 main section.specialoffers {
   padding-left: 55px;
   padding-right: 55px;
+
   @media (max-width: 767px) {
     padding-left: 30px;
     padding-right: 30px;
@@ -382,7 +390,8 @@ main section.specialoffers div.flex {
 main section.specialoffers div.otoku {
   margin-top: 42px;
   padding: 0 20px;
-  border-right: 2px dashed #b64b15; /* 右側に縦線 */
+  border-right: 2px dashed #b64b15;
+  /* 右側に縦線 */
 
   @media (max-width: 1190px) {
     padding: 0;
@@ -467,8 +476,10 @@ main section.specialoffers span.font14 {
 
 br.mobilbr {
   display: none;
+
   @media (max-width: 1190px) {
     display: block;
+
     @media (max-width: 767px) {
       display: none;
     }

@@ -12,7 +12,7 @@ $(window).scroll(function () {
 
 // スクロールすると、下からふわっと出現する設定
 $(window).scroll(function () {
-  var scrollAnimationElm = document.querySelectorAll(".fadein2");
+  var scrollAnimationElm = document.querySelectorAll(".fadein");
   var scrollAnimationFunc = function () {
     for (var i = 0; i < scrollAnimationElm.length; i++) {
       var triggerMargin = 100;
