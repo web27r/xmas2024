@@ -5,12 +5,6 @@
 .koibackbeige:last-child {
   margin-bottom: unset;
 }
-.flexborn767 {
-  display: inherit;
-  @media (max-width: 767px) {
-    display: flex;
-  }
-}
 .mojileft {
   text-align: left;
 }
@@ -29,7 +23,13 @@
     font-size: 20px;
   }
 }
-/* 消えたけどどこかで使う */
+/* 消えたけどどこかで使う2*/
+.flexborn767 {
+  display: inherit;
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}
 .orikaesan {
   @media (min-width: 1200px) and (max-width: 768px) {
     white-space: nowrap;
@@ -139,6 +139,9 @@ main article.workshop section.koibackbeige {
 /* hgroup */
 main article section hgroup.flex {
   align-items: baseline;
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 }
 p.no,
 p.abc {
@@ -177,17 +180,6 @@ hgroup h3,
 article.workshop h3 {
   font-size: 25px;
   font-weight: 700;
-}
-/* セクションタイトルフレボ＆画像フレボ */
-section > hgroup.flex {
-  @media (max-width: 767px) {
-    display: block;
-  }
-}
-section > div.flex {
-  @media (max-width: 767px) {
-    justify-content: center;
-  }
 }
 /* ーーーーーーーー
 FDG共通セクション
@@ -277,14 +269,20 @@ main article.goods section.koibackbeige {
   & > p {
     margin-bottom: 15px;
   }
-  & div.flex img {
-    width: 254px;
-    height: 170px;
+  & div.flex p {
+    flex: 1;
+    /* width: 254px;
+    height: 170px; */
   }
 }
 /* ーーーーーー
 ワークショップ
 ーーーーーーー */
+main article.workshop section > div.flex {
+  @media (max-width: 767px) {
+    justify-content: center;
+  }
+}
 main article.workshop section h3 {
   /* 左余白68-25=43 */
   margin-left: 43px;
