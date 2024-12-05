@@ -2,9 +2,6 @@
 /* ーーーーーー
 下層ページ共通、になりそう（まだなってない）
 ーーーーーーー */
-.koibackbeige:last-child {
-  margin-bottom: unset;
-}
 .mojileft {
   text-align: left;
 }
@@ -125,6 +122,9 @@ main article section.koibackbeige {
   background-repeat: no-repeat;
   background-position: left 26px top 20px;
   background-size: 30px 38px;
+  /* @media (max-width: 767px){
+    background-position: left 10px top 20px;
+  } */
 }
 main article.FandD section.koibackbeige {
   background-image: url(../img/FandD.img/ornamentNoRed.png);
@@ -148,25 +148,105 @@ p.abc {
   color: var(--backbeige);
   font-size: 22px;
   margin-right: 21px;
+  /* @media (max-width: 767px){
+    margin-left: -25px;
+  } */
+}
+hgroup.no2 p.no {
+  margin-right: 15px;
 }
 p.no {
   font-family: "Kaisei Opti";
 }
 p.abc {
   font-family: "Miltonian Tattoo", serif;
-  /* 31-25 */
-  margin-left: 6px;
 }
-p.abci {
-  /* 36-25 */
-  margin-left: 11px;
+/* hgroup英語の左余白&gapに当たる余白 */
+hgroup.ah {
+  & p {
+    /* 31-25 */
+    margin-left: 6px;
+    @media (max-width: 767px) {
+      /* 28-9 */
+      margin-left: 19px;
+    }
+  }
+  & h3 {
+    margin-left: 17px;
+    @media (max-width: 767px) {
+      margin-left: 15px;
+    }
+  }
 }
-h3 {
-  margin-right: 12px;
-  font-weight: bold;
+hgroup.g {
+  & p {
+    /* 32-25 */
+    margin-left: 7px;
+    @media (max-width: 767px) {
+      /* 29-9 */
+      margin-left: 20px;
+    }
+  }
+  & h3 {
+    margin-left: 18px;
+    @media (max-width: 767px) {
+      margin-left: 16px;
+    }
+  }
 }
+hgroup.bcdf {
+  & p {
+    /* 33-25 */
+    margin-left: 8px;
+    @media (max-width: 767px) {
+      /* 30-9 */
+      margin-left: 21px;
+    }
+  }
+  & h3 {
+    margin-left: 19px;
+    @media (max-width: 767px) {
+      margin-left: 17px;
+    }
+  }
+}
+hgroup.e {
+  & p {
+    /* 34-25 */
+    margin-left: 9px;
+    @media (max-width: 767px) {
+      /* 31-9 */
+      margin-left: 22px;
+    }
+  }
+  & h3 {
+    margin-left: 20px;
+    @media (max-width: 767px) {
+      margin-left: 18px;
+    }
+  }
+}
+hgroup.i {
+  & p {
+    /* 36-25 */
+    margin-left: 11px;
+    @media (max-width: 767px) {
+      /* 33-9 */
+      margin-left: 24px;
+    }
+  }
+  & h3 {
+    margin-left: 22px;
+    @media (max-width: 767px) {
+      margin-left: 20px;
+    }
+  }
+}
+/* 共通 */
 main article.FandD section hgroup h3,
 main article.goods section hgroup h3 {
+  margin-right: 12px;
+  font-weight: bold;
   @media (max-width: 767px) {
     margin-right: 0;
   }
@@ -177,9 +257,6 @@ p.none {
   font-size: 16px;
   @media (max-width: 767px) {
     margin-top: -2px;
-    /* テキレと合わせ技じゃないと左にならん63-25=38 */
-    margin-left: 38px;
-    text-align: left;
   }
 }
 hgroup h3,
@@ -221,7 +298,7 @@ h2 {
 main article.FandD section.koibackbeige {
   padding: 25px 25px 31px 25px;
   @media (max-width: 767px) {
-    padding-top: 25px 31px 32px 31px;
+    padding: 25px auto 32px auto;
   }
 }
 
@@ -233,8 +310,16 @@ main article.FandD section hgroup {
     /* 29-25 */
     margin-left: 3px;
   }
-  &h3 {
+  & h3 {
     margin-right: 12px;
+  }
+  /* p.noneに当たる。これを改行のタイミングによってクラス付けないと余白が変になる後でやる */
+  & p.none {
+    @media (max-width: 575px) {
+      /* テキレと合わせ技じゃないと左にならん63-25=38 */
+      margin-left: 38px;
+      text-align: left;
+    }
   }
 }
 main article.FandD section div.flex {
@@ -265,20 +350,26 @@ br.borntab {
 グッズ
 ーーー */
 main article.goods section.koibackbeige {
-  padding: 30px 25px 22px 24px;
+  padding: 24px 25px 22px 25px;
   @media (max-width: 767px) {
-    padding-top: 30px 3px 33px 14px;
+    padding: 24px 8px 33px 9px;
   }
   & hgroup {
     margin-bottom: 18px;
   }
+  /* p.noneに当たる。これを改行のタイミングによってクラス付けないと余白が変になる後でやる２ */
+  & p.none {
+    @media (max-width: 575px) {
+      /* 63+12=54 */
+      margin-left: 75px;
+      margin-bottom: 20px;
+    }
+  }
   & > p {
     margin-bottom: 15px;
   }
-  & div.flex p {
-    flex: 1;
-    /* width: 254px;
-    height: 170px; */
+  & div.flex p img {
+    width: 265px;
   }
 }
 /* ーーーーーー
@@ -286,12 +377,12 @@ main article.goods section.koibackbeige {
 ーーーーーーー */
 main article.workshop section > div.flex {
   @media (max-width: 767px) {
-    justify-content: center;
+    display: block;
   }
 }
 main article.workshop section h3 {
-  /* 左余白68-25=43 */
-  margin-left: 43px;
+  /* 左余白63-25=43 */
+  margin-left: 48px;
   &.snowdome {
     margin-bottom: 19px;
   }
@@ -308,10 +399,14 @@ main article.workshop section h3 {
 .flex7em {
   flex-basis: 7em;
 }
+.flex1 {
+  flex: 1;
+}
 .flexauto {
   flex: auto;
 }
 /* スノードーム */
+/* koibackbeigeに当たる */
 main article.workshop section.snowdome {
   padding: 34px 22px 50px 22px;
   @media (max-width: 767px) {
@@ -321,12 +416,14 @@ main article.workshop section.snowdome {
     gap: 21px;
   }
 }
+
 /* キャンドルフラワーアレンジ */
+/* koibackbeigeに当たる */
 main article.workshop section.hana {
-  padding: 33px 25px 50px 24px;
+  padding: 33px 25px 50px 27px;
   & > div.flex {
-    gap: 16px;
+    gap: 13px;
   }
 }
 
-/* 続きはbrボーンづくり */
+/* 続きはWS画像伸びたくない */
