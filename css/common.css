@@ -236,19 +236,19 @@ hgroup p {
 }
 
 /* スクロールすると、下からふわっと出現する設定 */
-.fadein2 {
+.fadein {
   transition: 1s ease-in-out;
   transform: translateY(50px);
   opacity: 0;
 }
 
-.fadein2.on {
+.fadein.on {
   transform: translateY(0);
   opacity: 1;
 }
 
 /* トップページ以外の自動フェードイン */
-.fadein22 {
+.fadein2 {
   opacity: 0;
   transform: translateY(50px);
   animation: fadein2Up 1s ease-out forwards;
