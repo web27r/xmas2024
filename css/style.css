@@ -394,7 +394,7 @@ main section.specialoffers div.otoku:last-child {
 }
 
 main section.specialoffers div.otoku p:nth-child(2) {
-  max-width: 382px;
+  max-width: 380px;
   margin-top: 31px;
   margin-bottom: 10px;
   color: var(--mainred);
