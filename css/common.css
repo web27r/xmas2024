@@ -28,6 +28,12 @@ body {
   font-family: "M PLUS 1p";
   color: var(--bunblack);
   line-height: normal;
+  background-image: url(../img/index.img/backgroundimg2.png);
+  /* 背景画像をスクロールせずに固定 */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--mainblue);
 }
 
 .container {
@@ -51,14 +57,14 @@ a {
   align-items: center;
   background-color: var(--mainred);
 
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     padding: 0;
     display: flex;
   }
 }
 
 h1.logo {
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     margin: 10px;
   }
 }
@@ -66,12 +72,6 @@ h1.logo {
 /* メイン */
 main {
   padding: 90px 0;
-  background-image: url(../img/index.img/backgroundimg2.png);
-  /* 背景画像をスクロールせずに固定 */
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
 
   @media (max-width: 767px) {
     padding: 60px 0;
@@ -79,7 +79,7 @@ main {
 }
 
 nav {
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     display: none;
     padding: 86px 0 20px 0;
     position: absolute;
@@ -95,7 +95,7 @@ nav ul {
   display: flex;
   justify-content: center;
 
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     display: block;
   }
 }
@@ -113,7 +113,7 @@ nav ul li {
   border: 2px solid #c4903c;
   font-size: max(0.65vw, 13px);
 
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     width: 100%;
     border: none;
     border-bottom: 1px solid #ead13e;
@@ -152,7 +152,7 @@ nav ul li:hover a {
   margin-left: auto;
   margin-right: 0;
 
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     display: block;
     z-index: 2;
   }
@@ -227,6 +227,10 @@ hgroup p {
   background-color: var(--koibackbeige);
 }
 
+.koibackbeige:last-child {
+  margin-bottom: unset;
+}
+
 .flex {
   display: flex;
 }
@@ -275,6 +279,7 @@ footer {
 
 footer div {
   align-items: center;
+  position: relative;
 }
 
 footer p.logo {
@@ -282,6 +287,8 @@ footer p.logo {
     display: flex;
     justify-content: center;
     margin-bottom: 41px;
+    position: absolute;
+    bottom: -400px;
   }
 }
 
@@ -330,10 +337,13 @@ footer p.aboutcompany {
   line-height: 30px;
   text-align: center;
   color: #fff;
+  @media (max-width: 767px) {
+    margin-bottom: 365px;
+  }
 }
 
 footer p.copyright {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -381,9 +391,8 @@ footer p.pagetop img {
     margin-bottom: unset;
   }
 }
-
-@media (max-width: 767px) {
-  footer span.none {
+footer span.none {
+  @media (max-width: 767px) {
     display: none;
   }
 }

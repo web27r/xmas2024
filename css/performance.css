@@ -30,7 +30,9 @@ main article ul {
 @media (max-width: 767px) {
   label[for="tabartist"],
   label[for="tabschedule"] {
+    width: 155px;
     padding: 10px 25px;
+    display: block;
     border-radius: 10px;
     background-color: #25244e;
     box-shadow: 0 0 0 3px #25244e;
@@ -117,10 +119,13 @@ main article section.schedule p {
 }
 
 main article section.aboutartist div {
-  padding: 10px 0 66px 0;
+  padding: 20px 0 50px 0;
   flex-wrap: wrap;
   gap: 25px 30px;
   justify-content: center;
+  @media (max-width: 767px) {
+    padding-bottom: 30px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -136,17 +141,31 @@ main article section figcaption {
 }
 
 main section.aboutartist hgroup.stageplace {
-  width: fit-content;
   margin-left: auto;
   margin-right: auto;
   padding: 30px 0;
+  margin: 0 20px;
   border-top: 2px dashed #b64b15;
+  @media (max-width: 991px) {
+    margin: 0 20px;
+  }
+}
+
+br.mobilbr {
+  display: none;
+  @media (max-width: 991px) {
+    display: block;
+  }
 }
 
 main section.aboutartist hgroup.stageplace p:last-child,
 main section.aboutartist hgroup.stageplace2 p:last-child {
   font-size: 16px;
   color: var(--bunblack);
+
+  @media (max-width: 767px) {
+    text-align: left;
+  }
 }
 
 main section.aboutartist hgroup.stageplace p a {
@@ -156,6 +175,10 @@ main section.aboutartist hgroup.stageplace p a {
 
 main section.aboutartist hgroup.stageplace2 {
   padding-bottom: 55px;
+
+  @media (max-width: 991px) {
+    margin: 0 20px;
+  }
 }
 
 /* ーーーーー
