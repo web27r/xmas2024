@@ -1,7 +1,19 @@
 @import url(common.css);
 /* ーーーーーー
-下層ページ共通
+下層ページ共通、になりそう（まだなってない）
 ーーーーーーー */
+.koibackbeige:last-child {
+  margin-bottom: unset;
+}
+.flexborn767 {
+  display: inherit;
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}
+.mojileft {
+  text-align: left;
+}
 .moji23 {
   @media (max-width: 767px) {
     font-size: 23px;
@@ -17,7 +29,14 @@
     font-size: 20px;
   }
 }
+/* 消えたけどどこかで使う */
+.orikaesan {
+  @media (min-width: 1200px) and (max-width: 768px) {
+    white-space: nowrap;
+  }
+}
 /* ノートPC@media (max-width: 1199px)
+文字折り返し限定tab@media (max-width: 991px)
 スマホ横@media (max-width: 767px)
 コピペセット */
 /* 1199>738 */
@@ -98,18 +117,6 @@ main article.map ul li:hover {
   color: #de9115;
   background-image: url(../img/FandD.img/sitasankaku_on.png);
 }
-/* 消えたけどどこかで使う便利２セット */
-br.born757 {
-  display: none;
-  @media (max-width: 1199px) and (min-width: 757px) {
-    display: inline;
-  }
-}
-.orikaesan {
-  @media (min-width: 1199px) and (max-width: 757px) {
-    white-space: nowrap;
-  }
-}
 /* ーーーーーーーー
 FDGW共通セクション
 ーーーーーーーー */
@@ -172,16 +179,30 @@ article.workshop h3 {
   font-weight: 700;
 }
 /* セクションタイトルフレボ＆画像フレボ */
-section > hgroup.flex,
-section > div.flex {
+section > hgroup.flex {
   @media (max-width: 767px) {
     display: block;
   }
 }
-.flexborn {
-  display: inherit;
+section > div.flex {
   @media (max-width: 767px) {
-    display: flex;
+    justify-content: center;
+  }
+}
+/* ーーーーーーーー
+FDG共通セクション
+ーーーーーーーーー */
+main article.FandD section div.flex,
+main article.goods section div.flex {
+  justify-content: space-between;
+  gap: 38px;
+  @media (max-width: 1199px) and (min-width: 768px) {
+    gap: 5px;
+  }
+  @media (max-width: 767px) {
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 /* ーーーーーーーーーーーーーー
@@ -192,10 +213,10 @@ h2 {
   width: 368px;
   margin-left: auto;
   margin-right: auto;
-  @media (max-width: 767px) {
-    /* width: 357px; */
-    margin-left: -20px;
-    /* margin-right: -5px; */
+  @media (max-width: 450px) {
+    width: 100%;
+    margin-left: unset;
+    margin-right: unset;
   }
 }
 /* セクション */
@@ -219,11 +240,7 @@ main article.FandD section hgroup {
   }
 }
 main article.FandD section div.flex {
-  gap: 38px;
   text-align: center;
-  @media (max-width: 1199px) {
-    gap: 5px;
-  }
 }
 main article section div figure figcaption {
   margin-top: 14px;
@@ -231,8 +248,19 @@ main article section div figure figcaption {
 /* FD共通フィギュア */
 figcaption {
   white-space: nowrap;
-  @media (max-width: 1199px) {
+  @media (max-width: 991px) {
     white-space: normal;
+  }
+}
+figcaption.mojilefttab {
+  @media (max-width: 991px) and (min-width: 768px) {
+    text-align: left;
+  }
+}
+br.borntab {
+  display: none;
+  @media (max-width: 991px) and (min-width: 768px) {
+    display: inline;
   }
 }
 /* ーー
@@ -244,20 +272,14 @@ main article.goods section.koibackbeige {
     padding-top: 30px 3px 33px 14px;
   }
   & hgroup {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   & > p {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
-  & p.gyou3 {
-    margin-bottom: 11px;
-  }
-  & div.flex {
-    gap: 38px;
-    & img {
-      width: 265px;
-      height: 177px;
-    }
+  & div.flex img {
+    width: 254px;
+    height: 170px;
   }
 }
 /* ーーーーーー
@@ -303,26 +325,4 @@ main article.workshop section.hana {
   }
 }
 
-/* 続きはbrボーンづくり
-フォントの太さNEXTのみ！
-コンテナ,ベージュの幅要らん */
-
-/* トプペmain section.magcup aside p左マイナス要らん */
-
-/* // スクロールすると、下からふわっと出現する設定
-$(window).scroll(function () {
-  var scrollAnimationElm = document.querySelectorAll(".fadein");
-  var scrollAnimationFunc = function () {
-    for (var i = 0; i < scrollAnimationElm.length; i++) {
-      var triggerMargin = 100;
-      if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
-        scrollAnimationElm[i].classList.add("on");
-      }
-    }
-  };
-  window.addEventListener("load", scrollAnimationFunc);
-  window.addEventListener("scroll", scrollAnimationFunc);
-}); */
-/* これを一番上だけ自動で出したい */
-
-/* 幅がズレたのはcommonに追加してもらったコンテナtoバックベージュの1199/767が悪さしていた。マジ左右15&50と同居出来ない模様。1199/767消せば解決 */
+/* 続きはbrボーンづくり */

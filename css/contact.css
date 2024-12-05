@@ -1,5 +1,6 @@
 @import url(common.css);
 /* ノートPC@media (max-width: 1199px)
+文字折り返し限定tab@media (max-width: 991px)
 スマホ横@media (max-width: 767px)
 コピペセット */
 /* 1199>738 */
@@ -18,7 +19,9 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   @media (max-width: 767px) {
-    width: 275px;
+    width: 90%;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 /* ーーーー
@@ -50,7 +53,7 @@ aside.tyuui {
   margin-top: 10px;
 }
 /* 各入力３点セット */
-div.flex {
+div.nyuryoku3 {
   margin-top: 50px;
   align-items: center;
 }

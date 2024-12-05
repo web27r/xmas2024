@@ -1,6 +1,7 @@
 @import url(common.css);
 
 /* ノートPC@media (max-width: 1199px)
+文字折り返し限定tab@media (max-width: 991px)
 スマホ横@media (max-width: 767px)
 コピペセット */
 /* 1199>738 */
@@ -20,7 +21,7 @@ hgroup {
 }
 /* 中身 */
 .koibackbeige {
-  /* もしThanks幅が変になったら38px-デフォ20px */
+  /* もしThanks幅が変になったら38px-デフォ20pxだが12/5大丈夫そ */
   /* margin-bottom: 18px; */
   margin-bottom: 38px;
   padding: 30px 49px 41px 50px;
