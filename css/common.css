@@ -63,6 +63,15 @@ a {
   }
 }
 
+.tuizyuutop {
+  @media (max-width: 991px) {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--mainred);
+  }
+}
+
 h1.logo {
   @media (max-width: 991px) {
     margin: 10px;
@@ -83,10 +92,10 @@ nav {
     display: none;
     padding: 86px 0 20px 0;
     position: absolute;
-    width: 100%;
-    z-index: 1;
-    background-color: var(--mainred);
     top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: var(--mainred);
   }
 }
 
@@ -115,6 +124,7 @@ nav ul li {
 
   @media (max-width: 991px) {
     width: 100%;
+    margin: 0;
     border: none;
     border-bottom: 1px solid #ead13e;
     font-size: 20px;
@@ -146,15 +156,16 @@ nav ul li:hover a {
   border: none;
   /* PCでは非表示設定（モバイル時の方でdisplay:flexにして表示する） */
   display: none;
-  justify-content: center;
-  align-items: center;
-  background-color: unset;
   margin-left: auto;
-  margin-right: 0;
+  background-color: var(--mainred);
+  border-radius: 20px;
 
   @media (max-width: 991px) {
     display: block;
-    z-index: 2;
+    z-index: 1;
+    position: sticky;
+    top: 10px;
+    right: 10px;
   }
 }
 
@@ -172,6 +183,7 @@ nav ul li:hover a {
 
 .hmenu.close span {
   background-color: unset;
+  z-index: 2;
 }
 
 .hmenu span::before {
@@ -201,7 +213,7 @@ nav ul li:hover a {
   text-align: center;
   font-family: "Miltonian Tattoo", serif;
   color: var(--mainred);
-  font-size: max(1.25vw, 30px);
+  font-size: max(1.25vw, 28px);
 }
 
 /* 見出し下のタイトル設定 */
@@ -269,8 +281,8 @@ hgroup p {
 フッター
 ーーーーーー*/
 footer {
-  padding: 65px 20px 0 20px;
-  background-image: url(../img/common.img/footer.svg);
+  padding: 65px 20px 20px 20px;
+  background-image: url(../img/common.img/footerback2.svg);
   background-repeat: repeat-x;
   background-position: bottom;
   background-color: var(--mainred);
@@ -343,7 +355,6 @@ footer p.aboutcompany {
 }
 
 footer p.copyright {
-  padding-bottom: 20px;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;

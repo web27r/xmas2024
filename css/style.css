@@ -4,6 +4,9 @@
 main {
   padding-bottom: 100px;
   padding-top: 172px;
+  @media (max-width: 991px) {
+    padding-top: 100px;
+  }
 }
 
 /* ーーーー
@@ -269,9 +272,10 @@ main section.magcup div {
   column-gap: 30px;
   justify-content: center;
   border: 3px solid #c3a80d;
+  border-radius: 10px;
   background-color: var(--bunblue);
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     display: block;
     padding: 15px;
     margin: 20px 0;
@@ -281,17 +285,21 @@ main section.magcup div {
 main section.magcup div p {
   margin-right: 10px;
   font-family: "Miltonian Tattoo";
-  font-size: max(1.23vw, 18px);
+  font-size: max(1.25vw, 28px);
   color: var(--backbeige);
 }
 
 main div p span.fontkaisei {
   font-family: "Kaisei Opti";
-  font-size: max(0.84vw, 16px);
+  font-size: max(1.5vw, 20px);
 
   @media (max-width: 767px) {
     margin-right: 10px;
   }
+}
+
+span.font18 {
+  font-size: 18px;
 }
 
 /* ーーーーーーーーーーーー
@@ -337,7 +345,7 @@ main section.magcup aside p {
   }
 }
 
-main section.magcup p.yoyaku {
+main section.magcup p.yoyaku a {
   max-width: fit-content;
   margin: 0 auto;
   padding: 15px 45px;
@@ -345,15 +353,21 @@ main section.magcup p.yoyaku {
   background: var(--mainred);
   font-family: "Kaisei Opti";
   font-size: 25px;
+  color: var(--backbeige);
 }
 
-main section.magcup p.yoyaku:hover {
+main section.magcup p.yoyaku a:hover {
   border: 3px solid #c3a80d;
   background: #bb232a;
 }
 
-main section.magcup p.yoyaku a {
-  color: var(--backbeige);
+main section.specialoffers {
+  padding-left: 55px;
+  padding-right: 55px;
+  @media (max-width: 767px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 main section.specialoffers div.flex {
@@ -366,7 +380,8 @@ main section.specialoffers div.flex {
 }
 
 main section.specialoffers div.otoku {
-  padding: 16px 34px;
+  margin-top: 42px;
+  padding: 0 20px;
   border-right: 2px dashed #b64b15; /* 右側に縦線 */
 
   @media (max-width: 1190px) {
@@ -375,13 +390,14 @@ main section.specialoffers div.otoku {
     text-align: center;
 
     @media (max-width: 767px) {
+      margin-top: 0;
       text-align: left;
     }
   }
 }
 
-@media (max-width: 1190px) {
-  main section.specialoffers div.otoku:first-child {
+main section.specialoffers div.otoku:first-child {
+  @media (max-width: 1190px) {
     padding-bottom: 54px;
     margin-bottom: 54px;
     border-bottom: 2px dashed #b64b15;
@@ -408,27 +424,35 @@ main section.specialoffers div.otoku aside {
   margin-bottom: 20px;
 }
 
-main section.specialoffers div.tenpo1,
-main section.specialoffers div.tenpo2 {
-  width: fit-content;
-  margin: 0 auto;
-  padding: 21px 16px;
+main section.specialoffers div.tenpo {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 21px 0;
   border-radius: 15px;
   background-color: #d7c8a4;
   text-align: left;
 }
 
+main section.specialoffers div.tenpo1 {
+  max-width: 320px;
+}
+
+main section.specialoffers div.tenpo2 {
+  max-width: 350px;
+}
+
 main section.specialoffers div.otoku p.sitamargin {
-  margin-bottom: 63px;
+  margin-bottom: 15px;
 }
 
 main section.specialoffers h3 {
-  padding-left: 15px;
+  padding-left: 22px;
 }
 
 main section.specialoffers div.tenpo1 ul,
 main section.specialoffers div.tenpo2 ul {
-  padding: 10px 10px 20px 35px;
+  margin-left: 2em;
+  padding: 7px 16px 0 16px;
   list-style-type: disc;
 }
 
@@ -439,6 +463,16 @@ main section.specialoffers div.tenpo2 li:first-child {
 main section.specialoffers span.font14 {
   font-weight: normal;
   font-size: 14px;
+}
+
+br.mobilbr {
+  display: none;
+  @media (max-width: 1190px) {
+    display: block;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
 }
 
 main section.caution {
