@@ -2,6 +2,17 @@
 /* ーーーーーー
 下層ページ共通、になりそう（まだなってない）
 ーーーーーーー */
+br.born767 {
+  display: none;
+  @media (max-width: 767px) {
+    display: inline;
+  }
+}
+.noflex767 {
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
 .mojileft {
   text-align: left;
 }
@@ -416,7 +427,13 @@ main article.workshop section.snowdome {
     gap: 21px;
   }
 }
-
+@media (max-width: 767px) {
+  main article.workshop section.snowdome {
+    & span.none767 {
+      display: none;
+    }
+  }
+}
 /* キャンドルフラワーアレンジ */
 /* koibackbeigeに当たる */
 main article.workshop section.hana {
