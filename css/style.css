@@ -20,17 +20,13 @@ header {
   background-position: center;
   background-size: cover;
 
-  @media (max-width: 991px) {
-    padding-top: 0;
-
-    @media (max-width: 767px) {
-      background-image: url(../img/index.img/iphonemainimg.png);
-    }
+  @media (max-width: 767px) {
+    background-image: url(../img/index.img/iphonemainimg.png);
   }
 }
 
 header div.maintitle {
-  text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   color: #f5f3f0;
 
@@ -49,6 +45,7 @@ header div.flex {
 }
 
 header p:first-child {
+  font-family: "Tempus Sans ITC";
   font-size: max(2vw, 30px);
 
   @media (max-width: 767px) {
@@ -93,7 +90,7 @@ section {
   padding: 60px 125px 40px 125px;
 
   @media (max-width: 767px) {
-    padding: 50px 15px;
+    padding: 50px 15px 50px 15px;
   }
 }
 
@@ -109,7 +106,7 @@ main section.news dl div {
   }
 }
 
-main section.news div dt {
+main section.news dl dt {
   padding-bottom: 10px;
   font-family: "Miltonian Tattoo", serif;
   font-size: 20px;
@@ -125,10 +122,10 @@ h2 {
 }
 
 /* section共通の薄ピンクの枠の設定 */
-main section.event div.day,
-main section.event div.free,
-main section.event div.place,
-main section.event div.access,
+main section.event dl.day,
+main section.event dl.free,
+main section.event dl.place,
+main section.event dl.access,
 main section.event section.magcup div {
   padding: 40px 80px;
   flex-wrap: wrap;
@@ -141,7 +138,7 @@ main section.event section.magcup div {
     flex-wrap: nowrap;
 
     @media (max-width: 767px) {
-      padding: 20px 15px 30px 15px;
+      padding: 20px 15px 20px 15px;
     }
   }
 }
@@ -157,18 +154,18 @@ main section.event dl dt {
   }
 }
 
-main section.event div {
+main section.event dl {
   margin-bottom: 20px;
 }
 
-main section.event div.day,
-main section.event div.access {
+main section.event dl.day,
+main section.event dl.access {
   column-gap: 75px;
 }
 
-main section.event div.day div,
-main section.event div.place dd,
-main section.event div.access dd {
+main section.event dl.day div,
+main section.event dl.place dd,
+main section.event dl.access dd {
   @media (max-width: 1190px) {
     width: fit-content;
     margin-left: auto;
@@ -176,18 +173,18 @@ main section.event div.access dd {
   }
 }
 
-main section.event div.day dd:first-child {
+main section.event dl.day dd:first-child {
   margin-bottom: 20px;
   font-weight: bold;
   color: #213b60;
-  font-size: max(1.00vw, 19px);
+  font-size: max(1vw, 20px);
 
   @media (max-width: 767px) {
     margin-bottom: 10px;
   }
 }
 
-main section.event div.day dd:nth-child(2) {
+main section.event dl.day dd:nth-child(2) {
   margin-bottom: 20px;
   font-weight: bold;
   font-size: max(0.7vw, 18px);
@@ -197,18 +194,18 @@ main section.event div.day dd:nth-child(2) {
   }
 }
 
-main section.event div.free {
+main section.event dl.free {
   column-gap: 250px;
 }
 
-main section.event div.free dd,
-main section.event div.place dd,
-main section.event div.access dd {
+main section.event dl.free dd,
+main section.event dl.place dd,
+main section.event dl.access dd {
   color: #213b60;
-  font-size: max(0.7vw, 16px);
+  font-size: max(0.7vw, 15px);
 }
 
-main section.event div.free dd {
+main section.event dl.free dd {
   font-weight: bold;
   font-size: 28px;
 
@@ -217,21 +214,20 @@ main section.event div.free dd {
   }
 }
 
-main section.event div.place {
+main section.event dl.place {
   column-gap: 116px;
 }
 
-main section.event div.access dd {
+main section.event dl.access dd {
   margin-bottom: 33px;
 }
 
-main section.event div.access p.noflex {
+main section.event dl.access p:last-child {
   width: 100%;
   text-align: center;
 }
 
 main div.market {
-  margin-bottom: 90px;
   padding: 125px 0;
   background-image: url(../img/index.img/ChristmasMarket.jpg);
   background-repeat: no-repeat;
@@ -242,8 +238,7 @@ main div.market {
 }
 
 main div.market section.aboutxmas {
-  padding-bottom: 73px;
-  margin-bottom: 0;
+  padding-bottom: 60px;
 }
 
 main div.market section.aboutxmas h2 {
@@ -265,7 +260,7 @@ main section.magcup hgroup p {
   font-family: "Kaisei Opti";
 
   @media (max-width: 767px) {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
@@ -290,18 +285,21 @@ main section.magcup div {
 }
 
 main section.magcup div p {
-  margin-right: 10px;
   font-family: "Miltonian Tattoo";
-  font-size: max(1.25vw, 28px);
+  font-size: max(1.25vw, 22px);
   color: var(--backbeige);
 }
 
-main div p span.fontkaisei {
+span.fontkaisei {
   font-family: "Kaisei Opti";
-  font-size: max(1.5vw, 20px);
+  font-size: max(1.5vw, 18px);
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     margin-right: 10px;
+
+    @media (max-width: 767px) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -317,6 +315,12 @@ main section.magcup div img {
 
   @media (max-width: 767px) {
     margin-right: 10px;
+  }
+}
+
+main section.magcup span.br {
+  @media (max-width: 767px) {
+    display: inline-block;
   }
 }
 
@@ -373,8 +377,8 @@ main section.specialoffers {
   padding-right: 55px;
 
   @media (max-width: 767px) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 
@@ -460,7 +464,7 @@ main section.specialoffers h3 {
 
 main section.specialoffers div.tenpo1 ul,
 main section.specialoffers div.tenpo2 ul {
-  margin-left: 2em;
+  margin-left: 1.5em;
   padding: 7px 16px 0 16px;
   list-style-type: disc;
 }
@@ -472,18 +476,6 @@ main section.specialoffers div.tenpo2 li:first-child {
 main section.specialoffers span.font14 {
   font-weight: normal;
   font-size: 14px;
-}
-
-br.mobilbr {
-  display: none;
-
-  @media (max-width: 1190px) {
-    display: block;
-
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
 }
 
 main section.caution {
@@ -499,5 +491,24 @@ main section.caution ul li {
 
   @media (max-width: 767px) {
     margin-left: 18px;
+  }
+}
+
+br.mobilebr {
+  display: none;
+
+  @media (max-width: 1190px) {
+    display: block;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+br.mobilebr2 {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
   }
 }
