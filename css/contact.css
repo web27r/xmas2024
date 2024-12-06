@@ -18,11 +18,12 @@ textarea {
   width: 617px;
   margin-left: auto;
   margin-right: auto;
+  /* ここ調整するかも275じゃないとin大阪が変になる */
   @media (max-width: 767px) {
     width: 425px;
   }
   @media (max-width: 575px) {
-    width: 315px;
+    width: 275px;
   }
 }
 /* ーーーー
@@ -43,8 +44,12 @@ hgroup {
     margin-bottom: 10px;
   }
 }
+main article.contact aside.futoji {
+  margin-left: 18px;
+  margin-right: 17px;
+}
 .toicontainer {
-  margin: 50px auto 0 auto;
+  margin: 43px auto 0 auto;
   @media (max-width: 767px) {
     margin: 35px auto 0 auto;
   }
@@ -62,7 +67,7 @@ div.nyuryoku3 {
 /* 必須任意の枠 */
 .box {
   padding: 5px 20px;
-  margin-right: 20px;
+  margin-right: 40px;
   margin-bottom: 10px;
   color: var(--backbeige);
   border-radius: 5px;

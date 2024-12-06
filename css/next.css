@@ -8,6 +8,15 @@ br.born767 {
     display: inline;
   }
 }
+br.born575 {
+  display: none;
+  @media (max-width: 575px) {
+    display: inline;
+  }
+}
+.orikaesan {
+  white-space: nowrap;
+}
 .noflex767 {
   @media (max-width: 767px) {
     display: block;
@@ -36,11 +45,6 @@ br.born767 {
   display: inherit;
   @media (max-width: 767px) {
     display: flex;
-  }
-}
-.orikaesan {
-  @media (min-width: 1200px) and (max-width: 768px) {
-    white-space: nowrap;
   }
 }
 /* ノートPC@media (max-width: 1199px)
@@ -133,19 +137,15 @@ main article section.koibackbeige {
   background-repeat: no-repeat;
   background-position: left 26px top 20px;
   background-size: 30px 38px;
-  /* @media (max-width: 767px){
-    background-position: left 10px top 20px;
-  } */
+  @media (max-width: 767px) {
+    background-position: left 23px top 20px;
+  }
 }
 main article.FandD section.koibackbeige {
   background-image: url(../img/FandD.img/ornamentNoRed.png);
 }
 main article.goods section.koibackbeige {
   background-image: url(../img/FandD.img/ornamentAbcBlue.png);
-}
-main article.workshop section.koibackbeige {
-  background-position: left 22px top 30px;
-  background-image: url(../img/FandD.img/WorkShop.png);
 }
 /* hgroup */
 main article section hgroup.flex {
@@ -383,24 +383,9 @@ main article.goods section.koibackbeige {
     width: 265px;
   }
 }
-/* ーーーーーー
-ワークショップ
-ーーーーーーー */
-main article.workshop section > div.flex {
-  @media (max-width: 767px) {
-    display: block;
-  }
-}
-main article.workshop section h3 {
-  /* 左余白63-25=43 */
-  margin-left: 48px;
-  &.snowdome {
-    margin-bottom: 19px;
-  }
-  &.hana {
-    margin-bottom: 22px;
-  }
-}
+/* ーーーーーーーーー
+ワークショップ雪花共通
+ーーーーーーーーーー */
 .mb1_5em {
   margin-bottom: 1.5em;
 }
@@ -416,15 +401,61 @@ main article.workshop section h3 {
 .flexauto {
   flex: auto;
 }
+main article.workshop section {
+  &.koibackbeige {
+    @media (max-width: 767px) {
+      background-position: left 23px top 30px;
+    }
+  }
+  & > div.flex {
+    align-items: flex-start;
+    @media (max-width: 767px) {
+      display: block;
+    }
+    & > p {
+      @media (max-width: 767px) {
+        margin-bottom: 19px;
+        text-align: center;
+      }
+    }
+  }
+}
 /* スノードーム */
+/* .koibackbeigeに配置 */
+main article.workshop section.snowdome {
+  background-position: left 22px top 30px;
+  background-image: url(../img/FandD.img/WorkShop.png);
+}
 /* koibackbeigeに当たる */
 main article.workshop section.snowdome {
   padding: 34px 22px 50px 22px;
   @media (max-width: 767px) {
-    padding: 33px 8px 50px 9px;
+    padding: 34px 8px 50px 9px;
+  }
+  & h3 {
+    /* h3上余白34-オーナメント上余白30=3px */
+    margin-top: 4px;
+    /* 左余白68-22=46 */
+    margin-left: 46px;
+    margin-bottom: 19px;
+    @media (max-width: 767px) {
+      margin-left: 63px;
+    }
   }
   & > div.flex {
     gap: 21px;
+    & p {
+      flex-basis: 265px;
+    }
+    & dl.flextab {
+      display: flex;
+      @media (max-width: 991px) {
+        display: block;
+      }
+      @media (max-width: 767px) {
+        display: flex;
+      }
+    }
   }
 }
 @media (max-width: 767px) {
@@ -435,12 +466,41 @@ main article.workshop section.snowdome {
   }
 }
 /* キャンドルフラワーアレンジ */
+/* .koibackbeigeに配置 */
+main article.workshop section.hana {
+  background-position: left 27px top 30px;
+  background-image: url(../img/FandD.img/WorkShop.png);
+}
 /* koibackbeigeに当たる */
 main article.workshop section.hana {
   padding: 33px 25px 50px 27px;
-  & > div.flex {
-    gap: 13px;
+  @media (max-width: 767px) {
+    padding: 33px 8px 50px 9px;
   }
+  & h3 {
+    /* h3上余白33-オーナメント上余白30=3px */
+    margin-top: 3px;
+    /* 左余白67-27=40 */
+    margin-left: 40px;
+    margin-bottom: 22px;
+    @media (max-width: 767px) {
+      font-size: 20px;
+      margin-right: -8px;
+      /* 1px引けば右が収まるが375は収まらない */
+      margin-left: 62px;
+    }
+    /* iPhone8の為だけの改行 */
+    & br.bornhana {
+      display: none;
+      @media (max-width: 389px) {
+        display: inline;
+      }
+    }
+  }
+}
+& > div.flex {
+  gap: 13px;
+  flex-direction: row-reverse;
 }
 
 /* 続きはWS画像伸びたくない */
