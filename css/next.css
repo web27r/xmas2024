@@ -409,10 +409,15 @@ main article.workshop section {
   }
   & > div.flex {
     align-items: flex-start;
-    @media (max-width: 767px) {
+    justify-content: space-between;
+    @media (max-width: 991px) {
       display: block;
     }
+    & > div {
+      max-width: 590px;
+    }
     & > p {
+      max-width: 100%;
       @media (max-width: 767px) {
         margin-bottom: 19px;
         text-align: center;
