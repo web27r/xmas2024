@@ -181,7 +181,6 @@ nav ul li:hover a {
   transition: 0.5s;
 }
 
-
 .hmenu span::before,
 .hmenu span::after {
   width: 100%;
@@ -192,8 +191,6 @@ nav ul li:hover a {
   position: absolute;
   transition: 0.5s;
 }
-
-
 
 .hmenu.close span {
   background-color: unset;
@@ -297,7 +294,7 @@ hgroup p {
 ーーーーーー*/
 footer {
   padding: 65px 20px 20px 20px;
-  background-image: url(../img/common.img/footerback2.svg);
+  background-image: url(../img/common.img/footerback3.png);
   background-repeat: repeat-x;
   background-position: bottom;
   background-color: var(--mainred);
