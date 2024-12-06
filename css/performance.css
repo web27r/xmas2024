@@ -206,6 +206,7 @@ main article section.schedule {
 main article section.schedule hgroup {
   width: fit-content;
   margin-bottom: 10px;
+  margin-left: 10px;
   align-items: baseline;
   border-bottom: 3px solid #648497;
 }
@@ -301,6 +302,9 @@ table tbody tr th.time {
   vertical-align: middle;
   font-size: 25px;
   color: var(--backbeige);
+  @media (max-width: 991px) {
+    padding: 80px 5px;
+  }
 }
 
 table tbody tr td {
