@@ -51,6 +51,11 @@ a {
   color: inherit;
 }
 
+.linkblue {
+  text-decoration: underline;
+  color: #337dcc;
+}
+
 .headerkasou {
   padding: 10px;
   justify-content: space-evenly;
@@ -290,12 +295,35 @@ hgroup p {
   }
 }
 
+/* タブレットの時だけトップページの一部自動フェードイン */
+.fadein3 {
+  @media (max-width: 991px) and (min-width: 767px) {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadein2Up 1s ease-out forwards;
+    @media (max-width: 767px) {
+    }
+  }
+}
+
+@keyframes fadein2Up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ーーーーー
 フッター
 ーーーーーー*/
 footer {
   padding: 65px 20px 20px 20px;
-  background-image: url(../img/common.img/footerback3.png);
+  background-image: url(../img/common.img/footerback.png);
   background-repeat: repeat-x;
   background-position: bottom;
   background-color: var(--mainred);
@@ -394,7 +422,7 @@ footer p.pagetop a {
   display: flex;
 
   /* モバイル時のページトップボタン */
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     padding: 10px 15px;
     flex-direction: column-reverse;
     align-items: center;
@@ -409,16 +437,8 @@ footer p.pagetop a {
   }
 }
 
-footer p.pagetop img {
-  margin-bottom: 8px;
-
-  @media (max-width: 767px) {
-    margin-bottom: unset;
-  }
-}
-
 footer span.none {
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     display: none;
   }
 }
@@ -429,7 +449,7 @@ footer span.none {
   background-image: url(../img/common.img/decosnow.svg);
   background-repeat: no-repeat;
   background-position: center top 20px;
-  background-size: 90% auto;
+  background-size: 95% auto;
 }
 
 /* ぶら下げ飾り */
@@ -438,4 +458,14 @@ footer span.none {
   background-repeat: no-repeat;
   background-position: top 0 left 5%, top 0 right 5%;
   background-size: 17% auto;
+  @media (max-width: 767px) {
+    background-size: 25% auto;
+  }
+}
+
+/* モバイル時にornamentにタイトルが被るので、マージンで調整 */
+.mobiletop {
+  @media (max-width: 767px) {
+    margin-top: 25px;
+  }
 }

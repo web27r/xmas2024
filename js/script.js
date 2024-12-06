@@ -32,11 +32,15 @@ $('input[name="tab"]').change(function () {
   $("." + id).fadein2();
 });
 
-// 上下スライド
+// モバイルメニュー上下スライド
 // .hmenuをクリックした時
 $(".hmenu").click(function () {
   $("nav").slideToggle(500);
   $(this).toggleClass("close");
+});
+
+$(".container").click(function () {
+  $(".hmenu").removeClass(".close");
 });
 
 // タブ選択で、表示切替設定(performance.html）
