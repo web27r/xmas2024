@@ -18,12 +18,12 @@ textarea {
   width: 617px;
   margin-left: auto;
   margin-right: auto;
-  /* ここ調整するかも275じゃないとin大阪が変になる */
+  /* in大阪326がギリ */
   @media (max-width: 767px) {
     width: 425px;
   }
   @media (max-width: 575px) {
-    width: 275px;
+    width: 326px;
   }
 }
 /* ーーーー
@@ -35,6 +35,10 @@ textarea {
     padding: 60px 30px 78px 30px;
     @media (max-width: 767px) {
       padding: 35px 15px 53px 15px;
+    }
+    /* iPhone8の為のやつ */
+    @media (max-width: 388px) {
+      padding: 35px 5px 53px 5px;
     }
   }
 }
