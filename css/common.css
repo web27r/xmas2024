@@ -250,6 +250,7 @@ hgroup p {
   background-color: var(--koibackbeige);
 }
 
+.backbeige:last-child,
 .koibackbeige:last-child {
   margin-bottom: unset;
 }
