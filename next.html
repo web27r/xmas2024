@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christmas Market 2024 in てんしば</title>
-    <link rel="icon" href="img/common.img/favicon1.png" type="image/png">
+    <title>フード・ドリンク&#xFF5C;Christmas Market 2024 in てんしば</title>
+    <link rel="icon" href="img/common.img/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/next.css">
+    <!-- footerFixed -->
+    <script src="js/footerFixed.js"></script>
     <!-- jQueryの読み込み -->
     <script src="js/jquery-3.7.1.min.js"></script>
 </head>
@@ -17,34 +19,40 @@
 ーーーー -->
 <body id="top">
     <!-- トプペからナブ丸コピ -->
-    <header>
+    <header class="tuizyuutop headerkasou flex">
+        <h1 class="logo"><a href="index.html"><img src="img/common.img/logo.svg" width="90" height="90" alt="ロゴ"></a></h1>
+        <!-- モバイル時のハンバーガーメニュー -->
+        <button class="hmenu"><span></span></button>
         <nav>
             <ul>
                 <li><a href="index.html">トップページ</a></li>
-                <li><a href="next.html">フード・ドリンク</a></li>
+                <li><a href="next.html">ショップ</a></li>
                 <li><a href="performance.html">パフォーマンス</a></li>
-                <li><a href="#">会場マップ</a></li>
+                <li><a href="next.html#map">会場マップ</a></li>
                 <li><a href="index.html#access">アクセス</a></li>
                 <li><a href="q&a.html">Q&A</a></li>
                 <li><a href="contact.html">お問い合わせ</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <div class="container">
             <!-- ーーー
             会場マップ
             ーーーーー -->
-            <article class="backbeige snow map">
-                <hgroup>
+            <article class="fadein2 backbeige ornament map">
+                <hgroup class="shop">
                     <h1 class="midashired mise">SHOP</h1>
                     <p>お店一覧</p>
                 </hgroup>
-                <ul class="flex">
-                    <li><a href="#FandD">フード&#x30FB;<br class="born757">ドリンク</a></li>
-                    <li><a class="gooddown" href="#goods">グッズ</a></li>
-                    <li><a href="#workshop">ワーク<br class="born757">ショップ</a></li>
+
+                <ul id="map" class="flex">
+                    <li class="fd"><a href="#FandD">フード・ドリンク</a></li>
+                    <li class="goods"><a href="#goods">グッズ</a></li>
+                    <li class="ws"><a href="#workshop">ワークショップ</a></li>
                 </ul>
+
                 <hgroup class="map">
                     <h1 class="midashired">MAP</h1>
                     <p>会場マップ</p>
@@ -54,7 +62,7 @@
             <!-- ーーーーーーーーーーーーーーーーーーーーーーー
                                     ここからフードandドリンク
                                     ーーーーーーーーーーー -->
-            <article id="FandD" class="backbeige snow FandD">
+            <article id="FandD" class="backbeige fadein2 snow FandD">
                 <hgroup class="FandD">
                     <h1 class="midashired">FOOD &amp; DRINK</h1>
                     <p>フード・ドリンク</p>
@@ -75,7 +83,7 @@
                             <figcaption>ソーセージ１２本盛り<br>&#xFFE5;1.700</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/1Germany/1snowmancocoa.png">
-                            <figcaption>スノーマンのクリスマスホットココア<br>&#xFFE5;1.200</figcaption>
+                            <figcaption>スノーマンのクリスマス<br class="borntab">ホットココア<br>&#xFFE5;1.200</figcaption>
                         </figure>
                     </div>
                 </section>
@@ -109,7 +117,7 @@
                             <figcaption>ハンブルグプレート<br>&#xFFE5;2.400</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/1Germany/3shellbutter.png">
-                            <figcaption>ムール貝ガーリックバターソース<br>&#xFFE5;1.600</figcaption>
+                            <figcaption>ムール貝ガーリックバター<br class="borntab">ソース<br>&#xFFE5;1.600</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/1Germany/3appleGuryuwain.png">
                             <figcaption>アップルグリューワイン<br>&#xFFE5;800</figcaption>
@@ -137,18 +145,18 @@
                 <section class="koibackbeige">
                     <hgroup class="flex">
                         <p class="no">5</p>
-                        <h3 class="moji23">Lecker Glühwein Haus</h3>
-                        <p class="none">レッカーグリューワインハウス</p>
+                        <h3 class="moji23">Glühwein Haus</h3>
+                        <p class="none">グリューワインハウス</p>
                     </hgroup>
                     <div class="flex">
                         <figure><img src="img/FandD.img/1Germany/5Xmascocoa.png">
-                            <figcaption>サンタのクリスマスホットココア<br>&#xFFE5;1.200</figcaption>
+                            <figcaption>サンタのクリスマス<br class="borntab">ホットココア<br>&#xFFE5;1.200</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/1Germany/5mixberryGuryuwain.png">
-                            <figcaption>ミックスベリーグリューワイン<br>&#xFFE5;800</figcaption>
+                            <figcaption>ミックスベリーグリュー<br class="borntab">ワイン<br>&#xFFE5;800</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/1Germany/5hotKahluaalcohol.png">
-                            <figcaption>ホットカルーアミルク（アルコール）<br>&#xFFE5;800</figcaption>
+                            <figcaption>ホットカルーアミルク<br class="borntab">（アルコール）<br>&#xFFE5;800</figcaption>
                         </figure>
                     </div>
                 </section>
@@ -173,15 +181,15 @@
                 <section class="koibackbeige">
                     <hgroup class="flex">
                         <p class="no">7</p>
-                        <h3>Christmas café&#xFF06;Bar</h3>
+                        <h3>Xmas café&#xFF06;Bar</h3>
                         <p class="none">クリスマスcafé&#xFF06;Bar</p>
                     </hgroup>
                     <div class="flex">
                         <figure><img src="img/FandD.img/1Germany/7GermanyGuryuwain.png">
-                            <figcaption>ドイツで仕込んだグリューワイン<br>&#xFFE5;800</figcaption>
+                            <figcaption>ドイツで仕込んだグリュー<br class="borntab">ワイン<br>&#xFFE5;800</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/1Germany/7Xmasbeer.png">
-                            <figcaption>トューハークリスマスビア(瓶)<br>&#xFFE5;1.200</figcaption>
+                            <figcaption>トューハークリスマスビア<br class="borntab">(瓶)<br>&#xFFE5;1.200</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/1Germany/7hotchocolate.png">
                             <figcaption>ホットチョコレート<br>&#xFFE5;700</figcaption>
@@ -210,8 +218,8 @@
                 <section class="koibackbeige">
                     <hgroup class="flex">
                         <p class="no">9</p>
-                        <h3 class="moji23">The Holly Jolly House</h3>
-                        <p class="none">ホリー・ジョリー・ハウス</p>
+                        <h3 class="moji23">The Holly Jolly</h3>
+                        <p class="none">ホリー&#x30FB;ジョリー</p>
                     </hgroup>
                     <div class="flex">
                         <figure><img src="img/FandD.img/2UK/roastbeef.png">
@@ -240,7 +248,7 @@
                             <figcaption>クリスマスハム<br>&#xFFE5;1.800</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/3Sweden/xmascola.png">
-                            <figcaption>ユールムスト(クリスマスコーラ)<br>&#xFFE5;800</figcaption>
+                            <figcaption>ユールムスト<br class="borntab">(クリスマスコーラ)<br>&#xFFE5;800</figcaption>
                         </figure>
                     </div>
                 </section>
@@ -248,8 +256,8 @@
                 <section class="koibackbeige">
                     <hgroup class="flex no2">
                         <p class="no">11</p>
-                        <h3>La Casa Navideña</h3>
-                        <p class="none">ラ&#x30FB;カサ&#x30FB;ナビデーニャ</p>
+                        <h3>Tapas y Vino</h3>
+                        <p class="none">タパス&#x30FB;イ&#x30FB;ビノ</p>
                     </hgroup>
                     <div class="flex">
                         <figure><img src="img/FandD.img/4Spain/namaham.png">
@@ -272,13 +280,13 @@
                     </hgroup>
                     <div class="flex">
                         <figure><img src="img/FandD.img/5Finland/ham.png">
-                            <figcaption>豚肉のハムの盛合せマスタード添え<br>&#xFFE5;2.100</figcaption>
+                            <figcaption>豚肉のハムの盛合せ<br class="borntab">マスタード添え<br>&#xFFE5;2.100</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/5Finland/pie.png">
-                            <figcaption>風車型のパイ～ヨウルトルットゥ～<br>&#xFFE5;800</figcaption>
+                            <figcaption>風車型のパイ<br class="borntab">&#xFF5E;ヨウルトルットゥ&#xFF5E;<br>&#xFFE5;800</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/5Finland/cookie.png">
-                            <figcaption>ピパルカクト～ジンジャークッキー～<br>&#xFFE5;600</figcaption>
+                            <figcaption>ピパルカクト<br class="borntab">&#xFF5E;ジンジャークッキー&#xFF5E;<br>&#xFFE5;600</figcaption>
                         </figure>
                     </div>
                 </section>
@@ -297,7 +305,7 @@
                             <figcaption>パンケーキボール<br>&#xFFE5;1.200</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/6Denmark/13_3glogg.png">
-                            <figcaption>ノンアルコール&#x30FB;グリュッグ<br>&#xFFE5;800</figcaption>
+                            <figcaption>ノンアルコール&#x30FB;<br class="borntab">グリュッグ<br>&#xFFE5;800</figcaption>
                         </figure>
                     </div>
                 </section>
@@ -323,8 +331,8 @@
                 <section class="koibackbeige">
                     <hgroup class="flex no2">
                         <p class="no">15</p>
-                        <h3>Poppin Churitos Haus</h3>
-                        <p class="none">ポッピンチュリトスハウス</p>
+                        <h3>Poppin Churitos</h3>
+                        <p class="none">ポッピンチュリトス</p>
                     </hgroup>
                     <div class="flex">
                         <figure><img src="img/FandD.img/7othermenu/15XmasChuritos.png">
@@ -334,7 +342,7 @@
                             <figcaption>クリスマスワッフルチョコ<br>&#xFFE5;900</figcaption>
                         </figure>
                         <figure><img src="img/FandD.img/7othermenu/15Xmaswafflemixberry.png">
-                            <figcaption>クリスマスワッフルミックスベリー<br>&#xFFE5;1.000</figcaption>
+                            <figcaption>クリスマスワッフル<br class="borntab">ミックスベリー<br>&#xFFE5;1.000</figcaption>
                         </figure>
                     </div>
                 </section>
@@ -342,144 +350,144 @@
             <!-- ーーーーー
             ここからグッズ
             ーーーーーーー -->
-            <article id="goods" class="backbeige goods snow">
+            <article id="goods" class="backbeige fadein2 goods snow">
                 <hgroup class="GandW">
                     <h1 class="midashired">GOODS</h1>
                     <p>グッズ</p>
                 </hgroup>
 
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="ah flex">
                         <p class="abc">A</p>
                         <h3>SNOWDOME</h3>
                         <p class="none">スノードーム</p>
                     </hgroup>
                     <p>オーストリア・ウィーンの創業1900年のPERZYスノードームが勢ぞろい 透明度の高い澄んだアルプスの天然水だけで満たされており、雪に見立てたパウダーが可憐に美しく、とても長い時間舞うのが特徴です。</p>
                     <div class="flex">
-                        <img src="img/FandD.img/8Agoods/A_snowglobe1.png" alt="お城の前にスノードーム">
-                        <img src="img/FandD.img/8Agoods/A_snowglobe2.png" alt="サンタのスノードーム">
-                        <img src="img/FandD.img/8Agoods/A_snowglobe3.png" alt="雑貨屋に並ぶスノードーム">
+                        <p><img src="img/FandD.img/8Agoods/A_snowglobe1.png" alt="お城の前にスノードーム"></p>
+                        <p><img src="img/FandD.img/8Agoods/A_snowglobe2.png" alt="サンタのスノードーム"></p>
+                        <p><img src="img/FandD.img/8Agoods/A_snowglobe3.png" alt="雑貨屋に並ぶスノードーム"></p>
                     </div>
                 </section>
 
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="bcdf flex">
                         <p class="abc">B</p>
                         <h3>KOSelig JAPAN</h3>
                         <p class="none">コーシェリジャパン</p>
                     </hgroup>
                     <p class="gyou3">「Koselig（コーシェリ）」という言葉をご存知ですか？それは、“こころがホッとする”という意味のノルウェー語です。天然由来100%のソイワックスキャンドルを中心に、ナチュラルフレグランスをお届けします。クリスマス限定の香りもご用意しております。</p>
                     <div class="flex">
-                        <img src="img/FandD.img/8Bgoods/B_candle1.png" alt="雑貨屋に並ぶキャンドル">
-                        <img src="img/FandD.img/8Bgoods/B_candle2.png" alt="白背景にキャンドル">
-                        <img src="img/FandD.img/8Bgoods/B_candle3.png" alt="手に持ったフレグランス">
+                        <p><img src="img/FandD.img/8Bgoods/B_candle1.png" alt="雑貨屋に並ぶキャンドル"></p>
+                        <p><img src="img/FandD.img/8Bgoods/B_candle2.png" alt="白背景にキャンドル"></p>
+                        <p><img src="img/FandD.img/8Bgoods/B_candle3.png" alt="手に持ったフレグランス"></p>
                     </div>
                 </section>
 
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="bcdf flex">
                         <p class="abc">C</p>
                         <h3>Berry DECO</h3>
                         <p class="none">ベリーデコ</p>
                     </hgroup>
                     <p>人から人へ「つながる笑顔」をモットーに、アイシングクッキーで世界中を笑顔にします。<br>熟練のデコレーターが一つ一つ、心を込めて手作りしています。</p>
                     <div class="flex">
-                        <img src="img/FandD.img/8Cgoods/C_docecookie1.png" alt="ツリーのアイシングクッキー">
-                        <img src="img/FandD.img/8Cgoods/C_docecookie2.png" alt="サンタのアイシングクッキー">
-                        <img src="img/FandD.img/8Cgoods/C_docecookie3.png" alt="サンタとトナカイと雪だるまのアイシングクッキー">
+                        <p><img src="img/FandD.img/8Cgoods/C_docecookie1.png" alt="ツリーのアイシングクッキー"></p>
+                        <p><img src="img/FandD.img/8Cgoods/C_docecookie2.png" alt="サンタのアイシングクッキー"></p>
+                        <p><img src="img/FandD.img/8Cgoods/C_docecookie3.png" alt="サンタとトナカイと雪だるまのアイシングクッキー"></p>
                     </div>
                 </section>
 
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="bcdf flex">
                         <p class="abc">D</p>
                         <h3>Stollen&amp;pretzel</h3>
                         <p class="none">シュトレン&#xFF06;プレッツェル</p>
                     </hgroup>
                     <p class="gyou3">ドイツの伝統的なお菓子シュトレンとプレッツェルを集めた限定店舗です。<br>ドイツでは、アドベントの4週間の間に、シュトレンを薄くスライスして少しずつ食べる習慣があります。関西初出店限定シュトレンとプレッツェルが揃います。</p>
                     <div class="flex">
-                        <img src="img/FandD.img/8Dgoods/D_stollen1.png" alt="星形のシュトーレン">
-                        <img src="img/FandD.img/8Dgoods/D_stollen2.png" alt="真っ白なシュトーレン">
-                        <img src="img/FandD.img/8Dgoods/D_stollen3.png" alt="サンタの乗ったシュトーレン">
+                        <p><img src="img/FandD.img/8Dgoods/D_stollen1.png" alt="星形のシュトーレン"></p>
+                        <p><img src="img/FandD.img/8Dgoods/D_stollen2.png" alt="真っ白なシュトーレン"></p>
+                        <p><img src="img/FandD.img/8Dgoods/D_stollen3.png" alt="サンタの乗ったシュトーレン"></p>
                     </div>
                 </section>
 
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="e flex">
                         <p class="abc">E</p>
-                        <h3 class="moji21">Christmas advent SHOP</h3>
+                        <h3 class="moji21">Xmas advent SHOP</h3>
                         <p class="none">クリスマスアドベントショップ</p>
                     </hgroup>
                     <p>クリスマスに向けてオーナメントやスノードーム等の雑貨が沢山集まっています。欧州ではクリスマスまでの4週間をアドベントと言い、クリスマスの準備をしながら楽しみに待ちます。</p>
                     <div class="flex">
-                        <img src="img/FandD.img/8Egoods/E_ornament1.png" alt="ランタン風スノードーム">
-                        <img src="img/FandD.img/8Egoods/E_ornament2.png" alt="バラと松ぼっくりのリース">
-                        <img src="img/FandD.img/8Egoods/E_ornament3.png" alt="金魚鉢に夜の雪景色を閉じ込めた風スノードーム">
+                        <p><img src="img/FandD.img/8Egoods/E_ornament1.png" alt="ランタン風スノードーム"></p>
+                        <p><img src="img/FandD.img/8Egoods/E_ornament2.png" alt="バラと松ぼっくりのリース"></p>
+                        <p><img src="img/FandD.img/8Egoods/E_ornament3.png" alt="金魚鉢に夜の雪景色を閉じ込めた風スノードーム"></p>
                     </div>
                 </section>
 
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="bcdf flex">
                         <p class="abc">F</p>
                         <h3>Brezeria</h3>
                         <p class="none">ブレッツェリア</p>
                     </hgroup>
                     <p>ブレッツェリアのブレッツェルは、本番ドイツのパン職人がひとつひとつ丁寧に焼き上げたものを、すぐに冷凍し、美味しさはそのままに、みなさまのもとへお届けします。</p>
                     <div class="flex">
-                        <img src="img/FandD.img/8Fgoods/F_brezeria1.png" alt="チョコのプレッツェル">
-                        <img src="img/FandD.img/8Fgoods/F_brezeria2.png" alt="プレーンのプレッツェル">
-                        <img src="img/FandD.img/8Fgoods/F_brezeria3.png" alt="スコーン">
+                        <p><img src="img/FandD.img/8Fgoods/F_brezeria1.png" alt="チョコのプレッツェル"></p>
+                        <p><img src="img/FandD.img/8Fgoods/F_brezeria2.png" alt="プレーンのプレッツェル"></p>
+                        <p><img src="img/FandD.img/8Fgoods/F_brezeria3.png" alt="スコーン"></p>
                     </div>
                 </section>
 
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="g flex">
                         <p class="abc">G</p>
                         <h3>Happy Chistmas</h3>
                         <p class="none">ハッピークリスマス</p>
                     </hgroup>
                     <p>「ハッピークリスマス」では光るクリスマスツリーやぬいぐるみ、クリスマスを楽しみたい方、クリスマスプレゼントをお探しの方に楽しいグッズをお届けします！</p>
                     <div class="flex">
-                        <img src="img/FandD.img/8Ggoods/G_present1.png" alt="キャンドルホルダー付きキャンドル">
-                        <img src="img/FandD.img/8Ggoods/G_present2.png" alt="空アクスタ風ツリー">
-                        <img src="img/FandD.img/8Ggoods/G_present3.png" alt="サンタの帽子をかぶったナマケモノのぬいぐるみ">
+                        <p><img src="img/FandD.img/8Ggoods/G_present1.png" alt="キャンドルホルダー付きキャンドル"></p>
+                        <p><img src="img/FandD.img/8Ggoods/G_present2.png" alt="空アクスタ風ツリー"></p>
+                        <p><img src="img/FandD.img/8Ggoods/G_present3.png" alt="サンタの帽子をかぶったナマケモノのぬいぐるみ"></p>
                     </div>
                 </section>
 
 
                 <section class="koibackbeige">
-                    <hgroup class="flex">
+                    <hgroup class="ah flex">
                         <p class="abc">H</p>
-                        <h3>Sweets&#xFF06;Tea Haus</h3>
-                        <p class="none">スイーツ&#xFF06;ティーハウス</p>
+                        <h3>Sweets&#xFF06;Tea</h3>
+                        <p class="none">スイーツ&#xFF06;ティー</p>
                     </hgroup>
                     <p class="gyou3">&#x300C;ワールドチョコレートマスターズ2024&#x300D;日本代表選考会のファイナリストであるショコラティエ&#x30FB;西田明弘氏によるクリスマス限定チョコレートやドイツではクリスマスマーケットでお馴染みのキャラメルナッツ&#x300C;ゲブランテマンデルン&#x300D;、また北ドイツのブランド&#x300C;ALTHAUS&#x300D;の紅茶をお届けします。贈り物にもピッタリです&sung;</p>
                     <div class="flex">
-                        <img src="img/FandD.img/8Hgoods/H_sweetstea1.png" alt="トナカイと雪だるまとジンジャーマンのチョコ">
-                        <img src="img/FandD.img/8Hgoods/H_sweetstea2.png" alt="キャラメルナッツ">
-                        <img src="img/FandD.img/8Hgoods/H_sweetstea3.png" alt="ALTHAUSの紅茶">
+                        <p><img src="img/FandD.img/8Hgoods/H_sweetstea1.png" alt="トナカイと雪だるまとジンジャーマンのチョコ"></p>
+                        <p><img src="img/FandD.img/8Hgoods/H_sweetstea2.png" alt="キャラメルナッツ"></p>
+                        <p><img src="img/FandD.img/8Hgoods/H_sweetstea3.png" alt="ALTHAUSの紅茶"></p>
                     </div>
                 </section>
 
                 <section class="koibackbeige">
-                    <hgroup class="flex">
-                        <p class="abc abci">I</p>
+                    <hgroup class="i flex">
+                        <p class="abc">I</p>
                         <h3>Alt Heide</h3>
                         <p class="none">アルト&#x3000;ハイデ</p>
                     </hgroup>
                     <p>ザイフェンの木工芸品の販売です。<br>
                         くるみ割り人形、シュビッブボーゲン、煙だし人形、オーナメント、シュパンバウムなどを販売します。</p>
                     <div class="flex">
-                        <img src="img/FandD.img/8Igoods/I_gift1 1.png" alt="くるみ割り人形の兵隊の人形">
-                        <img src="img/FandD.img/8Igoods/I_gift2.png" alt="自立するトナカイの飾り板">
-                        <img src="img/FandD.img/8Igoods/I_gift3.png" alt="ハートを抱えたツインお団子ヘアの少女のオーナメント">
+                        <p><img src="img/FandD.img/8Igoods/I_gift1 1.png" alt="くるみ割り人形の兵隊の人形"></p>
+                        <p><img src="img/FandD.img/8Igoods/I_gift2.png" alt="自立するトナカイの飾り板"></p>
+                        <p><img src="img/FandD.img/8Igoods/I_gift3.png" alt="ハートを抱えたツインお団子ヘアの少女のオーナメント"></p>
                     </div>
                 </section>
             </article>
             <!-- ーーーーーーーーーーーーーー
                             ここからワークショップ
                             ーーーーーーーーーー -->
-            <article id="workshop" class="backbeige workshop snow">
+            <article id="workshop" class="backbeige fadein2 workshop snow">
                 <hgroup class="GandW">
                     <h1 class="midashired">WORKSHOP</h1>
                     <p>ワークショップ</p>
@@ -487,28 +495,28 @@
                 <section class="koibackbeige snowdome">
                     <h3 class="snowdome">スノードーム</h3>
                     <div class="flex">
-                        <img src="img/FandD.img/9workshop/workshop_snowdorm.png" alt="サンタのスノードーム">
+                        <p><img src="img/FandD.img/9workshop/workshop_snowdorm.png" alt="サンタのスノードーム" width="265px" height="312px"></p>
                         <div>
-                            <div class="flex">
-                                <dl class="flex">
+                            <div class="flex noflex767 futoji">
+                                <dl class="flextab">
                                     <dt>現地体験キット</dt>
                                     <dd>&yen;4,500</dd>
                                 </dl>
-                                <span>&#x30FB;</span>
-                                <dl class="flex">
+                                <span class="none767">&#x30FB;</span>
+                                <dl class="flextab">
                                     <dt>持ち帰り製作キット</dt>
                                     <dd>&yen;3,500</dd>
                                 </dl>
                             </div>
-                            <p class="mb1_5em">世界で一つだけのオリジナルスノードームを作ろう。いろいろなモチーフを自由にレイアウトしてあなただけのスノードームを作ってクリスマスの思い出にしよう。様々なモチーフと水とキラキラしたパウダーを入れて雪の舞う完成したスノードームを持ち帰れます。</p>
+                            <p class="mb1_5em futoji">世界で一つだけのオリジナルスノードームを作ろう。いろいろなモチーフを自由にレイアウトしてあなただけのスノードームを作ってクリスマスの思い出にしよう。様々なモチーフと水とキラキラしたパウダーを入れて雪の舞う完成したスノードームを持ち帰れます。</p>
                             <aside>&#x203B;オプションで透明なスノードームを綺麗に光らせられる&#x300C;キラキラ LEDコースター 1,000円&#x300D;を付けられます</aside>
                             <aside>&#x203B;スノードームの中のモチーフはイメージのため実際と異なる場合があります</aside>
-                            <aside class="mb1_5em">&#x203B;決済方法はクレジットカードまたはPayPay決済のみ</aside>
-                            <dl class="flex">
+                            <aside class="mb1_5em">&#x203B;決済方法はクレジットカードまたは<br class="born575">PayPay決済のみ</aside>
+                            <dl class="flex futoji">
                                 <dt class="flex6em">&#xFF1C;所要時間&#xFF1E;</dt>
                                 <dd>30&#xFF5E;45分</dd>
                             </dl>
-                            <dl class="flex">
+                            <dl class="flex futoji">
                                 <dt class="flex6em">&#xFF1C;講師&#xFF1E;</dt>
                                 <dd class="flexauto">合同会社スノードームクリエーター</dd>
                             </dl>
@@ -517,25 +525,25 @@
                 </section>
 
                 <section class="koibackbeige hana">
-                    <h3 class="hana moji20">キャンドルフラワーアレンジ Red・Natunal</h3>
+                    <h3 class="hana moji20 orikaesan">キャンドルフラワー<br class="bornhana">アレンジ<br class="born767"> Red・Natunal</h3>
                     <div class="flex">
-                        <div class="left">
-                            <dl class="flex">
+                        <p><img src="img/FandD.img/9workshop/workshop_candleflower.png" alt="花とキャンドル" width="265px" height="234px"></p>
+                        <div class="flexauto">
+                            <dl class="flex futoji">
                                 <dt>キャンドルフラワーアレンジ</dt>
                                 <dd>&yen;4,500</dd>
                             </dl>
-                            <p class="mb1_5em">アーティフィシャルフラワーで作る贅沢な雰囲気のキャンドルフラワーアレンジです。華やかなレッドカラーとシックなナチュラルカラーの２プラン。 揺らめく灯りに照らされたクリスマス感たっぷりの飾りを手作りしてみませんか&#xFF1F;下準備された材料を自由にあしらうだけ&sung;思い出に残るひと時をご一緒しましょう&#xFF01;</p>
-                            <aside class="mb1_5em">&#x203B;決済方法はクレジットカードまたはPayPay決済のみ</aside>
-                            <dl class="flex">
+                            <p class="mb1_5em futoji">アーティフィシャルフラワーで作る贅沢な雰囲気のキャンドルフラワーアレンジです。華やかなレッドカラーとシックなナチュラルカラーの２プラン。 揺らめく灯りに照らされたクリスマス感たっぷりの飾りを手作りしてみませんか&#xFF1F;下準備された材料を自由にあしらうだけ&sung;思い出に残るひと時をご一緒しましょう&#xFF01;</p>
+                            <aside class="mb1_5em">&#x203B;決済方法はクレジットカードまたは<br class="born575">PayPay決済のみ</aside>
+                            <dl class="flex futoji">
                                 <dt class="flex7em">&#xFF1C;所要時間&#xFF1E;</dt>
                                 <dd>60分</dd>
                             </dl>
-                            <dl class="flex">
+                            <dl class="flex futoji">
                                 <dt class="flex7em">&#xFF1C;講師&#xFF1E;</dt>
                                 <dd>YUIKO HORIUCHI</dd>
                             </dl>
                         </div>
-                        <img src="img/FandD.img/9workshop/workshop_candleflower.png" alt="花とキャンドル">
                     </div>
                 </section>
             </article>
@@ -545,19 +553,32 @@
     フッター
     ーーーー -->
     <!-- トプペから丸コピ -->
-    <footer>
+    <footer id="footer">
         <div class="container">
+            <div class="flex">
+                <p class="logo"><a href="index.html"><img src="img/common.img/logo.svg" alt="ロゴ"></a></p>
+                <div>
+                    <div class="snsflex flex">
+                        <p>Follow us</p>
+                        <ul class="snsbtn flex">
+                            <li><a href="https://x.com/osaka_christmas"><img src="img/common.img/Xlogo.svg" alt="x"></a></li>
+                            <li><a href="https://www.facebook.com/osakachristmasmarket"><img src="img/common.img/facebooklogo.svg" alt="facebook"></a></li>
+                            <li><a href="https://www.instagram.com/osaka_christmasmarket/"><img src="img/common.img/instagramlogo.svg" alt="instagram"></a></li>
+                        </ul>
+                    </div>
+                    <div class="companyicon flex">
+                        <p><a href="https://japan.diplo.de/Vertretung/japan/ja/Startseite.html"><img src="img/common.img/site1.png" width="120" height="80" alt="ドイツ大使館&#x30FB;総領事館サイト"></a></p>
+                        <p><a href="#"><img src="img/common.img/site2.jpg" width="120" height="80" alt="ドイツ総領事館150周年ロゴ"></a></p>
+                        <p><a href="https://x.com/GermanyTravelJP"><img src="img/common.img/site3.png" width="120" height="80" alt="ドイツ観光局のSNS"></a></p>
+                    </div>
+                </div>
+            </div>
             <p class="aboutcompany">主催 クリスマスマーケット in 大阪 実行委員会<br>協力 近鉄不動産株式会社<br>後援 大阪・神戸ドイツ連邦共和国総領事館／ドイツ観光局／天王寺区／公益財団法人大阪観光局
             </p>
-            <div class="companyicon">
-                <p><a href="https://japan.diplo.de/Vertretung/japan/ja/Startseite.html"><img src="img/common.img/site1.png" width="180" height="80" alt="ドイツ大使館&#x30FB;総領事館サイト"></a></p>
-                <p><a href="#"><img src="img/common.img/site2.jpg" width="180" height="80" alt="ドイツ総領事館150周年ロゴ"></a></p>
-                <p><a href="https://x.com/GermanyTravelJP"><img src="img/common.img/site3.png" width="180" height="80" alt="ドイツ観光局のSNS"></a></p>
-            </div>
-            <p class="logo"><a href="index.html"><img src="img/common.img/logo2.png" width="200" height="200" alt="ロゴ"></a>
-            </p>
-            <p class="pagetop"><a href="#top"><img src="img/common.img/pagetop.svg" alt="ページトップへ">PAGE TOP</a></p>
-            <p class="copyright"><small>COPYRIGHT&copy;OSAKA CHRISTMASMARKET.ALL RIGHTS RESERVED.</small></p>
+            <p class="pagetop"><a href="#top"><img src="img/common.img/pagetop.svg" alt="ページトップへ"><span class="none">PAGE
+                    </span>TOP</a></p>
+            <p class="copyright"><small>COPYRIGHT&copy;OSAKA CHRISTMASMARKET.<span class="none">ALL RIGHTS
+                        RESERVED.</span></small></p>
         </div>
     </footer>
     <script src="js/script.js"></script>

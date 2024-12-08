@@ -3,25 +3,16 @@
 /* ーーーー
 ヘッダー
 ーーーー */
-header {
-  padding: 15px 0 15px 0;
-  background-color: var(--mainred);
-}
-
-main {
-  padding-bottom: 10px;
-}
-
 main article {
   padding: 60px 125px;
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     padding: 60px 15px;
   }
 }
 
 main article hgroup {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 /* ーーーー
@@ -32,7 +23,7 @@ main article ul {
   gap: 10px;
   color: var(--bunblack);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     display: block;
   }
 }
@@ -62,7 +53,7 @@ label[for="tab3"] {
 }
 
 /* タブを選択したときの設定 */
-input:checked+label {
+input:checked + label {
   border-bottom: 5px solid var(--mainred);
   background-color: var(--koibackbeige);
   color: var(--bunblack);
@@ -87,7 +78,7 @@ main article section.koibackbeige {
   padding: 55px 30px 0 30px;
   border: 2px solid var(--mainred);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding: 45px 10px 5px 10px;
   }
 }
@@ -96,7 +87,7 @@ main article dl {
   margin-bottom: 60px;
   font-size: 18px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-bottom: 40px;
   }
 }
@@ -106,7 +97,7 @@ main article dl dt {
   position: relative;
   font-weight: bold;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding: 0 0 0 50px;
   }
 }
@@ -115,7 +106,7 @@ main article dl dd {
   padding: 10px 10px 20px 60px;
   position: relative;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding: 10px 0 20px 50px;
   }
 }
@@ -155,19 +146,4 @@ main article dd div {
   background-color: #ded5bf7d;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-}
-
-
-/* commonに書く！！ */
-
-/* index.htmlにも記入している為どちらも消してcommonに書く */
-.container,
-.backbeige {
-  @media (max-width: 1199px) {
-    width: 738px;
-
-    @media (max-width: 767px) {
-      width: 360px;
-    }
-  }
 }

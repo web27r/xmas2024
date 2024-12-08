@@ -16,6 +16,7 @@
   --bunblack: #4f4141;
   --bunorange: #d1611b;
   --wakugreen: #43680d;
+  --hoverblue: #1d3387;
   /* 以下gold外中グラデ */
   --sotogold: #caa341;
   --nakagold: #edd63e;
@@ -27,25 +28,80 @@ body {
   font-family: "M PLUS 1p";
   color: var(--bunblack);
   line-height: normal;
+  background-image: url(../img/index.img/backgroundimg2.png);
+  /* 背景画像をスクロールせずに固定 */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--mainblue);
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.futoji {
+  font-weight: bold;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+.linkblue {
+  text-decoration: underline;
+  color: #337dcc;
+}
+
+.headerkasou {
+  padding: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--mainred);
+
+  @media (max-width: 991px) {
+    padding: 0;
+    display: flex;
+  }
+}
+
+.tuizyuutop {
+  @media (max-width: 991px) {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--mainred);
+  }
+}
+
+h1.logo {
+  @media (max-width: 991px) {
+    margin: 10px;
+  }
 }
 
 /* メイン */
 main {
-  padding-bottom: 100px;
-  padding-top: 172px;
-  background-image: url(../img/index.img/backgroundimg2.png);
-  background-size: cover;
-  /* 背景画像をスクロールせずに固定 */
-  background-attachment: fixed;
+  padding: 90px 0;
+
+  @media (max-width: 767px) {
+    padding: 60px 0;
+  }
+}
+
+nav {
+  @media (max-width: 991px) {
+    display: none;
+    padding: 86px 0 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: var(--mainred);
+  }
 }
 
 /* ナビゲーション */
@@ -53,34 +109,49 @@ nav ul {
   display: flex;
   justify-content: center;
 
-  /* @media (max-width:767px) {
-    display: none;
-  } */
+  @media (max-width: 991px) {
+    display: block;
+  }
 }
 
 nav ul li {
   margin-left: 4px;
   margin-right: 4px;
-  padding: 18px 0;
-  width: 170px;
+  width: max(7vw, 100px);
+  height: 58px;
   text-align: center;
   background: linear-gradient(90deg, #c4903c 0%, #ead13e 50%, #c4903c 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border: 2px solid #c4903c;
-  font-size: max(0.41vw, 12px);
+  font-size: max(0.65vw, 13px);
+
+  @media (max-width: 991px) {
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #ead13e;
+    font-size: 20px;
+  }
+}
+
+nav ul li a {
+  display: inline-block;
+  width: 100%;
+  /* liと同じ高さ */
+  line-height: 58px;
 }
 
 nav ul li:hover {
-  background: var(--, linear-gradient(90deg, #CAA341 0%, #EDD63E 52.01%, #CAA341 100%));
+  background: var(--, linear-gradient(90deg, #caa341 0%, #edd63e 52.01%, #caa341 100%));
   background-clip: unset;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
 }
 
 nav ul li:hover a {
-  color: #94661C;
+  color: #94661c;
 }
 
 /* モバイル時のハンバーガメニュー */
@@ -90,22 +161,23 @@ nav ul li:hover a {
   border: none;
   /* PCでは非表示設定（モバイル時の方でdisplay:flexにして表示する） */
   display: none;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: unset;
+  margin-left: auto;
+  background-color: var(--mainred);
+  border-radius: 15px;
 
-  @media (max-width:767px) {
-    display: flex;
+  @media (max-width: 991px) {
+    display: block;
+    z-index: 2;
+    position: sticky;
+    top: 10px;
+    right: 10px;
   }
 }
 
-.hmenu span,
-.hmenu span::before,
-.hmenu span::after {
-  width: 40px;
+.hmenu span {
+  width: 60%;
+  left: 20%;
+  top: 27px;
   height: 3px;
   background-color: #fff;
   border-radius: 5px;
@@ -114,8 +186,20 @@ nav ul li:hover a {
   transition: 0.5s;
 }
 
-.hmenu.open span {
+.hmenu span::before,
+.hmenu span::after {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.hmenu.close span {
   background-color: unset;
+  z-index: 2;
 }
 
 .hmenu span::before {
@@ -129,37 +213,37 @@ nav ul li:hover a {
 }
 
 /* 下:0, 回転:-135° */
-.hmenu.open span::before {
+.hmenu.close span::before {
   bottom: 0;
   transform: rotate(-135deg);
 }
 
 /* 上:0, 回転:135° */
-.hmenu.open span::after {
+.hmenu.close span::after {
   top: 0;
   transform: rotate(135deg);
 }
-
-
 
 /* 見出しの設定 */
 .midashired {
   text-align: center;
   font-family: "Miltonian Tattoo", serif;
   color: var(--mainred);
-  font-size: 35px;
+  font-size: max(1.25vw, 28px);
 }
 
 /* 見出し下のタイトル設定 */
 hgroup p {
   text-align: center;
   color: #213b60;
-  font-size: 25px;
+  font-size: max(0.88vw, 22px);
 }
 
 /* 外側の白い枠の共通の設定 */
 .backbeige {
-  margin-bottom: 90px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 50px;
   border-radius: 15px;
   background-color: var(--backbeige);
 }
@@ -171,38 +255,151 @@ hgroup p {
   background-color: var(--koibackbeige);
 }
 
+.backbeige:last-child,
+.koibackbeige:last-child {
+  margin-bottom: unset;
+}
+
 .flex {
   display: flex;
 }
 
-/* フッター */
+/* スクロールすると、下からふわっと出現する設定 */
+.fadein {
+  transition: 1s ease-in-out;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.fadein.on {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* トップページ以外の自動フェードイン */
+.fadein2 {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadein2Up 1s ease-out forwards;
+}
+
+@keyframes fadein2Up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* タブレットの時だけトップページの一部自動フェードイン */
+.fadein3 {
+  @media (max-width: 991px) and (min-width: 767px) {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadein2Up 1s ease-out forwards;
+    @media (max-width: 767px) {
+    }
+  }
+}
+
+@keyframes fadein2Up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ーーーーー
+フッター
+ーーーーーー*/
 footer {
-  padding: 65px 20px 0 20px;
-  background-image: url(../img/common.img/footer.svg);
+  padding: 65px 20px 20px 20px;
+  background-image: url(../img/common.img/footerback.png);
   background-repeat: repeat-x;
   background-position: bottom;
   background-color: var(--mainred);
+  position: relative;
 }
 
-footer p.aboutcompany {
-  margin-bottom: 34px;
-  line-height: 30px;
+footer div {
+  align-items: center;
+  position: relative;
+}
+
+footer p.logo {
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 41px;
+    position: absolute;
+    bottom: -400px;
+  }
+}
+
+footer div.flex:first-child {
+  justify-content: space-evenly;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+footer div.snsflex {
+  margin-bottom: 50px;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+footer div.snsflex p {
+  font-family: "Miltonian Tattoo";
+  font-size: max(1.82vw, 30px);
   color: #fff;
+
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+}
+
+footer div.snsflex ul {
+  align-items: center;
+  justify-content: center;
+}
+
+footer div.snsflex ul li {
+  margin: 0 8px;
 }
 
 footer div.companyicon {
-  margin-bottom: 256px;
   column-gap: 20px;
+}
 
-  @media (max-width:767px) {
-    /* ！！！！！あとで直す！！！！！ */
-    flex-wrap: wrap;
+footer p.aboutcompany {
+  margin-top: 65px;
+  margin-bottom: 215px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+
+  @media (max-width: 767px) {
+    margin-bottom: 365px;
   }
 }
 
 footer p.copyright {
   width: fit-content;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--mainred);
   font-size: 12px;
 }
@@ -225,7 +422,7 @@ footer p.pagetop a {
   display: flex;
 
   /* モバイル時のページトップボタン */
-  @media (max-width:767px) {
+  @media (max-width: 991px) {
     padding: 10px 15px;
     flex-direction: column-reverse;
     align-items: center;
@@ -240,16 +437,8 @@ footer p.pagetop a {
   }
 }
 
-footer p.pagetop img {
-  margin-bottom: 8px;
-
-  @media (max-width:767px) {
-    margin-bottom: unset;
-  }
-}
-
-@media (max-width:767px) {
-  footer span.none {
+footer span.none {
+  @media (max-width: 991px) {
     display: none;
   }
 }
@@ -260,7 +449,7 @@ footer p.pagetop img {
   background-image: url(../img/common.img/decosnow.svg);
   background-repeat: no-repeat;
   background-position: center top 20px;
-  background-size: 90% auto;
+  background-size: 95% auto;
 }
 
 /* ぶら下げ飾り */
@@ -269,4 +458,14 @@ footer p.pagetop img {
   background-repeat: no-repeat;
   background-position: top 0 left 5%, top 0 right 5%;
   background-size: 17% auto;
+  @media (max-width: 767px) {
+    background-size: 25% auto;
+  }
+}
+
+/* モバイル時にornamentにタイトルが被るので、マージンで調整 */
+.mobiletop {
+  @media (max-width: 767px) {
+    margin-top: 25px;
+  }
 }

@@ -1,48 +1,54 @@
 @import url(common.css);
 
-/* コメントの所はcommon.cssに移動済み */
+/* トップページだけmain上下余白が違う */
+main {
+  padding-bottom: 100px;
+  padding-top: 172px;
 
-/* body {
-  font-family: "M PLUS 1p";
-  color: #4f4141;
+  @media (max-width: 991px) {
+    padding-top: 100px;
+  }
 }
-
-.container {
-  width: 1000px;
-  margin: 0 auto;
-}
-
-a {
-  text-decoration: none;
-} */
 
 /* ーーーー
 ヘッダー
 ーーーー */
 header {
-  padding-top: 15%;
+  padding-top: 10%;
   background-image: url(../img/index.img/mainimg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  @media (max-width:767px) {
-    padding-top: 200px;
+  @media (max-width: 767px) {
     background-image: url(../img/index.img/iphonemainimg.png);
   }
 }
 
-
 header div.maintitle {
-  text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   color: #f5f3f0;
+
+  @media (max-width: 767px) {
+    margin-top: 140px;
+  }
+}
+
+header div.flex {
+  display: block;
+
+  @media (max-width: 991px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 header p:first-child {
+  font-family: "Tempus Sans ITC";
   font-size: max(2vw, 30px);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     font-size: 26px;
   }
 }
@@ -50,11 +56,15 @@ header p:first-child {
 header h1 {
   margin: 30px 0;
   font-family: "Princess Sofia", cursive;
-  font-size: max(5vw, 70px);
+  font-size: max(5vw, 50px);
 
-  @media (max-width:767px) {
-    margin: 10px 0;
-    font-size: 50px;
+  @media (max-width: 991px) {
+    margin: 5px 0;
+
+    @media (max-width: 767px) {
+      margin: 10px 0;
+      font-size: 50px;
+    }
   }
 }
 
@@ -63,61 +73,24 @@ header p:last-child {
   font-family: "Princess Sofia", cursive;
   font-size: max(4vw, 60px);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding-bottom: 258px;
     font-size: 45px;
   }
 }
 
-/* ーーーー
-ナビゲーション
-ーーーー */
-/* nav ul {
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin-left: 8px;
-  margin-right: 8px;
-  padding: 18px 0;
-  width: 223px;
-  text-align: center;
-  font-size: 22px;
-  background: linear-gradient(90deg, #c4903c 0%, #ead13e 50%, #c4903c 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border: 3px solid #c4903c;
-} */
-
-/* メイン
-main {
-  padding-bottom: 100px;
-  padding-top: 172px;
-  background-image: url(../img/index.img/backgroundimg2.png);
-  background-size: cover;
-   背景画像をスクロールせずに固定
-  background-attachment: fixed;
-} */
-
-/* スクロールすると、下からふわっと出現する設定 */
-section.on {
-  transform: translateY(0);
-  opacity: 1;
+.hmenu {
+  @media (max-width: 991px) {
+    position: fixed;
+  }
 }
 
 /* 外側の白い枠の共通の設定 */
 section {
-  padding: 60px 85px 40px 85px;
-  /* スクロールすると、下からふわっと出現する設定 */
-  transition: 1s ease-in-out;
-  transform: translateY(50px);
-  opacity: 0;
+  padding: 60px 125px 40px 125px;
 
-  @media (max-width:767px) {
-    padding: 50px 15px;
-
+  @media (max-width: 767px) {
+    padding: 50px 15px 50px 15px;
   }
 }
 
@@ -126,27 +99,17 @@ main section.news h2 {
 }
 
 main section.news dl div {
-  padding: 20px 35px;
+  padding: 20px 23px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     padding: 15px 12px;
   }
 }
 
-main section.news div dt {
+main section.news dl dt {
   padding-bottom: 10px;
   font-family: "Miltonian Tattoo", serif;
   font-size: 20px;
-}
-
-main section.news div dd {
-  padding-left: 55px;
-  font-size: 16px;
-  line-height: 25px;
-
-  @media (max-width:767px) {
-    padding-left: 24px;
-  }
 }
 
 /* hgroup,h2共通設定 */
@@ -156,30 +119,26 @@ hgroup {
 
 h2 {
   margin-bottom: 10px;
-  /* text-align: center;
-  font-family: "Miltonian Tattoo", serif;
-  color: var(--mainred);
-  font-size: 35px; */
 }
 
 /* section共通の薄ピンクの枠の設定 */
-main section.event div.day,
-main section.event div.free,
-main section.event div.place,
-main section.event div.access,
+main section.event dl.day,
+main section.event dl.free,
+main section.event dl.place,
+main section.event dl.access,
 main section.event section.magcup div {
   padding: 40px 80px;
   flex-wrap: wrap;
   background-color: var(--koibackbeige);
   border-radius: 10px;
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     padding: 40px 45px;
     display: block;
     flex-wrap: nowrap;
 
-    @media (max-width:767px) {
-      padding: 20px 15px 30px 15px;
+    @media (max-width: 767px) {
+      padding: 20px 15px 20px 15px;
     }
   }
 }
@@ -189,91 +148,86 @@ main section.event dl dt {
   font-size: 20px;
   font-weight: bold;
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     margin-bottom: 10px;
     text-align: center;
   }
 }
 
-main section.event div {
+main section.event dl {
   margin-bottom: 20px;
 }
 
-main section.event div.day,
-main section.event div.access {
+main section.event dl.day,
+main section.event dl.access {
   column-gap: 75px;
 }
 
-main section.event div.day div,
-main section.event div.access dd {
-  @media (max-width:1190px) {
+main section.event dl.day div,
+main section.event dl.place dd,
+main section.event dl.access dd {
+  @media (max-width: 1190px) {
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    width: fit-content;
   }
 }
 
-main section.event div.day dd:first-child {
+main section.event dl.day dd:first-child {
   margin-bottom: 20px;
   font-weight: bold;
   color: #213b60;
-  font-size: max(1.05vw, 18px);
+  font-size: max(1vw, 20px);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-bottom: 10px;
   }
 }
 
-main section.event div.day dd:nth-child(2) {
+main section.event dl.day dd:nth-child(2) {
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: max(0.70vw, 18px);
+  font-size: max(0.7vw, 18px);
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-bottom: 5px;
   }
 }
 
-main section.event div.free {
+main section.event dl.free {
   column-gap: 250px;
 }
 
-main section.event div.free dd,
-main section.event div.place dd,
-main section.event div.access dd {
+main section.event dl.free dd,
+main section.event dl.place dd,
+main section.event dl.access dd {
   color: #213b60;
-  font-size: max(0.70vw, 16px);
+  font-size: max(0.7vw, 15px);
 }
 
-main section.event div.free dd {
+main section.event dl.free dd {
   font-weight: bold;
   font-size: 28px;
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     text-align: center;
   }
 }
 
-main section.event div.place {
+main section.event dl.place {
   column-gap: 116px;
 }
 
-main section.event div.place dd {
-  text-align: center;
-}
-
-
-main section.event div.access dd {
+main section.event dl.access dd {
   margin-bottom: 33px;
 }
 
-main section.event div.access p.noflex {
+main section.event dl.access p:last-child {
   width: 100%;
   text-align: center;
 }
 
 main div.market {
-  margin-bottom: 90px;
   padding: 125px 0;
   background-image: url(../img/index.img/ChristmasMarket.jpg);
   background-repeat: no-repeat;
@@ -284,15 +238,14 @@ main div.market {
 }
 
 main div.market section.aboutxmas {
-  padding-bottom: 73px;
-  margin-bottom: 0;
+  padding-bottom: 60px;
 }
 
 main div.market section.aboutxmas h2 {
   margin-bottom: 55px;
   font-weight: bold;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-bottom: 20px;
     font-size: 25px;
   }
@@ -306,7 +259,7 @@ main div.market section.aboutxmas p {
 main section.magcup hgroup p {
   font-family: "Kaisei Opti";
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     font-size: 15px;
   }
 }
@@ -321,9 +274,10 @@ main section.magcup div {
   column-gap: 30px;
   justify-content: center;
   border: 3px solid #c3a80d;
+  border-radius: 10px;
   background-color: var(--bunblue);
 
-  @media (max-width:767px) {
+  @media (max-width: 991px) {
     display: block;
     padding: 15px;
     margin: 20px 0;
@@ -331,19 +285,26 @@ main section.magcup div {
 }
 
 main section.magcup div p {
-  margin-right: 10px;
   font-family: "Miltonian Tattoo";
-  font-size: max(1.23vw, 18px);
+  font-size: max(1.25vw, 22px);
   color: var(--backbeige);
 }
 
-main div p span.fontkaisei {
+span.fontkaisei {
   font-family: "Kaisei Opti";
-  font-size: max(0.84vw, 16px);
+  font-size: max(1.5vw, 18px);
 
-  @media (max-width:767px) {
+  @media (max-width: 991px) {
     margin-right: 10px;
+
+    @media (max-width: 767px) {
+      margin-right: 0;
+    }
   }
+}
+
+span.font18 {
+  font-size: 18px;
 }
 
 /* ーーーーーーーーーーーー
@@ -352,8 +313,14 @@ main div p span.fontkaisei {
 main section.magcup div img {
   margin-right: 5px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-right: 10px;
+  }
+}
+
+main section.magcup span.br {
+  @media (max-width: 767px) {
+    display: inline-block;
   }
 }
 
@@ -369,8 +336,9 @@ main section.magcup ul li {
   margin-bottom: 15px;
   list-style-type: disc;
   font-weight: bold;
+  margin-left: 1.5em;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-left: 18px;
   }
 }
@@ -380,16 +348,15 @@ main section.magcup aside {
 }
 
 main section.magcup aside p {
-  margin-left: -10px;
   margin-bottom: 10px;
   text-align: left;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-left: 0px;
   }
 }
 
-main section.magcup p.yoyaku {
+main section.magcup p.yoyaku a {
   max-width: fit-content;
   margin: 0 auto;
   padding: 15px 45px;
@@ -397,44 +364,53 @@ main section.magcup p.yoyaku {
   background: var(--mainred);
   font-family: "Kaisei Opti";
   font-size: 25px;
-}
-
-main section.magcup p.yoyaku:hover {
-  border: 3px solid #C3A80D;
-  background: #BB232A;
-}
-
-main section.magcup p.yoyaku a {
   color: var(--backbeige);
+}
+
+main section.magcup p.yoyaku a:hover {
+  border: 3px solid #c3a80d;
+  background: #bb232a;
+}
+
+main section.specialoffers {
+  padding-left: 55px;
+  padding-right: 55px;
+
+  @media (max-width: 767px) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 main section.specialoffers div.flex {
   justify-content: center;
   font-weight: bold;
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     display: block;
   }
 }
 
 main section.specialoffers div.otoku {
-  padding: 16px 34px;
+  margin-top: 42px;
+  padding: 0 20px;
   border-right: 2px dashed #b64b15;
   /* 右側に縦線 */
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     padding: 0;
     border-right: unset;
     text-align: center;
 
-    @media (max-width:767px) {
+    @media (max-width: 767px) {
+      margin-top: 0;
       text-align: left;
     }
   }
 }
 
-@media (max-width:1190px) {
-  main section.specialoffers div.otoku:first-child {
+main section.specialoffers div.otoku:first-child {
+  @media (max-width: 1190px) {
     padding-bottom: 54px;
     margin-bottom: 54px;
     border-bottom: 2px dashed #b64b15;
@@ -447,12 +423,12 @@ main section.specialoffers div.otoku:last-child {
 }
 
 main section.specialoffers div.otoku p:nth-child(2) {
-  max-width: 382px;
+  max-width: 380px;
   margin-top: 31px;
   margin-bottom: 10px;
   color: var(--mainred);
 
-  @media (max-width:1190px) {
+  @media (max-width: 1190px) {
     max-width: unset;
   }
 }
@@ -461,26 +437,35 @@ main section.specialoffers div.otoku aside {
   margin-bottom: 20px;
 }
 
-main section.specialoffers div.tenpo1,
-main section.specialoffers div.tenpo2 {
-  width: fit-content;
-  margin: 0 auto;
-  padding: 21px 16px;
+main section.specialoffers div.tenpo {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 21px 0;
   border-radius: 15px;
   background-color: #d7c8a4;
+  text-align: left;
+}
+
+main section.specialoffers div.tenpo1 {
+  max-width: 320px;
+}
+
+main section.specialoffers div.tenpo2 {
+  max-width: 350px;
 }
 
 main section.specialoffers div.otoku p.sitamargin {
-  margin-bottom: 38px;
+  margin-bottom: 15px;
 }
 
 main section.specialoffers h3 {
-  padding-left: 15px;
+  padding-left: 22px;
 }
 
 main section.specialoffers div.tenpo1 ul,
 main section.specialoffers div.tenpo2 ul {
-  padding: 10px 10px 20px 35px;
+  margin-left: 1.5em;
+  padding: 7px 16px 0 16px;
   list-style-type: disc;
 }
 
@@ -504,85 +489,26 @@ main section.caution ul li {
   list-style-image: url(../img/index.img/listicon.svg);
   line-height: 25px;
 
-  @media (max-width:767px) {
+  @media (max-width: 767px) {
     margin-left: 18px;
   }
 }
 
-/* フッター */
-/* footer {
-  padding: 20px;
-  padding-top: 65px;
-  background-image: url(../img/index.img/footer.svg);
-  background-repeat: repeat-x;
-  background-position: bottom;
-  background-color: var(--mainred);
-}
+br.mobilebr {
+  display: none;
 
-footer p.aboutcompany {
-  margin-bottom: 34px;
-  line-height: 30px;
-  color: #fff;
-}
+  @media (max-width: 1190px) {
+    display: block;
 
-footer div.companyicon {
-  margin-bottom: 256px;
-  display: flex;
-  column-gap: 20px;
-}
-
-footer p.copyright {
-  width: fit-content;
-  margin: 0 auto;
-  color: var(--mainred);
-  font-size: 12px;
-} */
-
-/* ロゴの位置 */
-footer div.container {
-  position: relative;
-}
-
-footer p.logo {
-  position: absolute;
-  top: 0px;
-  right: 20px;
-}
-
-
-
-/* ーーーーーーーーーーー
-  common.css追加！！！
-  ーーーーーーーーーーーーー */
-/* 見出しの設定 */
-.midashired {
-  /* フォントサイズのみ vwに変更 */
-  font-size: max(1.23vw, 30px);
-}
-
-/* 見出し下のタイトル設定 */
-hgroup p {
-  font-size: max(0.88vw, 22px);
-}
-
-
-
-@media (max-width:767px) {
-
-  /* メイン */
-  main {
-    padding-top: 90px;
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }
 
-
-.container,
-.backbeige {
-  @media (max-width: 1199px) {
-    width: 738px;
-
-    @media (max-width: 767px) {
-      width: 360px;
-    }
+br.mobilebr2 {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
   }
 }

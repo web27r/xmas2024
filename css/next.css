@@ -1,56 +1,58 @@
 @import url(common.css);
 /* ーーーーーー
-下層ページ共通
+下層ページ共通、になりそう（まだなってない）
 ーーーーーーー */
-/* ナブ下兼本編上余白 */
-main {
-  padding-top: 70px;
+br.born767 {
+  display: none;
   @media (max-width: 767px) {
-    padding-top: 40px;
+    display: inline;
   }
 }
-/* ヘッダー */
-header {
-  padding: 15px 0 15px 0;
-  background-color: var(--mainred);
+br.born575 {
+  display: none;
+  @media (max-width: 575px) {
+    display: inline;
+  }
 }
-moji23 {
+.orikaesan {
+  white-space: nowrap;
+}
+.noflex767 {
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+.mojileft {
+  text-align: left;
+}
+.moji23 {
   @media (max-width: 767px) {
     font-size: 23px;
   }
 }
-moji21 {
+.moji21 {
   @media (max-width: 767px) {
     font-size: 21px;
   }
 }
-moji20 {
+.moji20 {
   @media (max-width: 767px) {
     font-size: 20px;
   }
 }
+/* 消えたけどどこかで使う2*/
+.flexborn767 {
+  display: inherit;
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}
 /* ノートPC@media (max-width: 1199px)
+文字折り返し限定tab@media (max-width: 991px)
 スマホ横@media (max-width: 767px)
 コピペセット */
 /* 1199>738 */
 /* 767>360; */
-/* ーー
-共通幅
-ーーー */
-
-/* 外身 */
-.container,
-.backbeige {
-  @media (max-width: 1199px) {
-    width: 738px;
-    @media (max-width: 767px) {
-      /* F&Dだけ幅違う */
-      width: 357px;
-    }
-  }
-}
-/* 中身 */
-
 /* ーーーーーーーーーー
 メイン共通アーティクル
 ーーーーーーーーーーーー */
@@ -62,64 +64,71 @@ main article.backbeige {
     }
   }
   &:not(:first-child) {
-    padding: 60px 40px 37px 40px;
+    padding: 60px 40px 47px 40px;
+    @media (max-width: 767px) {
+      padding: 60px 15px 30px 15px;
+    }
   }
 }
 h1 {
   margin-bottom: 7px;
 }
 /* これ青文字 */
-main hgroup {
-  &.map {
-    margin-bottom: 19px;
-  }
+main article hgroup {
+  &.shop,
   &.FandD {
     margin-bottom: 30px;
   }
+  &.map,
   &.GandW {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 }
 /* ーーーー
 会場マップ
 ーーーーー */
 main article.map ul {
-  font-family: "Kaisei Opti";
-  gap: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
+  gap: 30px;
+  justify-content: center;
   @media (max-width: 767px) {
-    display: block;
-  }
-  & li {
-    width: 270px;
-    padding: 14px 58px 15px 29px;
-    text-align: center;
-    font-size: 25px;
-    border: none;
-    background-color: var(--koibackbeige);
-    background-image: url(../img/FandD.img/Vector.png);
-    background-repeat: no-repeat;
-    background-position: center right 28px;
-    letter-spacing: -2.5px;
-    @media (max-width: 767px) {
-      margin: 0 auto 20px auto;
-    }
-    & a {
-      color: var(--bunblack);
-    }
+    gap: 11px;
+    flex-wrap: wrap;
   }
 }
-br.born757 {
-  display: none;
-  @media (max-width: 1199px) and (min-width: 757px) {
-    display: inline;
+li.goods {
+  @media (max-width: 767px) {
+    /* 19-gap11=8px */
+    margin-bottom: 8px;
   }
 }
-/* a.gooddown {
-  @media (max-width: 1199px) and (min-width: 757px) {
-    padding: 32px 100px 32px 100px;
+main article.map ul li {
+  width: 155px;
+  height: 45px;
+  padding: 10px 17px 13px 18px;
+  border-radius: 10px;
+  background-color: #de9115;
+  box-shadow: 0 0 0 3px #de9115;
+  border: 2px dashed var(--koibackbeige);
+  color: var(--koibackbeige);
+  font-size: 15px;
+  white-space: nowrap;
+  text-align: center;
+  background-image: url(../img/FandD.img/sitasankaku_off.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 4px;
+  @media (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
   }
-} */
+}
+main article.map ul li:hover {
+  background-color: var(--koibackbeige);
+  box-shadow: 0 0 0 3px var(--koibackbeige);
+  border: 2px dashed #de9115;
+  color: #de9115;
+  background-image: url(../img/FandD.img/sitasankaku_on.png);
+}
 /* ーーーーーーーー
 FDGW共通セクション
 ーーーーーーーー */
@@ -128,6 +137,9 @@ main article section.koibackbeige {
   background-repeat: no-repeat;
   background-position: left 26px top 20px;
   background-size: 30px 38px;
+  @media (max-width: 767px) {
+    background-position: left 23px top 20px;
+  }
 }
 main article.FandD section.koibackbeige {
   background-image: url(../img/FandD.img/ornamentNoRed.png);
@@ -135,50 +147,148 @@ main article.FandD section.koibackbeige {
 main article.goods section.koibackbeige {
   background-image: url(../img/FandD.img/ornamentAbcBlue.png);
 }
-main article.workshop section.koibackbeige {
-  /* 変わるかも！ */
-  background-position: left 22px top 30px;
-  background-image: url(../img/FandD.img/WorkShop.png);
-}
 /* hgroup */
 main article section hgroup.flex {
   align-items: baseline;
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 }
 p.no,
 p.abc {
   color: var(--backbeige);
   font-size: 22px;
   margin-right: 21px;
+  /* @media (max-width: 767px){
+    margin-left: -25px;
+  } */
+}
+hgroup.no2 p.no {
+  margin-right: 15px;
 }
 p.no {
   font-family: "Kaisei Opti";
 }
 p.abc {
   font-family: "Miltonian Tattoo", serif;
-  /* 31-25 */
-  margin-left: 6px;
 }
-p.abci {
-  /* 36-25 */
-  margin-left: 11px;
+/* hgroup英語の左余白&gapに当たる余白 */
+hgroup.ah {
+  & p {
+    /* 31-25 */
+    margin-left: 6px;
+    @media (max-width: 767px) {
+      /* 28-9 */
+      margin-left: 19px;
+    }
+  }
+  & h3 {
+    margin-left: 17px;
+    @media (max-width: 767px) {
+      margin-left: 15px;
+    }
+  }
 }
-h3 {
+hgroup.g {
+  & p {
+    /* 32-25 */
+    margin-left: 7px;
+    @media (max-width: 767px) {
+      /* 29-9 */
+      margin-left: 20px;
+    }
+  }
+  & h3 {
+    margin-left: 18px;
+    @media (max-width: 767px) {
+      margin-left: 16px;
+    }
+  }
+}
+hgroup.bcdf {
+  & p {
+    /* 33-25 */
+    margin-left: 8px;
+    @media (max-width: 767px) {
+      /* 30-9 */
+      margin-left: 21px;
+    }
+  }
+  & h3 {
+    margin-left: 19px;
+    @media (max-width: 767px) {
+      margin-left: 17px;
+    }
+  }
+}
+hgroup.e {
+  & p {
+    /* 34-25 */
+    margin-left: 9px;
+    @media (max-width: 767px) {
+      /* 31-9 */
+      margin-left: 22px;
+    }
+  }
+  & h3 {
+    margin-left: 20px;
+    @media (max-width: 767px) {
+      margin-left: 18px;
+    }
+  }
+}
+hgroup.i {
+  & p {
+    /* 36-25 */
+    margin-left: 11px;
+    @media (max-width: 767px) {
+      /* 33-9 */
+      margin-left: 24px;
+    }
+  }
+  & h3 {
+    margin-left: 22px;
+    @media (max-width: 767px) {
+      margin-left: 20px;
+    }
+  }
+}
+/* 共通 */
+main article.FandD section hgroup h3,
+main article.goods section hgroup h3 {
   margin-right: 12px;
+  font-weight: bold;
+  @media (max-width: 767px) {
+    margin-right: 0;
+  }
 }
-/* 青文字から本文に戻す */
+/* FDG青文字から本文に戻す */
 p.none {
   color: var(--bunblack);
   font-size: 16px;
+  @media (max-width: 767px) {
+    margin-top: -2px;
+  }
 }
 hgroup h3,
 article.workshop h3 {
   font-size: 25px;
   font-weight: 700;
 }
-/* セクション画像フレボ */
-section > div.flex {
+/* ーーーーーーーー
+FDG共通セクション
+ーーーーーーーーー */
+main article.FandD section div.flex,
+main article.goods section div.flex {
+  justify-content: space-between;
+  gap: 38px;
+  @media (max-width: 1199px) and (min-width: 768px) {
+    gap: 5px;
+  }
   @media (max-width: 767px) {
-    display: block;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 /* ーーーーーーーーーーーーーー
@@ -189,30 +299,42 @@ h2 {
   width: 368px;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: 450px) {
+    width: 100%;
+    margin-left: unset;
+    margin-right: unset;
+  }
 }
 /* セクション */
 main article.FandD section.koibackbeige {
-  padding: 22px 25px;
+  padding: 25px 25px 31px 25px;
+  @media (max-width: 767px) {
+    padding: 25px auto 32px auto;
+  }
 }
 
 main article.FandD section hgroup {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   /* 34-25 */
   margin-left: 9px;
   &.no2 {
     /* 29-25 */
     margin-left: 3px;
   }
-  &h3 {
+  & h3 {
     margin-right: 12px;
+  }
+  /* p.noneに当たる。これを改行のタイミングによってクラス付けないと余白が変になる後でやる */
+  & p.none {
+    @media (max-width: 575px) {
+      /* テキレと合わせ技じゃないと左にならん63-25=38 */
+      margin-left: 38px;
+      text-align: left;
+    }
   }
 }
 main article.FandD section div.flex {
-  gap: 38px;
   text-align: center;
-  @media (max-width: 1199px) {
-    gap: 5px;
-  }
 }
 main article section div figure figcaption {
   margin-top: 14px;
@@ -220,40 +342,50 @@ main article section div figure figcaption {
 /* FD共通フィギュア */
 figcaption {
   white-space: nowrap;
-  @media (max-width: 1199px) {
+  @media (max-width: 991px) {
     white-space: normal;
+  }
+}
+figcaption.mojilefttab {
+  @media (max-width: 991px) and (min-width: 768px) {
+    text-align: left;
+  }
+}
+br.borntab {
+  display: none;
+  @media (max-width: 991px) and (min-width: 768px) {
+    display: inline;
   }
 }
 /* ーー
 グッズ
 ーーー */
 main article.goods section.koibackbeige {
-  padding: 22px 25px 33px 25px;
+  padding: 24px 25px 22px 25px;
+  @media (max-width: 767px) {
+    padding: 24px 8px 33px 9px;
+  }
   & hgroup {
-    margin-bottom: 21px;
+    margin-bottom: 18px;
   }
-  & div.flex {
-    margin-bottom: 12px;
-    gap: 38px;
+  /* p.noneに当たる。これを改行のタイミングによってクラス付けないと余白が変になる後でやる２ */
+  & p.none {
+    @media (max-width: 575px) {
+      /* 63+12=54 */
+      margin-left: 75px;
+      margin-bottom: 20px;
+    }
   }
-  & p.gyou3 {
-    /* 33-9 */
-    margin-bottom: -24px;
+  & > p {
+    margin-bottom: 15px;
   }
-}
-/* ーーーーーー
-ワークショップ
-ーーーーーーー */
-main article.workshop section h3 {
-  /* 左余白68-25=43 */
-  margin-left: 43px;
-  &.snowdome {
-    margin-bottom: 19px;
-  }
-  &.hana {
-    margin-bottom: 22px;
+  & div.flex p img {
+    width: 265px;
   }
 }
+/* ーーーーーーーーー
+ワークショップ雪花共通
+ーーーーーーーーーー */
 .mb1_5em {
   margin-bottom: 1.5em;
 }
@@ -263,28 +395,117 @@ main article.workshop section h3 {
 .flex7em {
   flex-basis: 7em;
 }
+.flex1 {
+  flex: 1;
+}
 .flexauto {
   flex: auto;
 }
+main article.workshop section {
+  &.koibackbeige {
+    @media (max-width: 767px) {
+      background-position: left 23px top 30px;
+    }
+  }
+  & > div.flex {
+    align-items: flex-start;
+    justify-content: space-between;
+    @media (max-width: 991px) {
+      display: block;
+    }
+    & > div {
+      max-width: 590px;
+    }
+    & > p {
+      max-width: 100%;
+      @media (max-width: 767px) {
+        margin-bottom: 19px;
+        text-align: center;
+      }
+    }
+  }
+}
 /* スノードーム */
+/* .koibackbeigeに配置 */
+main article.workshop section.snowdome {
+  background-position: left 22px top 30px;
+  background-image: url(../img/FandD.img/WorkShop.png);
+}
+/* koibackbeigeに当たる */
 main article.workshop section.snowdome {
   padding: 34px 22px 50px 22px;
   @media (max-width: 767px) {
-    padding: 33px 8px 50px 9px;
+    padding: 34px 8px 50px 9px;
+  }
+  & h3 {
+    /* h3上余白34-オーナメント上余白30=3px */
+    margin-top: 4px;
+    /* 左余白68-22=46 */
+    margin-left: 46px;
+    margin-bottom: 19px;
+    @media (max-width: 767px) {
+      margin-left: 63px;
+    }
   }
   & > div.flex {
     gap: 21px;
+    & p {
+      flex-basis: 265px;
+    }
+    & dl.flextab {
+      display: flex;
+      @media (max-width: 991px) {
+        display: block;
+      }
+      @media (max-width: 767px) {
+        display: flex;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  main article.workshop section.snowdome {
+    & span.none767 {
+      display: none;
+    }
   }
 }
 /* キャンドルフラワーアレンジ */
+/* .koibackbeigeに配置 */
 main article.workshop section.hana {
-  padding: 33px 25px 50px 24px;
-  & > div.flex {
-    gap: 16px;
+  background-position: left 27px top 30px;
+  background-image: url(../img/FandD.img/WorkShop.png);
+}
+/* koibackbeigeに当たる */
+main article.workshop section.hana {
+  padding: 33px 25px 50px 27px;
+  @media (max-width: 767px) {
+    padding: 33px 8px 50px 9px;
+  }
+  & h3 {
+    /* h3上余白33-オーナメント上余白30=3px */
+    margin-top: 3px;
+    /* 左余白67-27=40 */
+    margin-left: 40px;
+    margin-bottom: 22px;
+    @media (max-width: 767px) {
+      font-size: 20px;
+      margin-right: -8px;
+      /* 1px引けば右が収まるが375は収まらない */
+      margin-left: 62px;
+    }
+    /* iPhone8の為だけの改行 */
+    & br.bornhana {
+      display: none;
+      @media (max-width: 389px) {
+        display: inline;
+      }
+    }
   }
 }
+& > div.flex {
+  gap: 13px;
+  flex-direction: row-reverse;
+}
 
-/* 続きはbrボーンづくりと国画像から
-３＃移動はdesign変わるかも
-フォントの太さを見る
-common行きをチェックする！ */
+/* 続きはWS画像伸びたくない */

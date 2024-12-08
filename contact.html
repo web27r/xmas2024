@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christmas Market 2024 in てんしば</title>
-    <link rel="icon" href="img/common.img/favicon1.png" type="image/png">
+    <title>お問い合わせ&#xFF5C;Christmas Market 2024 in てんしば</title>
+    <link rel="icon" href="img/common.img/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/contact.css">
+    <!-- footerFixed -->
+    <script src="js/footerFixed.js"></script>
     <!-- jQueryの読み込み -->
     <script src="js/jquery-3.7.1.min.js"></script>
 </head>
@@ -17,22 +19,26 @@
 ーーーー -->
 <body>
     <!-- トプペからナブ丸コピ -->
-    <header>
+    <header class="tuizyuutop headerkasou flex">
+        <h1 class="logo"><a href="index.html"><img src="img/common.img/logo.svg" width="90" height="90" alt="ロゴ"></a></h1>
+        <!-- モバイル時のハンバーガーメニュー -->
+        <button class="hmenu"><span></span></button>
         <nav>
             <ul>
                 <li><a href="index.html">トップページ</a></li>
-                <li><a href="next.html">フード・ドリンク</a></li>
+                <li><a href="next.html">ショップ</a></li>
                 <li><a href="performance.html">パフォーマンス</a></li>
-                <li><a href="#">会場マップ</a></li>
+                <li><a href="next.html#map">会場マップ</a></li>
                 <li><a href="index.html#access">アクセス</a></li>
                 <li><a href="q&a.html">Q&A</a></li>
                 <li><a href="contact.html">お問い合わせ</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <div class="container">
-            <article class="backbeige snow">
+            <article class="contact fadein2 backbeige snow">
                 <!-- ーーーー
 ここから本編
 ーーーーーー -->
@@ -41,16 +47,18 @@
                     <p>お問い合わせ</p>
                 </hgroup>
 
-                <p>
-                    <small>&#x3010;お問い合わせいただく前の注意事項&#x3011;<br>
-                        &#x25CF;お客様からいただく個人情報は、お問い合わせ・ご質問への回答、情報提供のために使用させていただきます。<br>
-                        &#x25CF;ご回答までにお時間を要する場合や、ご質問によってはお応えできかねる場合もございます。あらかじめご了承ください。<br>
-                        &#x25CF;ご回答の内容は、お客様個人に当てたものです。一部・全部の転用や二次利用はご遠慮ください。</small>
-                </p>
+                <aside class="futoji">
+                    <h2>&#x3010;お問い合わせいただく前の注意事項&#x3011;</h2>
+                    <ul>
+                        <li>&#x25CF;お客様からいただく個人情報は、お問い合わせ・ご質問への回答、情報提供のために使用させていただきます。</li>
+                        <li>&#x25CF;ご回答までにお時間を要する場合や、ご質問によってはお応えできかねる場合もございます。あらかじめご了承ください。</li>
+                        <li>&#x25CF;ご回答の内容は、お客様個人に当てたものです。一部・全部の転用や二次利用はご遠慮ください。</li>
+                    </ul>
+                </aside>
 
                 <div class="toicontainer">
                     <form action="#" method="post">
-                        <div class="flex">
+                        <div class="nyuryoku3 flex">
                             <p class="box red"><span style="white-space: nowrap;">必須</span></p>
                             <label class="dt" for="area_l">お問い合わせの種類について選択してください。</label>
                         </div>
@@ -62,7 +70,7 @@
                         </select>
 
                         <dl>
-                            <div class="flex">
+                            <div class="nyuryoku3 flex">
                                 <dd class="box red">必須</dd>
                                 <dt>お名前（漢字）</dt>
                             </div>
@@ -70,7 +78,7 @@
                         </dl>
 
                         <dl>
-                            <div class="flex">
+                            <div class="nyuryoku3 flex">
                                 <dd class="box red">必須</dd>
                                 <dt>お名前（ふりがな）</dt>
                             </div>
@@ -78,7 +86,7 @@
                         </dl>
 
                         <dl>
-                            <div class="flex">
+                            <div class="nyuryoku3 flex">
                                 <dd class="box blue">任意</dd>
                                 <dt>会社名</dt>
                             </div>
@@ -86,26 +94,26 @@
                         </dl>
 
                         <dl>
-                            <div class="flex">
+                            <div class="nyuryoku3 flex">
                                 <dd class="box red">必須</dd>
                                 <dt>電話番号</dt>
                             </div>
                             <dd><input type="tel" name="tel" placeholder="例&#xFF1A;03-3333-3333" required></dd>
                         </dl>
-                        <p class="tyuui"><small>&#x203B;お問い合わせの方は、日中連絡が取れるお電話番号をこちらにご記入ください。</small></p>
+                        <aside class="tyuui"><small>&#x203B;お問い合わせの方は、日中連絡が取れるお電話番号をこちらにご記入ください。</small></aside>
 
                         <dl>
-                            <div class="flex">
+                            <div class="nyuryoku3 flex">
                                 <dd class="box red">必須</dd>
                                 <dt>メールアドレス</dt>
                             </div>
                             <dd><input type="email" name="mail" placeholder="例&#xFF1A;info@christmasmarket.com" required></dd>
                         </dl>
-                        <p class="tyuui"><small>&#x203B;お客様のメール設定により、メールが届かない場合がございます。<br>
-                                &#x300C; @osaka-christmasmarket.com &#x300D;からのメール受信が可能な設定にしていただきますようお願いいたします。</small></p>
+                        <aside class="tyuui">&#x203B;お客様のメール設定により、メールが届かない場合がございます。<br>
+                            &#x300C; @osaka-christmasmarket.com &#x300D;からのメール受信が可能な設定にしていただきますようお願いいたします。</aside>
 
                         <dl>
-                            <div class="flex">
+                            <div class="nyuryoku3 flex">
                                 <dd class="box red">必須</dd>
                                 <dt>お問い合わせの内容</dt>
                             </div>
@@ -113,8 +121,8 @@
                         </dl>
 
                         <div class="doui">
-                            <p><small>個人情報取扱いについてを必ずご確認いただき、<br class="none767">
-                                    &#x300C;同意する&#x300D;にチェックを入れてください。</small></p>
+                            <aside>個人情報取扱いについてを必ずご確認いただき、<br class="none767">
+                                &#x300C;同意する&#x300D;にチェックを入れてください。</aside>
                             <p><label><input type="checkbox" name="doui">同意する</label></p>
                             <p><label><input type="submit" value="送信する"></label></p>
                         </div>
@@ -124,19 +132,32 @@
             </article>
         </div>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="container">
+            <div class="flex">
+                <p class="logo"><a href="index.html"><img src="img/common.img/logo.svg" alt="ロゴ"></a></p>
+                <div>
+                    <div class="snsflex flex">
+                        <p>Follow us</p>
+                        <ul class="snsbtn flex">
+                            <li><a href="https://x.com/osaka_christmas"><img src="img/common.img/Xlogo.svg" alt="x"></a></li>
+                            <li><a href="https://www.facebook.com/osakachristmasmarket"><img src="img/common.img/facebooklogo.svg" alt="facebook"></a></li>
+                            <li><a href="https://www.instagram.com/osaka_christmasmarket/"><img src="img/common.img/instagramlogo.svg" alt="instagram"></a></li>
+                        </ul>
+                    </div>
+                    <div class="companyicon flex">
+                        <p><a href="https://japan.diplo.de/Vertretung/japan/ja/Startseite.html"><img src="img/common.img/site1.png" width="120" height="80" alt="ドイツ大使館&#x30FB;総領事館サイト"></a></p>
+                        <p><a href="#"><img src="img/common.img/site2.jpg" width="120" height="80" alt="ドイツ総領事館150周年ロゴ"></a></p>
+                        <p><a href="https://x.com/GermanyTravelJP"><img src="img/common.img/site3.png" width="120" height="80" alt="ドイツ観光局のSNS"></a></p>
+                    </div>
+                </div>
+            </div>
             <p class="aboutcompany">主催 クリスマスマーケット in 大阪 実行委員会<br>協力 近鉄不動産株式会社<br>後援 大阪・神戸ドイツ連邦共和国総領事館／ドイツ観光局／天王寺区／公益財団法人大阪観光局
             </p>
-            <div class="companyicon">
-                <p><a href="https://japan.diplo.de/Vertretung/japan/ja/Startseite.html"><img src="img/common.img/site1.png" width="180" height="80" alt="ドイツ大使館&#x30FB;総領事館サイト"></a></p>
-                <p><a href="#"><img src="img/common.img/site2.jpg" width="180" height="80" alt="ドイツ総領事館150周年ロゴ"></a></p>
-                <p><a href="https://x.com/GermanyTravelJP"><img src="img/common.img/site3.png" width="180" height="80" alt="ドイツ観光局のSNS"></a></p>
-            </div>
-            <p class="logo"><a href="index.html"><img src="img/common.img/logo2.png" width="200" height="200" alt="ロゴ"></a>
-            </p>
-            <p class="pagetop"><a href="#top"><img src="img/common.img/pagetop.svg" alt="ページトップへ">PAGE TOP</a></p>
-            <p class="copyright"><small>COPYRIGHT&copy;OSAKA CHRISTMASMARKET.ALL RIGHTS RESERVED.</small></p>
+            <p class="pagetop"><a href="#top"><img src="img/common.img/pagetop.svg" alt="ページトップへ"><span class="none">PAGE
+                    </span>TOP</a></p>
+            <p class="copyright"><small>COPYRIGHT&copy;OSAKA CHRISTMASMARKET.<span class="none">ALL RIGHTS
+                        RESERVED.</span></small></p>
         </div>
     </footer>
     <script src="js/script.js"></script>

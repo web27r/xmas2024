@@ -1,20 +1,6 @@
 @import url(common.css);
-/* ーーーーーー
-下層ページ共通
-ーーーーーーー */
-/* ナブ下兼本編上余白 */
-main {
-  padding-top: 70px;
-  @media (max-width: 767px) {
-    padding-top: 40px;
-  }
-}
-/* ヘッダー */
-header {
-  padding: 15px 0 15px 0;
-  background-color: var(--mainred);
-}
 /* ノートPC@media (max-width: 1199px)
+文字折り返し限定tab@media (max-width: 991px)
 スマホ横@media (max-width: 767px)
 コピペセット */
 /* 1199>738 */
@@ -22,17 +8,6 @@ header {
 /* ーー
 共通幅
 ーーー */
-
-/* 外身 */
-.container,
-.backbeige {
-  @media (max-width: 1199px) {
-    width: 738px;
-    @media (max-width: 767px) {
-      width: 360px;
-    }
-  }
-}
 /* 中身 */
 .toicontainer,
 select,
@@ -43,8 +18,12 @@ textarea {
   width: 617px;
   margin-left: auto;
   margin-right: auto;
+  /* in大阪326がギリ */
   @media (max-width: 767px) {
-    width: 275px;
+    width: 425px;
+  }
+  @media (max-width: 575px) {
+    width: 326px;
   }
 }
 /* ーーーー
@@ -55,7 +34,11 @@ textarea {
   @media (max-width: 1199px) {
     padding: 60px 30px 78px 30px;
     @media (max-width: 767px) {
-      padding: 35px 20px 53px 20px;
+      padding: 35px 15px 53px 15px;
+    }
+    /* iPhone8の為のやつ */
+    @media (max-width: 388px) {
+      padding: 35px 5px 53px 5px;
     }
   }
 }
@@ -65,18 +48,22 @@ hgroup {
     margin-bottom: 10px;
   }
 }
+main article.contact aside.futoji {
+  margin-left: 18px;
+  margin-right: 17px;
+}
 .toicontainer {
-  margin: 50px auto 0 auto;
+  margin: 43px auto 0 auto;
   @media (max-width: 767px) {
     margin: 35px auto 0 auto;
   }
 }
-/* 最初の注意書き */
-p.tyuui {
+/* form box 下※の注意書き */
+aside.tyuui {
   margin-top: 10px;
 }
 /* 各入力３点セット */
-div.flex {
+div.nyuryoku3 {
   margin-top: 50px;
   align-items: center;
 }
@@ -84,7 +71,7 @@ div.flex {
 /* 必須任意の枠 */
 .box {
   padding: 5px 20px;
-  margin-right: 20px;
+  margin-right: 40px;
   margin-bottom: 10px;
   color: var(--backbeige);
   border-radius: 5px;
@@ -132,4 +119,8 @@ input[type="submit"] {
   color: var(--backbeige);
   background-color: var(--koiblue);
   cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--hoverblue);
 }

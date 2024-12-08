@@ -1,65 +1,49 @@
 @import url(common.css);
-/* ーーーーーー
-下層ページ共通
-ーーーーーーー */
-/* ナブ下兼本編上余白 */
-main {
-  padding-top: 70px;
-  @media (max-width: 767px) {
-    padding-top: 40px;
-  }
-}
-/* ヘッダー */
-header {
-  padding: 15px 0 15px 0;
-  background-color: var(--mainred);
-}
+
 /* ノートPC@media (max-width: 1199px)
+文字折り返し限定tab@media (max-width: 991px)
 スマホ横@media (max-width: 767px)
 コピペセット */
 /* 1199>738 */
 /* 767>360; */
-/* ーー
-共通幅
-ーーー */
-
-/* 外身 */
-.container,
-.backbeige {
-  @media (max-width: 1199px) {
-    width: 738px;
-    @media (max-width: 767px) {
-      width: 360px;
-    }
-  }
-}
-/* 中身 */
-.toicontainer {
-  margin: 50px auto 0 auto;
-  width: 801px;
-  @media (max-width: 1199px) {
-    width: 708px;
-    @media (max-width: 767px) {
-      width: 330px;
-    }
-  }
-}
 /* ーーーー
 各ブロック
 ーーーーー */
+/* 外身 */
 .backbeige {
-  padding: 60px 10px 78px 10px;
+  padding: 60px 50px 78px 50px;
   @media (max-width: 757px) {
-    padding: 35px 10px 53px 10px;
+    padding: 60px 20px 60px 20px;
   }
 }
 hgroup {
-  margin-bottom: 40px;
+  margin-bottom: 19px;
 }
-p.blue {
+/* 中身 */
+.koibackbeige {
+  /* もしThanks幅が変になったら38px-デフォ20pxだが12/5大丈夫そ */
+  /* margin-bottom: 18px; */
+  margin-bottom: 38px;
+  padding: 30px 49px 41px 50px;
+  @media (max-width: 757px) {
+    padding: 30px 20px;
+  }
+}
+h2.blue,
+.mb20 {
+  margin-bottom: 20px;
+  @media (max-width: 757px) {
+    margin-bottom: 15px;
+  }
+}
+h2.blue {
   text-align: center;
   color: var(--bunblue);
   font-size: 25px;
+  @media (max-width: 757px) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 br.born757 {
   display: none;
@@ -67,11 +51,8 @@ br.born757 {
     display: inline;
   }
 }
-p.mb20 {
-  margin-bottom: 20px;
-}
+/* 外野 */
 p.homebutton {
-  margin-top: 85px;
   text-align: center;
   & a {
     padding: 18px 56px 18px 58px;
@@ -81,5 +62,8 @@ p.homebutton {
     font-size: 20px;
     color: var(--backbeige);
     background-color: var(--koiblue);
+  }
+  & :hover {
+    background-color: var(--hoverblue);
   }
 }
