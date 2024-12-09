@@ -17,8 +17,8 @@ br.born575 {
 .orikaesan {
   white-space: nowrap;
 }
-.noflex767 {
-  @media (max-width: 767px) {
+.noflex575 {
+  @media (max-width: 575px) {
     display: block;
   }
 }
@@ -43,6 +43,15 @@ br.born575 {
 /* 消えたけどどこかで使う2*/
 .flexborn767 {
   display: inherit;
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}
+.flextab {
+  display: flex;
+  @media (max-width: 991px) {
+    display: block;
+  }
   @media (max-width: 767px) {
     display: flex;
   }
@@ -317,9 +326,15 @@ main article.FandD section hgroup {
   margin-bottom: 20px;
   /* 34-25 */
   margin-left: 9px;
+  @media (max-width: 767px) {
+    margin-left: 6px;
+  }
   &.no2 {
     /* 29-25 */
     margin-left: 3px;
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
   }
   & h3 {
     margin-right: 12px;
@@ -418,7 +433,7 @@ main article.workshop section {
     }
     & > p {
       max-width: 100%;
-      @media (max-width: 767px) {
+      @media (max-width: 991px) {
         margin-bottom: 19px;
         text-align: center;
       }
@@ -452,20 +467,11 @@ main article.workshop section.snowdome {
     & p {
       flex-basis: 265px;
     }
-    & dl.flextab {
-      display: flex;
-      @media (max-width: 991px) {
-        display: block;
-      }
-      @media (max-width: 767px) {
-        display: flex;
-      }
-    }
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   main article.workshop section.snowdome {
-    & span.none767 {
+    & span.none575 {
       display: none;
     }
   }
