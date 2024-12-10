@@ -69,12 +69,10 @@ a {
 }
 
 .tuizyuutop {
-  @media (max-width: 991px) {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: var(--mainred);
-  }
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--mainred);
 }
 
 h1.logo {
@@ -405,6 +403,10 @@ footer p.copyright {
 }
 
 /* ページトップボタン */
+footer p.pagetop {
+  display: none;
+}
+
 footer p.pagetop a {
   padding: 23px 15px;
   position: fixed;

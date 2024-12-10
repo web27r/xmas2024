@@ -81,6 +81,9 @@ main article section.aboutartist {
   background-image: url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg), url(../img/performance.img/akamaru.svg);
   background-repeat: no-repeat;
   background-position: top 15px left 15px, top 15px right 15px, bottom 15px left 15px, bottom 15px right 15px;
+  @media (min-width: 768px) {
+    display: block !important;
+  }
 }
 
 main article section h3 {
