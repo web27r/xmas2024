@@ -1,5 +1,9 @@
 @import url(common.css);
 
+body {
+  position: relative;
+}
+
 /* トップページだけmain上下余白が違う */
 main {
   padding-bottom: 100px;
@@ -76,6 +80,15 @@ header p:last-child {
   @media (max-width: 767px) {
     padding-bottom: 258px;
     font-size: 45px;
+  }
+}
+
+/* PC表示の時のトップページ */
+header nav ul {
+  @media (min-width: 992px) {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 }
 
@@ -240,7 +253,7 @@ main section.event dl.access p:last-child {
 
 main div.market {
   padding: 125px 0;
-  height: 620px;
+  height: 600px;
   position: relative;
   clip-path: inset(0);
 }
@@ -256,11 +269,8 @@ main div.market::before {
   background: url("../img/index.img/ChristmasMarket.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
   z-index: -1;
-  @media (max-width: 767px) {
-    background-size: cover;
-  }
 }
 /* ここまで */
 
