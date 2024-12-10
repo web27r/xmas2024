@@ -57,16 +57,17 @@
                 </aside>
 
                 <div class="toicontainer">
-                    <form action="#" method="post">
+                    <form action="https://ssl.form-mailer.jp/fm/service/Forms/complete" method="post" name="form1" enctype="multipart/form-data" accept-charset="UTF-8">
+                        <input type="hidden" name="key" value="64fd99f8841406">
                         <div class="nyuryoku3 flex">
                             <p class="box red"><span style="white-space: nowrap;">必須</span></p>
                             <label class="dt" for="area_l">お問い合わせの種類について選択してください。</label>
                         </div>
-                        <select id="area_l" name="area">
-                            <option>イベントについて</option>
-                            <option>取材・掲載について</option>
-                            <option>スタッフ応募について</option>
-                            <option>その他</option>
+                        <select id="area_l" name="field_7359205">
+                            <option value="0" selected>イベントについて</option>
+                            <option value="1">取材・掲載について</option>
+                            <option value="2">スタッフ応募について</option>
+                            <option value="3">その他</option>
                         </select>
 
                         <dl>
@@ -74,7 +75,7 @@
                                 <dd class="box red">必須</dd>
                                 <dt>お名前（漢字）</dt>
                             </div>
-                            <dd><input type="text" name="name" placeholder="例&#xFF1A;大阪花子" required></dd>
+                            <dd><input type="text" name="field_7359206" placeholder="例&#xFF1A;大阪花子" required></dd>
                         </dl>
 
                         <dl>
@@ -82,7 +83,7 @@
                                 <dd class="box red">必須</dd>
                                 <dt>お名前（ふりがな）</dt>
                             </div>
-                            <dd><input type="text" name="furigana" placeholder="例&#xFF1A;おおさかはなこ" required></dd>
+                            <dd><input type="text" name="field_7359207" placeholder="例&#xFF1A;おおさかはなこ" required></dd>
                         </dl>
 
                         <dl>
@@ -90,7 +91,7 @@
                                 <dd class="box blue">任意</dd>
                                 <dt>会社名</dt>
                             </div>
-                            <dd><input type="text" name="company" placeholder="例&#xFF1A;株式会社クリスマスマーケット in大阪"></dd>
+                            <dd><input type="text" name="field_7359208" placeholder="例&#xFF1A;株式会社クリスマスマーケット in大阪"></dd>
                         </dl>
 
                         <dl>
@@ -98,7 +99,7 @@
                                 <dd class="box red">必須</dd>
                                 <dt>電話番号</dt>
                             </div>
-                            <dd><input type="tel" name="tel" placeholder="例&#xFF1A;03-3333-3333" required></dd>
+                            <dd><input type="tel" name="field_7359564" placeholder="例&#xFF1A;03-3333-3333" required></dd>
                         </dl>
                         <aside class="tyuui"><small>&#x203B;お問い合わせの方は、日中連絡が取れるお電話番号をこちらにご記入ください。</small></aside>
 
@@ -107,7 +108,7 @@
                                 <dd class="box red">必須</dd>
                                 <dt>メールアドレス</dt>
                             </div>
-                            <dd><input type="email" name="mail" placeholder="例&#xFF1A;info@christmasmarket.com" required></dd>
+                            <dd><input type="email" name="field_7359565" placeholder="例&#xFF1A;info@christmasmarket.com" required></dd>
                         </dl>
                         <aside class="tyuui">&#x203B;お客様のメール設定により、メールが届かない場合がございます。<br>
                             &#x300C; @osaka-christmasmarket.com &#x300D;からのメール受信が可能な設定にしていただきますようお願いいたします。</aside>
@@ -117,7 +118,7 @@
                                 <dd class="box red">必須</dd>
                                 <dt>お問い合わせの内容</dt>
                             </div>
-                            <dd><textarea name="naiyou" required></textarea></dd>
+                            <dd><textarea name="field_7359566" required></textarea></dd>
                         </dl>
 
                         <div class="doui">
@@ -126,6 +127,7 @@
                             <p><label><input type="checkbox" name="doui">同意する</label></p>
                             <p><label><input type="submit" value="送信する"></label></p>
                         </div>
+                        <input type="hidden" name="code" value="utf8">
                     </form>
                 </div>
 
