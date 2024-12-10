@@ -227,6 +227,7 @@ main section.event dl.access p:last-child {
   text-align: center;
 }
 
+/* 変更箇所 */
 /* main div.market {
   padding: 125px 0;
   background-image: url(../img/index.img/ChristmasMarket.jpg);
@@ -252,9 +253,16 @@ main div.market::before {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: url("../img/index.img/ChristmasMarket.jpg") center/cover no-repeat;
+  background: url("../img/index.img/ChristmasMarket.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
   z-index: -1;
+  @media (max-width: 767px) {
+    background-size: cover;
+  }
 }
+/* ここまで */
 
 main div.market p.fixedimg img {
   object-fit: cover;

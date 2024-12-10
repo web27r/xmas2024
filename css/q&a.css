@@ -64,8 +64,8 @@ main article label[for="tab2"] {
   font-size: 17px;
 }
 
-main article section.tab2,
-main article section.tab3 {
+main article div.tab2,
+main article div.tab3 {
   display: none;
 }
 
@@ -74,7 +74,7 @@ main article ul input {
   display: none;
 }
 
-main article section.koibackbeige {
+main article div.koibackbeige {
   padding: 55px 30px 0 30px;
   border: 2px solid var(--mainred);
 
