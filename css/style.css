@@ -240,7 +240,7 @@ main section.event dl.access p:last-child {
 
 main div.market {
   padding: 125px 0;
-  height: 620px;
+  height: 600px;
   position: relative;
   clip-path: inset(0);
 }
@@ -256,11 +256,8 @@ main div.market::before {
   background: url("../img/index.img/ChristmasMarket.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
   z-index: -1;
-  @media (max-width: 767px) {
-    background-size: cover;
-  }
 }
 /* ここまで */
 
