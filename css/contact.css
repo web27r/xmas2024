@@ -65,6 +65,7 @@ aside.tyuui {
 /* 各入力３点セット */
 div.nyuryoku3 {
   margin-top: 50px;
+  margin-bottom: 10px;
   align-items: center;
 }
 
@@ -72,7 +73,6 @@ div.nyuryoku3 {
 .box {
   padding: 5px 20px;
   margin-right: 40px;
-  margin-bottom: 10px;
   color: var(--backbeige);
   border-radius: 5px;
 }
