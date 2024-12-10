@@ -241,15 +241,15 @@ main section.event dl.access p:last-child {
 }
 
 /* 元の設定 */
-/* main div.market {
+main div.market {
   padding: 125px 0;
   background-image: url(../img/index.img/ChristmasMarket.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; */
-/* 背景画像をスクロールせずに固定 */
-/* background-attachment: fixed;
-} */
+  background-size: cover;
+  /* 背景画像をスクロールせずに固定 */
+  background-attachment: fixed;
+}
 
 /* 背景お試し１ */
 /* main div.market {
@@ -275,7 +275,7 @@ main div.market::before {
 } */
 
 /* 背景お試し２ */
-main div.market {
+/* main div.market {
   padding: 130px 0;
   position: relative;
   height: auto;
@@ -299,7 +299,7 @@ main div.market {
   background-size: cover;
   background-position: center;
   z-index: -1;
-}
+} */
 
 /* ここまで */
 
