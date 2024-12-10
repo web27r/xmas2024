@@ -374,6 +374,10 @@ table tbody td span.red {
   color: #b6151a;
 }
 
+table tbody div {
+  height: 85px;
+}
+
 /* PDFボタンの設定 */
 p.pdfbtn {
   position: relative;
