@@ -1,5 +1,10 @@
 @import url(common.css);
-
+/* ーーーーーー
+下層ページ共通、になった
+ーーーーーーー */
+main span {
+  display: inline-block;
+}
 /* ノートPC@media (max-width: 1199px)
 文字折り返し限定tab@media (max-width: 991px)
 スマホ横@media (max-width: 767px)

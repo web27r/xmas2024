@@ -2,17 +2,8 @@
 /* ーーーーーー
 下層ページ共通、になりそう（まだなってない）
 ーーーーーーー */
-br.born767 {
-  display: none;
-  @media (max-width: 767px) {
-    display: inline;
-  }
-}
-br.born575 {
-  display: none;
-  @media (max-width: 575px) {
-    display: inline;
-  }
+main span {
+  display: inline-block;
 }
 .orikaesan {
   white-space: nowrap;
@@ -167,10 +158,6 @@ p.no,
 p.abc {
   color: var(--backbeige);
   font-size: 22px;
-  margin-right: 21px;
-  /* @media (max-width: 767px){
-    margin-left: -25px;
-  } */
 }
 hgroup.no2 p.no {
   margin-right: 15px;
@@ -183,7 +170,7 @@ p.abc {
 }
 /* hgroup英語の左余白&gapに当たる余白 */
 hgroup.ah {
-  & p {
+  & p.abc {
     /* 31-25 */
     margin-left: 6px;
     @media (max-width: 767px) {
@@ -199,7 +186,7 @@ hgroup.ah {
   }
 }
 hgroup.g {
-  & p {
+  & p.abc {
     /* 32-25 */
     margin-left: 7px;
     @media (max-width: 767px) {
@@ -215,7 +202,7 @@ hgroup.g {
   }
 }
 hgroup.bcdf {
-  & p {
+  & p.abc {
     /* 33-25 */
     margin-left: 8px;
     @media (max-width: 767px) {
@@ -231,7 +218,7 @@ hgroup.bcdf {
   }
 }
 hgroup.e {
-  & p {
+  & p.abc {
     /* 34-25 */
     margin-left: 9px;
     @media (max-width: 767px) {
@@ -247,7 +234,7 @@ hgroup.e {
   }
 }
 hgroup.i {
-  & p {
+  & p.abc {
     /* 36-25 */
     margin-left: 11px;
     @media (max-width: 767px) {
@@ -300,6 +287,22 @@ main article.goods section div.flex {
     flex-wrap: wrap;
   }
 }
+main article.FandD section hgroup,
+main article.goods section hgroup {
+  & h3 {
+    @media (max-width: 575px) {
+      /* 一番長い店名Eに合わせて同時に折り返すための下準備 */
+      flex-basis: 236px;
+    }
+  }
+  & p.none {
+    @media (max-width: 575px) {
+      /* 一番長い店名Eに合わせて同時に折り返すための下準備 */
+      flex-basis: 225px;
+      text-align: left;
+    }
+  }
+}
 /* ーーーーーーーーーーーーーー
 FD共通アーティクル＆セクション
 ーーーーーーーーーーーーーーー */
@@ -329,22 +332,24 @@ main article.FandD section hgroup {
   @media (max-width: 767px) {
     margin-left: 6px;
   }
+  & p {
+    margin-right: 21px;
+  }
   &.no2 {
     /* 29-25 */
     margin-left: 3px;
+    & h3 {
+      margin-right: 12px;
+    }
     @media (max-width: 767px) {
       margin-left: 0;
     }
-  }
-  & h3 {
-    margin-right: 12px;
-  }
-  /* p.noneに当たる。これを改行のタイミングによってクラス付けないと余白が変になる後でやる */
-  & p.none {
-    @media (max-width: 575px) {
-      /* テキレと合わせ技じゃないと左にならん63-25=38 */
-      margin-left: 38px;
-      text-align: left;
+    /* hgroup改行された後の２文字番号のカナ店名 */
+    /* １番号は左余白38pxで3px差があるはず */
+    & p.none {
+      @media (max-width: 575px) {
+        margin-left: 42px;
+      }
     }
   }
 }
@@ -366,12 +371,6 @@ figcaption.mojilefttab {
     text-align: left;
   }
 }
-br.borntab {
-  display: none;
-  @media (max-width: 991px) and (min-width: 768px) {
-    display: inline;
-  }
-}
 /* ーー
 グッズ
 ーーー */
@@ -383,12 +382,18 @@ main article.goods section.koibackbeige {
   & hgroup {
     margin-bottom: 18px;
   }
-  /* p.noneに当たる。これを改行のタイミングによってクラス付けないと余白が変になる後でやる２ */
   & p.none {
+    margin-left: 12px;
     @media (max-width: 575px) {
       /* 63+12=54 */
-      margin-left: 75px;
-      margin-bottom: 20px;
+      margin-left: 54px;
+    }
+  }
+  /* ここ改行後むずい */
+  & p.e {
+    @media (max-width: 590px) {
+      /* 63+12=54 */
+      margin-left: 54px;
     }
   }
   & > p {
@@ -508,10 +513,16 @@ main article.workshop section.hana {
       }
     }
   }
+  & > div.flex {
+    gap: 15px;
+    flex-direction: row-reverse;
+  }
 }
-& > div.flex {
-  gap: 13px;
-  flex-direction: row-reverse;
+br.born767 {
+  display: none;
+  @media (max-width: 767px) {
+    display: inline;
+  }
 }
 
-/* 続きはWS画像伸びたくない */
+/* E改行調整 */

@@ -72,7 +72,7 @@ div.nyuryoku3 {
 /* 必須任意の枠 */
 .box {
   padding: 5px 20px;
-  margin-right: 40px;
+  margin-right: 10px;
   color: var(--backbeige);
   border-radius: 5px;
 }
