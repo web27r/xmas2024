@@ -477,7 +477,8 @@ footer span.none {
   }
 }
 
-main section.magcup p {
+main section.magcup p,
+p.yoyaku {
   text-align: center;
 }
 
