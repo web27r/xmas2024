@@ -477,6 +477,10 @@ footer span.none {
   }
 }
 
+main section.magcup p {
+  text-align: center;
+}
+
 .yoyaku a {
   max-width: fit-content;
   margin: 0 auto;
