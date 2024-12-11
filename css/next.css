@@ -63,8 +63,14 @@ main article.backbeige {
       padding: 60px 11px 60px 12px;
     }
   }
-  &:not(:first-child) {
+  &:not(:first-child, :last-child) {
     padding: 60px 40px 47px 40px;
+    @media (max-width: 767px) {
+      padding: 60px 15px 30px 15px;
+    }
+  }
+  &:last-child {
+    padding: 60px 40px 71px 40px;
     @media (max-width: 767px) {
       padding: 60px 15px 30px 15px;
     }
@@ -493,6 +499,7 @@ main article.workshop section.hana {
 }
 /* koibackbeigeに当たる */
 main article.workshop section.hana {
+  margin-bottom: 48px;
   padding: 33px 25px 50px 27px;
   @media (max-width: 767px) {
     padding: 33px 8px 50px 9px;
