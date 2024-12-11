@@ -124,7 +124,6 @@ main article.map ul li {
   }
   & a {
     display: block;
-    /* ここから */
     width: 155px;
     padding: 10px 17px 13px 18px;
     @media (max-width: 767px) {
@@ -527,5 +526,3 @@ br.born767 {
     display: inline;
   }
 }
-
-/* E改行調整 */
