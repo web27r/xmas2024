@@ -103,9 +103,9 @@ li.goods {
   }
 }
 main article.map ul li {
-  width: 155px;
-  height: 45px;
-  padding: 10px 17px 13px 18px;
+  /* width: 155px; */
+  /* height: 45px; */
+  /* padding: 10px 17px 13px 18px; */
   border-radius: 10px;
   background-color: #de9115;
   box-shadow: 0 0 0 3px #de9115;
@@ -121,6 +121,17 @@ main article.map ul li {
     margin-left: auto;
     margin-right: auto;
   }
+  & a {
+    display: block;
+    width: 150px;
+    height: 45px;
+    padding: 10px 17px 13px 18px;
+    @media (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 17px 0 18px;
+    }
+  }
 }
 main article.map ul li:hover {
   background-color: var(--koibackbeige);
@@ -129,6 +140,7 @@ main article.map ul li:hover {
   color: #de9115;
   background-image: url(../img/FandD.img/sitasankaku_on.png);
 }
+
 /* ーーーーーーーー
 FDGW共通セクション
 ーーーーーーーー */
