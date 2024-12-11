@@ -106,6 +106,7 @@ main article.map ul li {
   /* width: 155px; */
   /* height: 45px; */
   /* padding: 10px 17px 13px 18px; */
+  height: 45px;
   border-radius: 10px;
   background-color: #de9115;
   box-shadow: 0 0 0 3px #de9115;
@@ -123,8 +124,7 @@ main article.map ul li {
   }
   & a {
     display: block;
-    width: 150px;
-    height: 45px;
+    width: 155px;
     padding: 10px 17px 13px 18px;
     @media (max-width: 767px) {
       margin-left: auto;
@@ -260,7 +260,7 @@ main article.FandD section.koibackbeige {
     & p.none {
       margin-left: 12px;
       @media (max-width: 575px) {
-        /* ここで折り返し後の左余白を調整63-25 */
+        /* 折り返し後の左余白を調整63-25 */
         margin-left: 38px;
       }
     }
@@ -526,5 +526,3 @@ br.born767 {
     display: inline;
   }
 }
-
-/* E改行調整 */
