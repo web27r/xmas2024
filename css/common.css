@@ -34,33 +34,6 @@ body {
   background-size: cover;
   background-position: center;
   background-color: var(--mainblue);
-  /* 背景固定設定 */
-  position: relative;
-  height: auto;
-}
-
-/*  背景固定設定 うまくいかず */
-.inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  clip-path: inset(0);
-}
-.bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  z-index: -2;
-}
-
-.backimg1 {
-  background-image: url(../img/common.img/backimg.png);
 }
 
 .container {
