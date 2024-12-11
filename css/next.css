@@ -150,122 +150,26 @@ main article.goods section.koibackbeige {
 /* hgroup */
 main article section hgroup.flex {
   align-items: baseline;
-  @media (max-width: 767px) {
+  @media (max-width: 575px) {
     flex-wrap: wrap;
   }
-}
-p.no,
-p.abc {
-  color: var(--backbeige);
-  font-size: 22px;
-}
-hgroup.no2 p.no {
-  margin-right: 15px;
-}
-p.no {
-  font-family: "Kaisei Opti";
-}
-p.abc {
-  font-family: "Miltonian Tattoo", serif;
-}
-/* hgroup英語の左余白&gapに当たる余白 */
-hgroup.ah {
+  & p.no,
   & p.abc {
-    /* 31-25 */
-    margin-left: 6px;
-    @media (max-width: 767px) {
-      /* 28-9 */
-      margin-left: 19px;
-    }
+    color: var(--backbeige);
+    font-size: 22px;
   }
-  & h3 {
-    margin-left: 17px;
+  /* 共通 */
+  /* FDG青文字から本文に戻す */
+  & p.none {
+    margin-top: 10px;
+    color: var(--bunblack);
+    font-size: 16px;
     @media (max-width: 767px) {
-      margin-left: 15px;
-    }
-  }
-}
-hgroup.g {
-  & p.abc {
-    /* 32-25 */
-    margin-left: 7px;
-    @media (max-width: 767px) {
-      /* 29-9 */
-      margin-left: 20px;
-    }
-  }
-  & h3 {
-    margin-left: 18px;
-    @media (max-width: 767px) {
-      margin-left: 16px;
+      margin-top: -2px;
     }
   }
 }
-hgroup.bcdf {
-  & p.abc {
-    /* 33-25 */
-    margin-left: 8px;
-    @media (max-width: 767px) {
-      /* 30-9 */
-      margin-left: 21px;
-    }
-  }
-  & h3 {
-    margin-left: 19px;
-    @media (max-width: 767px) {
-      margin-left: 17px;
-    }
-  }
-}
-hgroup.e {
-  & p.abc {
-    /* 34-25 */
-    margin-left: 9px;
-    @media (max-width: 767px) {
-      /* 31-9 */
-      margin-left: 22px;
-    }
-  }
-  & h3 {
-    margin-left: 20px;
-    @media (max-width: 767px) {
-      margin-left: 18px;
-    }
-  }
-}
-hgroup.i {
-  & p.abc {
-    /* 36-25 */
-    margin-left: 11px;
-    @media (max-width: 767px) {
-      /* 33-9 */
-      margin-left: 24px;
-    }
-  }
-  & h3 {
-    margin-left: 22px;
-    @media (max-width: 767px) {
-      margin-left: 20px;
-    }
-  }
-}
-/* 共通 */
-main article.FandD section hgroup h3,
-main article.goods section hgroup h3 {
-  margin-right: 12px;
-  font-weight: bold;
-  @media (max-width: 767px) {
-    margin-right: 0;
-  }
-}
-/* FDG青文字から本文に戻す */
-p.none {
-  color: var(--bunblack);
-  font-size: 16px;
-  @media (max-width: 767px) {
-    margin-top: -2px;
-  }
-}
+/* wsがhgroupに入ってないので&でまとめられない */
 hgroup h3,
 article.workshop h3 {
   font-size: 25px;
@@ -291,15 +195,16 @@ main article.FandD section hgroup,
 main article.goods section hgroup {
   & h3 {
     @media (max-width: 575px) {
-      /* 一番長い店名Eに合わせて同時に折り返すための下準備 */
+      font-weight: bold;
+      /* 一番長い店名Eに合わせて同時に折り返すための下準備その１ */
       flex-basis: 236px;
     }
   }
   & p.none {
+    text-align: left;
     @media (max-width: 575px) {
-      /* 一番長い店名Eに合わせて同時に折り返すための下準備 */
+      /* 一番長い店名Eに合わせて同時に折り返すための下準備その２ */
       flex-basis: 225px;
-      text-align: left;
     }
   }
 }
@@ -323,52 +228,55 @@ main article.FandD section.koibackbeige {
   @media (max-width: 767px) {
     padding: 25px auto 32px auto;
   }
-}
-
-main article.FandD section hgroup {
-  margin-bottom: 20px;
-  /* 34-25 */
-  margin-left: 9px;
-  @media (max-width: 767px) {
-    margin-left: 6px;
-  }
-  & p {
-    margin-right: 21px;
-  }
-  &.no2 {
-    /* 29-25 */
-    margin-left: 3px;
+  & hgroup {
+    margin-bottom: 20px;
+    /* 34-25グッズでいうp.abc */
+    & p.no {
+      margin-left: 9px;
+      font-family: "Kaisei Opti";
+      @media (max-width: 767px) {
+        /* 31-25 */
+        margin-left: 6px;
+      }
+    }
     & h3 {
-      margin-right: 12px;
-    }
-    @media (max-width: 767px) {
-      margin-left: 0;
-    }
-    /* hgroup改行された後の２文字番号のカナ店名 */
-    /* １番号は左余白38pxで3px差があるはず */
-    & p.none {
+      margin-left: 21px;
       @media (max-width: 575px) {
-        margin-left: 42px;
+        margin-left: 17px;
+      }
+    }
+    & p.none {
+      margin-left: 12px;
+      @media (max-width: 575px) {
+        /* ここで折り返し後の左余白を調整63-25 */
+        margin-left: 38px;
       }
     }
   }
-}
-main article.FandD section div.flex {
-  text-align: center;
-}
-main article section div figure figcaption {
-  margin-top: 14px;
-}
-/* FD共通フィギュア */
-figcaption {
-  white-space: nowrap;
-  @media (max-width: 991px) {
-    white-space: normal;
+  & hgroup.no2 {
+    & p.no {
+      /* 29-25=4だが3が綺麗 */
+      margin-left: 3px;
+      /* 25-25=0 */
+      @media (max-width: 767px) {
+        margin-left: 0px;
+      }
+    }
+    & h3 {
+      margin-left: 14px;
+      /* @media (max-width: 575px) は変わらんから書かない */
+    }
+    /* & p.noneは１ケタと同じ左余白なので書かない */
   }
-}
-figcaption.mojilefttab {
-  @media (max-width: 991px) and (min-width: 768px) {
-    text-align: left;
+  & div.flex {
+    text-align: center;
+    & figure figcaption {
+      margin-top: 14px;
+      white-space: nowrap;
+      @media (max-width: 991px) {
+        white-space: normal;
+      }
+    }
   }
 }
 /* ーー
@@ -381,19 +289,16 @@ main article.goods section.koibackbeige {
   }
   & hgroup {
     margin-bottom: 18px;
-  }
-  & p.none {
-    margin-left: 12px;
-    @media (max-width: 575px) {
-      /* 63+12=54 */
-      margin-left: 54px;
+    & p.abc {
+      font-family: "Miltonian Tattoo", serif;
     }
-  }
-  /* ここ改行後むずい */
-  & p.e {
-    @media (max-width: 590px) {
-      /* 63+12=54 */
-      margin-left: 54px;
+    /* & h3 {margin-left: 英語の横幅が違う！各設定が下に作った */
+    & p.none {
+      margin-left: 12px;
+      @media (max-width: 575px) {
+        /* 63+12=54 */
+        margin-left: 54px;
+      }
     }
   }
   & > p {
@@ -401,6 +306,91 @@ main article.goods section.koibackbeige {
   }
   & div.flex p img {
     width: 265px;
+  }
+}
+/* オーナメント英語の左余白&gapに当たる余白 */
+/* 各幅A19_B16_CF15_D17_E14_G18_H20_I11 */
+hgroup.ah {
+  & p.abc {
+    /* 31-25 */
+    margin-left: 6px;
+    @media (max-width: 767px) {
+      /* 28-9 */
+      margin-left: 19px;
+    }
+  }
+  & h3 {
+    margin-left: 18px;
+    @media (max-width: 767px) {
+      margin-left: 15px;
+    }
+  }
+}
+hgroup.g {
+  & p.abc {
+    /* 32-25 */
+    margin-left: 7px;
+    @media (max-width: 767px) {
+      /* 29-9 */
+      margin-left: 20px;
+    }
+  }
+  & h3 {
+    margin-left: 19px;
+    @media (max-width: 767px) {
+      margin-left: 16px;
+    }
+  }
+}
+hgroup.bcdf {
+  & p.abc {
+    /* 33-25 */
+    margin-left: 8px;
+    @media (max-width: 767px) {
+      /* 30-9 */
+      margin-left: 21px;
+    }
+  }
+  & h3 {
+    margin-left: 20px;
+    @media (max-width: 767px) {
+      margin-left: 17px;
+    }
+  }
+}
+hgroup.e {
+  @media (max-width: 767px) {
+    margin-top: 4px;
+  }
+  & p.abc {
+    /* 34-25 */
+    margin-left: 9px;
+    @media (max-width: 767px) {
+      /* 31-9 */
+      margin-left: 22px;
+    }
+  }
+  & h3 {
+    margin-left: 21px;
+    @media (max-width: 767px) {
+      margin-left: 18px;
+    }
+  }
+}
+hgroup.i {
+  & p.abc {
+    /* 36-25 */
+    margin-left: 11px;
+    @media (max-width: 767px) {
+      /* 33-9 */
+      margin-left: 24px;
+    }
+  }
+  & h3 {
+    margin-left: 23px;
+    @media (max-width: 767px) {
+      margin-left: 20px;
+    }
   }
 }
 /* ーーーーーーーーー
