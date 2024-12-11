@@ -93,6 +93,15 @@ textarea {
   border-radius: 5px;
   border: 3px solid #d4b577;
 }
+/* アウトライン:なし */
+#area_l,
+main input[type="text"],
+main input[type="email"],
+main input[type="tel"],
+main textarea {
+  outline: none;
+}
+
 textarea {
   height: 220px;
   margin-bottom: 50px;
