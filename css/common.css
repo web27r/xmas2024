@@ -497,3 +497,11 @@ p.yoyaku {
   border: 3px solid #c3a80d;
   background: #bb232a;
 }
+
+.orikaesan {
+  white-space: nowrap;
+}
+
+main span {
+  display: inline-block;
+}
