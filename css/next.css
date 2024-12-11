@@ -72,7 +72,7 @@ main article.backbeige {
   &:last-child {
     padding: 60px 40px 71px 40px;
     @media (max-width: 767px) {
-      padding: 60px 15px 30px 15px;
+      padding: 60px 15px 66px 15px;
     }
   }
 }
