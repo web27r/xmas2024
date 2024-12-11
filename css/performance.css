@@ -124,7 +124,7 @@ main article section.schedule p {
 
 main article section.schedule h4 {
   @media (max-width: 767px) {
-    font-size: 19px;
+    font-size: 18px;
   }
 }
 
