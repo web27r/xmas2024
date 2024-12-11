@@ -28,12 +28,18 @@ body {
   font-family: "M PLUS 1p";
   color: var(--bunblack);
   line-height: normal;
-  background-image: url(../img/index.img/backgroundimg2.png);
+  background-image: url(../img/common.img/backimg.png);
   /* 背景画像をスクロールせずに固定 */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-color: var(--mainblue);
+  @media (max-width: 991px) {
+    background-attachment: unset;
+    background-image: url(../img/common.img/backsnowblue.png);
+    background-size: contain;
+    background-repeat: repeat-y;
+  }
 }
 
 .container {
@@ -96,7 +102,7 @@ nav {
     padding: 86px 0 20px 0;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     background-color: var(--mainred);
   }
