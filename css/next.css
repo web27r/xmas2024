@@ -2,12 +2,6 @@
 /* ーーーーーー
 下層ページ共通、になりそう（まだなってない）
 ーーーーーーー */
-main span {
-  display: inline-block;
-}
-.orikaesan {
-  white-space: nowrap;
-}
 .noflex575 {
   @media (max-width: 575px) {
     display: block;
