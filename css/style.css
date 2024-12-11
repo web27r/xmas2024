@@ -1,8 +1,8 @@
 @import url(common.css);
 
-body {
+/* body {
   position: relative;
-}
+} */
 
 /* トップページだけmain上下余白が違う */
 main {
@@ -23,6 +23,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  clip-path: inset(0);
 
   @media (max-width: 767px) {
     background-image: url(../img/index.img/iphonemainimg.png);
@@ -89,6 +90,7 @@ header nav ul {
     position: sticky;
     top: 0;
     z-index: 1000;
+    clip-path: unset;
   }
 }
 
@@ -251,37 +253,18 @@ main section.event dl.access p:last-child {
 /* background-attachment: fixed;
 } */
 
-/* 背景お試し１ */
-/* main div.market {
-  padding: 125px 0;
-  height: 600px;
-  position: relative;
-  clip-path: inset(0);
-}
-
-main div.market::before {
-  content: "";
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: url("../img/index.img/ChristmasMarket.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-} */
-
-/* 背景お試し２ */
+/* クリスマス背景固定設定（iPhoneではbackground-attachment:fixedが使えない） */
 main div.market {
   padding: 130px 0;
   position: relative;
   height: auto;
 }
 
-.inner {
+.backimg2 {
+  background-image: url(../img/index.img/ChristmasMarket.jpg);
+}
+
+/* .inner {
   position: absolute;
   top: 0;
   left: 0;
@@ -295,22 +278,12 @@ main div.market {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("../img/index.img/ChristmasMarket.jpg");
   background-size: cover;
   background-position: center;
   z-index: -1;
-}
+} */
 
 /* ここまで */
-
-main div.market p.fixedimg img {
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
 
 main div.market section.aboutxmas {
   padding-bottom: 60px;
