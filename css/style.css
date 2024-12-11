@@ -50,11 +50,7 @@ header div.flex {
 
 header p:first-child {
   font-family: "Tempus Sans ITC";
-  font-size: max(2vw, 30px);
-
-  @media (max-width: 767px) {
-    font-size: 26px;
-  }
+  font-size: max(2vw, 26px);
 }
 
 header h1 {
@@ -67,7 +63,6 @@ header h1 {
 
     @media (max-width: 767px) {
       margin: 10px 0;
-      font-size: 50px;
     }
   }
 }
@@ -75,11 +70,10 @@ header h1 {
 header p:last-child {
   padding-bottom: 15%;
   font-family: "Princess Sofia", cursive;
-  font-size: max(4vw, 60px);
+  font-size: max(4vw, 45px);
 
   @media (max-width: 767px) {
     padding-bottom: 258px;
-    font-size: 45px;
   }
 }
 
@@ -259,10 +253,6 @@ main div.market {
   height: auto;
 }
 
-.backimg2 {
-  background-image: url(../img/index.img/ChristmasMarket.jpg);
-}
-
 .inner {
   position: absolute;
   top: 0;
@@ -277,6 +267,7 @@ main div.market {
   left: 0;
   width: 100vw;
   height: 100vh;
+  background-image: url(../img/index.img/ChristmasMarket.jpg);
   background-size: cover;
   background-position: center;
   z-index: -1;
