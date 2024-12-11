@@ -31,9 +31,13 @@ body {
   background-image: url(../img/common.img/backimg.png);
   /* 背景画像をスクロールせずに固定 */
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center;
   background-color: var(--mainblue);
+  @media (max-width: 991px) {
+    background-attachment: unset;
+    background-repeat: repeat-y;
+  }
 }
 
 .container {
