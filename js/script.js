@@ -27,7 +27,7 @@ $(window).scroll(function () {
 
 // タブ選択で、表示切替設定（q&a.html）
 $('input[name="tab"]').change(function () {
-  $("main article section.tab").hide();
+  $("main article div.tab").hide();
   var id = $(this).attr("id");
   $("." + id).fadein2();
 });
