@@ -203,7 +203,6 @@ nav ul li:hover a {
 
 .hmenu.close span {
   background-color: unset;
-  z-index: 2;
 }
 
 .hmenu span::before {
