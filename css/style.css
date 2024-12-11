@@ -1,8 +1,8 @@
 @import url(common.css);
 
-/* body {
+body {
   position: relative;
-} */
+}
 
 /* トップページだけmain上下余白が違う */
 main {
@@ -23,7 +23,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  clip-path: inset(0);
 
   @media (max-width: 767px) {
     background-image: url(../img/index.img/iphonemainimg.png);
@@ -264,7 +263,7 @@ main div.market {
   background-image: url(../img/index.img/ChristmasMarket.jpg);
 }
 
-/* .inner {
+.inner {
   position: absolute;
   top: 0;
   left: 0;
@@ -281,7 +280,7 @@ main div.market {
   background-size: cover;
   background-position: center;
   z-index: -1;
-} */
+}
 
 /* ここまで */
 
