@@ -314,6 +314,11 @@ main article.goods section.koibackbeige {
       font-family: "Miltonian Tattoo", serif;
     }
     /* & h3 {margin-left: 英語の横幅が違う！各設定が下に作った */
+    & h3 {
+      @media (max-width: 389px) {
+        font-size: 21px;
+      }
+    }
     & p.none {
       margin-left: 12px;
       @media (max-width: 575px) {
