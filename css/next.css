@@ -208,7 +208,7 @@ main article.goods section hgroup {
   & h3 {
     @media (max-width: 575px) {
       font-weight: bold;
-      /* 一番長い店名Eに合わせて同時に折り返すための下準備その１ */
+      /* 一番長い店名DGに合わせて同時に折り返すための下準備その１ */
       flex-basis: 236px;
     }
     @media (max-width: 389px) {
