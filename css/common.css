@@ -389,7 +389,7 @@ footer div.companyicon {
 }
 
 footer p.aboutcompany {
-  margin-top: 65px;
+  margin-top: 30px;
   margin-bottom: 215px;
   line-height: 30px;
   text-align: center;
@@ -503,6 +503,7 @@ p.yoyaku {
   white-space: nowrap;
 }
 
-main span {
+main span,
+footer span {
   display: inline-block;
 }
