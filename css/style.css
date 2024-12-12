@@ -95,7 +95,7 @@ header nav ul {
 
 /* 外側の白い枠の共通の設定 */
 section {
-  padding: 60px 125px 40px 125px;
+  padding: 60px 125px;
 
   @media (max-width: 767px) {
     padding: 50px 15px 50px 15px;
@@ -234,17 +234,6 @@ main section.event dl.access p:last-child {
   width: 100%;
   text-align: center;
 }
-
-/* 元の設定 */
-/* main div.market {
-  padding: 125px 0;
-  background-image: url(../img/index.img/ChristmasMarket.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-/* 背景画像をスクロールせずに固定 */
-/* background-attachment: fixed;
-} */
 
 /* クリスマス背景固定設定（iPhoneではbackground-attachment:fixedが使えない） */
 main div.market {
@@ -390,8 +379,8 @@ main section.magcup aside p {
   }
 }
 
-main p.yoyaku {
-  margin-bottom: 42px;
+main section.magcup p.yoyaku {
+  margin-bottom: 20px;
 }
 
 main section.specialoffers {
@@ -413,6 +402,13 @@ main section.specialoffers div.flex {
   }
 }
 
+main section.magcup br.mobilebr2 {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
 main section.specialoffers div.otoku {
   margin-top: 42px;
   padding: 0 20px;
@@ -427,6 +423,18 @@ main section.specialoffers div.otoku {
     @media (max-width: 767px) {
       margin-top: 0;
       text-align: left;
+    }
+  }
+}
+
+main section.specialoffers br.mobilbr {
+  display: none;
+
+  @media (max-width: 1190px) {
+    display: block;
+
+    @media (max-width: 767px) {
+      display: none;
     }
   }
 }
@@ -516,21 +524,6 @@ main section.caution ul li {
   }
 }
 
-br.mobilebr {
-  display: none;
-
-  @media (max-width: 1190px) {
-    display: block;
-
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
-}
-
-br.mobilebr2 {
-  display: none;
-  @media (max-width: 767px) {
-    display: block;
-  }
+main section.caution ul li:last-child {
+  margin-bottom: unset;
 }
