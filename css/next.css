@@ -211,12 +211,18 @@ main article.goods section hgroup {
       /* 一番長い店名Eに合わせて同時に折り返すための下準備その１ */
       flex-basis: 236px;
     }
+    @media (max-width: 389px) {
+      flex-basis: unset;
+    }
   }
   & p.none {
     text-align: left;
     @media (max-width: 575px) {
       /* 一番長い店名Eに合わせて同時に折り返すための下準備その２ */
       flex-basis: 225px;
+    }
+    @media (max-width: 389px) {
+      flex-basis: unset;
     }
   }
 }
