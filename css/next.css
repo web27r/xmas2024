@@ -221,9 +221,9 @@ main article.goods section hgroup {
       /* 一番長い店名Eに合わせて同時に折り返すための下準備その２ */
       flex-basis: 225px;
     }
-    @media (max-width: 389px) {
-      flex-basis: unset;
-    }
+    /* @media (max-width: 389px) {
+      ポタルの為にこっちはunsetしない
+    } */
   }
 }
 /* ーーーーーーーーーーーーーー
@@ -261,6 +261,9 @@ main article.FandD section.koibackbeige {
       margin-left: 21px;
       @media (max-width: 575px) {
         margin-left: 17px;
+      }
+      @media (max-width: 389px) {
+        font-size: 21px;
       }
     }
     & p.none {
