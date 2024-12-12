@@ -211,7 +211,7 @@ main section.event dl.free dd,
 main section.event dl.place dd,
 main section.event dl.access dd {
   color: #213b60;
-  font-size: max(0.9vw, 16px);
+  font-size: max(0.9vw, 15px);
 }
 
 main section.event dl.free dd {
