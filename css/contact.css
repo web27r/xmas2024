@@ -25,6 +25,9 @@ textarea {
   @media (max-width: 575px) {
     width: 326px;
   }
+  @media (max-width: 389px) {
+    width: 275px;
+  }
 }
 /* ーーーー
 各ブロック
