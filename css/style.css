@@ -204,13 +204,14 @@ main section.event dl.day dd:nth-child(2) {
 
 main section.event dl.free {
   column-gap: 250px;
+  align-items: center;
 }
 
 main section.event dl.free dd,
 main section.event dl.place dd,
 main section.event dl.access dd {
   color: #213b60;
-  font-size: max(0.7vw, 15px);
+  font-size: max(0.9vw, 16px);
 }
 
 main section.event dl.free dd {
@@ -224,10 +225,12 @@ main section.event dl.free dd {
 
 main section.event dl.place {
   column-gap: 116px;
+  align-items: center;
 }
 
 main section.event dl.access dd {
   margin-bottom: 33px;
+  line-height: 25px;
 }
 
 main section.event dl.access p:last-child {
