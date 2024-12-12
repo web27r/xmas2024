@@ -390,6 +390,10 @@ main section.magcup aside p {
   }
 }
 
+main p.yoyaku {
+  margin-bottom: 42px;
+}
+
 main section.specialoffers {
   padding-left: 55px;
   padding-right: 55px;
@@ -473,7 +477,7 @@ main section.specialoffers div.tenpo2 {
 }
 
 main section.specialoffers div.otoku p.sitamargin {
-  margin-bottom: 15px;
+  margin-bottom: 28px;
 }
 
 main section.specialoffers h3 {
